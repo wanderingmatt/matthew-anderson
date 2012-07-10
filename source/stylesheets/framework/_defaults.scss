@@ -1,0 +1,23 @@
+// Variables for colors, sizes and mixins.
+//
+// No styleguide reference.
+
+// COLORS
+
+// GRID
+
+$relative-font-sizing: false;
+$base-font-size : 15px;
+$base-line-height: 25px;
+$container-style: fluid;
+$total-columns: 12;
+$column-width: 4em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+// COMPASS
+
+$legacy-support-for-ie6: false;
+$default-border-radius: 3px;
+$default-text-shadow-v-offset: -1px;
+$default-transition-duration: .25s;
