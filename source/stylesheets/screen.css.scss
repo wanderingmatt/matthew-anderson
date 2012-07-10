@@ -2,15 +2,21 @@
 
 @import 'framework/all';
 @import 'plugins/camera';
-
 @include establish-baseline;
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  @include transition;
+}
 
 body {
   font-family: $default-font;
+  color: $body-color;
 }
 
 .wrapper {
-  @include susy-grid-background;
+  // @include susy-grid-background;
   @include container;
 }
 
@@ -19,8 +25,15 @@ nav {
   @include span-columns(2);
   position: fixed;
   h1 {
-    @include adjust-leading-to(4);
-    background-color: #eee;
+    background: url('/images/monogram_rev.png') no-repeat;
+    @include adjust-leading-to(2);
+    text-indent: -9999px;
+    @include trailer;
+  }
+  a {
+    &:hover {
+      padding-left: 2px;
+    }
   }
 }
 
@@ -30,5 +43,10 @@ section {
   .slides {
     @include span-columns(7, 10);
   }
-  aside { @include span-columns(3 omega, 10); }
+  aside {
+    @include span-columns(3 omega, 10);
+    p {
+      color: #888;
+    }
+  }
 }
