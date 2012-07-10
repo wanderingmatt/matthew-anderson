@@ -7,17 +7,20 @@ $(function(){
   $('#onehub .slides').camera({
     autoAdvance: false,
     fx: 'simpleFade',
-    // height: '55.5%',
-    imagePath: '/images/'
+    height: '50%',
+    imagePath: '/images/',
+    thumbnails: true
   });
   $('#carlos-lamas .slides').camera({
     autoAdvance: false,
     // height: '70%',
-    imagePath: '/images/'
+    imagePath: '/images/',
+    thumbnails: true
   });
   $('#kenny-meyers .slides').camera({
     autoAdvance: false,
     // height: '70%',
-    imagePath: '/images/'
+    imagePath: '/images/',
+    thumbnails: true
   });
 });

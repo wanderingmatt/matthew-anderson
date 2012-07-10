@@ -16,7 +16,7 @@ body {
 }
 
 .wrapper {
-  // @include susy-grid-background;
+  @include susy-grid-background;
   @include container;
 }
 
