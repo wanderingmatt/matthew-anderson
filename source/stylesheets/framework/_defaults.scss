@@ -15,7 +15,7 @@ $container-style: fluid;
 $total-columns: 12;
 $column-width: 4em;
 $gutter-width: 1em;
-$grid-padding: $gutter-width;
+$grid-padding: $gutter-width * 2;
 
 // COMPASS
 
