@@ -16,14 +16,12 @@ body {
 }
 
 .wrapper {
-  @include susy-grid-background;
-  @include container;
+  // @include susy-grid-background;
+  @include container($total-columns, $break-medium);
 }
 
 nav {
-  @include leader;
-  @include span-columns(2);
-  position: fixed;
+  // @include leader;
   h1 {
     background: url('/images/monogram_rev.png') no-repeat;
     @include adjust-leading-to(2);
@@ -37,16 +35,26 @@ nav {
   }
 }
 
-section {
-  @include leader;
-  @include span-columns(10 omega);
-  .slides {
-    @include span-columns(7, 10);
+@include at-breakpoint($break-medium) {
+  .wrapper {
+    @include susy-grid-background;
+    @include container;
   }
-  aside {
-    @include span-columns(3 omega, 10);
-    p {
-      color: #888;
+  nav {
+    @include span-columns(2);
+    position: fixed;
+  }
+  section {
+    @include leader;
+    @include span-columns(10 omega);
+    .slides {
+      @include span-columns(7, 10);
+    }
+    aside {
+      @include span-columns(3 omega, 10);
+      p {
+        color: #888;
+      }
     }
   }
 }

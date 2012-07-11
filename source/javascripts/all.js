@@ -7,7 +7,7 @@ $(function(){
   $('#onehub .slides').camera({
     autoAdvance: false,
     fx: 'simpleFade',
-    height: '50%',
+    height: '55.5%',
     imagePath: '/images/',
     thumbnails: true
   });
