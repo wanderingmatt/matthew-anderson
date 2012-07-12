@@ -40,17 +40,6 @@ section {
   nav { display: none; }
 }
 
-.slides {
-  li {
-    background-color: #ddd;
-  }
-  img {
-    display: block;
-    max-width: 100%;
-  }
-}
-
-
 @include at-breakpoint($break-medium) {
   .wrapper {
     @include susy-grid-background;

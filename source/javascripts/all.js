@@ -4,6 +4,7 @@
 $(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
-    pauseOnHover: false
+    pauseOnHover: false,
+    slideshow: false
   });
 });
