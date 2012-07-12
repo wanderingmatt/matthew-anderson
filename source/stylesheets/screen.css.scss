@@ -1,7 +1,7 @@
 // Styles for http://matthew-anderson.com
 
 @import 'framework/all';
-@import 'plugins/camera';
+@import 'plugins/flexslider';
 @include establish-baseline;
 
 a {
@@ -20,7 +20,7 @@ body {
   @include container($total-columns, $break-medium);
 }
 
-nav {
+.menu {
   // @include leader;
   h1 {
     background: url('/images/monogram_rev.png') no-repeat;
@@ -35,6 +35,22 @@ nav {
   }
 }
 
+section {
+  margin: 0 0 - $grid-padding;
+  nav { display: none; }
+}
+
+.slides {
+  li {
+    background-color: #ddd;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+
 @include at-breakpoint($break-medium) {
   .wrapper {
     @include susy-grid-background;
@@ -47,7 +63,7 @@ nav {
   section {
     @include leader;
     @include span-columns(10 omega);
-    .slides {
+    .flexslider {
       @include span-columns(7, 10);
     }
     aside {

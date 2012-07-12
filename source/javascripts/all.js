@@ -1,26 +1,9 @@
 //= require "jquery-1.7.2"
-//= require "jquery.easing.1.3"
-//= require "jquery.mobile.customized.min"
-//= require "jquery.camera"
+//= require "jquery.flexslider"
 
-$(function(){
-  $('#onehub .slides').camera({
-    autoAdvance: false,
-    fx: 'simpleFade',
-    height: '55.5%',
-    imagePath: '/images/',
-    thumbnails: true
-  });
-  $('#carlos-lamas .slides').camera({
-    autoAdvance: false,
-    // height: '70%',
-    imagePath: '/images/',
-    thumbnails: true
-  });
-  $('#kenny-meyers .slides').camera({
-    autoAdvance: false,
-    // height: '70%',
-    imagePath: '/images/',
-    thumbnails: true
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    pauseOnHover: false
   });
 });
