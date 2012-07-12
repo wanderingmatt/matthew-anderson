@@ -23,7 +23,7 @@ body {
 .menu {
   // @include leader;
   h1 {
-    background: url('/images/monogram_rev.png') no-repeat;
+    background: url('../images/monogram_rev.png') no-repeat;
     @include adjust-leading-to(2);
     text-indent: -9999px;
     @include trailer;
@@ -42,7 +42,6 @@ section {
 
 @include at-breakpoint($break-medium) {
   .wrapper {
-    @include susy-grid-background;
     @include container;
   }
   nav {
@@ -52,14 +51,21 @@ section {
   section {
     @include leader;
     @include span-columns(10 omega);
-    .flexslider {
-      @include span-columns(7, 10);
-    }
+    .flexslider { @include span-columns(7, 10); }
     aside {
       @include span-columns(3 omega, 10);
       p {
         color: #888;
       }
     }
+  }
+}
+
+@include at-breakpoint($break-large) {
+  .wrapper { @include susy-grid-background; }
+  section {
+    @include span-columns(14 omega);
+    .flexslider { @include span-columns(11, 14); }
+    aside { @include span-columns(3 omega, 14); }
   }
 }

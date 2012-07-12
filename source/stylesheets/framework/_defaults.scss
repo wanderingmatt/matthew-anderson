@@ -16,9 +16,9 @@ $total-columns: 1;
 $column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
-$break-medium: 768px 12;
-
-// $show-column-grid-backgrounds: false;
+$break-small: 768px;
+$break-medium: 1024px 12;
+$break-large: 1280px 16;
 
 // COMPASS
 
