@@ -23,17 +23,28 @@ a {
 }
 
 .monogram {
-  background: url('../images/monogram_rev.png') no-repeat;
   @include adjust-leading-to(2);
+  background: url('../images/monogram_rev.png') no-repeat;
+  @include leader(2);
   text-indent: -9999px;
-  @include trailer;
+  @include trailer(2);
 }
 
 .work { display: none; }
 
-section {
-  margin: 0 0 - $grid-padding;
-  nav { display: none; }
+article {
+  @include padding-trailer(2);
+  p { font-weight: 300; }
+  strong { color: $dark-grey; }
+}
+
+.flexslider { margin: 0 0 - $grid-padding; }
+
+aside {
+  h1 {
+    @include adjust-leading-to(2);
+    color: $dark-grey;
+  }
 }
 
 @include at-breakpoint($desktop-break) {
@@ -41,10 +52,6 @@ section {
   .menu {
     @include span-columns(2, $desktop-columns);
     position: fixed;
-    h1 {
-      @include leader(2);
-      @include trailer(2);
-    }
     ul { display: block; }
   }
   section {
@@ -54,13 +61,9 @@ section {
   article, .flexslider { @include span-columns(7, 10); }
   article {
     @include padding-leader(6);
-    @include padding-trailer(2);
-    p {
-      font-weight: 300;
-      padding: 0 $grid-padding;
-    }
-    strong { color: $dark-grey; }
+    p { padding: 0 $grid-padding; }
   }
+  .flexslider { margin-left: auto;}
   aside {
     @include span-columns(3 omega, 10);
     h1 {
