@@ -4,25 +4,30 @@
 
 // COLORS
 
-$body-color: #444;
+$body-color: #888;
+$dark-grey: #444;
+
 
 // GRID
 
 $relative-font-sizing: false;
-$base-font-size : 15px;
+$base-font-size: 15px;
 $base-line-height: 25px;
 $container-style: fluid;
 $total-columns: 1;
 $column-width: 4em;
-$gutter-width: 1em;
+$gutter-width: 2em;
 $grid-padding: $gutter-width;
 $break-small: 768px;
-$break-medium: 1024px 12;
-$break-large: 1280px 16;
+
+$desktop-break: 1024px;
+$desktop-columns: 12;
+$widescreen-break: 1280px;
+$widescreen-columns: 16;
 
 // COMPASS
 
 $legacy-support-for-ie6: false;
 $default-border-radius: 3px;
 $default-text-shadow-v-offset: -1px;
-$default-transition-duration: .2s;
+$default-transition-duration: .25s;
