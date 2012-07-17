@@ -36,10 +36,10 @@ section {
   nav { display: none; }
 }
 
-@include at-breakpoint($desktop-break $desktop-columns) {
+@include at-breakpoint($desktop-break) {
   // .wrapper { @include susy-grid-background; }
   .menu {
-    @include span-columns(2, 16);
+    @include span-columns(2, $desktop-columns);
     position: fixed;
     h1 {
       @include leader(2);
@@ -48,17 +48,16 @@ section {
     ul { display: block; }
   }
   section {
-    @include padding-leader(2);
-    @include span-columns(10 omega);
+    // @include padding-leader(2);
+    @include span-columns(10 omega, $desktop-columns);
   }
-  .flexslider { @include span-columns(7, 10); }
+  article, .flexslider { @include span-columns(7, 10); }
   article {
-    @include leader(4);
-    @include span-columns(10);
-    @include trailer;
+    @include padding-leader(6);
+    @include padding-trailer(2);
     p {
-      @include adjust-font-size-to($base-font-size * 2, 1);
       font-weight: 300;
+      padding: 0 $grid-padding;
     }
     strong { color: $dark-grey; }
   }
@@ -71,15 +70,21 @@ section {
   }
 }
 
-@include at-breakpoint($widescreen-break $widescreen-columns) {
+@include at-breakpoint($widescreen-break) {
   .wrapper {
     // @include susy-grid-background;
     max-width: 1600px;
   }
-  article { @include span-columns(11, 14); }
-  section {
-    @include span-columns(14 omega, $widescreen-columns);
-    .flexslider { @include span-columns(11, 14); }
-    aside { @include span-columns(3 omega, 14); }
+  article {
+    background-color: rgba(0, 0, 0, .025);
+    @include push(2);
+    @include span-columns(11, $widescreen-columns);
+    p {
+      @include adjust-font-size-to($base-font-size * 2, 1);
+    }
   }
+
+  section { @include span-columns(14 omega, $widescreen-columns); }
+  .flexslider { @include span-columns(11, 14); }
+  aside { @include span-columns(3 omega, 14); }
 }

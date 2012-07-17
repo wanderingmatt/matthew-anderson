@@ -4,6 +4,7 @@
 $(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
+    controlNav: false,
     pauseOnHover: false,
     slideshow: false
   });
