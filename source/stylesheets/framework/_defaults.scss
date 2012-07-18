@@ -10,7 +10,6 @@ $dark-grey: #444;
 
 // GRID
 
-$relative-font-sizing: false;
 $base-font-size: 15px;
 $base-line-height: 25px;
 $container-style: fluid;
@@ -23,7 +22,7 @@ $break-small: 768px;
 $desktop-columns: 12;
 $desktop-break: 1024px $desktop-columns;
 $widescreen-columns: 16;
-$widescreen-break: 1280px $widescreen-columns;
+$widescreen-break: 1440px $widescreen-columns;
 
 // COMPASS
 

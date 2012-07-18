@@ -34,7 +34,9 @@ a {
 
 article {
   @include padding-trailer(2);
-  p { font-weight: 300; }
+  p {
+    font-weight: 300;
+  }
   strong { color: $dark-grey; }
 }
 
@@ -54,16 +56,21 @@ aside {
     position: fixed;
     ul { display: block; }
   }
-  section {
-    // @include padding-leader(2);
-    @include span-columns(10 omega, $desktop-columns);
-  }
-  article, .flexslider { @include span-columns(7, 10); }
   article {
+    background-color: rgba(0, 0, 0, .025);
     @include padding-leader(6);
-    p { padding: 0 $grid-padding; }
+    @include push(2, $desktop-columns);
+    @include span-columns(7, $desktop-columns);
+    p {
+      @include adjust-font-size-to(21px, 1.6);
+      padding: 0 $grid-padding;
+    }
   }
-  .flexslider { margin-left: auto;}
+  section { @include span-columns(10 omega, $desktop-columns); }
+  .flexslider {
+    margin-left: auto;
+    @include span-columns(7, 10);
+  }
   aside {
     @include span-columns(3 omega, 10);
     h1 {
@@ -73,20 +80,21 @@ aside {
   }
 }
 
+@include at-breakpoint(1280px $desktop-columns) {
+  article p { @include adjust-font-size-to(22px); }
+}
+
 @include at-breakpoint($widescreen-break) {
   .wrapper {
     // @include susy-grid-background;
     max-width: 1600px;
   }
+  .menu { @include span-columns(2, $widescreen-columns); }
   article {
-    background-color: rgba(0, 0, 0, .025);
-    @include push(2);
+    @include push(2, $widescreen-columns);
     @include span-columns(11, $widescreen-columns);
-    p {
-      @include adjust-font-size-to($base-font-size * 2, 1);
-    }
+    p { @include adjust-font-size-to($base-font-size * 2); }
   }
-
   section { @include span-columns(14 omega, $widescreen-columns); }
   .flexslider { @include span-columns(11, 14); }
   aside { @include span-columns(3 omega, 14); }
