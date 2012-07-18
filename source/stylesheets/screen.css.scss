@@ -1,7 +1,11 @@
 // Styles for http://matthew-anderson.com
 
-@import 'framework/all';
-@import 'plugins/flexslider';
+@import 'compass';
+@import 'compass/reset';
+@import 'susy';
+@import 'framework/*';
+@import 'plugins/*';
+
 @include establish-baseline;
 
 body {

@@ -7,7 +7,6 @@
 $body-color: #888;
 $dark-grey: #444;
 
-
 // GRID
 
 $base-font-size: 15px;
@@ -17,8 +16,10 @@ $total-columns: 1;
 $column-width: 4em;
 $gutter-width: 2em;
 $grid-padding: $gutter-width;
-$break-small: 768px;
 
+// BREAKPOINTS
+
+$break-small: 768px;
 $desktop-columns: 12;
 $desktop-break: 1024px $desktop-columns;
 $widescreen-columns: 16;
