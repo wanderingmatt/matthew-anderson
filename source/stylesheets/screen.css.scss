@@ -61,10 +61,11 @@ aside {
     ul { display: block; }
   }
   article {
-    background-color: rgba(0, 0, 0, .025);
+    background-color: rgba(0, 0, 0, .05);
     @include padding-leader(6);
     @include push(2, $desktop-columns);
     @include span-columns(7, $desktop-columns);
+    text-shadow: 0 1px rgba(255, 255, 255, .8);
     p {
       @include adjust-font-size-to(21px, 1.6);
       padding: 0 $grid-padding;
@@ -82,6 +83,7 @@ aside {
       color: $dark-grey;
     }
   }
+  footer { background-color: rgba(0, 0, 0, .05); }
 }
 
 @include at-breakpoint(1280px $desktop-columns) {
@@ -102,4 +104,11 @@ aside {
   section { @include span-columns(14 omega, $widescreen-columns); }
   .flexslider { @include span-columns(11, 14); }
   aside { @include span-columns(3 omega, 14); }
+  footer {
+    @include push(2, $widescreen-columns);
+    @include span-columns(11, $widescreen-columns);
+    p {
+      padding: $grid-padding;
+    }
+  }
 }
