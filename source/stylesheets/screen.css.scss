@@ -51,6 +51,25 @@ aside {
     @include adjust-leading-to(2);
     color: $dark-grey;
   }
+  p { @include trailer; }
+}
+
+.button {
+  @include adjust-font-size-to(13px);
+  border: 1px solid rgba(0, 0, 0, .05);
+  @include border-radius(4px);
+  color: #aaa;
+  padding: 9px 13px;
+  @include text-shadow(0 1px #fff);
+  @include transition(none);
+  &:hover {
+    background-color: rgba(0, 0, 0, .025);
+    color: #777;
+  }
+  &:active {
+    border-color: rgba(0, 0, 0, .15);
+    @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .15));
+  }
 }
 
 @include at-breakpoint($desktop-break) {
@@ -71,7 +90,10 @@ aside {
       padding: 0 $grid-padding;
     }
   }
-  section { @include span-columns(10 omega, $desktop-columns); }
+  section {
+    // @include padding-leader(2);
+    @include span-columns(10 omega, $desktop-columns);
+  }
   .flexslider {
     margin-left: auto;
     @include span-columns(7, 10);
