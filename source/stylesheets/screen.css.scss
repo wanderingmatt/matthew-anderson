@@ -23,7 +23,7 @@ a {
 
 .wrapper {
   // @include susy-grid-background;
-  @include container($total-columns, $desktop-break, $widescreen-break);
+  @include container($total-columns, $tablet-break, $desktop-break, $widescreen-break);
 }
 
 .monogram {
@@ -72,6 +72,25 @@ aside {
   }
 }
 
+@include at-breakpoint($tablet-break) {
+  // .wrapper { @include susy-grid-background; }
+  section {
+    @include span-columns(8 omega, $tablet-columns);
+  }
+  .flexslider {
+    @include span-columns(5, 8);
+    width: columns(5, 8) + (columns(5, 8) / 20);
+  }
+  aside {
+    @include span-columns(3 omega, 8);
+    h1 {
+      @include adjust-leading-to(2);
+      color: $dark-grey;
+    }
+  }
+
+}
+
 @include at-breakpoint($desktop-break) {
   // .wrapper { @include susy-grid-background; }
   .menu {
@@ -98,14 +117,13 @@ aside {
     margin-left: auto;
     @include span-columns(7, 10);
   }
-  aside {
-    @include span-columns(3 omega, 10);
-    h1 {
-      @include adjust-leading-to(2);
-      color: $dark-grey;
-    }
+  aside { @include span-columns(3 omega, 10); }
+  footer {
+    background-color: rgba(0, 0, 0, .05);
+    @include push(2, $desktop-columns);
+    @include span-columns(7, $desktop-columns);
+    p { padding: $grid-padding; }
   }
-  footer { background-color: rgba(0, 0, 0, .05); }
 }
 
 @include at-breakpoint(1280px $desktop-columns) {
@@ -129,8 +147,5 @@ aside {
   footer {
     @include push(2, $widescreen-columns);
     @include span-columns(11, $widescreen-columns);
-    p {
-      padding: $grid-padding;
-    }
   }
 }

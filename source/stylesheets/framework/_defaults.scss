@@ -12,14 +12,15 @@ $dark-grey: #444;
 $base-font-size: 15px;
 $base-line-height: 25px;
 $container-style: fluid;
-$total-columns: 1;
+$total-columns: 4;
 $column-width: 4em;
 $gutter-width: 2em;
 $grid-padding: $gutter-width;
 
 // BREAKPOINTS
 
-$break-small: 768px;
+$tablet-columns: 8;
+$tablet-break: 768px $tablet-columns;
 $desktop-columns: 12;
 $desktop-break: 1024px $desktop-columns;
 $widescreen-columns: 16;
