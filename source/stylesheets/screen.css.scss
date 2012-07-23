@@ -34,7 +34,9 @@ a {
   @include trailer(2);
 }
 
-.work { display: none; }
+.work {
+  // display: none;
+}
 
 article {
   @include padding-trailer(2);
@@ -72,6 +74,7 @@ aside {
 
 @include at-breakpoint($tablet-break) {
   // .wrapper { @include susy-grid-background; }
+  .toggle-work { display: none; }
   section {
     // @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
