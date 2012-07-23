@@ -38,9 +38,7 @@ a {
 
 article {
   @include padding-trailer(2);
-  p {
-    font-weight: 300;
-  }
+  p { font-weight: 300; }
   strong { color: $dark-grey; }
 }
 
@@ -75,6 +73,7 @@ aside {
 @include at-breakpoint($tablet-break) {
   // .wrapper { @include susy-grid-background; }
   section {
+    // @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
   }
   .flexslider {
@@ -103,16 +102,13 @@ aside {
     @include padding-leader(6);
     @include push(2, $desktop-columns);
     @include span-columns(7, $desktop-columns);
-    text-shadow: 0 1px rgba(255, 255, 255, .8);
+    text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
       @include adjust-font-size-to(21px, 1.6);
       padding: 0 $grid-padding;
     }
   }
-  section {
-    // @include padding-leader(2);
-    @include span-columns(10 omega, $desktop-columns);
-  }
+  section { @include span-columns(10 omega, $desktop-columns); }
   .flexslider {
     margin-left: auto;
     @include span-columns(7, 10);
