@@ -37,10 +37,6 @@ a {
   }
 }
 
-.work {
-  // display: none;
-}
-
 article {
   @include padding-trailer(2);
   p { font-weight: 300; }
@@ -58,24 +54,38 @@ aside {
 }
 
 .button {
+  background-color: rgba(0, 0, 0, .05);
   @include adjust-font-size-to(13px);
-  border: 1px solid rgba(0, 0, 0, .05);
+  border: 1px solid rgba(0, 0, 0, .1);
   @include border-radius(4px);
   color: #aaa;
   padding: 9px 13px;
   @include text-shadow(0 1px #fff);
   @include transition(none);
   &:hover {
-    background-color: rgba(0, 0, 0, .025);
+    background-color: rgba(0, 0, 0, .1);
     color: #777;
   }
   &:active {
-    border-color: rgba(0, 0, 0, .15);
-    @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .15));
+    @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, .2));
   }
 }
 
-@include at-breakpoint($tablet-break) {
+@include at-breakpoint(0 $mobile-break) {
+  .toggle-work {
+    position: absolute;
+    right: $grid-padding;
+    top: $grid-padding;
+  }
+  .work {
+    // display: none;
+    background: #000;
+    margin: 0 0 - $grid-padding;
+    padding: $grid-padding;
+  }
+}
+
+@include at-breakpoint($tablet-break $tablet-columns) {
   // .wrapper { @include susy-grid-background; }
   .toggle-work { display: none; }
   section {
@@ -96,7 +106,7 @@ aside {
 
 }
 
-@include at-breakpoint($desktop-break) {
+@include at-breakpoint($desktop-break $desktop-columns) {
   // .wrapper { @include susy-grid-background; }
   .menu {
     @include span-columns(2, $desktop-columns);
@@ -132,7 +142,7 @@ aside {
   article p { @include adjust-font-size-to(22px); }
 }
 
-@include at-breakpoint($widescreen-break) {
+@include at-breakpoint($widescreen-break $widescreen-columns) {
   .wrapper {
     // @include susy-grid-background;
     max-width: 1600px;

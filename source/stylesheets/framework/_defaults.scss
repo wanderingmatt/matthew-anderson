@@ -19,12 +19,13 @@ $grid-padding: $gutter-width;
 
 // BREAKPOINTS
 
+$mobile-break: 480px;
 $tablet-columns: 8;
-$tablet-break: 768px $tablet-columns;
+$tablet-break: 768px;
 $desktop-columns: 12;
-$desktop-break: 1024px $desktop-columns;
+$desktop-break: 1024px;
 $widescreen-columns: 16;
-$widescreen-break: 1440px $widescreen-columns;
+$widescreen-break: 1440px;
 
 // COMPASS
 
