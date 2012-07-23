@@ -4,6 +4,10 @@
 //= require "jquery.flexslider"
 
 $(function() {
+  $('.monogram').click(function() {
+    $.scrollTo(0, 500, {easing: 'easeOutExpo'});
+  });
+
   $('.work a').click(function() {
     var target = $(this).attr('href');
     $.scrollTo(target, 500, {easing: 'easeOutExpo'});

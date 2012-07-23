@@ -27,11 +27,14 @@ a {
 }
 
 .monogram {
-  @include adjust-leading-to(2);
-  background: url('../images/monogram_rev.png') no-repeat;
+  display: block;
   @include leader(2);
-  text-indent: -9999px;
   @include trailer(2);
+  h1 {
+    background: url('../images/monogram_rev.png') no-repeat;
+    @include adjust-leading-to(2);
+    text-indent: -9999px;
+  }
 }
 
 .work {
