@@ -72,11 +72,11 @@
     width: 12em;
   }
   .flex-prev {
-    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(left, #000, transparent));
+    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(left, rgba(0, 0, 0, .4), transparent));
     left: 0;
   }
   .flex-next {
-    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(right, #000, transparent));
+    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(right, rgba(0, 0, 0, .4), transparent));
     right: 0;
   }
   .disabled {
@@ -86,9 +86,11 @@
 }
 
 .flexslider:hover {
-  a {
-    @include opacity(.4);
-    &:hover { @include opacity(.6); }
+  .flex-direction-nav {
+    a {
+      @include opacity(.5);
+      &:hover { @include opacity(1); }
+    }
   }
 }
 
@@ -152,10 +154,8 @@
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: $tablet-break) {
   .flex-direction-nav {
-    .flex-prev, .flex-next { @include opacity(1); }
-    .flex-prev { left: 0; }
-    .flex-next { right: 0; }
+    a { @include opacity(1); }
   }
 }

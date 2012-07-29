@@ -25,7 +25,9 @@ $(function() {
       $('.back-to-top').removeClass('test');
     }
   });
+});
 
+$(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
     slideshow: false
