@@ -4,7 +4,11 @@
 //= require "jquery.flexslider"
 
 $(function() {
-  $('.monogram').click(function() {
+  $('.toggle-work').click(function() {
+    $('.work').slideToggle('fast');
+  });
+
+  $('.monogram, .back-top-top').click(function() {
     $.scrollTo(0, 500, {easing: 'easeOutExpo'});
   });
 
@@ -13,16 +17,17 @@ $(function() {
     $.scrollTo(target, 500, {easing: 'easeOutExpo'});
   });
 
-  $('.toggle-work').click(function() {
-    $('.work').slideToggle('fast');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= $('section').first().offset().top) { // Determine when the first project section is visible.
+      $('.back-to-top').addClass('test');
+    }
+    else {
+      $('.back-to-top').removeClass('test');
+    }
   });
-});
 
-$(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
-    controlNav: false,
-    pauseOnHover: false,
     slideshow: false
   });
 });

@@ -21,9 +21,9 @@ a {
   &:hover { color: $blue; }
 }
 
-.wrapper {
+.wrapper { // Build containers for all of the breakpoints.
   // @include susy-grid-background;
-  @include container($total-columns, $tablet-break, $desktop-break, $widescreen-break);
+  @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
 }
 
 .monogram {
@@ -36,6 +36,8 @@ a {
     text-indent: -9999px;
   }
 }
+
+.back-to-top { display: none; }
 
 article {
   @include padding-trailer(2);
@@ -79,7 +81,7 @@ aside {
     top: $grid-padding;
   }
   .work {
-    // display: none;
+    display: none;
     background: $off-white;
     @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .3));
     margin: (0 - ($grid-padding / 2)) 0 - $grid-padding 0 0 - $grid-padding;
@@ -91,8 +93,9 @@ aside {
 @include at-breakpoint($tablet-break $tablet-columns) {
   // .wrapper { @include susy-grid-background; }
   .toggle-work { display: none; }
+  .back-to-top.test { display: inline; }
   section {
-    // @include padding-leader(2);
+    @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
   }
   .flexslider {
