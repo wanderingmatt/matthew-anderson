@@ -42,7 +42,7 @@
   margin-bottom: 60px;
   background: #fff;
   position: relative;
-  @include box-shadow(0 1px 4px rgba(0, 0, 0, .2));
+  @include box-shadow(0 0 0 1px rgba(0, 0, 0, .1));
   zoom: 1;
   .slides { zoom: 1; }
 }
@@ -68,15 +68,15 @@
     text-indent: -9999px;
     @include transition(all .3s ease);
     top: 0;
-    width: 10em;
+    width: 11em;
   }
   .flex-prev {
-    @include background-image(url('/images/prev.png'), linear-gradient(left, rgba(0, 0, 0, .4), transparent));
+    @include background-image(url('/images/prev.png'), linear-gradient(left, rgba(0, 0, 0, .4), transparent 75%));
     background-position: 0 50%;
     left: 0;
   }
   .flex-next {
-    @include background-image(url('/images/next.png'), linear-gradient(right, rgba(0, 0, 0, .4), transparent));
+    @include background-image(url('/images/next.png'), linear-gradient(right, rgba(0, 0, 0, .4), transparent 75%));
     background-position: 100% 50%;
     right: 0;
   }
@@ -104,7 +104,7 @@
   width: 100%;
   li {
     @include inline-block;
-    margin: 0 3px;
+    margin: 0 4px;
   }
 }
 
