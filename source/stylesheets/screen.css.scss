@@ -46,7 +46,7 @@ article {
   strong { color: $dark-grey; }
 }
 
-.flexslider { margin: 0 0 - $grid-padding; }
+.flexslider { margin: 0 0 - $grid-padding $grid-padding 0 - $grid-padding; }
 
 aside {
   h1 {

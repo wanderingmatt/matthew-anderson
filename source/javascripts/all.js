@@ -3,7 +3,7 @@
 //= require "jquery.scrollTo"
 //= require "jquery.flexslider"
 
-$(function() {
+$(document).ready(function() {
   $('.toggle-work').click(function() {
     $('.work').slideToggle('fast');
   });
@@ -25,9 +25,7 @@ $(function() {
       $('.back-to-top').removeClass('test');
     }
   });
-});
 
-$(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
     slideshow: false
