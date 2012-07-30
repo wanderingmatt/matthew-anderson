@@ -59,7 +59,6 @@
 
 .flex-direction-nav {
   a {
-    background-position: 0 50%;
     background-repeat: no-repeat;
     bottom: 0;
     cursor: pointer;
@@ -69,14 +68,16 @@
     text-indent: -9999px;
     @include transition(all .3s ease);
     top: 0;
-    width: 12em;
+    width: 10em;
   }
   .flex-prev {
-    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(left, rgba(0, 0, 0, .4), transparent));
+    @include background-image(url('/images/prev.png'), linear-gradient(left, rgba(0, 0, 0, .4), transparent));
+    background-position: 0 50%;
     left: 0;
   }
   .flex-next {
-    @include background-image(url(../images/bg_direction_nav.png), linear-gradient(right, rgba(0, 0, 0, .4), transparent));
+    @include background-image(url('/images/next.png'), linear-gradient(right, rgba(0, 0, 0, .4), transparent));
+    background-position: 100% 50%;
     right: 0;
   }
   .disabled {
