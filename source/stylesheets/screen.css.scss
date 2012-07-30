@@ -38,7 +38,7 @@ a {
   }
 }
 
-.back-to-top { display: none; }
+// .back-to-top { display: none; }
 
 article {
   @include padding-trailer(2);
@@ -116,9 +116,16 @@ aside {
 @include at-breakpoint($desktop-break $desktop-columns) {
   // .wrapper { @include susy-grid-background; }
   .menu {
+    // background: red;
+    bottom: $grid-padding;
     @include span-columns(2, $desktop-columns);
     position: fixed;
+    top: 0;
     ul { display: block; }
+  }
+  .back-to-top {
+    bottom: 0;
+    position: absolute;
   }
   article {
     background-color: $off-white;
