@@ -125,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: $tablet-break) {
+@media screen and (max-width: $desktop-break) {
   .flexslider { margin-bottom: 0; }
   .flex-direction-nav {
     a { @include opacity(.5); }

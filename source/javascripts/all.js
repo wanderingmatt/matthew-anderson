@@ -19,10 +19,10 @@ $(document).ready(function() {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() >= $('section').first().offset().top) { // Determine when the first project section is visible.
-      $('.back-to-top').addClass('test');
+      $('#back-to-top').addClass('available');
     }
     else {
-      $('.back-to-top').removeClass('test');
+      $('#back-to-top').removeClass('available');
     }
   });
 
