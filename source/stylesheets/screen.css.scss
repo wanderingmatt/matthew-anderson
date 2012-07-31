@@ -8,7 +8,6 @@
 
 @include establish-baseline;
 
-
 body {
   font-family: $default-font;
   color: $body-color;
@@ -38,7 +37,7 @@ a {
   }
 }
 
-// .back-to-top { display: none; }
+.back-to-top { display: none; }
 
 article {
   @include padding-trailer(2);
@@ -46,7 +45,7 @@ article {
   strong { color: $dark-grey; }
 }
 
-.flexslider { margin: 0 0 - $grid-padding $grid-padding 0 - $grid-padding; }
+.flexslider { margin: 0 0 - $grid-padding; }
 
 aside {
   h1 {
@@ -92,7 +91,6 @@ aside {
 }
 
 @include at-breakpoint($tablet-break $tablet-columns) {
-  // .wrapper { @include susy-grid-background; }
   .toggle-work { display: none; }
   .back-to-top.test { display: inline; }
   section {
@@ -100,6 +98,7 @@ aside {
     @include span-columns(8 omega, $tablet-columns);
   }
   .flexslider {
+    margin-bottom: $grid-padding;
     @include span-columns(5, 8);
     width: columns(5, 8) + (columns(5, 8) / 20);
   }
@@ -114,9 +113,7 @@ aside {
 }
 
 @include at-breakpoint($desktop-break $desktop-columns) {
-  // .wrapper { @include susy-grid-background; }
   .menu {
-    // background: red;
     bottom: $grid-padding;
     @include span-columns(2, $desktop-columns);
     position: fixed;
@@ -157,10 +154,7 @@ aside {
 }
 
 @include at-breakpoint($widescreen-break $widescreen-columns) {
-  .wrapper {
-    // @include susy-grid-background;
-    max-width: 1600px;
-  }
+  .wrapper { max-width: 1600px; }
   .menu { @include span-columns(2, $widescreen-columns); }
   article {
     @include push(2, $widescreen-columns);

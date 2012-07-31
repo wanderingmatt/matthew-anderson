@@ -71,12 +71,12 @@
     width: 11em;
   }
   .flex-prev {
-    @include background-image(url('/images/prev.png'), linear-gradient(left, rgba(0, 0, 0, .4), transparent 75%));
+    @include background-image(url('../images/prev.png'), linear-gradient(left, rgba(0, 0, 0, .4), transparent 75%));
     background-position: 0 50%;
     left: 0;
   }
   .flex-next {
-    @include background-image(url('/images/next.png'), linear-gradient(right, rgba(0, 0, 0, .4), transparent 75%));
+    @include background-image(url('../images/next.png'), linear-gradient(right, rgba(0, 0, 0, .4), transparent 75%));
     background-position: 100% 50%;
     right: 0;
   }
@@ -151,7 +151,9 @@
 }
 
 @media screen and (max-width: $tablet-break) {
+  .flexslider { margin-bottom: 0; }
   .flex-direction-nav {
-    a { @include opacity(1); }
+    a { @include opacity(.5); }
   }
+  .flex-control-nav { display: none; }
 }
