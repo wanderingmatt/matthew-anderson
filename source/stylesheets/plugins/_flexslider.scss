@@ -1,28 +1,3 @@
-// jQuery FlexSlider v2.0
-// http://www.woothemes.com/flexslider/
-//
-// Copyright 2012 WooThemes
-// Free to use under the GPLv2 license.
-// http://www.gnu.org/licenses/gpl-2.0.html
-//
-// Contributing author: Tyler Smith (@mbmufffin)
-// Ported to Compass plugin SCSS by Matthew Anderson (@wanderingmatt)
-
-// Browser Resets - can be commented out if using the Compass reset
-
-// .flex-container, .flexslider {
-//   a {
-//     &:active, &:focus { outline: none; }
-//   }
-// }
-
-// .flexslider {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
-
 // Necessary Styles
 
 .flexslider {
@@ -33,8 +8,7 @@
   }
 }
 
-.flex-pauseplay span {text-transform: capitalize;}
-.no-js .slides > li:first-child {display: block;} // No JavaScript Fallback - If you are not using another script, such as Modernizr, make sure you include js that eliminates this class on page load
+.flex-pauseplay span { text-transform: capitalize; }
 
 // Default Theme
 
@@ -58,6 +32,7 @@
 // Direction Nav
 
 .flex-direction-nav {
+  *height: 0;
   a {
     background-repeat: no-repeat;
     bottom: 0;
@@ -80,7 +55,7 @@
     background-position: 100% 50%;
     right: 0;
   }
-  .disabled {
+  .flex-disabled {
     cursor: default;
     @include opacity(.3);
   }
@@ -144,7 +119,7 @@
     width: 100%;
     &:hover { @include opacity(1); }
   }
-  .active {
+  .flex-active {
     cursor: default;
     @include opacity(1);
   }

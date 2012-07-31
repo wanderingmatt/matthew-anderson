@@ -37,22 +37,39 @@ a {
   }
 }
 
+.toggle-work {
+  position: absolute;
+  right: $grid-padding;
+  top: $grid-padding;
+}
+
+.work {
+  display: none;
+  background: $off-white;
+  @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .3));
+  margin: (0 - ($grid-padding / 2)) 0 - $grid-padding 0 0 - $grid-padding;
+  padding: $grid-padding;
+  @include trailer;
+}
+
 .back-to-top { display: none; }
 
 article {
-  @include padding-trailer(2);
+  @include padding-trailer;
   p { font-weight: 300; }
   strong { color: $dark-grey; }
 }
 
-.flexslider { margin: 0 0 - $grid-padding; }
+.flexslider { margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding; }
 
 aside {
+  margin-bottom: $grid-padding;
   h1 {
     @include adjust-leading-to(2);
     color: $dark-grey;
   }
   p { @include trailer; }
+  .button { display: none; }
 }
 
 .button {
@@ -91,8 +108,11 @@ aside {
 }
 
 @include at-breakpoint($tablet-break $tablet-columns) {
-  .toggle-work { display: none; }
   .back-to-top.test { display: inline; }
+  article {
+    @include padding-trailer(2);
+    .button { display: block; }
+  }
   section {
     @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
@@ -113,6 +133,7 @@ aside {
 }
 
 @include at-breakpoint($desktop-break $desktop-columns) {
+  .toggle-work { display: none; }
   .menu {
     bottom: $grid-padding;
     @include span-columns(2, $desktop-columns);
