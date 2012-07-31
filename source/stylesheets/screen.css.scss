@@ -60,7 +60,10 @@ article {
   strong { color: $dark-grey; }
 }
 
-.flexslider { margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding; }
+.flexslider {
+  background: $off-white url('../images/monogram_rev.png') no-repeat 50%;
+  margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding;
+}
 
 aside {
   margin-bottom: $grid-padding;

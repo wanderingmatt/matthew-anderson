@@ -8,7 +8,7 @@ $(document).ready(function() {
     $('.work').slideToggle('fast');
   });
 
-  $('.monogram, .back-top-top').click(function() {
+  $('.monogram, #back-to-top').click(function() {
     $.scrollTo(0, 500, {easing: 'easeOutExpo'});
   });
 
@@ -25,7 +25,9 @@ $(document).ready(function() {
       $('#back-to-top').removeClass('available');
     }
   });
+});
 
+$(window).load(function() {
   $('.flexslider').flexslider({
     animation: "slide",
     slideshow: false

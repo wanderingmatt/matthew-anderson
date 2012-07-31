@@ -128,7 +128,11 @@
 @media screen and (max-width: $desktop-break) {
   .flexslider { margin-bottom: 0; }
   .flex-direction-nav {
-    a { @include opacity(.5); }
+    a {
+      @include background-size(75%, contain);
+      @include opacity(.5);
+      width: 4em;
+    }
   }
   .flex-control-nav { display: none; }
 }
