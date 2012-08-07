@@ -5,6 +5,7 @@
 
 $(document).ready(function() {
   $('.toggle-work').click(function() {
+    $(this).toggleClass('toggled');
     $('.work').slideToggle('fast');
   });
 
