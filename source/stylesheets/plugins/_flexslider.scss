@@ -129,7 +129,7 @@
   .flexslider { margin-bottom: 0; }
   .flex-direction-nav {
     a {
-      @include background-size(75%, contain);
+      @include background-size(auto 40px, contain);
       @include opacity(.5);
       width: 4em;
     }

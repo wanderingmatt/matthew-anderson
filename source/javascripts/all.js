@@ -9,11 +9,13 @@ $(document).ready(function() {
     $('.work').slideToggle('fast');
   });
 
-  $('.monogram, #back-to-top').click(function() {
+  $('.monogram, #back-to-top').click(function(event) {
+    event.preventDefault();
     $.scrollTo(0, 500, {easing: 'easeOutExpo'});
   });
 
-  $('.work a').click(function() {
+  $('.work a').click(function(event) {
+    event.preventDefault();
     var target = $(this).attr('href');
     $.scrollTo(target, 500, {easing: 'easeOutExpo'});
   });
