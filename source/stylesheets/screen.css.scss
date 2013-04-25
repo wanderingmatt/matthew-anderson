@@ -3,7 +3,8 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'susy';
-@import 'framework/*';
+@import 'framework/defaults';
+@import 'framework/typography';
 @import 'plugins/flexslider';
 
 @include establish-baseline;
@@ -67,7 +68,10 @@ a {
 article {
   @include padding-trailer;
   p { font-weight: 300; }
-  strong { color: $dark-grey; }
+  a {
+    color: $dark-grey;
+    font-weight: 300;
+  }
 }
 
 .flexslider {
@@ -116,7 +120,7 @@ footer {
 @include at-breakpoint($tablet-break $tablet-columns) {
   #back-to-top.available { @include inline-block; }
   article {
-    p { @include adjust-font-size-to(20px, 1.5); }
+    p { @include adjust-font-size-to($base-font-size * 1.75, 1.5); }
   }
   section {
     @include padding-leader(2);
@@ -163,7 +167,7 @@ footer {
     @include span-columns(7, $desktop-columns);
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
-      @include adjust-font-size-to(21px, 1.6);
+      @include adjust-font-size-to($base-font-size * 1.2, 1.5);
       padding: 0 $grid-padding;
     }
   }
@@ -184,7 +188,7 @@ footer {
 }
 
 @include at-breakpoint(1280px $desktop-columns) {
-  article p { @include adjust-font-size-to(22px); }
+  article p { @include adjust-font-size-to($base-font-size * 1.5); }
 }
 
 @include at-breakpoint($widescreen-break $widescreen-columns) {
