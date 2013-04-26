@@ -63,6 +63,11 @@ a {
   margin: 0 0 - $grid-padding;
   padding: $grid-padding;
   @include trailer;
+  a {
+    font-family: $custom-font;
+    font-weight: normal;
+    // font-weight: 500;
+  }
 }
 
 #back-to-top { display: none; }
@@ -84,10 +89,15 @@ article {
 aside {
   margin-bottom: $grid-padding;
   h1 {
+    @include adjust-font-size-to(20px);
     @include adjust-leading-to(2);
     color: $dark-grey;
+    font-family: $custom-font $default-font;
   }
-  p { @include trailer; }
+  p {
+    @include adjust-font-size-to(13px);
+    @include trailer;
+  }
   .button { display: none; }
 }
 
