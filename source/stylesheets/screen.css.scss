@@ -12,6 +12,7 @@
 body {
   font-family: $default-font;
   color: $body-color;
+  text-rendering: optimizeSpeed;
 }
 
 a {
@@ -32,7 +33,7 @@ a {
   @include leader(2);
   @include trailer(2);
   h1 {
-    background: url('../images/monogram.png') no-repeat;
+    background: url('/images/monogram.png') no-repeat;
     @include background-size(auto 50px);
     @include adjust-leading-to(2);
     text-indent: -9999px;
@@ -41,7 +42,7 @@ a {
 }
 
 .toggle-work {
-  background-image: url('../images/arrow-down.png');
+  background-image: url('/images/arrow-down.png');
   background-position: 50%;
   background-repeat: no-repeat;
   @include background-size(40px);
@@ -52,7 +53,7 @@ a {
   text-indent: -9999px;
   top: 40px;
   width: 40px;
-  &.toggled { background-image: url('../images/arrow-up.png'); }
+  &.toggled { background-image: url('/images/arrow-up.png'); }
 }
 
 .work {
@@ -64,9 +65,11 @@ a {
   padding: $grid-padding;
   @include trailer;
   a {
+    @include adjust-font-size-to(20px);
+    @include adjust-leading-to(1);
+
     font-family: $custom-font;
-    font-weight: normal;
-    // font-weight: 500;
+    font-weight: 500;
   }
 }
 
@@ -74,7 +77,10 @@ a {
 
 article {
   @include padding-trailer;
-  p { font-weight: 300; }
+  p {
+    font-family: $custom-font;
+    font-weight: 300;
+  }
   a {
     color: $dark-grey;
     font-weight: 300;
@@ -82,7 +88,7 @@ article {
 }
 
 .flexslider {
-  background: $off-white url('../images/monogram_rev.png') no-repeat 50%;
+  background: $off-white url('/images/monogram_rev.png') no-repeat 50%;
   margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding;
 }
 
@@ -94,10 +100,7 @@ aside {
     color: $dark-grey;
     font-family: $custom-font $default-font;
   }
-  p {
-    @include adjust-font-size-to(13px);
-    @include trailer;
-  }
+  p { @include trailer; }
   .button { display: none; }
 }
 
@@ -154,6 +157,7 @@ footer {
 }
 
 @include at-breakpoint($desktop-break $desktop-columns) {
+  body { text-rendering: optimizeLegibility; }
   .toggle-work { display: none; }
   .menu {
     bottom: $grid-padding;
