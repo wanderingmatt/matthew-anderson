@@ -65,8 +65,6 @@ a {
   @include trailer;
   a {
     @include adjust-font-size-to(20px);
-    // @include adjust-leading-to(2);
-
     font-family: $custom-font $default-font;
   }
 }
@@ -77,7 +75,6 @@ article {
   @include padding-trailer;
   p {
     color: $medium-grey;
-    font-family: $custom-font;
     font-weight: 300;
   }
   a {
@@ -95,12 +92,16 @@ aside {
   margin-bottom: $grid-padding;
   h1 {
     @include adjust-font-size-to(20px);
-    @include adjust-leading-to(2);
+    @include leader;
+    // @include adjust-leading-to(2);
     color: $dark-grey;
     font-family: $custom-font $default-font;
     font-weight: 700;
   }
-  p { @include trailer; }
+  p {
+    @include trailer;
+    @include adjust-font-size-to(13px);
+  }
   .button { display: none; }
 }
 
@@ -135,7 +136,10 @@ footer {
 @include at-breakpoint($tablet-break $tablet-columns) {
   #back-to-top.available { @include inline-block; }
   article {
-    p { @include adjust-font-size-to($base-font-size * 1.75, 1.5); }
+    p {
+      @include adjust-font-size-to($base-font-size * 1.75, 1.5);
+      font-family: $custom-font;
+    }
   }
   section {
     @include padding-leader(2);
@@ -148,7 +152,7 @@ footer {
   aside {
     @include span-columns(3 omega, 8);
     h1 {
-      @include adjust-leading-to(2);
+      // @include adjust-leading-to(2);
       color: $dark-grey;
     }
   }
