@@ -11,20 +11,19 @@
 
 body {
   font-family: $default-font;
-  color: $body-color;
+  color: $light-grey;
   text-rendering: optimizeSpeed;
 }
 
 a {
-  color: $body-color;
-  font-weight: bold;
+  color: $light-grey;
+  // font-weight: bold;
   text-decoration: none;
   @include transition;
   &:hover { color: $blue; }
 }
 
 .wrapper { // Build containers for all of the breakpoints.
-  // @include susy-grid-background;
   @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
 }
 
@@ -66,10 +65,9 @@ a {
   @include trailer;
   a {
     @include adjust-font-size-to(20px);
-    @include adjust-leading-to(1);
+    // @include adjust-leading-to(2);
 
-    font-family: $custom-font;
-    font-weight: 500;
+    font-family: $custom-font $default-font;
   }
 }
 
@@ -78,6 +76,7 @@ a {
 article {
   @include padding-trailer;
   p {
+    color: $medium-grey;
     font-family: $custom-font;
     font-weight: 300;
   }
@@ -88,7 +87,7 @@ article {
 }
 
 .flexslider {
-  background: $off-white url('/images/monogram_rev.png') no-repeat 50%;
+  background: $off-white url('/images/monogram.png') no-repeat 50%;
   margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding;
 }
 
@@ -99,6 +98,7 @@ aside {
     @include adjust-leading-to(2);
     color: $dark-grey;
     font-family: $custom-font $default-font;
+    font-weight: 700;
   }
   p { @include trailer; }
   .button { display: none; }

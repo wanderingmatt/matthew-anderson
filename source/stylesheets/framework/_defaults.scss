@@ -4,8 +4,9 @@
 
 // COLORS
 
-$body-color: #777;
 $dark-grey: #444;
+$medium-grey: #777;
+$light-grey: #999;
 $off-white: #f6f6f6;
 $blue: #06c;
 
@@ -34,4 +35,4 @@ $widescreen-break: 1440px;
 $legacy-support-for-ie6: false;
 $default-border-radius: 3px;
 $default-text-shadow-v-offset: -1px;
-$default-transition-duration: .25s;
+$default-transition-duration: .1s;
