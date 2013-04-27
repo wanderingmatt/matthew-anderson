@@ -71,7 +71,7 @@ a {
 #back-to-top { display: none; }
 
 article {
-  @include padding-trailer;
+  @include trailer(2);
   p {
     color: $medium-grey;
     font-weight: 300;
@@ -97,16 +97,15 @@ aside {
   }
   p {
     @include adjust-font-size-to(13px);
-    @include trailer;
+    @include trailer(2);
   }
   .button { display: none; }
 }
 
 footer {
-  background-color: rgba(0, 0, 0, .05);
-  background-color: red;
+  background-color: $off-white;
   clear: both;
-  // margin: 0 0 -$grid-padding;
+  margin: 0 0 -$grid-padding;
   p { padding: $grid-padding; }
 }
 
@@ -134,6 +133,7 @@ footer {
 @include at-breakpoint($tablet-break $tablet-columns) {
   #back-to-top.available { @include inline-block; }
   article {
+    margin: 0;
     p {
       @include adjust-font-size-to($base-font-size * 1.75, 1.5);
       font-family: $custom-font;
@@ -145,6 +145,7 @@ footer {
   }
   .flexslider {
     @include span-columns(5, 8);
+    margin-bottom: 0;
     width: columns(5, 8) + (columns(5, 8) / 20);
   }
   aside {
@@ -155,7 +156,9 @@ footer {
     }
   }
   footer {
-    @include leader(2); }
+    @include leader(2);
+    // @include adjust-leading-to(2);
+  }
 }
 
 @include at-breakpoint($desktop-break $desktop-columns) {
@@ -175,7 +178,7 @@ footer {
     }
   }
   #back-to-top {
-    bottom: 0;
+    bottom: -6px;
     position: absolute;
   }
   article {
@@ -187,6 +190,7 @@ footer {
     p {
       @include adjust-font-size-to($base-font-size * 1.2, 1.5);
       padding: 0 $grid-padding;
+      @include trailer;
     }
   }
   section { @include span-columns(10 omega, $desktop-columns); }
@@ -197,6 +201,7 @@ footer {
   }
   aside {
     @include span-columns(3 omega, 10);
+    p { @include trailer; }
     .button { @include inline-block; }
   }
   footer {
