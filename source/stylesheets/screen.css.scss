@@ -31,7 +31,7 @@ a {
   @include leader(2);
   @include trailer(2);
   h1 {
-    background: url('/images/monogram.png') no-repeat;
+    background: url('../images/monogram.png') no-repeat;
     @include background-size(auto 50px);
     @include adjust-leading-to(2);
     text-indent: -9999px;
@@ -40,7 +40,7 @@ a {
 }
 
 .toggle-work {
-  background-image: url('/images/arrow-down.png');
+  background-image: url('../images/arrow-down.png');
   background-position: 50%;
   background-repeat: no-repeat;
   @include background-size(40px);
@@ -51,7 +51,7 @@ a {
   text-indent: -9999px;
   top: 40px;
   width: 40px;
-  &.toggled { background-image: url('/images/arrow-up.png'); }
+  &.toggled { background-image: url('../images/arrow-up.png'); }
 }
 
 .work {
@@ -83,7 +83,7 @@ article {
 }
 
 .flexslider {
-  background: $off-white url('/images/monogram.png') no-repeat 50%;
+  background: $off-white url('../images/monogram.png') no-repeat 50%;
   margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding;
 }
 
