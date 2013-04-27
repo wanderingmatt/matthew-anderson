@@ -17,7 +17,6 @@ body {
 
 a {
   color: $light-grey;
-  // font-weight: bold;
   text-decoration: none;
   @include transition;
   &:hover { color: $blue; }
@@ -64,7 +63,7 @@ a {
   padding: $grid-padding;
   @include trailer;
   a {
-    @include adjust-font-size-to(20px);
+    @include adjust-font-size-to(17px);
     font-family: $custom-font $default-font;
   }
 }
@@ -92,15 +91,13 @@ aside {
   margin-bottom: $grid-padding;
   h1 {
     @include adjust-font-size-to(20px);
-    @include leader;
-    // @include adjust-leading-to(2);
+    @include adjust-leading-to(2);
     color: $dark-grey;
     font-family: $custom-font $default-font;
-    font-weight: 700;
   }
   p {
-    @include trailer;
     @include adjust-font-size-to(13px);
+    @include trailer;
   }
   .button { display: none; }
 }
@@ -119,6 +116,7 @@ footer {
   border: 1px solid rgba(0, 0, 0, .1);
   @include border-radius(4px);
   color: #aaa;
+  font-weight: 700;
   @include inline-block;
   padding: 4px 12px;
   @include text-shadow(0 1px #fff);

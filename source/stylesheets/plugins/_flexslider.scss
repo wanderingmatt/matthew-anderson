@@ -16,7 +16,7 @@
   margin-bottom: 60px;
   background: #fff;
   position: relative;
-  @include box-shadow(0 0 0 1px rgba(0, 0, 0, .1));
+  // @include box-shadow(0 0 0 1px rgba(0, 0, 0, .1));
   zoom: 1;
   .slides { zoom: 1; }
 }
