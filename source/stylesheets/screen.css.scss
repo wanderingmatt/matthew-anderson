@@ -135,7 +135,7 @@ footer {
   article {
     margin: 0;
     p {
-      @include adjust-font-size-to($base-font-size * 1.75, 1.5);
+      @include adjust-font-size-to($base-font-size * 2, 1.5);
       font-family: $custom-font;
     }
   }
@@ -188,7 +188,7 @@ footer {
     @include span-columns(7, $desktop-columns);
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
-      @include adjust-font-size-to($base-font-size * 1.2, 1.5);
+      @include adjust-font-size-to($base-font-size * 1.25, 1.5);
       padding: 0 $grid-padding;
       @include trailer;
     }
@@ -211,7 +211,7 @@ footer {
 }
 
 @include at-breakpoint(1280px $desktop-columns) {
-  article p { @include adjust-font-size-to($base-font-size * 1.5); }
+  article p { @include adjust-font-size-to($base-font-size * 1.75, 1.5); }
 }
 
 @include at-breakpoint($widescreen-break $widescreen-columns) {
