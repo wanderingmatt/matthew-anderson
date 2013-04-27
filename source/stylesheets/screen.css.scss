@@ -99,6 +99,12 @@ aside {
     @include adjust-font-size-to(13px);
     @include trailer(2);
   }
+  ul {
+    color: $medium-grey;
+    @include adjust-font-size-to(13px);
+    list-style: disc inside;
+    li { margin-left: .1em; }
+  }
   .button { display: none; }
 }
 
