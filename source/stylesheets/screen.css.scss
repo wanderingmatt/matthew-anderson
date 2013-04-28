@@ -11,12 +11,12 @@
 
 body {
   font-family: $default-font;
-  color: $light-grey;
+  color: $default-grey;
   text-rendering: optimizeSpeed;
 }
 
 a {
-  color: $light-grey;
+  color: $default-grey;
   text-decoration: none;
   @include transition;
   &:hover { color: $blue; }
@@ -92,6 +92,7 @@ article {
 
 aside {
   margin-bottom: $grid-padding;
+  @include trailer(2);
   h1 {
     @include adjust-font-size-to(20px);
     @include adjust-leading-to(2);
@@ -100,11 +101,11 @@ aside {
   }
   p {
     @include adjust-font-size-to(13px);
-    @include trailer(2);
   }
   ul {
     color: $medium-grey;
     @include adjust-font-size-to(13px);
+    @include leader;
     list-style: disc inside;
     li { margin-left: .1em; }
   }
@@ -112,10 +113,18 @@ aside {
 }
 
 footer {
-  background-color: $off-white;
   clear: both;
   margin: 0 0 -$grid-padding;
-  p { padding: $grid-padding; }
+  p {
+    @include adjust-font-size-to(13px);
+    color: $light-grey;
+  }
+  .tools {
+    background-color: $off-white;
+    @include box-sizing(border-box);
+    padding: $grid-padding;
+  }
+  .copyright { padding: $grid-padding; }
 }
 
 .button {
@@ -143,14 +152,15 @@ footer {
   #back-to-top.available { @include inline-block; }
   article {
     margin: 0;
+    @include trailer(2);
     p {
       @include adjust-font-size-to($base-font-size * 2, 1.5);
       font-family: $custom-font;
     }
   }
   section {
-    @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
+    @include trailer(2);
   }
   .loading { min-height: 342px; }
   .flexslider {
@@ -159,14 +169,15 @@ footer {
     width: columns(5, 8) + (columns(5, 8) / 20);
   }
   aside {
+    margin-top: 0;
     @include span-columns(3 omega, 8);
     h1 {
-      // @include adjust-leading-to(2);
+      @include adjust-leading-to(2);
       color: $dark-grey;
     }
   }
   footer {
-    @include leader(2);
+    // @include leader(2);
     // @include adjust-leading-to(2);
   }
 }
@@ -188,7 +199,7 @@ footer {
     }
   }
   #back-to-top {
-    bottom: -6px;
+    bottom: -9px;
     position: absolute;
   }
   article {
@@ -217,7 +228,12 @@ footer {
   }
   footer {
     @include push(2, $desktop-columns);
-    @include span-columns(7, $desktop-columns);
+    @include span-columns(10, $desktop-columns);
+    .tools { @include span-columns(7, 10); }
+    .copyright {
+      @include span-columns(3 omega, 10);
+      padding: $grid-padding 0;
+    }
   }
 }
 
@@ -240,6 +256,8 @@ footer {
   aside { @include span-columns(3 omega, 14); }
   footer {
     @include push(2, $widescreen-columns);
-    @include span-columns(11, $widescreen-columns);
+    @include span-columns(14, $widescreen-columns);
+    .tools { @include span-columns(11, 14); }
+    .copyright { @include span-columns(3 omega, 14); }
   }
 }
