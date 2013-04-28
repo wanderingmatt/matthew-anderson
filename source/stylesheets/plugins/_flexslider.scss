@@ -21,11 +21,6 @@
   .slides { zoom: 1; }
 }
 
-.flex-viewport {
-  max-height: 2000px;
-  @include transition(all 1s ease)
-}
-
 .loading .flex-viewport { max-height: 300px; }
 .carousel li { margin-right: 5px }
 
