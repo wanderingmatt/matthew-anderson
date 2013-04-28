@@ -82,10 +82,13 @@ article {
   }
 }
 
-.flexslider {
+.loading {
   background: $off-white url('../images/monogram.png') no-repeat 50%;
-  margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding;
+  @include background-size(auto 50px);
+  min-height: 241px;
 }
+
+.flexslider { margin: 0 0 - $grid-padding $grid-padding / 4 0 - $grid-padding; }
 
 aside {
   margin-bottom: $grid-padding;
@@ -149,6 +152,7 @@ footer {
     @include padding-leader(2);
     @include span-columns(8 omega, $tablet-columns);
   }
+  .loading { min-height: 342px; }
   .flexslider {
     @include span-columns(5, 8);
     margin-bottom: 0;
@@ -200,6 +204,7 @@ footer {
     }
   }
   section { @include span-columns(10 omega, $desktop-columns); }
+  .loading { min-height: 416px; }
   .flexslider {
     margin-left: auto;
     margin-bottom: $grid-padding;
@@ -218,6 +223,7 @@ footer {
 
 @include at-breakpoint(1280px $desktop-columns) {
   article p { @include adjust-font-size-to($base-font-size * 1.75, 1.5); }
+  .loading { min-height: 526px; }
 }
 
 @include at-breakpoint($widescreen-break $widescreen-columns) {
@@ -229,6 +235,7 @@ footer {
     p { @include adjust-font-size-to($base-font-size * 2); }
   }
   section { @include span-columns(14 omega, $widescreen-columns); }
+  .loading { min-height: 709px; }
   .flexslider { @include span-columns(11, 14); }
   aside { @include span-columns(3 omega, 14); }
   footer {
