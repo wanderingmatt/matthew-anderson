@@ -113,18 +113,14 @@ aside {
 }
 
 footer {
+  background-color: $off-white;
   clear: both;
   margin: 0 0 -$grid-padding;
   p {
     @include adjust-font-size-to(13px);
     color: $light-grey;
-  }
-  .tools {
-    background-color: $off-white;
-    @include box-sizing(border-box);
     padding: $grid-padding;
   }
-  .copyright { padding: $grid-padding; }
 }
 
 .button {
@@ -176,10 +172,6 @@ footer {
       color: $dark-grey;
     }
   }
-  footer {
-    // @include leader(2);
-    // @include adjust-leading-to(2);
-  }
 }
 
 @include at-breakpoint($desktop-break $desktop-columns) {
@@ -228,12 +220,7 @@ footer {
   }
   footer {
     @include push(2, $desktop-columns);
-    @include span-columns(10, $desktop-columns);
-    .tools { @include span-columns(7, 10); }
-    .copyright {
-      @include span-columns(3 omega, 10);
-      padding: $grid-padding 0;
-    }
+    @include span-columns(7, $desktop-columns);
   }
 }
 
@@ -256,8 +243,6 @@ footer {
   aside { @include span-columns(3 omega, 14); }
   footer {
     @include push(2, $widescreen-columns);
-    @include span-columns(14, $widescreen-columns);
-    .tools { @include span-columns(11, 14); }
-    .copyright { @include span-columns(3 omega, 14); }
+    @include span-columns(11, $widescreen-columns);
   }
 }
