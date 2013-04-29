@@ -1,5 +1,39 @@
 /* @license
- * MyFonts Webfont Build ID 2539424, 2013-04-25T02:04:40-0400
+ * MyFonts Webfont Build ID 2543370, 2013-04-29T12:15:25-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Brandon Grotesque Light by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/light/
+ * Copyright: Copyright (c) 2009 by Hannes von Doehren. All rights reserved.
+ *
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2543370
+ *
+ * © 2013 MyFonts Inc
+*/
+
+@import url("//hello.myfonts.net/count/26cf0a");
+
+@font-face {
+    font-family: 'brandon-grotesque-light';
+    src: url('../fonts/brandon-grotesque-light.eot');
+    src: url('../fonts/brandon-grotesque-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/brandon-grotesque-light.woff') format('woff'),
+         url('../fonts/brandon-grotesque-light.ttf') format('truetype'),
+         url('../fonts/brandon-grotesque-light.svg#wf') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$custom-font-light: 'brandon-grotesque-light';
+
+/* @license
+ * MyFonts Webfont Build ID 2543368, 2013-04-29T12:13:58-0400
  *
  * The fonts listed in this notice are subject to the End User License
  * Agreement(s) entered into by the website owner. All other parties are
@@ -8,15 +42,16 @@
  * You may obtain a valid license at the URLs below.
  *
  * Webfont: Brandon Grotesque Regular by HVD Fonts
- * URL: http://www.myfonts.com../fonts/hvdfonts/brandon-grotesque/regular/
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/regular/
  * Copyright: Copyright (c) 2009 by Hannes von Doehren. All rights reserved.
  *
  *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2542290
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2539424
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2543368
  *
  * © 2013 MyFonts Inc
 */
+
+@import url("//hello.myfonts.net/count/26cf08");
 
 @font-face {
     font-family: 'brandon-grotesque-regular';
@@ -24,10 +59,11 @@
     src: url('../fonts/brandongrotesque-regular.eot?#iefix') format('embedded-opentype'),
          url('../fonts/brandongrotesque-regular.woff') format('woff'),
          url('../fonts/brandongrotesque-regular.ttf') format('truetype'),
-         url('../fonts/brandongrotesque-regular.svg#brandon_grotesque_regularRg') format('svg');
+         url('../fonts/brandongrotesque-regular.svg#wf') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-$custom-font: 'brandon-grotesque-regular';
+$custom-font-regular: 'brandon-grotesque-regular';
+
 $default-font: 'Helvetica Neue', Arial, sans-serif;

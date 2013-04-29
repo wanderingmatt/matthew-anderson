@@ -64,7 +64,7 @@ a {
   @include trailer;
   a {
     @include adjust-font-size-to(17px);
-    font-family: $custom-font $default-font;
+    font-family: $custom-font-regular $default-font;
   }
 }
 
@@ -97,7 +97,7 @@ aside {
     @include adjust-font-size-to(20px);
     @include adjust-leading-to(2);
     color: $dark-grey;
-    font-family: $custom-font $default-font;
+    font-family: $custom-font-regular $default-font;
   }
   p {
     @include adjust-font-size-to(13px);
@@ -151,7 +151,7 @@ footer {
     @include trailer(2);
     p {
       @include adjust-font-size-to($base-font-size * 2, 1.5);
-      font-family: $custom-font;
+      font-family: $custom-font-light;
     }
   }
   section {
