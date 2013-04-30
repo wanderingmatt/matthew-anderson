@@ -101,6 +101,7 @@ aside {
   }
   p {
     @include adjust-font-size-to(13px);
+    span { white-space: nowrap; }
   }
   ul {
     color: $medium-grey;
