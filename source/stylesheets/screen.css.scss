@@ -39,20 +39,20 @@ a {
   }
 }
 
-.toggle-work {
-  background-image: url('../images/arrow-down.png');
-  background-position: 50%;
-  background-repeat: no-repeat;
-  @include background-size(40px);
-  height: 40px;
-  padding: $grid-padding / 2;
-  position: absolute;
-  right: $grid-padding / 2;
-  text-indent: -9999px;
-  top: 40px;
-  width: 40px;
-  &.toggled { background-image: url('../images/arrow-up.png'); }
-}
+// .toggle-work {
+//   background-image: url('../images/arrow-down.png');
+//   background-position: 50%;
+//   background-repeat: no-repeat;
+//   @include background-size(40px);
+//   height: 40px;
+//   padding: $grid-padding / 2;
+//   position: absolute;
+//   right: $grid-padding / 2;
+//   text-indent: -9999px;
+//   top: 40px;
+//   width: 40px;
+//   &.toggled { background-image: url('../images/arrow-up.png'); }
+// }
 
 .work {
   background: $off-white;
@@ -177,7 +177,7 @@ footer {
 
 @include at-breakpoint($desktop-break $desktop-columns) {
   body { text-rendering: optimizeLegibility; }
-  .toggle-work { display: none; }
+  // .toggle-work { display: none; }
   .menu {
     bottom: $grid-padding;
     @include span-columns(2, $desktop-columns);
