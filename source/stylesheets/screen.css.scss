@@ -39,21 +39,6 @@ a {
   }
 }
 
-// .toggle-work {
-//   background-image: url('../images/arrow-down.png');
-//   background-position: 50%;
-//   background-repeat: no-repeat;
-//   @include background-size(40px);
-//   height: 40px;
-//   padding: $grid-padding / 2;
-//   position: absolute;
-//   right: $grid-padding / 2;
-//   text-indent: -9999px;
-//   top: 40px;
-//   width: 40px;
-//   &.toggled { background-image: url('../images/arrow-up.png'); }
-// }
-
 .work {
   background: $off-white;
   @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .3));
@@ -177,7 +162,6 @@ footer {
 
 @include at-breakpoint($desktop-break $desktop-columns) {
   body { text-rendering: optimizeLegibility; }
-  // .toggle-work { display: none; }
   .menu {
     bottom: $grid-padding;
     @include span-columns(2, $desktop-columns);
@@ -202,7 +186,7 @@ footer {
     @include span-columns(7, $desktop-columns);
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
-      @include adjust-font-size-to($base-font-size * 1.25, 1.5);
+      @include adjust-font-size-to($base-font-size * 1.35, 1.5);
       padding: 0 $grid-padding;
       @include trailer;
     }
@@ -226,7 +210,7 @@ footer {
 }
 
 @include at-breakpoint(1280px $desktop-columns) {
-  article p { @include adjust-font-size-to($base-font-size * 1.75, 1.5); }
+  article p { @include adjust-font-size-to($base-font-size * 1.7, 1.5); }
   .loading { min-height: 519px; }
 }
 
@@ -236,7 +220,7 @@ footer {
   article {
     @include push(2, $widescreen-columns);
     @include span-columns(11, $widescreen-columns);
-    p { @include adjust-font-size-to($base-font-size * 2); }
+    p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
   }
   section { @include span-columns(14 omega, $widescreen-columns); }
   .loading { min-height: 700px; }

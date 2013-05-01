@@ -4,11 +4,6 @@
 //= require "jquery.flexslider"
 
 $(document).ready(function() {
-  // $('.toggle-work').click(function() {
-  //   $(this).toggleClass('toggled');
-  //   $('.work').slideToggle('fast');
-  // });
-
   $('.monogram, #back-to-top').click(function(event) {
     event.preventDefault();
     $.scrollTo(0, 500, {easing: 'easeOutExpo'});
