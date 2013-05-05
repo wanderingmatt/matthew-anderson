@@ -19,7 +19,7 @@ a {
   color: $default-grey;
   text-decoration: none;
   @include transition;
-  &:hover { color: $blue; }
+  &:hover { color: $primary; }
 }
 
 .wrapper { // Build containers for all of the breakpoints.
