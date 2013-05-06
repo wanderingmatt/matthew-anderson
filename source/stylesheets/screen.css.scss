@@ -68,8 +68,8 @@ article {
 }
 
 .loading {
-  background: $off-white url('../images/monogram.png') no-repeat 50%;
-  @include background-size(auto 50px);
+  @include background(url('../images/monogram.png') no-repeat 50%, linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%));
+  @include background-size(auto 50px, $grid-padding $grid-padding);
   min-height: 238px;
 }
 
