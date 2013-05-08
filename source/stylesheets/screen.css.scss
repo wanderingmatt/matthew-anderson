@@ -43,12 +43,14 @@ a {
   @include clearfix;
   @include trailer;
   li {
-    @include span-columns(1, 7);
+    @include span-columns(1, 10);
     &:last-child { @include omega; }
   }
   a {
-    background: #444;
+    background: url('../images/icons/twitter.png') no-repeat;
+    @include background-size(100% auto);
     display: block;
+    height: columns(1, 10, fluid) * 1;
     text-indent: -9999px;
   }
 }
