@@ -39,22 +39,6 @@ a {
   }
 }
 
-.elsewhere {
-  @include clearfix;
-  @include trailer;
-  li {
-    @include span-columns(1, 10);
-    &:last-child { @include omega; }
-  }
-  a {
-    background: url('../images/icons/twitter.png') no-repeat;
-    @include background-size(100% auto);
-    display: block;
-    height: columns(1, 10, fluid) * 1;
-    text-indent: -9999px;
-  }
-}
-
 .work {
   background: $off-white;
   @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .3));
@@ -106,15 +90,52 @@ aside {
   .button { display: none; }
 }
 
+@function calculate-position($spot) {
+  $number-of-services: 8;
+  @return (100% / ($number-of-services - 1)) * ($spot - 1);
+}
+
+@mixin sprite-position($spot) {
+  background-position: 0 calculate-position($spot);
+}
+
+.elsewhere {
+  @include clearfix;
+  li {
+    @include span-columns(1, 4);
+    @include trailer;
+    &:nth-child(4n) { @include omega; }
+  }
+  a {
+    background-image: url('../images/icons.png');
+    @include background-size(100% auto);
+    @include border-radius(100px);
+    display: block;
+    height: 0; // Responsive box
+    @include opacity(.2);
+    padding-bottom: 100%;
+    text-indent: -9999px;
+    width: 100%;
+    &:hover { @include opacity(.9); }
+    &.email { @include sprite-position(1); }
+    &.twitter { @include sprite-position(2); }
+    &.blog { @include sprite-position(3); }
+    &.dribbble { @include sprite-position(4); }
+    &.github { @include sprite-position(5); }
+    &.rdio { @include sprite-position(6); }
+    &.gimmebar { @include sprite-position(7); }
+    &.foursquare { @include sprite-position(8); }
+  }
+}
+
 footer {
   background-color: $off-white;
   clear: both;
   margin: 0 0 -$grid-padding;
-  text-align: center;
+  padding: $grid-padding;
   p {
     @include adjust-font-size-to(13px);
     color: $light-grey;
-    padding: $grid-padding;
   }
 }
 
@@ -139,6 +160,14 @@ footer {
   }
 }
 
+@include at-breakpoint($mobile-break 8) {
+  .elsewhere li {
+    @include span-columns(1);
+    @include remove-nth-omega(4n);
+    &:last-child { @include omega; }
+  }
+}
+
 @include at-breakpoint($tablet-break $tablet-columns) {
   #back-to-top.available { @include inline-block; }
   article {
@@ -150,13 +179,13 @@ footer {
     }
   }
   section {
-    @include span-columns(8 omega, $tablet-columns);
+    @include span-columns(8 omega);
     @include trailer(2);
   }
   .loading { min-height: 337px; }
   .flexslider {
-    @include span-columns(5, 8);
-    width: columns(5, 8) + (columns(5, 8) / 20);
+    @include span-columns(5);
+    width: columns(5) + (columns(5) / 20);
   }
   aside {
     padding: 0;
@@ -172,7 +201,7 @@ footer {
   body { text-rendering: optimizeLegibility; }
   .menu {
     bottom: $grid-padding;
-    @include span-columns(2, $desktop-columns);
+    @include span-columns(2);
     position: fixed;
     top: 0;
     .work {
@@ -190,8 +219,8 @@ footer {
   article {
     background-color: $off-white;
     @include padding-leader(6);
-    @include push(2, $desktop-columns);
-    @include span-columns(7, $desktop-columns);
+    @include push(2);
+    @include span-columns(7);
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
       @include adjust-font-size-to($base-font-size * 1.35, 1.5);
@@ -199,7 +228,7 @@ footer {
       @include trailer;
     }
   }
-  section { @include span-columns(10 omega, $desktop-columns); }
+  section { @include span-columns(10 omega); }
   .loading { min-height: 410px; }
   .flexslider {
     margin-left: auto;
@@ -212,8 +241,8 @@ footer {
     .button { @include inline-block; }
   }
   footer {
-    @include push(2, $desktop-columns);
-    @include span-columns(7, $desktop-columns);
+    @include push(2);
+    @include span-columns(7);
   }
 }
 
@@ -224,18 +253,18 @@ footer {
 
 @include at-breakpoint($widescreen-break $widescreen-columns) {
   .wrapper { max-width: 1600px; }
-  .menu { @include span-columns(2, $widescreen-columns); }
+  .menu { @include span-columns(2); }
   article {
-    @include push(2, $widescreen-columns);
-    @include span-columns(11, $widescreen-columns);
+    @include push(2);
+    @include span-columns(11);
     p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
   }
-  section { @include span-columns(14 omega, $widescreen-columns); }
+  section { @include span-columns(14 omega); }
   .loading { min-height: 700px; }
   .flexslider { @include span-columns(11, 14); }
   aside { @include span-columns(3 omega, 14); }
   footer {
-    @include push(2, $widescreen-columns);
-    @include span-columns(11, $widescreen-columns);
+    @include push(2);
+    @include span-columns(11);
   }
 }
