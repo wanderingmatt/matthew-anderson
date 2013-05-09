@@ -18,7 +18,7 @@ body {
 a {
   color: $default-grey;
   text-decoration: none;
-  @include transition;
+  @include transition(color .1s, opacity .1s);
   &:hover { color: $primary; }
 }
 
@@ -114,6 +114,7 @@ aside {
     height: 0; // Responsive box
     @include opacity(.2);
     padding-bottom: 100%;
+    position: relative;
     text-indent: -9999px;
     width: 100%;
     &:hover { @include opacity(.9); }
