@@ -161,7 +161,7 @@ footer {
     @include trailer(2);
     p {
       @include adjust-font-size-to($base-font-size * 2, 1.5);
-      font-family: $custom-font-light;
+      font-family: $custom-font-light $default-font;
     }
   }
   section {

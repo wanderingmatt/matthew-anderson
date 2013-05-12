@@ -2,6 +2,7 @@
 //= require "jquery.easing-1.3"
 //= require "jquery.scrollTo"
 //= require "jquery.flexslider"
+//= require "respond.src"
 
 $(document).ready(function() {
   $('.monogram, #back-to-top').click(function(event) {
