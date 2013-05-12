@@ -240,18 +240,12 @@ footer {
       padding: $grid-padding 0;
       @include push(2);
       @include span-columns(7);
-      ul { width: 50%; }
+      ul { width: 400px; }
     }
     .copyright {
-      display: none;
-      // padding: $grid-padding *2 0;
+      padding: $grid-padding 0;
       @include pull(9);
       @include span-columns(2);
-      // line-height: 1;
-      // position: absolute;
-      // bottom: $grid-padding;
-      // left: 0;
-
     }
   }
 }
@@ -274,11 +268,10 @@ footer {
   .flexslider { @include span-columns(11, 14); }
   aside { @include span-columns(3 omega, 14); }
   footer {
-    @include push(2);
-    @include span-columns(11);
     .elsewhere {
-      // float: right;
-      width: 40%;
+      @include push(2);
+      @include span-columns(11);
     }
+    .copyright { @include pull(13); }
   }
 }
