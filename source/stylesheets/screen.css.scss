@@ -18,7 +18,7 @@ body {
 a {
   color: $default-grey;
   text-decoration: none;
-  @include transition(color .1s, opacity .1s);
+  @include transition;
   &:hover { color: $primary; }
 }
 
@@ -40,13 +40,7 @@ a {
 }
 
 .work {
-  background: $off-white;
-  @include box-shadow(inset 0 0 3px rgba(0, 0, 0, .3));
   display: none;
-  margin: (0 - ($grid-padding / 2)) 0 - $grid-padding 0 0 - $grid-padding;
-  margin: 0 0 - $grid-padding;
-  padding: $grid-padding;
-  @include trailer;
   a {
     @include adjust-font-size-to(17px);
     font-family: $custom-font-regular $default-font;
@@ -99,44 +93,41 @@ aside {
   background-position: 0 calculate-position($spot);
 }
 
-.elsewhere {
-  @include clearfix;
-  li {
-    @include span-columns(1, 4);
-    @include trailer;
-    &:nth-child(4n) { @include omega; }
-  }
-  a {
-    background-image: url('../images/icons.png');
-    @include background-size(100% auto);
-    @include border-radius(100px);
-    display: block;
-    height: 0; // Responsive box
-    @include opacity(.2);
-    padding-bottom: 100%;
-    position: relative;
-    text-indent: -9999px;
-    width: 100%;
-    &:hover { @include opacity(.9); }
-    &.email { @include sprite-position(1); }
-    &.twitter { @include sprite-position(2); }
-    &.blog { @include sprite-position(3); }
-    &.dribbble { @include sprite-position(4); }
-    &.github { @include sprite-position(5); }
-    &.rdio { @include sprite-position(6); }
-    &.gimmebar { @include sprite-position(7); }
-    &.foursquare { @include sprite-position(8); }
-  }
-}
-
 footer {
-  background-color: $off-white;
-  clear: both;
-  margin: 0 0 -$grid-padding;
-  padding: $grid-padding;
-  p {
+  text-align: center;
+  .elsewhere {
+    background-color: $off-white;
+    @include clearfix;
+    padding: $grid-padding *2 $grid-padding;
+    margin: 0 auto;
+    li { @include isolate-grid(1, 8); }
+    a {
+      background-image: url('../images/icons.png');
+      @include background-size(100% auto);
+      @include border-radius(100px);
+      display: block;
+      height: 0; // Responsive box
+      @include opacity(.2);
+      padding-bottom: 100%;
+      position: relative;
+      text-indent: -9999px;
+      width: 100%;
+      &:hover { @include opacity(.9); }
+      &.email { @include sprite-position(1); }
+      &.twitter { @include sprite-position(2); }
+      &.blog { @include sprite-position(3); }
+      &.dribbble { @include sprite-position(4); }
+      &.github { @include sprite-position(5); }
+      &.rdio { @include sprite-position(6); }
+      &.gimmebar { @include sprite-position(7); }
+      &.foursquare { @include sprite-position(8); }
+    }
+  }
+  .copyright {
     @include adjust-font-size-to(13px);
+    @include adjust-leading-to(2);
     color: $light-grey;
+    padding-left: $grid-padding;
   }
 }
 
@@ -158,14 +149,6 @@ footer {
   &:active {
     border-color: rgba(0, 0, 0, .2);
     @include box-shadow(inset 0 1px 2px rgba(0, 0, 0, .2));
-  }
-}
-
-@include at-breakpoint($mobile-break 8) {
-  .elsewhere li {
-    @include span-columns(1);
-    @include remove-nth-omega(4n);
-    &:last-child { @include omega; }
   }
 }
 
@@ -194,6 +177,23 @@ footer {
     h1 {
       @include adjust-leading-to(2);
       color: $dark-grey;
+    }
+  }
+  footer {
+    .elsewhere {
+      ul {
+        // background: none;
+        // @include box-sizing(border-box);
+        @include span-columns(5);
+        padding: 0;
+        // @include suffix(3);
+
+        // position: absolute;
+        // top: 30px;
+        // right: $grid-padding;
+        // width: 50%;
+
+      }
     }
   }
 }
@@ -267,5 +267,9 @@ footer {
   footer {
     @include push(2);
     @include span-columns(11);
+    .elsewhere {
+      // float: right;
+      width: 40%;
+    }
   }
 }
