@@ -1,9 +1,3 @@
-//= require "jquery-1.7.2"
-//= require "jquery.easing-1.3"
-//= require "jquery.scrollTo"
-//= require "jquery.flexslider"
-//= require "respond.min"
-
 $(document).ready(function() {
   $('.monogram, #back-to-top').click(function(event) {
     event.preventDefault();
