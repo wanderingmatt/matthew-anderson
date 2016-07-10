@@ -3,17 +3,11 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'susyone';
+@import 'modular-scale';
 @import 'framework/defaults';
+@import 'framework/custom-fonts';
 @import 'framework/typography';
-@import 'plugins/flexslider';
-
-@include establish-baseline;
-
-body {
-  font-family: $default-font;
-  color: $default-grey;
-  text-rendering: optimizeSpeed;
-}
+@import 'vendor/flexslider';
 
 a {
   color: $default-grey;
