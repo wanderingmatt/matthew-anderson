@@ -1,0 +1,10 @@
+aside {
+  padding: $grid-padding 0 $grid-padding * 2 0;
+  h1 {
+    @include adjust-font-size-to(ms(2));
+    color: $dark-grey;
+    font-family: $custom-font-regular, $default-font;
+  }
+  p { @include adjust-font-size-to(ms(0)); }
+  .button { display: none; }
+}

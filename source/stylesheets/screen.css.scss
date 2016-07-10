@@ -64,19 +64,7 @@ article {
 
 .flexslider { margin: 0 0 - $grid-padding 0 0 - $grid-padding; }
 
-aside {
-  padding: $grid-padding 0 $grid-padding * 2 0;
-  h1 {
-    @include adjust-font-size-to(20px);
-    color: $dark-grey;
-    font-family: $custom-font-regular, $default-font;
-  }
-  p {
-    @include adjust-font-size-to(13px);
-    span { white-space: nowrap; }
-  }
-  .button { display: none; }
-}
+@import 'regions/asides';
 
 @function calculate-position($spot) {
   $number-of-services: 8;
