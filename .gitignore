@@ -1,7 +1,2 @@
 node_modules/
 .publish
-
-/.bundle
-/build
-/.sass-cache
-Gemfile.lock
