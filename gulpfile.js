@@ -55,7 +55,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src('./src/javascripts/*.js')
+  gulp.src(['./node_modules/jquery/dist/jquery.js', './src/javascripts/slick.js', './src/javascripts/scripts.js'])
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/javascripts'))

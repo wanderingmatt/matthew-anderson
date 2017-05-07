@@ -9,8 +9,7 @@
 @import 'framework/typography';
 // @import 'vendor/flexslider';
 @import 'vendor/slick';
-@import 'vendor/slick-theme';
-
+// @import 'vendor/slick-theme';
 
 body {
   color: $default-grey;
@@ -68,14 +67,21 @@ article {
   }
 }
 
-.loading {
-  // @include background(url('../images/monogram.png') no-repeat 50%, linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%));
-  // @include background-size(auto 50px, $grid-padding $grid-padding);
-  min-height: 238px;
-}
+// .loading {
+//   // @include background(url('../images/monogram.png') no-repeat 50%, linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%));
+//   // @include background-size(auto 50px, $grid-padding $grid-padding);
+//   min-height: 238px;
+// }
 
-section { margin: 0 0 - $grid-padding 0 0 - $grid-padding; }
-// .flexslider { margin: 0 0 - $grid-padding 0 0 - $grid-padding; }
+.slides {
+  background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
+  background-size: $grid-padding $grid-padding;
+
+  list-style-typ: none;
+  margin: 0 0 - $grid-padding 0 0 - $grid-padding;
+  padding: 0;
+  img { width: 100%; display: block; }
+}
 
 @import 'regions/asides';
 
