@@ -1,5 +1,7 @@
 $(document).ready(function(){
   $('.slides').slick({
-    dots: true
+    dots: true,
+    lazyLoad: 'progressive',
+    mobileFirst: true
   });
 });

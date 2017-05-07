@@ -15,3 +15,14 @@ $base-line-multi: 1.5;
 $base-line-unit: $base-font-size;
 $round-to-nearest-half-line: true;
 @include establish-baseline;
+
+//
+
+.nowrap { white-space: nowrap; }
+
+a {
+  color: $default-grey;
+  text-decoration: none;
+  // @include transition;
+  &:hover { color: $primary; }
+}

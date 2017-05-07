@@ -10,62 +10,12 @@
 // @import 'vendor/flexslider';
 @import 'vendor/slick';
 // @import 'vendor/slick-theme';
-
-body {
-  color: $default-grey;
-  font-family: $default-font;
-  text-rendering: optimizeSpeed;
-}
-
-.nowrap { white-space: nowrap; }
-
-a {
-  color: $default-grey;
-  text-decoration: none;
-  // @include transition;
-  &:hover { color: $primary; }
-}
-
-.wrapper { // Build containers for all of the breakpoints.
-  // @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
-  padding: 0 $grid-padding;
-}
-
-.monogram {
-  display: block;
-  @include leader(3);
-  @include trailer(3);
-  h1 {
-    background: url('../images/monogram.png') no-repeat;
-    background-size: auto 50px;
-    @include adjust-leading-to(2);
-    text-indent: -9999px;
-    height: 50px;
-  }
-}
-
-.work {
-  display: none;
-  a {
-    @include adjust-font-size-to(17px);
-    font-family: $custom-font-regular, $default-font;
-  }
-}
+@import 'regions/layout';
+@import 'regions/menu';
+@import 'regions/article';
+@import 'regions/aside';
 
 #back-to-top { display: none; }
-
-article {
-  clear: both;
-  @include trailer(3);
-  p, strong {
-    color: $medium-grey;
-    font-weight: 300;
-  }
-  a {
-    color: $dark-grey;
-    font-weight: 300;
-  }
-}
 
 // .loading {
 //   // @include background(url('../images/monogram.png') no-repeat 50%, linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%));
@@ -83,7 +33,6 @@ article {
   img { width: 100%; display: block; }
 }
 
-@import 'regions/asides';
 
 @function calculate-position($spot) {
   $number-of-services: 8;

@@ -1,0 +1,12 @@
+article {
+  clear: both;
+  @include trailer(3);
+  p, strong {
+    color: $medium-grey;
+    font-weight: 300;
+  }
+  a {
+    color: $dark-grey;
+    font-weight: 300;
+  }
+}
