@@ -1,6 +1,7 @@
 var gulp         = require('gulp');
 
 var autoprefixer = require('gulp-autoprefixer');
+var cssfont64    = require('gulp-cssfont64');
 var cssmin       = require('gulp-clean-css');
 var concat       = require('gulp-concat');
 var connect      = require('gulp-connect');
@@ -50,8 +51,8 @@ gulp.task('css', function () {
 
 gulp.task('fonts', function () {
   gulp.src('./src/fonts/**/*')
-    .pipe(gulp.dest('./dist/fonts'))
-    .pipe(connect.reload())
+    .pipe(cssfont64())
+    .pipe(gulp.dest('./src/scss/framework'))
 });
 
 gulp.task('js', function () {
