@@ -1,12 +1,24 @@
-@import 'normalize';
-// @import 'compass';
-// @import 'compass/reset';
+@import 'node_modules/normalize.css/normalize.css';
+@import 'node_modules/modularscale-sass/stylesheets/modularscale';
+@import 'node_modules/ritmo/_ritmo';
+@import 'node_modules/ritmo/compass-aliases';
+
 // @import 'susyone';
-// @import 'modular-scale';
 @import 'framework/defaults';
 @import 'framework/custom-fonts';
 @import 'framework/typography';
-@import 'vendor/flexslider';
+// @import 'vendor/flexslider';
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+
+
+body {
+  color: $default-grey;
+  font-family: $default-font;
+  text-rendering: optimizeSpeed;
+}
+
+.nowrap { white-space: nowrap; }
 
 a {
   color: $default-grey;
@@ -17,16 +29,17 @@ a {
 
 .wrapper { // Build containers for all of the breakpoints.
   // @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
+  padding: 0 $grid-padding;
 }
 
 .monogram {
   display: block;
-  // @include leader(2);
-  // @include trailer(2);
+  @include leader(3);
+  @include trailer(3);
   h1 {
     background: url('../images/monogram.png') no-repeat;
     background-size: auto 50px;
-    // @include adjust-leading-to(2);
+    @include adjust-leading-to(2);
     text-indent: -9999px;
     height: 50px;
   }
@@ -35,7 +48,7 @@ a {
 .work {
   display: none;
   a {
-    // @include adjust-font-size-to(17px);
+    @include adjust-font-size-to(17px);
     font-family: $custom-font-regular, $default-font;
   }
 }
@@ -44,8 +57,8 @@ a {
 
 article {
   clear: both;
-  // @include trailer(2);
-  p {
+  @include trailer(3);
+  p, strong {
     color: $medium-grey;
     font-weight: 300;
   }
@@ -61,6 +74,7 @@ article {
   min-height: 238px;
 }
 
+section { margin: 0 0 - $grid-padding 0 0 - $grid-padding; }
 // .flexslider { margin: 0 0 - $grid-padding 0 0 - $grid-padding; }
 
 @import 'regions/asides';
@@ -110,14 +124,14 @@ footer {
 }
 
 .copyright {
-  // @include adjust-font-size-to(13px);
-  // @include adjust-leading-to(2);
+  @include adjust-font-size-to(13px);
+  @include adjust-leading-to(2);
   color: $light-grey;
 }
 
 .button {
   background-color: rgba(0, 0, 0, .05);
-  // @include adjust-font-size-to(13px);
+  @include adjust-font-size-to(13px);
   border: 1px solid rgba(0, 0, 0, .1);
   border-radius: 4px;
   color: #aaa;
@@ -141,15 +155,15 @@ footer {
 @media (min-width: 767px) {
   article {
     margin: 0;
-    // @include trailer(2);
+    @include trailer(2);
     p {
-      // @include adjust-font-size-to($base-font-size * 2, 1.5);
+      @include adjust-font-size-to($base-font-size * 2, 1.5);
       font-family: $custom-font-light, $default-font;
     }
   }
   section {
     // @include span-columns(8 omega);
-    // @include trailer(2);
+    @include trailer(2);
   }
   .loading { min-height: 337px; }
   .flexslider {
@@ -160,7 +174,7 @@ footer {
     padding: 0;
     // @include span-columns(3 omega, 8);
     h1 {
-      // @include adjust-leading-to(2);
+      @include adjust-leading-to(2);
       color: $dark-grey;
     }
   }
@@ -196,14 +210,14 @@ footer {
   }
   article {
     background-color: $off-white;
-    // @include padding-leader(6);
+    @include padding-leader(6);
     // @include push(2);
     // @include span-columns(7);
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
-      // @include adjust-font-size-to($base-font-size * 1.35, 1.5);
-      // padding: 0 $grid-padding;
-      // @include trailer;
+      @include adjust-font-size-to($base-font-size * 1.35, 1.5);
+      padding: 0 $grid-padding;
+      @include trailer;
     }
   }
   // section { @include span-columns(10 omega); }
@@ -215,7 +229,7 @@ footer {
   }
   aside {
     // @include span-columns(3 omega, 10);
-    // p { @include trailer; }
+    p { @include trailer; }
     .button { display: inline-block; }
   }
   footer {
@@ -233,7 +247,7 @@ footer {
       // @include span-columns(2);
     }
   }
-  // article p { @include adjust-font-size-to($base-font-size * 1.7, 1.5); }
+  article p { @include adjust-font-size-to($base-font-size * 1.7, 1.5); }
   .loading { min-height: 519px; }
 }
 
@@ -243,7 +257,7 @@ footer {
   article {
     // @include push(2);
     // @include span-columns(11);
-    // p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
+    p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
   }
   // section { @include span-columns(14 omega); }
   .loading { min-height: 700px; }
