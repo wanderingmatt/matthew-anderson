@@ -11,7 +11,7 @@ var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
 var uglify       = require('gulp-uglify');
 
-gulp.task('build', ['html', 'css', 'js', 'images']);
+gulp.task('build', ['html', 'css', 'fonts', 'js', 'images']);
 
 gulp.task('connect', function() {
   connect.server({
@@ -23,6 +23,7 @@ gulp.task('connect', function() {
 gulp.task('watch', function () {
   gulp.watch('./src/*.html', ['html']);
   gulp.watch('./src/scss/*.scss', ['css']);
+  gulp.watch('./src/fonts/*', ['fonts']);
   gulp.watch('./src/javascripts/*.js', ['js']);
   gulp.watch('./src/images/*', ['images']);
 });
@@ -44,6 +45,12 @@ gulp.task('css', function () {
     .pipe(cssmin())
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('./dist/stylesheets'))
+    .pipe(connect.reload())
+});
+
+gulp.task('fonts', function () {
+  gulp.src('./src/fonts/**/*')
+    .pipe(gulp.dest('./dist/fonts'))
     .pipe(connect.reload())
 });
 
