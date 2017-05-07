@@ -13,6 +13,7 @@
 @import 'regions/layout';
 @import 'regions/menu';
 @import 'regions/article';
+@import 'regions/slider';
 @import 'regions/aside';
 
 #back-to-top { display: none; }
@@ -27,7 +28,6 @@
   background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
   background-size: $grid-padding $grid-padding;
 
-  list-style-typ: none;
   margin: 0 0 - $grid-padding 0 0 - $grid-padding;
   padding: 0;
   img { width: 100%; display: block; }

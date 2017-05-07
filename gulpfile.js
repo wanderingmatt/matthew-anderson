@@ -22,10 +22,10 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function () {
   gulp.watch('./src/*.html', ['html']);
-  gulp.watch('./src/scss/*.scss', ['css']);
-  gulp.watch('./src/fonts/*', ['fonts']);
-  gulp.watch('./src/javascripts/*.js', ['js']);
-  gulp.watch('./src/images/*', ['images']);
+  gulp.watch('./src/scss/**/*', ['css']);
+  gulp.watch('./src/fonts/**/*', ['fonts']);
+  gulp.watch('./src/javascripts/**/*', ['js']);
+  gulp.watch('./src/images/**/*', ['images']);
 });
 
 gulp.task('html', function() {
