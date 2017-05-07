@@ -1,13 +1,15 @@
 @import 'node_modules/normalize.css/normalize.css';
 @import 'node_modules/modularscale-sass/stylesheets/modularscale';
-@import 'node_modules/ritmo/_ritmo';
+@import 'node_modules/ritmo/ritmo';
 @import 'node_modules/ritmo/compass-aliases';
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 // @import 'susyone';
 @import 'framework/defaults';
 // @import 'framework/fonts';
 @import 'framework/brandon-grotesque-light';
 @import 'framework/brandon-grotesque-regular';
+@import 'framework/convert-to-rem';
 @import 'framework/typography';
 // @import 'vendor/flexslider';
 @import 'vendor/slick';
@@ -15,7 +17,7 @@
 @import 'regions/layout';
 @import 'regions/menu';
 @import 'regions/article';
-@import 'regions/slider';
+@import 'regions/slides';
 @import 'regions/aside';
 
 #back-to-top { display: none; }
@@ -28,9 +30,8 @@
 
 .slides {
   background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
-  background-size: $grid-padding $grid-padding;
-
-  margin: 0 0 - $grid-padding 0 0 - $grid-padding;
+  background-size: rhythm(2) rhythm(2);
+  margin: 0 0 - rhythm(2) 0 0 - rhythm(2);
   padding: 0;
   img { width: 100%; display: block; }
 }
@@ -173,7 +174,7 @@ footer {
     text-shadow: 0 1px rgba(255, 255, 255, .6);
     p {
       @include adjust-font-size-to($base-font-size * 1.35, 1.5);
-      padding: 0 $grid-padding;
+      padding: 0 rhythm(2);
       @include trailer;
     }
   }

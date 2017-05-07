@@ -20,11 +20,35 @@ $round-to-nearest-half-line: true;
 
 //
 
-.nowrap { white-space: nowrap; }
+body {
+  color: $medium-grey;
+  font-family: $default-font;
+  text-rendering: optimizeSpeed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  @include trailer;
+}
 
 a {
-  color: $default-grey;
   text-decoration: none;
   // @include transition;
   &:hover { color: $primary; }
+}
+
+.nowrap { white-space: nowrap; }
+
+// MOBILE ONLY
+
+@include breakpoint($mobile-only) {
+  body {
+    font-size: ms(0);
+    line-height: ms(0) * 1.5;
+  }
 }

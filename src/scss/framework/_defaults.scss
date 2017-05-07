@@ -4,27 +4,32 @@
 
 // COLORS
 
-$dark-grey: #444;
-$medium-grey: #777;
-$default-grey: #999;
-$light-grey: #bbb;
-$off-white: #f6f6f6;
+$dark-grey: #393637;
+$medium-grey: #868485;
+$light-grey: #D3D2D2;
+$off-white: #E9E9E9;
 $primary: #096;
 
 // GRID
 
-$container-style: fluid;
-$total-columns: 4;
-$column-width: 4em;
-$gutter-width: 2em;
-$grid-padding: $gutter-width;
+// $container-style: fluid;
+// $total-columns: 4;
+// $column-width: 4em;
+// $gutter-width: 2em;
+// $grid-padding: $gutter-width;
 
 // BREAKPOINTS
 
-$mobile-break: 480px;
-$tablet-columns: 8;
-$tablet-break: 768px;
-$desktop-columns: 12;
-$desktop-break: 1025px;
-$widescreen-columns: 16;
-$widescreen-break: 1440px;
+$retina: min-resolution 2dppx;
+$mobile-only: max-width 767px;
+$tablet: 768px;
+$desktop: 1200px;
+$widescreen: 1601px;
+
+// $mobile-break: 480px;
+// $tablet-columns: 8;
+// $tablet-break: 768px;
+// $desktop-columns: 12;
+// $desktop-break: 1025px;
+// $widescreen-columns: 16;
+// $widescreen-break: 1440px;

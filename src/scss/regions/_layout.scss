@@ -1,10 +1,4 @@
-body {
-  color: $default-grey;
-  font-family: $default-font;
-  text-rendering: optimizeSpeed;
-}
-
 .wrapper { // Build containers for all of the breakpoints.
   // @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
-  padding: 0 $grid-padding;
+  padding: 0 rhythm(2);
 }
