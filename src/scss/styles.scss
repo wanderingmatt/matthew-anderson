@@ -9,7 +9,6 @@
 // @import 'framework/fonts';
 @import 'framework/brandon-grotesque-light';
 @import 'framework/brandon-grotesque-regular';
-@import 'framework/convert-to-rem';
 @import 'framework/typography';
 // @import 'vendor/flexslider';
 @import 'vendor/slick';
@@ -31,11 +30,11 @@
 .slides {
   background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
   background-size: rhythm(2) rhythm(2);
-  margin: 0 0 - rhythm(2) 0 0 - rhythm(2);
+  // margin: 0 0 - rhythm(2) 0 0 - rhythm(2);
+  margin: 0;
   padding: 0;
   img { width: 100%; display: block; }
 }
-
 
 @function calculate-position($spot) {
   $number-of-services: 8;

@@ -1,4 +1,6 @@
 .wrapper { // Build containers for all of the breakpoints.
   // @include container($total-columns, $tablet-break $tablet-columns, $desktop-break $desktop-columns, $widescreen-break $widescreen-columns);
-  padding: 0 rhythm(2);
+  // padding: 0 rhythm(2);
 }
+
+// section { border-top: 1px solid rgba(0, 0, 0, .05); }

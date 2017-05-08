@@ -1,5 +1,6 @@
 article {
   clear: both;
+  padding: 0 rhythm(2);
   @include trailer(3);
   p { @include adjust-font-size-to(ms(1)); }
   strong { font-weight: normal; }
