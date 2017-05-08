@@ -40,7 +40,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('css', function () {
-  gulp.src('./src/scss/*.scss')
+  gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cssmin())

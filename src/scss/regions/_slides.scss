@@ -1,5 +1,11 @@
 .slides {
+  background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
+  background-size: rhythm(2) rhythm(2);
+  // margin: 0 0 - rhythm(2) 0 0 - rhythm(2);
+  margin: 0;
+  padding: 0;
   > li { display: inline-block; }
+  img { width: 100%; display: block; }
 }
 
 // $slick-font-path: "./fonts/" !default;
@@ -39,7 +45,7 @@ $slick-opacity-not-active: 0.25 !default;
     margin: rhythm(.25);
     position: relative;
     button {
-      background: rgba(0, 0, 0, .1);
+      background: $light-grey;
       border: 0;
       border-radius: 50%;
       color: transparent;
