@@ -21,7 +21,7 @@ $round-to-nearest-half-line: true;
 //
 
 body {
-  color: $medium-grey;
+  color: $light-grey;
   font-family: $default-font;
   text-rendering: optimizeSpeed;
 }
@@ -37,9 +37,14 @@ p {
 }
 
 a {
+  color: $darkest-grey;
   text-decoration: none;
-  // @include transition;
+  transition: color .2s ease;
   &:hover { color: $primary; }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 .nowrap { white-space: nowrap; }
@@ -51,4 +56,10 @@ a {
     font-size: ms(0);
     line-height: ms(0) * 1.5;
   }
+}
+
+// DESKTOP
+
+@include breakpoint($desktop) {
+  body { text-rendering: optimizeLegibility; }
 }

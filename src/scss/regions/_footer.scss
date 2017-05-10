@@ -2,42 +2,50 @@ footer {
   // @include bleed;
   // clear: both;
   // text-align: center;
-}
-
-.elsewhere {
-  background-color: $off-white;
-  margin: 0;
-  padding: rhythm(2);
-  // @include bleed;
-  // padding: $grid-padding * 2 $grid-padding;
-  // ul { @include clearfix; }
-  // li { @include isolate-grid(1, 8); }
-  a {
-    // background-image: url('../images/icons.png');
-    background-size: 100% auto;
-    // border-radius: 100px;
-    display: block;
-    // height: 0; // Responsive box
-    // opacity: .2;
-    // padding-bottom: 100%;
-    position: relative;
-    // text-indent: -9999px;
-    width: 100%;
-    &:hover { opacity: .9; }
-    // &.email { @include sprite-position(1); }
-    // &.twitter { @include sprite-position(2); }
-    // &.blog { @include sprite-position(3); }
-    // &.dribbble { @include sprite-position(4); }
-    // &.github { @include sprite-position(5); }
-    // &.rdio { @include sprite-position(6); }
-    // &.gimmebar { @include sprite-position(7); }
-    // &.foursquare { @include sprite-position(8); }
+  .elsewhere {
+    background-color: $off-white;
+    margin: 0;
+    padding: rhythm(2);
+    // @include bleed;
+    // padding: $grid-padding * 2 $grid-padding;
+    // ul { @include clearfix; }
+    // li { @include isolate-grid(1, 8); }
+    a {
+      // background-image: url('../images/icons.png');
+      background-size: 100% auto;
+      // border-radius: 100px;
+      display: block;
+      // height: 0; // Responsive box
+      // opacity: .2;
+      // padding-bottom: 100%;
+      position: relative;
+      // text-indent: -9999px;
+      width: 100%;
+      &:hover { opacity: .9; }
+      // &.email { @include sprite-position(1); }
+      // &.twitter { @include sprite-position(2); }
+      // &.blog { @include sprite-position(3); }
+      // &.dribbble { @include sprite-position(4); }
+      // &.github { @include sprite-position(5); }
+      // &.rdio { @include sprite-position(6); }
+      // &.gimmebar { @include sprite-position(7); }
+      // &.foursquare { @include sprite-position(8); }
+    }
   }
-}
 
-.copyright {
-  // @include adjust-leading-to(2);
-  color: $light-grey;
-  margin: 0;
-  padding: rhythm(1) rhythm(2);
+  .copyright {
+    // @include adjust-leading-to(2);
+    color: $light-grey;
+    margin: 0;
+    padding: rhythm(1) rhythm(2);
+  }
+
+  // TABLET
+
+  @include breakpoint($tablet) {
+    text-align: left;
+    .elsewhere {
+      ul { width: columns(5) - (columns(5) / 10); }
+    }
+  }
 }

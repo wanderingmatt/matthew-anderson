@@ -74,4 +74,4 @@ gulp.task('deploy', function () {
     .pipe(deploy())
 });
 
-gulp.task('default', ['build', 'connect', 'watch']);
+gulp.task('default', ['connect', 'watch']);

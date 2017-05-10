@@ -2,8 +2,25 @@ aside {
   padding: rhythm(3.5) rhythm(2) rhythm(1.5) rhythm(2);
   h1 {
     @include adjust-font-size-to(ms(2));
-    color: $dark-grey;
+    color: $darkest-grey;
     font-family: $custom-font-regular, $default-font;
   }
+  p { @include adjust-font-size-to(ms(0)); }
   .button { display: none; }
+
+  // TABLET
+
+  @include breakpoint($tablet) {
+    padding: rhythm(1) 0 0 rhythm(2);
+    width: 40%;
+    h1 {
+      @include adjust-leading-to(2);
+    }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($desktop) {
+    // width: 25vw;
+  }
 }

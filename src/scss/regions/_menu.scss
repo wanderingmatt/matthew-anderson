@@ -13,10 +13,28 @@
   }
 }
 
-.work {
+.projects {
   display: none;
+  list-style-type: none;
+  padding: 0;
   a {
     @include adjust-font-size-to(17px);
+    color: $light-grey;
     font-family: $custom-font-regular, $default-font;
+    &:hover { color: $primary; }
   }
+}
+
+// DESKTOP
+
+@include breakpoint($desktop) {
+  .menu {
+    box-sizing: border-box;
+    padding: 0 rhythm(2);
+    position: fixed;
+    top: 0;
+    width: 200px;
+  }
+
+  .projects { display: initial; }
 }

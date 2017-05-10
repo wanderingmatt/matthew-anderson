@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.slides').slick({
+  $('.slides-list').slick({
     arrows: false,
     dots: true,
     lazyLoad: 'progressive',

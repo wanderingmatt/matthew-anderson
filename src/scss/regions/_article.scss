@@ -1,8 +1,39 @@
 article {
   clear: both;
+  color: $medium-grey;
   padding: 0 rhythm(2);
   @include trailer(3);
   p { @include adjust-font-size-to(ms(1)); }
   strong { font-weight: normal; }
-  a { color: $dark-grey; }
+
+  // TABLET
+
+  @include breakpoint($tablet) {
+    margin: 0;
+    @include trailer(3);
+    p {
+      @include adjust-font-size-to(ms(5));
+      font-family: $custom-font-light, $default-font;
+    }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($desktop) {
+    // background-color: $off-white;
+    // border-bottom: 1px solid $off-white;
+    box-sizing: border-box;
+    margin: 0 auto rhythm(3) 200px;
+    @include padding-leader(9);
+    @include padding-trailer(3);
+    // text-shadow: 0 1px rgba(255, 255, 255, .6);
+    width: 65vw;
+    p {
+      // font-size: 100px;
+      @include adjust-font-size-to(ms(6));
+      // @include adjust-font-size-to($base-font-size * 1.35, 1.5);
+      padding: 0 rhythm(2);
+      // @include trailer;
+    }
+  }
 }
