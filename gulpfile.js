@@ -31,10 +31,10 @@ gulp.task('watch', function () {
 
 gulp.task('html', function() {
   gulp.src('./src/index.html')
-    .pipe(htmlmin({
-      collapseWhitespace: true,
-      removeAttributeQuotes: true
-    }))
+    // .pipe(htmlmin({
+    //   collapseWhitespace: true,
+    //   removeAttributeQuotes: true
+    // }))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload())
 });

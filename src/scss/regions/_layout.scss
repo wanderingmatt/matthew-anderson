@@ -8,8 +8,8 @@
 @include breakpoint($tablet) {
   section {
     display: flex;
-    @include trailer(4);
     padding: 0 rhythm(2);
+    @include trailer(4);
   }
 }
 
@@ -19,5 +19,7 @@
   section {
     margin-left: 200px;
     padding: 0;
+    @include padding-leader(3);
+    @include trailer(3);
   }
 }

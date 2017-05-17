@@ -23,7 +23,7 @@ article {
     // background-color: $off-white;
     // border-bottom: 1px solid $off-white;
     box-sizing: border-box;
-    margin: 0 auto rhythm(3) 200px;
+    margin: 0 auto 0 200px;
     @include padding-leader(9);
     @include padding-trailer(3);
     // text-shadow: 0 1px rgba(255, 255, 255, .6);
