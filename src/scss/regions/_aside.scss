@@ -7,7 +7,7 @@ aside {
     font-family: $custom-font-regular, $default-font;
   }
   p { @include adjust-font-size-to(ms(0)); }
-  .button { display: none; }
+  .button { @extend %hidden; }
 
   // TABLET
 
@@ -15,5 +15,11 @@ aside {
     padding: rhythm(1) rhythm(2) 0 rhythm(2);
     width: 30%;
     h1 { @include adjust-leading-to(2); }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($desktop) {
+    .button { display: inline-block; }
   }
 }

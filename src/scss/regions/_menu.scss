@@ -14,7 +14,7 @@
 }
 
 .projects {
-  display: none;
+  @extend %hidden;
   list-style-type: none;
   padding: 0;
   a {
