@@ -1,0 +1,136 @@
+.slides { box-sizing: border-box; }
+
+.slides-list {
+  background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
+  background-size: rhythm(2) rhythm(2);
+  margin: 0;
+  padding: 0;
+  > li { display: inline-block; }
+  img { width: 100%; display: block; }
+}
+
+.slick-list {
+  cursor: ew-resize; cursor: grab;
+  &:active { cursor: grabbing; }
+}
+
+.slick-dots {
+  bottom: 0 - rhythm(3.5);
+  display: block;
+  list-style: none;
+  line-height: rhythm(1);
+  margin: 0;
+  padding: rhythm(1) rhythm(1.75);
+  position: absolute;
+  li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    button {
+      background: $lightest-grey;
+      border: 0;
+      border-radius: 50%;
+      color: transparent;
+      cursor: pointer;
+      display: block;
+      height: 5px;
+      line-height: 0px;
+      outline: none;
+      padding: 0;
+      width: 5px;
+      &:hover {
+        background: $medium-grey;
+        outline: none;
+      }
+      &:active { background: $dark-grey; }
+    }
+    &.slick-active button {
+      background: $primary;
+      opacity: 1;
+    }
+  }
+}
+
+// TABLET
+
+@include breakpoint($tablet) {
+  .slides { width: 75%; }
+
+  .slides-list {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    display: block;
+  }
+
+  .slick-dots {
+    bottom: 0 - rhythm(1.5);
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+// DESKTOP
+
+@include breakpoint($desktop) {
+  .slides-list {
+    box-shadow: none;
+    transition: box-shadow .2s ease-in;
+    &:hover {
+      box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+      .slick-arrow { opacity: 1; }
+    }
+  }
+
+  .slick-arrow {
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 32px;
+    opacity: .5;
+    outline: none;
+    position: absolute;
+    text-indent: -9999px;
+    top: 50%;
+    transition: opacity .2s ease-in;
+    transform: translateY(-50%);
+    width: 32px;
+    z-index: 1;
+    &::after {
+      border: 2px solid $lightest-grey;
+      border-width: 0 0 2px 2px;
+      content: '';
+      display: block;
+      height: 16px;
+      position: absolute;
+      top: 7px;
+      width: 16px;
+    }
+    &:hover {
+      &::after {
+        border-color: $medium-grey;
+      }
+    }
+    &:active {
+      &::after {
+        border-color: $dark-grey;
+        top: 8px;
+      }
+    }
+  }
+  .slick-prev {
+    left: -32px;
+    &::after {
+      left: 8px;
+      transform: rotate(45deg);
+    }
+  }
+  .slick-next {
+    right: -32px;
+    &::after {
+      right: 8px;
+      transform: rotate(225deg);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+%hidden { display: none; }
+%visible { display: initial; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+section { @extend %clearfix; }
+
+// TABLET
+
+@include breakpoint($tablet) {
+  section {
+    display: flex;
+    padding: 0 rhythm(2);
+    @include trailer(4);
+  }
+}
+
+// DESKTOP
+
+@include breakpoint($desktop) {
+  section {
+    margin-left: 225px;
+    padding: 0;
+    @include padding-leader(3);
+    @include trailer(3);
+  }
+}

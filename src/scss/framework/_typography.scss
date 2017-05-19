@@ -1,0 +1,65 @@
+$default-font: 'Helvetica Neue', Arial, sans-serif;
+$custom-font-light: 'brandon-grotesque-light';
+$custom-font-regular: 'brandon-grotesque-regular';
+
+// MODULAR SCALE
+// 14px 16px 20px 23px 28px 32px 40px 45px 56px 64px 79px
+
+$ms-base: 14px 16px;
+$ms-ratio: $augmented-fourth;
+
+// @debug ms-list(0, 10, $ms-base, $ms-ratio);
+
+// VERTICAL RHYTHM
+
+$base-font-size: ms(1);
+$base-line-multi: 1.5;
+$base-line-unit: $base-font-size;
+$round-to-nearest-half-line: true;
+@include establish-baseline;
+
+//
+
+body {
+  color: $light-grey;
+  font-family: $default-font;
+  text-rendering: optimizeSpeed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  @include trailer;
+}
+
+a {
+  color: $darkest-grey;
+  text-decoration: none;
+  transition: color .2s ease;
+  &:hover { color: $primary; }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+.nowrap { white-space: nowrap; }
+
+// MOBILE ONLY
+
+@include breakpoint($mobile-only) {
+  body {
+    font-size: ms(0);
+    line-height: ms(0) * 1.5;
+  }
+}
+
+// DESKTOP
+
+@include breakpoint($desktop) {
+  body { text-rendering: optimizeLegibility; }
+}

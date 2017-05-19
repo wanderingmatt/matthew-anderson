@@ -1,0 +1,75 @@
+footer {
+  .elsewhere {
+    @extend %clearfix;
+    background: $off-white;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: rhythm(2);
+    li { width: 50%; }
+    a {
+      // background-image: url('../images/icons.png');
+      // background-size: 100% auto;
+      // border-radius: 100px;
+      // display: block;
+      // height: 0; // Responsive box
+      // opacity: .2;
+      // padding-bottom: 100%;
+      // position: relative;
+      // text-indent: -9999px;
+      // width: 100%;
+      // &:hover { opacity: .9; }
+      // &.email { @include sprite-position(1); }
+      // &.twitter { @include sprite-position(2); }
+      // &.blog { @include sprite-position(3); }
+      // &.dribbble { @include sprite-position(4); }
+      // &.github { @include sprite-position(5); }
+      // &.rdio { @include sprite-position(6); }
+      // &.gimmebar { @include sprite-position(7); }
+      // &.foursquare { @include sprite-position(8); }
+    }
+  }
+
+  .copyright {
+    color: $light-grey;
+    margin: 0;
+    padding: rhythm(1) rhythm(2);
+  }
+
+  // TABLET
+
+  @include breakpoint($tablet) {
+    .elsewhere {
+      li { width: 25%; }
+    }
+  }
+
+  // DESKTOP
+
+  @include breakpoint($desktop) {
+    background: $off-white;
+    display: flex;
+    @include leader(6);
+    .elsewhere {
+      background: none;
+      box-sizing: border-box;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      order: 2;
+      padding: rhythm(2) 0;
+      width: 60%;
+      li { width: auto; }
+    }
+    .copyright {
+      box-sizing: border-box;
+      order: 1;
+      padding: rhythm(2);
+      width: 225px;
+    }
+  }
+
+  // WIDESCREEN
+
+  @include breakpoint($widescreen) { background: none; }
+}
