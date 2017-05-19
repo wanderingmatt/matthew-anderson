@@ -13,7 +13,7 @@ var rename       = require('gulp-rename');
 var sass         = require('gulp-sass');
 var uglify       = require('gulp-uglify');
 
-gulp.task('build', ['html', 'css', 'fonts', 'js', 'images']);
+gulp.task('build', ['html', 'css', 'js']);
 
 gulp.task('connect', function() {
   connect.server({
