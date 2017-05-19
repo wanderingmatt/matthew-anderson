@@ -36,10 +36,9 @@
 }
 
 @include breakpoint($widescreen) {
-  .wrapper { max-width: 1600px; }
-  article {
-    p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
-  }
+  // article {
+  //   p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
+  // }
   footer {
     .elsewhere {
       // @include push(2);

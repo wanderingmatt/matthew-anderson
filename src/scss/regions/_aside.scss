@@ -1,4 +1,5 @@
 aside {
+  box-sizing: border-box;
   padding: rhythm(3.5) rhythm(2) rhythm(1) rhythm(2);
   h1 {
     @include adjust-font-size-to(ms(2));
@@ -11,16 +12,8 @@ aside {
   // TABLET
 
   @include breakpoint($tablet) {
-    padding: rhythm(1) 0 0 rhythm(2);
-    width: 40%;
-    h1 {
-      @include adjust-leading-to(2);
-    }
-  }
-
-  // DESKTOP
-
-  @include breakpoint($desktop) {
-    // width: 25vw;
+    padding: rhythm(1) rhythm(2) 0 rhythm(2);
+    width: 30%;
+    h1 { @include adjust-leading-to(2); }
   }
 }

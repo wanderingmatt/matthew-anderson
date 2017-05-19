@@ -1,3 +1,5 @@
+.slides { box-sizing: border-box; }
+
 .slides-list {
   background: linear-gradient(135deg, $off-white 25%, white 25%, white 50%, $off-white 50%, $off-white 75%, white 75%);
   background-size: rhythm(2) rhythm(2);
@@ -53,9 +55,11 @@
 // TABLET
 
 @include breakpoint($tablet) {
+  .slides { width: 70%; }
+
   .slides-list {
     box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-    width: 60vw;
+    display: block;
   }
 
   .slick-dots {
@@ -72,7 +76,6 @@
   .slides-list {
     box-shadow: none;
     transition: box-shadow .2s ease-in;
-    width: 65vw;
     &:hover {
       box-shadow: 0 0 4px rgba(0, 0, 0, .2);
       .slick-arrow { opacity: 1; }

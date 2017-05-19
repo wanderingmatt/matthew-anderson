@@ -17,7 +17,7 @@
 
 @include breakpoint($desktop) {
   section {
-    margin-left: 200px;
+    margin-left: 225px;
     padding: 0;
     @include padding-leader(3);
     @include trailer(3);

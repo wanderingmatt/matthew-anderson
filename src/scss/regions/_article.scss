@@ -20,20 +20,12 @@ article {
   // DESKTOP
 
   @include breakpoint($desktop) {
-    // background-color: $off-white;
-    // border-bottom: 1px solid $off-white;
     box-sizing: border-box;
-    margin: 0 auto 0 200px;
-    @include padding-leader(9);
-    @include padding-trailer(3);
-    // text-shadow: 0 1px rgba(255, 255, 255, .6);
-    width: 65vw;
+    margin: 0 auto 0 225px;
+    padding: rhythm(9) rhythm(4) rhythm(3);
     p {
-      // font-size: 100px;
       @include adjust-font-size-to(ms(6));
-      // @include adjust-font-size-to($base-font-size * 1.35, 1.5);
-      padding: 0 rhythm(2);
-      // @include trailer;
+      width: 70%;
     }
   }
 }
