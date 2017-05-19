@@ -28,4 +28,10 @@ article {
       width: 70%;
     }
   }
+
+  // WIDESCREEN
+
+  @include breakpoint($widescreen) {
+    p { @include adjust-font-size-to(ms(7)); }
+  }
 }

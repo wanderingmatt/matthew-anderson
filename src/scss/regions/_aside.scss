@@ -20,6 +20,8 @@ aside {
   // DESKTOP
 
   @include breakpoint($desktop) {
+    h1 { @include adjust-font-size-to(ms(3)); }
+    p { @include adjust-font-size-to(ms(1)); }
     .button { display: inline-block; }
   }
 }
