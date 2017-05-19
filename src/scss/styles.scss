@@ -4,45 +4,18 @@
 @import 'node_modules/ritmo/compass-aliases';
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-// @import 'susyone';
-@import 'framework/defaults';
-// @import 'framework/fonts';
-@import 'framework/brandon-grotesque-light';
-@import 'framework/brandon-grotesque-regular';
-@import 'framework/typography';
-// @import 'vendor/flexslider';
-@import 'vendor/slick';
-// @import 'vendor/slick-theme';
-@import 'regions/layout';
-@import 'regions/menu';
-@import 'regions/article';
-@import 'regions/slides';
-@import 'regions/aside';
-@import 'regions/footer';
-@import 'modules/buttons';
-
-#back-to-top { display: none; }
+@import 'defaults';
+@import 'fonts/brandon-grotesque-light';
+@import 'fonts/brandon-grotesque-regular';
+@import 'framework/*';
+@import 'vendor/*';
+@import 'regions/*';
+@import 'modules/*';
 
 // DESKTOP
 
 @include breakpoint($desktop) {
-
-  #back-to-top.available { display: inline-block; }
-  #back-to-top {
-    bottom: 0;
-    position: absolute;
-  }
-
-  // section { @include span-columns(10 omega); }
-  // .loading { min-height: 410px; }
-  // .flexslider {
-    // margin-left: auto;
-    // margin-bottom: $grid-padding;
-    // @include span-columns(7, 10);
-  // }
   aside {
-    // @include span-columns(3 omega, 10);
-    p { @include trailer; }
     .button { display: inline-block; }
   }
   footer {
@@ -60,22 +33,13 @@
       // @include span-columns(2);
     }
   }
-  // article p { @include adjust-font-size-to($base-font-size * 1.7, 1.5); }
-  .loading { min-height: 519px; }
 }
 
 @include breakpoint($widescreen) {
   .wrapper { max-width: 1600px; }
-  // .menu { @include span-columns(2); }
   article {
-    // @include push(2);
-    // @include span-columns(11);
     p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
   }
-  // section { @include span-columns(14 omega); }
-  .loading { min-height: 700px; }
-  // .flexslider { @include span-columns(11, 14); }
-  // aside { @include span-columns(3 omega, 14); }
   footer {
     .elsewhere {
       // @include push(2);

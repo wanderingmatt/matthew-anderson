@@ -6,6 +6,7 @@ var cssmin       = require('gulp-clean-css');
 var concat       = require('gulp-concat');
 var connect      = require('gulp-connect');
 var deploy       = require('gulp-gh-pages');
+var glob         = require('gulp-sass-glob');
 var htmlmin      = require('gulp-htmlmin');
 var imagemin     = require('gulp-imagemin');
 var rename       = require('gulp-rename');
@@ -31,16 +32,13 @@ gulp.task('watch', function () {
 
 gulp.task('html', function() {
   gulp.src('./src/index.html')
-    // .pipe(htmlmin({
-    //   collapseWhitespace: true,
-    //   removeAttributeQuotes: true
-    // }))
     .pipe(gulp.dest('./dist'))
     .pipe(connect.reload())
 });
 
 gulp.task('css', function () {
   gulp.src('./src/scss/**/*.scss')
+    .pipe(glob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cssmin())
@@ -52,7 +50,7 @@ gulp.task('css', function () {
 gulp.task('fonts', function () {
   gulp.src('./src/fonts/**/*')
     .pipe(cssfont64())
-    .pipe(gulp.dest('./src/scss/framework'))
+    .pipe(gulp.dest('./src/scss/fonts'))
 });
 
 gulp.task('js', function () {
