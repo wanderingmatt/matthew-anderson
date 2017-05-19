@@ -11,16 +11,3 @@
 @import 'vendor/*';
 @import 'regions/*';
 @import 'modules/*';
-
-@include breakpoint($widescreen) {
-  // article {
-  //   p { @include adjust-font-size-to($base-font-size * 2.25, 2); }
-  // }
-  footer {
-    .elsewhere {
-      // @include push(2);
-      // @include span-columns(11);
-    }
-    // .copyright { @include pull(13); }
-  }
-}

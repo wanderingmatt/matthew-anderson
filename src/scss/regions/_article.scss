@@ -32,6 +32,6 @@ article {
   // WIDESCREEN
 
   @include breakpoint($widescreen) {
-    p { @include adjust-font-size-to(ms(7)); }
+    p { @include adjust-font-size-to(ms(8)); }
   }
 }

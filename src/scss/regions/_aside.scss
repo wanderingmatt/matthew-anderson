@@ -7,13 +7,12 @@ aside {
     font-family: $custom-font-regular, $default-font;
   }
   p { @include adjust-font-size-to(ms(0)); }
-  .button { @extend %hidden; }
 
   // TABLET
 
   @include breakpoint($tablet) {
     padding: rhythm(1) rhythm(2) 0 rhythm(2);
-    width: 30%;
+    width: 25%;
     h1 { @include adjust-leading-to(2); }
   }
 
