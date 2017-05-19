@@ -75,53 +75,59 @@
     width: 65vw;
     &:hover {
       box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-      .slick-arrow {
-        opacity: 1;
-        visibility: visible;
-      }
+      .slick-arrow { opacity: 1; }
     }
   }
 
   .slick-arrow {
-    height: 48px;
-    opacity: 0;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 32px;
+    opacity: .5;
+    outline: none;
     position: absolute;
     text-indent: -9999px;
     top: 50%;
     transition: opacity .2s ease-in;
-    width: 48px;
-    visibility: hidden;
+    transform: translateY(-50%);
+    width: 32px;
     z-index: 1;
+    &::after {
+      border: 2px solid $lightest-grey;
+      border-width: 0 0 2px 2px;
+      content: '';
+      display: block;
+      height: 16px;
+      position: absolute;
+      top: 7px;
+      width: 16px;
+    }
+    &:hover {
+      &::after {
+        border-color: $medium-grey;
+      }
+    }
+    &:active {
+      &::after {
+        border-color: $dark-grey;
+        top: 8px;
+      }
+    }
   }
-
   .slick-prev {
-    left: -36px;
+    left: -32px;
+    &::after {
+      left: 8px;
+      transform: rotate(45deg);
+    }
   }
-
   .slick-next {
-    right: -36px;
+    right: -32px;
+    &::after {
+      right: 8px;
+      transform: rotate(225deg);
+    }
   }
 }
-
-// $slick-font-path: "./fonts/" !default;
-// $slick-font-family: "slick" !default;
-// $slick-loader-path: "./" !default;
-// $slick-arrow-color: white !default;
-$slick-dot-color: black !default;
-$slick-dot-color-active: $slick-dot-color !default;
-// $slick-prev-character: "\2190" !default;
-// $slick-next-character: "\2192" !default;
-$slick-dot-character: "\2022" !default;
-$slick-dot-size: 6px !default;
-$slick-opacity-default: 0.75 !default;
-$slick-opacity-on-hover: 1 !default;
-$slick-opacity-not-active: 0.25 !default;
-
-.slick-dotted.slick-slider {
-  // @include leader(2)
-  // @include trailer(2);
-}
-
-// .slick-arrow { display: none; }
-
-// .slic
