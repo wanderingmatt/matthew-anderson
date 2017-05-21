@@ -1,3 +1,5 @@
+@mixin sprite-position($position) { background-position: 0 (0 - (($position - 1) * 32px)); }
+
 footer {
   .elsewhere {
     @extend %clearfix;
@@ -9,25 +11,23 @@ footer {
     padding: rhythm(2);
     li { width: 50%; }
     a {
-      // background-image: url('../images/icons.png');
-      // background-size: 100% auto;
-      // border-radius: 100px;
-      // display: block;
-      // height: 0; // Responsive box
-      // opacity: .2;
-      // padding-bottom: 100%;
-      // position: relative;
-      // text-indent: -9999px;
-      // width: 100%;
-      // &:hover { opacity: .9; }
-      // &.email { @include sprite-position(1); }
-      // &.twitter { @include sprite-position(2); }
-      // &.blog { @include sprite-position(3); }
-      // &.dribbble { @include sprite-position(4); }
-      // &.github { @include sprite-position(5); }
-      // &.rdio { @include sprite-position(6); }
-      // &.gimmebar { @include sprite-position(7); }
-      // &.foursquare { @include sprite-position(8); }
+      background-image: url('../images/sprite.png');
+      @include breakpoint($retina) { background-image: url('../images/sprite@2x.png'); }
+      background-size: 100% auto;
+      display: block;
+      height: 32px;
+      opacity: .4;
+      text-indent: -9999px;
+      width: 32px;
+      &:hover { opacity: .8; }
+      &:active { opacity: 1; }
+      &.dribbble { @include sprite-position(1); }
+      &.email { @include sprite-position(2); }
+      &.github { @include sprite-position(3); }
+      &.instagram { @include sprite-position(4); }
+      &.linkedin { @include sprite-position(5); }
+      &.spotify { @include sprite-position(6); }
+      &.twitter { @include sprite-position(7); }
     }
   }
 
