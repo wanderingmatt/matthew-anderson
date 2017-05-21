@@ -2,14 +2,12 @@
 
 footer {
   .elsewhere {
-    @extend %clearfix;
     background: $off-white;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: rhythm(2);
-    li { width: 50%; }
     a {
       background-image: url('../images/sprite.png');
       @include breakpoint($retina) { background-image: url('../images/sprite@2x.png'); }
@@ -30,41 +28,52 @@ footer {
       &.twitter { @include sprite-position(7); }
     }
   }
-
   .copyright {
     color: $light-grey;
     margin: 0;
     padding: rhythm(1) rhythm(2);
   }
 
+  // MOBILE ONLY
+
+  @include breakpoint($mobile-only) {
+    .elsewhere {
+      a { transform: scale(.75); }
+    }
+  }
+
   // TABLET
 
   @include breakpoint($tablet) {
+    background: $off-white;
+    display: flex;
+    padding: rhythm(2);
     .elsewhere {
-      li { width: 25%; }
+      background: none;
+      box-sizing: border-box;
+      padding: 0;
+      width: 75%;
+    }
+    .copyright {
+      box-sizing: border-box;
+      line-height: 32px;
+      padding: 0 0 0 rhythm(4);
     }
   }
 
   // DESKTOP
 
   @include breakpoint($desktop) {
-    background: $off-white;
-    display: flex;
+    padding: rhythm(4) 0;
     @include leader(6);
     .elsewhere {
-      background: none;
-      box-sizing: border-box;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      justify-content: flex-start;
       order: 2;
-      padding: rhythm(2) 0;
-      width: 60%;
-      li { width: auto; }
+      li { margin-right: 3rem; }
     }
     .copyright {
-      box-sizing: border-box;
       order: 1;
-      padding: rhythm(2);
+      padding: 0 rhythm(2);
       width: 225px;
     }
   }
