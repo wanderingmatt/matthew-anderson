@@ -1,76 +1,99 @@
-var gulp         = require('gulp');
+const gulp         = require('gulp'),
 
-var autoprefixer = require('gulp-autoprefixer');
-var cssfont64    = require('gulp-cssfont64');
-var cssmin       = require('gulp-clean-css');
-var concat       = require('gulp-concat');
-var connect      = require('gulp-connect');
-var deploy       = require('gulp-gh-pages');
-var glob         = require('gulp-sass-glob');
-var htmlmin      = require('gulp-htmlmin');
-var imagemin     = require('gulp-imagemin');
-var rename       = require('gulp-rename');
-var sass         = require('gulp-sass');
-var uglify       = require('gulp-uglify');
+      autoprefixer = require('gulp-autoprefixer');
+      concat       = require('gulp-concat');
+      connect      = require('gulp-connect'),
+      del          = require('del'),
+      glob         = require('gulp-sass-glob'),
+      sass         = require('gulp-sass');
 
-gulp.task('build', ['html', 'stylesheets', 'js']);
+      // var cssfont64    = require('gulp-cssfont64');
+      // var cssmin       = require('gulp-clean-css');
+      // var deploy       = require('gulp-gh-pages');
+      // var htmlmin      = require('gulp-htmlmin');
+      // var imagemin     = require('gulp-imagemin');
+      // var rename       = require('gulp-rename');
+      // var uglify       = require('gulp-uglify');
 
-gulp.task('connect', function() {
+var paths = {
+  html: {
+    src: './src/**/*.html',
+    dest: './dist'
+  },
+  images: {
+    src: './src/images/**/*',
+    dest: './dist/images'
+  },
+  stylesheets: {
+    src: './src/stylesheets/**/*.scss',
+    dest: './dist/stylesheets'
+  }
+  // javascripts: {
+  //   src: './src/javascripts/scripts.js',
+  //   dest: './dist/javascripts'
+  // }
+};
+
+function serve(done) {
   connect.server({
     root: './dist',
     livereload: true
   });
-});
+  done();
+};
 
-gulp.task('watch', function () {
-  gulp.watch('./src/fonts/**/*', ['fonts']);
-  gulp.watch('./src/*.html', ['html']);
-  gulp.watch('./src/images/**/*', ['images']);
-  gulp.watch('./src/javascripts/**/*', ['js']);
-  gulp.watch('./src/stylesheets/**/*', ['stylesheets']);
-});
+function clean() {
+  return del(['./dist']);
+}
 
-gulp.task('html', function() {
-  gulp.src('./src/index.html')
-    .pipe(gulp.dest('./dist'))
+function watch(done) {
+  gulp.watch(paths.html.src, html);
+  gulp.watch(paths.images.src, images);
+  gulp.watch(paths.stylesheets.src, stylesheets);
+  // gulp.watch(paths.javascripts.src, javascripts);
+  done();
+};
+
+function html() {
+  return gulp
+    .src(paths.html.src)
+    .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
-});
+};
 
-
-gulp.task('fonts', function () {
-  gulp.src('./src/fonts/**/*')
-    .pipe(cssfont64())
-    .pipe(gulp.dest('./src/stylesheets/fonts'))
-});
-
-gulp.task('images', () =>
-  gulp.src('./src/images/**/*')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'))
-);
-
-gulp.task('js', function () {
-  gulp.src(['./node_modules/jquery/dist/jquery.js', './src/javascripts/slick.js', './src/javascripts/scripts.js'])
-    .pipe(concat('scripts.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/javascripts'))
+function images() {
+  return gulp
+    .src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
-});
+};
 
-gulp.task('stylesheets', function () {
-  gulp.src('./src/stylesheets/**/*.scss')
+function stylesheets() {
+  return gulp
+    .src(paths.stylesheets.src)
     .pipe(glob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(cssmin())
-    .pipe(rename('styles.css'))
-    .pipe(gulp.dest('./dist/stylesheets'))
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest(paths.stylesheets.dest))
     .pipe(connect.reload())
-});
+};
 
-gulp.task('deploy', function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-});
+// function javascripts() {
+//   return gulp
+//     .src(paths.javascripts.src)
+//     .pipe(concat('scripts.js'))
+//     .pipe(gulp.dest(paths.javascripts.dest))
+//     .pipe(connect.reload())
+// };
 
-gulp.task('default', ['build', 'connect', 'watch']);
+const build = gulp.series(clean, gulp.parallel(html, images, stylesheets));
+
+exports.build = build;
+exports.clean = clean;
+exports.serve = serve;
+exports.images = images;
+exports.stylesheets = stylesheets;
+exports.html = html;
+
+exports.default = gulp.series(build, serve, watch);
