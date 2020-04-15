@@ -7,14 +7,6 @@ const gulp         = require('gulp'),
       glob         = require('gulp-sass-glob'),
       sass         = require('gulp-sass');
 
-      // var cssfont64    = require('gulp-cssfont64');
-      // var cssmin       = require('gulp-clean-css');
-      // var deploy       = require('gulp-gh-pages');
-      // var htmlmin      = require('gulp-htmlmin');
-      // var imagemin     = require('gulp-imagemin');
-      // var rename       = require('gulp-rename');
-      // var uglify       = require('gulp-uglify');
-
 var paths = {
   html: {
     src: './src/**/*.html',
