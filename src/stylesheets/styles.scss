@@ -6,5 +6,8 @@
 @import 'fonts/brandon-grotesque-regular';
 @import 'framework/*';
 // @import 'vendor/*';
-// @import 'regions/*';
-// @import 'modules/*';
+@import 'regions/footer';
+@import 'regions/header';
+@import 'regions/layout';
+@import 'regions/nav';
+@import 'modules/*';

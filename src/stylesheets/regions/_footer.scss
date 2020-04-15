@@ -2,12 +2,14 @@
 
 footer {
   .elsewhere {
-    background: $off-white;
+    background: color('off-white');
+    box-sizing: border-box;
     display: flex;
+    // grid-template-columns: repeat(6, 1fr);
     justify-content: space-between;
     list-style-type: none;
-    margin: 0;
-    // padding: rhythm(2);
+    margin: 0 -1rem;
+    padding: 2rem 1rem;
     a {
       background-image: url('../images/sprite.png');
       @include breakpoint($retina) { background-image: url('../images/sprite@2x.png'); }
@@ -29,9 +31,10 @@ footer {
     }
   }
   .copyright {
-    color: $light-grey;
-    margin: 0;
-    // padding: rhythm(1) rhythm(2);
+    color: color('grey', 5);
+    // margin: 0;
+    padding: 1rem 0;
+    text-align: center;
   }
 
   // MOBILE ONLY
@@ -45,7 +48,7 @@ footer {
   // TABLET
 
   @include breakpoint($tablet) {
-    background: $off-white;
+    background: color('off-white');
     display: flex;
     // padding: rhythm(2);
     .elsewhere {
