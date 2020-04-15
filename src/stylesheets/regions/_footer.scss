@@ -7,7 +7,7 @@ footer {
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
-    padding: rhythm(2);
+    // padding: rhythm(2);
     a {
       background-image: url('../images/sprite.png');
       @include breakpoint($retina) { background-image: url('../images/sprite@2x.png'); }
@@ -31,7 +31,7 @@ footer {
   .copyright {
     color: $light-grey;
     margin: 0;
-    padding: rhythm(1) rhythm(2);
+    // padding: rhythm(1) rhythm(2);
   }
 
   // MOBILE ONLY
@@ -47,7 +47,7 @@ footer {
   @include breakpoint($tablet) {
     background: $off-white;
     display: flex;
-    padding: rhythm(2);
+    // padding: rhythm(2);
     .elsewhere {
       background: none;
       box-sizing: border-box;
@@ -57,15 +57,15 @@ footer {
     .copyright {
       box-sizing: border-box;
       line-height: 32px;
-      padding: 0 0 0 rhythm(4);
+      // padding: 0 0 0 rhythm(4);
     }
   }
 
   // DESKTOP
 
   @include breakpoint($desktop) {
-    padding: rhythm(4) 0;
-    @include leader(6);
+    // padding: rhythm(4) 0;
+    // @include leader(6);
     .elsewhere {
       justify-content: flex-start;
       order: 2;
@@ -73,7 +73,7 @@ footer {
     }
     .copyright {
       order: 1;
-      padding: 0 rhythm(2);
+      // padding: 0 rhythm(2);
       width: 225px;
     }
   }

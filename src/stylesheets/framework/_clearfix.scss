@@ -1,4 +1,4 @@
-// Mixin for clearing a floated element using a nested pseudo selector. Should be used by @extending %clearfix[-breakpoint] whenever possible.
+// Mixin for clearing a floated element using a nested pseudo selector. Should be used by @extending %clearfix[-breakpoint] placeholder whenever possible.
 
 @mixin clearfix {
   &::after {
@@ -7,5 +7,3 @@
     display: table;
   }
 }
-
-%clearfix { @include clearfix; }

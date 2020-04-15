@@ -1,0 +1,10 @@
+// Variables for media queries and breakpoints.
+//
+// No styleguide reference.
+
+$mobile-only: max-width 767px;
+$tablet: 768px;
+$desktop: 1200px;
+$widescreen: 1601px;
+
+$retina: min-resolution 2dppx;

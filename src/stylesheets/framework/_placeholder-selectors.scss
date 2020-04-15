@@ -1,0 +1,6 @@
+// Shared placeholder selectors used throughout the site and included at the top of the payload.
+//
+// No styleguide reference.
+
+%hidden { display: none; }
+%clearfix { @include clearfix; }

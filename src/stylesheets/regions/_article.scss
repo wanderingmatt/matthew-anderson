@@ -1,19 +1,19 @@
 article {
   clear: both;
   color: $medium-grey;
-  padding: 0 rhythm(2);
-  @include trailer(3);
-  p { @include adjust-font-size-to(ms(1)); }
+  // padding: 0 rhythm(2);
+  // @include trailer(3);
+  p { font-size: ms(1); }
   strong { font-weight: normal; }
 
   // TABLET
 
   @include breakpoint($tablet) {
     margin: 0;
-    @include trailer(3);
+    // @include trailer(3);
     p {
-      @include adjust-font-size-to(ms(5));
-      font-family: $custom-font-light, $default-font;
+      font-family: $custom-font-light, $default-font-family;
+      font-size: ms(5);
     }
   }
 
@@ -22,9 +22,9 @@ article {
   @include breakpoint($desktop) {
     box-sizing: border-box;
     margin: 0 auto 0 225px;
-    padding: rhythm(9) rhythm(4) rhythm(3);
+    // padding: rhythm(9) rhythm(4) rhythm(3);
     p {
-      @include adjust-font-size-to(ms(6));
+      font-size: ms(6);
       width: 70%;
     }
   }
@@ -32,6 +32,6 @@ article {
   // WIDESCREEN
 
   @include breakpoint($widescreen) {
-    p { @include adjust-font-size-to(ms(8)); }
+    p { font-size: ms(8); }
   }
 }
