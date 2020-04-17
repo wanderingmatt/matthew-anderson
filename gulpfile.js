@@ -18,8 +18,7 @@ var paths = {
     dest: './dist/images'
   },
   stylesheets: {
-    // src: './src/stylesheets/**/*.scss',
-    src: './src/stylesheets/reboot.scss',
+    src: ['./src/stylesheets/**/*.scss', '!./src/stylesheets/styles.scss'],
     dest: './dist/stylesheets'
   },
   // javascripts: {
