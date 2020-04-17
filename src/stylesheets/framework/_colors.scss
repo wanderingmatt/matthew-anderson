@@ -1,53 +1,13 @@
-// All of the colors used throughout the site. Can easily be inserted via the `color` function. For example, the primary turquoise color can be retrieved using `color('turquoise')`.
+// All of the colors used throughout the site.
 //
 // No styleguide reference.
 
-// $primary: #096;
-// $darkest-grey: #393637;
-// $dark-grey: #605D5E;
-// $medium-grey: #868485;
-// $light-grey: #ADABAB;
-// $lightest-grey: #D3D2D2;
-// $off-white: #E9E9E9;
-
-$colors: (
-  'turquoise': #096,
-  'off-black': #0c0d0d,
-  'grey': (
-    1: #2B2E2D,
-    2: #4A4E4D,
-    3: #696F6D,
-    4: #89908E,
-    5: #A8B1AE,
-    6: #C7D1CE,
-  ),
-  'off-white': #E6F2EE,
-);
-
-// Returns a color from the `$colors` map.
-//
-// $collection - The group of colors that you want to select a variant from.
-// $variant    = null - The name/type of color that you're looking for.
-//
-// No styleguide reference.
-
-@function color($collection, $variant: null) {
-  @if ($variant != null) {
-    @if not map-has-key($colors, $collection) {
-      @error "No collection found for `#{$collection}` in `$colors` map.";
-    } @else {
-      $nested-map: map-get($colors, $collection);
-      @if not map-has-key($nested-map, $variant) {
-        @error "No variant found for `#{$variant}` within the `#{$collection}` collection in `$colors` map.";
-      }
-    }
-
-    @return map-get(map-get($colors, $collection), $variant);
-  } @else {
-    @if not map-has-key($colors, $collection) {
-      @error "No collection found for `#{$collection}` in `$colors` map.";
-    }
-
-    @return map-get($colors, $collection);
-  }
-}
+$brand: #096;
+$off-black: #0C0D0D;
+$grey-1: #2B2E2D;
+$grey-2: #4A4E4D;
+$grey-3: #696F6D;
+$grey-4: #89908E;
+$grey-5: #A8B1AE;
+$grey-6: #C7D1CE;
+$off-white: #E6F2EE;
