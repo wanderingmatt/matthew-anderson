@@ -1,0 +1,13 @@
+.banner {
+  backdrop-filter: blur(14px);
+  background-color: fade_out(#fada6f, .1);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, .8);
+  font-size: ms(0);
+  padding: 21px 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  p { margin: 0; }
+}

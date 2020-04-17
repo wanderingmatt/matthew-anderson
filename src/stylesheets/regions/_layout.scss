@@ -1,1 +1,8 @@
-.wrapper { padding: 0 1rem; }
+body { padding-top: 78px; }
+
+.wrapper {
+  max-width: 1024px;
+  padding: 0 1rem;
+}
+
+.slides { display: none; }

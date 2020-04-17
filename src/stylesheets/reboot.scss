@@ -1,35 +1,7 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'node_modules/modularscale-sass/stylesheets/modularscale';
+@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-body { padding-top: 60px; }
-h3 { margin-bottom: 0; }
-p { margin-top: 0; }
-
-.wrapper {
-  max-width: 1024px;
-  padding: 0 14px;
-}
-
-.banner {
-  backdrop-filter: blur(14px);
-  background-color: fade_out(#fada6f, .1);
-  border-bottom: 1px solid rgba(0, 0, 0, .1);
-  color: rgba(0, 0, 0, .8);
-  padding: 21px 14px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  p { margin: 0; }
-}
-
-.projects {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  > li {
-    margin-bottom: 28px;
-    img { max-width: 100%; }
-  }
-}
-
-.slides { display: none; }
+@import 'framework/*';
+@import 'regions/layout';
+@import 'modules/*';
