@@ -1,10 +1,11 @@
 const gulp         = require('gulp'),
 
-      autoprefixer = require('gulp-autoprefixer');
-      concat       = require('gulp-concat');
+      autoprefixer = require('gulp-autoprefixer'),
+      concat       = require('gulp-concat'),
       connect      = require('gulp-connect'),
       del          = require('del'),
-      glob         = require('gulp-sass-glob'),
+      ghPages      = require('gulp-gh-pages-with-updated-gift'),
+      sassGlob     = require('gulp-sass-glob'),
       sass         = require('gulp-sass');
 
 var paths = {
@@ -17,14 +18,19 @@ var paths = {
     dest: './dist/images'
   },
   stylesheets: {
-    src: './src/stylesheets/**/*.scss',
+    // src: './src/stylesheets/**/*.scss',
+    src: './src/stylesheets/reboot.scss',
     dest: './dist/stylesheets'
-  }
+  },
   // javascripts: {
   //   src: './src/javascripts/scripts.js',
   //   dest: './dist/javascripts'
-  // }
+  // },
 };
+
+function clean() {
+  return del(['./dist/**/*', '!./dist/CNAME']);
+}
 
 function serve(done) {
   connect.server({
@@ -33,10 +39,6 @@ function serve(done) {
   });
   done();
 };
-
-function clean() {
-  return del(['./dist']);
-}
 
 function watch(done) {
   gulp.watch(paths.html.src, html);
@@ -63,7 +65,7 @@ function images() {
 function stylesheets() {
   return gulp
     .src(paths.stylesheets.src)
-    .pipe(glob())
+    .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(concat('styles.css'))
@@ -79,13 +81,32 @@ function stylesheets() {
 //     .pipe(connect.reload())
 // };
 
-const build = gulp.series(clean, gulp.parallel(html, images, stylesheets));
+function deploy() {
+  return gulp
+    .src('./dist/**/*')
+    .pipe(ghPages())
+};
+
+exports.clean = clean;
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    html,
+    images,
+    stylesheets
+  )
+);
 
 exports.build = build;
-exports.clean = clean;
-exports.serve = serve;
-exports.images = images;
-exports.stylesheets = stylesheets;
-exports.html = html;
 
-exports.default = gulp.series(build, serve, watch);
+exports.deploy = gulp.series(
+  build,
+  deploy
+);
+
+exports.default = gulp.series(
+  build,
+  serve,
+  watch
+);
