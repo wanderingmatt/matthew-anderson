@@ -1,8 +1,7 @@
-body { padding-top: 78px; }
+body { padding-top: 64px; }
 
-.wrapper {
-  max-width: 1024px;
-  padding: 0 1rem;
+%layout {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 98rem;
 }
-
-.slides { display: none; }
