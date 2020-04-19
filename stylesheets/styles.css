@@ -352,6 +352,9 @@ h3 {
 p {
   margin-top: 0; }
 
+header {
+  padding: 1rem 0; }
+
 body {
   padding-top: 78px; }
 
@@ -361,6 +364,26 @@ body {
 
 .slides {
   display: none; }
+
+nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0; }
+  nav .monogram {
+    height: 42px;
+    width: auto; }
+    nav .monogram .monogram-m, nav .monogram .monogram-a {
+      fill: #2B2E2D; }
+  nav .menu {
+    list-style-type: none;
+    margin: 0;
+    text-transform: uppercase; }
+    nav .menu a {
+      font-weight: 600;
+      text-decoration: none; }
+      nav .menu a.selected {
+        opacity: .5; }
 
 .banner {
   -webkit-backdrop-filter: blur(14px);
