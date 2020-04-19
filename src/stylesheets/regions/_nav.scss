@@ -1,13 +1,21 @@
 nav {
-  margin: 2rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
   .monogram {
-    display: block;
-    h1 {
-      background: url('../images/monogram.png') no-repeat;
-      background-size: auto 50px;
-      text-indent: -9999px;
-      height: 50px;
+    height: 42px;
+    width: auto;
+    .monogram-m, .monogram-a { fill: $grey-1; }
+  }
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    text-transform: uppercase;
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      &.selected { opacity: .5; }
     }
   }
-  .menu { @extend %hidden; }
 }
