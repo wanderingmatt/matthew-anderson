@@ -19,7 +19,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   text-size-adjust: none;
-  @include breakpoint($desktop) { text-rendering: auto; }
+  @include breakpoint($breakpoint-desktop) { text-rendering: auto; }
 }
 
 .wrapper { // TODO: Remove this parent after killing banner.

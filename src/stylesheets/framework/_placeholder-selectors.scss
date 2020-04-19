@@ -4,3 +4,7 @@
 
 %hidden { display: none; }
 %clearfix { @include clearfix; }
+
+@include breakpoint($breakpoint-tablet) {
+  %shown-tablet { display: initial; }
+}

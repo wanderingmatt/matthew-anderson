@@ -8,11 +8,10 @@ nav {
   }
   .monogram {
     margin-left: -1rem;
-    svg {
+    img {
       display: block;
       height: 3rem;
       width: auto;
-      .monogram-m, .monogram-a { fill: $grey-1; }
     }
   }
   .menu {

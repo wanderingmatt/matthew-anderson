@@ -11,7 +11,7 @@
     }
   }
 
-  @include breakpoint($tablet) {
+  @include breakpoint($breakpoint-tablet) {
     .projects-list {
       display: grid;
       grid-gap: 2rem;

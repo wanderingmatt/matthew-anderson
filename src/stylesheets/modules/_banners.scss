@@ -15,7 +15,7 @@
   }
   p { margin: 0; }
 
-  @include breakpoint($tablet) {
+  @include breakpoint($breakpoint-tablet) {
     text-align: center;
   }
 }
