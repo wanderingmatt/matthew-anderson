@@ -1,11 +1,23 @@
 .icon {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: inline-block;
   text-indent: -9999px;
+  height: 28px;
+  width: 28px;
 }
 
-.icon-chevron-right {
-  background: url('../images/chevron-right-inverted.svg') no-repeat 50%;
-  background-size: contain;
+.icon-small {
   height: 16px;
   width: 16px;
 }
+
+.icon-chevron-right-inverted { background-image: url('../images/icons/chevron-right-inverted.svg'); }
+.icon-dribbble { background-image: url('../images/icons/dribbble.svg'); }
+.icon-email { background-image: url('../images/icons/email.svg'); }
+.icon-github { background-image: url('../images/icons/github.svg'); }
+.icon-instagram { background-image: url('../images/icons/instagram.svg'); }
+.icon-linkedin { background-image: url('../images/icons/linkedin.svg'); }
+.icon-spotify { background-image: url('../images/icons/spotify.svg'); }
+.icon-twitter { background-image: url('../images/icons/twitter.svg'); }

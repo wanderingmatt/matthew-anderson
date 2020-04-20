@@ -1,6 +1,6 @@
 nav {
-  .layout {
-    @extend %layout;
+  .wrapper {
+    @extend %constrain-layout;
     align-items: center;
     display: flex;
     justify-content: space-between;

@@ -7,8 +7,8 @@
   right: 0;
   top: 0;
   z-index: 1000;
-  .layout {
-    @extend %layout;
+  .wrapper {
+    @extend %constrain-layout;
     color: rgba(0, 0, 0, .8);
     font-size: ms(0);
     padding: 1.5rem 1rem;

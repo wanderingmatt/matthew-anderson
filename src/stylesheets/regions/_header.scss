@@ -1,6 +1,6 @@
 header {
-  .layout {
-    @extend %layout;
+  .wrapper {
+    @extend %constrain-layout;
     padding: 0 1rem 1rem 1rem;
   }
 }
