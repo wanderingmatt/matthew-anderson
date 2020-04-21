@@ -75,6 +75,7 @@ function fonts() {
   )
 
   return stream
+    // .pipe(concat('_fonts.scss'))
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(connect.reload())
 };

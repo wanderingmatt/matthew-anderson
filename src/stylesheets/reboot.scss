@@ -2,7 +2,9 @@
 @import 'node_modules/modularscale-sass/stylesheets/modularscale';
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-@import 'fonts/*';
+// @import 'fonts/*';
+@import 'fonts/brandon-grotesque-regular';
+@import 'fonts/brandon-grotesque-light';
 @import 'framework/*';
 @import 'regions/footer';
 @import 'regions/header';
