@@ -10,6 +10,11 @@
   font-size: ms(0);
   font-weight: 500;
   letter-spacing: .1rem;
-  padding: 0 1rem;
   text-transform: uppercase;
+  width: 3rem;
+
+  @include breakpoint($breakpoint-tablet) {
+    height: 4rem;
+    width: 4rem;
+  }
 }
