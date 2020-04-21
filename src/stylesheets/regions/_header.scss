@@ -3,4 +3,5 @@ header {
     @extend %constrain-layout;
     padding: 0 1rem 1rem 1rem;
   }
+  a { text-decoration: none; }
 }

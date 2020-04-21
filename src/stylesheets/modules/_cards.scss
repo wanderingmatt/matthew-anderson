@@ -28,10 +28,11 @@
   .card-content {
     padding: 1rem;
     position: relative;
-    h3 {
-      color: $grey-1;
+    h3 { color: $grey-1; }
+    p {
+      color: $grey-4;
+      font-weight: initial;
     }
-    p { color: $grey-4; }
     .fab {
       position: absolute;
       right: 1rem;

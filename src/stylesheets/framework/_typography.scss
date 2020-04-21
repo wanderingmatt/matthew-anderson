@@ -25,6 +25,7 @@ body {
 .wrapper { // TODO: Remove this parent after killing banner.
   a {
     color: $grey-1;
+    font-weight: 500;
     &:hover { color: $brand; }
     transition: color .2s;
     &:active {
