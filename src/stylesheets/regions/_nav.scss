@@ -8,10 +8,13 @@ nav {
   }
   .monogram {
     margin-left: -1rem;
-    img {
-      display: block;
+    h1 {
+      background-image: url('../images/monogram.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
       height: 3rem;
-      width: auto;
+      text-indent: -9999px;
+      width: 6rem;
     }
   }
   .menu {
