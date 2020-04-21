@@ -5,6 +5,8 @@ const gulp         = require('gulp'),
       connect      = require('gulp-connect'),
       del          = require('del'),
       ghPages      = require('gulp-gh-pages-with-updated-gift'),
+      inlineFonts  = require('gulp-inline-fonts'),
+      merge        = require('merge-stream'),
       sassGlob     = require('gulp-sass-glob'),
       sass         = require('gulp-sass');
 
@@ -12,6 +14,10 @@ var paths = {
   html: {
     src: './src/**/*.html',
     dest: './dist'
+  },
+  fonts: {
+    src: './src/fonts/*',
+    dest: './src/stylesheets/fonts/',
   },
   images: {
     src: './src/images/**/*',
@@ -41,6 +47,7 @@ function serve(done) {
 
 function watch(done) {
   gulp.watch(paths.html.src, html);
+  gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
   // gulp.watch(paths.javascripts.src, javascripts);
@@ -51,6 +58,24 @@ function html() {
   return gulp
     .src(paths.html.src)
     .pipe(gulp.dest(paths.html.dest))
+    .pipe(connect.reload())
+};
+
+function fonts() {
+  var stream = merge();
+
+  stream.add(
+    gulp.src('./src/fonts/brandon-grotesque-regular*')
+      .pipe(inlineFonts({ name: 'brandon-grotesque-regular' }))
+  )
+
+  stream.add(
+    gulp.src('./src/fonts/brandon-grotesque-light*')
+      .pipe(inlineFonts({ name: 'brandon-grotesque-light' }))
+  )
+
+  return stream
+    .pipe(gulp.dest(paths.fonts.dest))
     .pipe(connect.reload())
 };
 
@@ -92,6 +117,7 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     html,
+    fonts,
     images,
     stylesheets
   )

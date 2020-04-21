@@ -3,5 +3,10 @@ header {
     @extend %constrain-layout;
     padding: 0 1rem 1rem 1rem;
   }
-  a { text-decoration: none; }
+  h2 {
+    a { text-decoration: none; }
+    .tagline { display: table; }
+  }
+
+  @include breakpoint($breakpoint-desktop) { padding-bottom: 4rem; }
 }
