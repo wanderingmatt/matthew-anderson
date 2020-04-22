@@ -17,7 +17,7 @@ var paths = {
   },
   fonts: {
     src: './src/fonts/*',
-    dest: './src/stylesheets/fonts/',
+    dest: './src/stylesheets/framework/',
   },
   images: {
     src: './src/images/**/*',
@@ -75,7 +75,7 @@ function fonts() {
   )
 
   return stream
-    // .pipe(concat('_fonts.scss'))
+    .pipe(concat('_fonts.scss'))
     .pipe(gulp.dest(paths.fonts.dest))
     .pipe(connect.reload())
 };
