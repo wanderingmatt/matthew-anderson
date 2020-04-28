@@ -16,7 +16,7 @@ nav {
     h1 { @extend %hidden; }
   }
   .menu {
-    @extend %hidden;
+    // @extend %hidden;
     list-style-type: none;
     margin: 0 -1rem 0 0;
     padding: 0;

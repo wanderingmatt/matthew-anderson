@@ -118,7 +118,6 @@ const build = gulp.series(
   clean,
   gulp.parallel(
     html,
-    fonts,
     images,
     stylesheets
   )
