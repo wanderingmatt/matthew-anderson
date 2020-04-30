@@ -13,9 +13,9 @@
     padding-bottom: 2rem;
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(16.25rem, .625fr);
+      grid-auto-rows: minmax(7.5rem, .625fr);
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
       a {
         display: flex;
         height: 100%;
@@ -29,8 +29,10 @@
 
   @include breakpoint($breakpoint-desktop) {
     .projects-list {
+      grid-auto-rows: minmax(12.5rem, .625fr);
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       > li {
-        &.highlight { grid-area: 1 / 1 / span 2 / span 2; }
+        &.highlight { grid-area: 1 / 1 / span 2 / span 3; }
       }
     }
   }

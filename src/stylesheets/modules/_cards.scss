@@ -46,6 +46,12 @@
     }
   }
 
+  @include breakpoint($breakpoint-mobile-only) {
+    .card-image {
+      img { max-height: 100vmin; }
+    }
+  }
+
   @include breakpoint($breakpoint-tablet) {
     .card-image {
       img {
