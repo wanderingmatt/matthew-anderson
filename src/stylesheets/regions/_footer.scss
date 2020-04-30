@@ -1,12 +1,12 @@
 footer {
   .wrapper { background-color: $off-white; }
   .elsewhere-list {
-    @extend %constrain-layout;
+    @include layout-constraints;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem 1rem;
     a {
       display: block;
       opacity: .75;
@@ -25,11 +25,20 @@ footer {
 
   @include breakpoint($breakpoint-tablet) {
     .elsewhere-list {
-      justify-content: space-evenly;
-      padding: 2rem 0;
+      padding: 3rem 0;
     }
-    .copyright {
-      padding: 2rem;
+    .copyright { padding: 2rem; }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .elsewhere-list {
+      padding: 4rem 0;
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .elsewhere-list {
+      padding: 5rem 0;
     }
   }
 }

@@ -1,21 +1,37 @@
 .projects {
-  padding-bottom: 1rem;
-  .wrapper { @extend %constrain-layout; }
+  @include layout-constraints;
+  margin-bottom: 2rem;
   .projects-list {
+    display: grid;
+    grid-gap: 1rem;
     list-style-type: none;
     margin: 0;
-    padding: 0 1rem;
-    > li {
-      margin-bottom: 1rem;
-    }
+    padding: 0;
   }
 
   @include breakpoint($breakpoint-tablet) {
     padding-bottom: 2rem;
     .projects-list {
-      display: grid;
+      grid-auto-flow: dense;
+      grid-auto-rows: minmax(16.25rem, .625fr);
       grid-gap: 2rem;
-      grid-template-columns: repeat(3, 2fr);
+      grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+      a {
+        display: flex;
+        height: 100%;
+      }
+      > li {
+        &.highlight { grid-area: 1 / 1 / span 2 / -1; }
+        &.tall { grid-row-end: span 2; }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .projects-list {
+      > li {
+        &.highlight { grid-area: 1 / 1 / span 2 / span 2; }
+      }
     }
   }
 }

@@ -2,17 +2,14 @@
   backdrop-filter: blur(14px);
   background-color: fade_out(#fada6f, .1);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
+  color: rgba(0, 0, 0, .8);
+  font-size: ms(0);
   left: 0;
+  padding: 1.5rem 1rem;
   position: fixed;
   right: 0;
   top: 0;
   z-index: 1000;
-  .wrapper {
-    @extend %constrain-layout;
-    color: rgba(0, 0, 0, .8);
-    font-size: ms(0);
-    padding: 1.5rem 1rem;
-  }
   p { margin: 0; }
 
   @include breakpoint($breakpoint-tablet) {

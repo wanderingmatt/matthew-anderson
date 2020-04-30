@@ -22,16 +22,14 @@ body {
   @include breakpoint($breakpoint-desktop) { text-rendering: auto; }
 }
 
-.wrapper { // TODO: Remove this parent after killing banner.
-  a {
-    color: $grey-1;
-    font-weight: 500;
-    &:hover { color: $brand; }
-    transition: color .2s;
-    &:active {
-      position: relative;
-      top: 1px;
-    }
+a {
+  color: $grey-1;
+  font-weight: 500;
+  &:hover { color: $brand; }
+  transition: color .2s;
+  &:active {
+    position: relative;
+    top: 1px;
   }
 }
 
@@ -55,9 +53,21 @@ h3 {
 h3 { margin-bottom: 0; }
 p { margin-top: 0; }
 
-@include breakpoint($breakpoint-desktop) {
+@include breakpoint($breakpoint-tablet) {
   h2 {
     font-family: $custom-font-light;
+    font-size: ms(7);
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  h2 {
+    font-size: ms(10);
+  }
+}
+
+@include breakpoint($breakpoint-widescreen) {
+  h2 {
     font-size: ms(11);
   }
 }

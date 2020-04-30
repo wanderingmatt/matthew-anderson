@@ -1,6 +1,6 @@
 nav {
   .wrapper {
-    @extend %constrain-layout;
+    @include layout-constraints;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -61,13 +61,27 @@ nav {
     padding: 1rem;
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    .wrapper {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+    }
+    .monogram {
+      img { height: 4rem; }
+    }
+  }
+
   @include breakpoint($breakpoint-desktop) {
     .wrapper {
       padding-bottom: 4rem;
       padding-top: 4rem;
     }
-    .monogram {
-      img { height: 4rem; }
+  }
+
+  @include breakpoint($breakpoint-widescreen) {
+    .wrapper {
+      padding-bottom: 6rem;
+      padding-top: 6rem;
     }
   }
 }
