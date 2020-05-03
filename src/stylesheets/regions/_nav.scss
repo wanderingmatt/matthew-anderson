@@ -16,7 +16,6 @@ nav {
     h1 { @extend %hidden; }
   }
   .menu {
-    @extend %hidden;
     list-style-type: none;
     margin: 0 -1rem 0 0;
     padding: 0;
@@ -34,25 +33,23 @@ nav {
         position: absolute;
         left: 0;
         width: 100%;
-        height: .25rem;
-        background: $off-white;
+        height: 2px;
+        background: fade_out($brand, .8);
         content: '';
         opacity: 0;
-        transition: opacity .2s, transform .2s;
-        transform: translateY(.25rem);
+        transition-duration: .2s;
+        transition-property: opacity, transform;
       }
-      &:hover, &.selected {
+      &:hover:not(.selected) {
         color: $grey-2;
         &::after {
           opacity: 1;
-          transform: translateY(0);
+          transform: translateY(-6px);
         }
       }
       &.selected {
-        &::after {
-          background: $brand;
-          opacity: 1;
-        }
+        color: $brand;
+        pointer-events: none;
       }
     }
   }
@@ -69,12 +66,33 @@ nav {
     .monogram {
       img { height: 4rem; }
     }
+    .menu {
+      a {
+        &::after {
+          height: 4px;
+        }
+        &:hover:not(.selected) {
+          color: $grey-2;
+          &::after {
+            opacity: 1;
+            transform: translateY(2px);
+          }
+        }
+      }
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
     .wrapper {
       padding-bottom: 4rem;
       padding-top: 4rem;
+    }
+    .menu {
+      a {
+        &::after {
+          transform: translateY(6px);
+        }
+      }
     }
   }
 
