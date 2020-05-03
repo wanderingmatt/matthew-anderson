@@ -11,6 +11,7 @@ $modularscale: (
 );
 
 html { font-size: ms(0); }
+::selection { background: fade_out($brand, .8); }
 
 body {
   color: $grey-4;

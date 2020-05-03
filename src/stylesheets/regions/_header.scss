@@ -4,7 +4,22 @@ header {
     padding: 0 1rem 1rem 1rem;
   }
   h2 {
-    a { text-decoration: none; }
+    a {
+      background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
+      background-position: 100% 90%;
+      background-repeat: no-repeat;
+      background-size: 100% 2px;
+      text-decoration: none;
+      transition-duration: .2s;
+      transition-timing-function: ease-in-out;
+      transition-property: background-image, background-position, background-size;
+      &:hover {
+        background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
+        background-size: 100% 90%;
+        background-position: 100% 100%;
+        color: initial;
+      }
+    }
     span { display: table; }
   }
 
@@ -16,6 +31,9 @@ header {
 
   @include breakpoint($breakpoint-tablet) {
     padding-bottom: 2rem;
+    h2 {
+      a { background-size: 100% 4px; }
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
