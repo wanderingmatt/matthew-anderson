@@ -13,15 +13,16 @@
     padding-bottom: 2rem;
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(7.5rem, .625fr);
+      grid-auto-rows: minmax(20rem, .375fr);
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-rows: 1fr;
       a {
         display: flex;
         height: 100%;
       }
       > li {
-        &.highlight { grid-area: 1 / 1 / span 2 / -1; }
+        &.highlight { grid-area: 1 / 1 / 1 / -1; }
         &.tall { grid-row-end: span 2; }
       }
     }
@@ -29,10 +30,12 @@
 
   @include breakpoint($breakpoint-desktop) {
     .projects-list {
-      grid-auto-rows: minmax(12.5rem, .625fr);
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-rows: none;
       > li {
-        &.highlight { grid-area: 1 / 1 / span 2 / span 3; }
+        &.highlight {
+          grid-column: span 3;
+          grid-row: span 2;
+        }
       }
     }
   }

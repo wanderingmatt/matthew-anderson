@@ -8,6 +8,12 @@ header {
     span { display: table; }
   }
 
+  @include breakpoint($breakpoint-legacy) {
+    h2 {
+      span { display: initial; }
+    }
+  }
+
   @include breakpoint($breakpoint-tablet) {
     padding-bottom: 2rem;
   }

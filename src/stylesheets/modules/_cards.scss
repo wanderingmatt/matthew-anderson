@@ -4,10 +4,8 @@
                 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
                 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     display: block;
+    position: relative;
     text-decoration: none;
-    &:hover {
-      // background-color: $off-white;
-    }
   }
   .card-image {
     height: 100%;
@@ -16,6 +14,7 @@
     img {
       display: block;
       height: 100%;
+      max-height: 100vmin;
       object-fit: cover;
       object-position: 50% 0;
       width: 100%;
@@ -46,21 +45,68 @@
     }
   }
 
-  @include breakpoint($breakpoint-mobile-only) {
-    .card-image {
-      img { max-height: 100vmin; }
-    }
-  }
-
   @include breakpoint($breakpoint-tablet) {
+    .card-action-area {
+      transition: transform .25s ease-in-out;
+    }
     .card-image {
       img {
+        max-height: initial;
         object-fit: cover;
         object-position: 50% 0;
       }
     }
     .card-content {
-      @extend %hidden-tablet;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      opacity: 0;
+      position: absolute;
+      text-align: center;
+      transition: opacity .25s ease-in-out;
+      width: 100%;
+      h3 {
+        color: #fff;
+      }
+      .tags, .fab { @extend %hidden-tablet; }
     }
   }
+  &:hover {
+    .card-action-area {
+      transform: scale(1.01);
+    }
+    .card-content {
+      opacity: .975;
+    }
+  }
+}
+
+.carlos-lamas {
+  .card-content { background: #4C489E; }
+}
+.chips-and-bits {
+  .card-content { background: #096; }
+}
+.iowa-actors {
+  .card-content { background: #FAE443; }
+}
+.kenny-meyers {
+  .card-content { background: #981B1E; }
+}
+.marshal {
+  .card-content { background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
+}
+.onehub {
+  .card-content { background: linear-gradient(to bottom right, #58B28D, #79B743); }
+}
+.proof {
+  .card-content { background: #B9AF64; }
+}
+.r8r {
+  .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
+}
+.side-projects {
+  .card-content { background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
 }
