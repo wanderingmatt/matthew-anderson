@@ -57,35 +57,37 @@
   }
 }
 
-section {
-  @include layout-constraints($half);
-  margin-bottom: 2rem;
-  a {
-    color: $grey-1;
-    font-weight: 700;
-    position: relative;
-    text-decoration: none;
-    &::after {
-      background-color: $off-white;
-      bottom: -2px;
-      content: '';
-      height: 2px;
-      left: 0;
-      position: absolute;
-      transition: background-color .2s;
-      width: 100%;
-    }
-    &:hover {
-      &::after { background-color: $brand; }
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    margin-bottom: 4rem;
+.about {
+    section {
+    @include layout-constraints($half);
+    margin-bottom: 2rem;
     a {
+      color: $grey-1;
+      font-weight: 700;
+      position: relative;
+      text-decoration: none;
       &::after {
-        bottom: -3px;
-        height: 3px;
+        background-color: $off-white;
+        bottom: -2px;
+        content: '';
+        height: 2px;
+        left: 0;
+        position: absolute;
+        transition: background-color .2s;
+        width: 100%;
+      }
+      &:hover {
+        &::after { background-color: $brand; }
+      }
+    }
+
+    @include breakpoint($breakpoint-desktop) {
+      margin-bottom: 4rem;
+      a {
+        &::after {
+          bottom: -3px;
+          height: 3px;
+        }
       }
     }
   }
