@@ -1,6 +1,7 @@
 .projects {
   @include layout-constraints;
   margin-bottom: 2rem;
+  margin-top: 2rem;
   .projects-list {
     display: grid;
     grid-gap: 1rem;
@@ -10,7 +11,8 @@
   }
 
   @include breakpoint($breakpoint-tablet) {
-    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
     .projects-list {
       grid-auto-flow: dense;
       grid-auto-rows: minmax(20rem, .375fr);
@@ -29,6 +31,8 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
     .projects-list {
       grid-template-rows: none;
       > li {
