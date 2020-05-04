@@ -24,7 +24,7 @@ var paths = {
     dest: './dist/images'
   },
   stylesheets: {
-    src: ['./src/stylesheets/**/*.scss', '!./src/stylesheets/styles.scss'],
+    src: './src/stylesheets/**/*.scss',
     dest: './dist/stylesheets'
   },
   // javascripts: {
@@ -93,7 +93,6 @@ function stylesheets() {
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(concat('styles.css'))
     .pipe(gulp.dest(paths.stylesheets.dest))
     .pipe(connect.reload())
 };
