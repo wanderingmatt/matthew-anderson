@@ -30,10 +30,16 @@
       bottom: 0;
       display: block;
       height: 4rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
       width: auto;
     }
     .wave { @extend %hidden; }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .hello {
+      .avatar { margin-top: 2rem; }
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -53,5 +59,9 @@
 
 section {
   @include layout-constraints($half);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+
+  @include breakpoint($breakpoint-desktop) {
+    margin-bottom: 4rem;
+  }
 }

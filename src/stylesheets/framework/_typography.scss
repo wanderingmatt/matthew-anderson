@@ -25,7 +25,7 @@ body {
 
 a {
   color: $grey-1;
-  font-weight: 500;
+  // font-weight: 500;
   &:hover { color: $brand; }
   transition: color .2s;
   &:active {
@@ -64,18 +64,18 @@ p { margin-top: 0; }
     font-family: $custom-font-light;
     font-size: ms(7);
   }
+  h3 {
+    font-family: $custom-font-light;
+    font-size: ms(5);
+    font-weight: 400;
+  }
+  h4 { margin-bottom: 1rem; }
 }
 
 @include breakpoint($breakpoint-desktop) {
   body { font-size: ms(3); }
-  h2 {
-    font-size: ms(10);
-  }
-  h3 {
-    font-family: $custom-font-light;
-    font-size: ms(8);
-    font-weight: 400;
-  }
+  h2 { font-size: ms(10); }
+  h3 { font-size: ms(8); }
   h4 { margin-bottom: 2rem; }
 }
 

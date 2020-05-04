@@ -24,7 +24,8 @@ nav {
     }
     a {
       color: $grey-5;
-      font-weight: 600;
+      font-size: ms(1);
+      font-weight: 700;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
@@ -68,9 +69,7 @@ nav {
     }
     .menu {
       a {
-        &::after {
-          height: 4px;
-        }
+        &::after { height: 4px; }
         &:hover:not(.selected) {
           color: $grey-2;
           &::after {
