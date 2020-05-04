@@ -1,0 +1,57 @@
+.ribbon {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  position: relative;
+  &::before, &::after {
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &::before {
+    background-image: url('/images/contours-seattle.svg');
+    background-position: 50%;
+    background-size: cover;
+    opacity: .1;
+    z-index: -2;
+  }
+  &::after {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 35% 65%, rgba(255, 255, 255, 1));
+    z-index: -1;
+  }
+  .wrapper {
+    @include layout-constraints($quarter);
+  }
+  .hello {
+    .avatar {
+      border-radius: 50%;
+      bottom: 0;
+      display: block;
+      height: 4rem;
+      margin-top: 1rem;
+      width: auto;
+    }
+    .wave { @extend %hidden; }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+    &::before { opacity: .075; }
+    .hello {
+      .avatar {
+        bottom: 0;
+        height: 6rem;
+        position: absolute;
+        transform: translateX(-3rem) translateY(4rem);
+      }
+    }
+  }
+}
+
+section {
+  @include layout-constraints($half);
+  margin-bottom: 4rem;
+}

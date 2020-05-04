@@ -1,9 +1,14 @@
 header {
   .wrapper {
     @include layout-constraints;
-    padding: 0 1rem 1rem 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   h2 {
+    strong {
+      color: $off-black;
+      font-weight: 400;
+    }
     a {
       background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
       background-position: 100% 90%;
@@ -30,17 +35,17 @@ header {
   }
 
   @include breakpoint($breakpoint-tablet) {
-    padding-bottom: 2rem;
+    // padding-bottom: 2rem;
     h2 {
       a { background-size: 100% 4px; }
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
-    padding-bottom: 4rem;
+    // padding-bottom: 4rem;
   }
 
   @include breakpoint($breakpoint-desktop) {
-    padding-bottom: 6rem;
+    // padding-bottom: 6rem;
   }
 }

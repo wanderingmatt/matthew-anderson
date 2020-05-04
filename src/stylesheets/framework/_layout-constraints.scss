@@ -1,7 +1,11 @@
-@mixin layout-constraints {
+$full: 1600px;
+$quarter: 1200px;
+$half: 800px;
+
+@mixin layout-constraints($constraint: $full) {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: $constraint;
   padding-left: 1rem;
   padding-right: 1rem;
 
