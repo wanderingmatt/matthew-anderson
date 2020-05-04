@@ -31,8 +31,8 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
-    margin-bottom: 6rem;
-    margin-top: 6rem;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
     .projects-list {
       grid-template-rows: none;
       > li {
@@ -42,5 +42,10 @@
         }
       }
     }
+  }
+
+  @include breakpoint($breakpoint-widescreen) {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
   }
 }
