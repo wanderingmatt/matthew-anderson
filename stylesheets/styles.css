@@ -657,6 +657,14 @@ nav a {
     top: 0;
     transform: translateY(-50%); }
 
+.card.kenny-meyers .card-image img {
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%; }
+
+.card.r8r .card-image img {
+  -o-object-position: 100% 0%;
+     object-position: 100% 0%; }
+
 @media (min-width: 768px) {
   .card .card-action-area {
     transition: transform .2s ease-in-out; }
