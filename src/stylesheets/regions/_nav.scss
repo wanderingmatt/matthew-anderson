@@ -37,17 +37,9 @@ nav {
         left: 0;
         opacity: 0;
         position: absolute;
-        transition-duration: .2s;
-        transition-property: opacity, transform;
         width: 100%;
       }
-      &:hover:not(.selected) {
-        color: $grey-2;
-        &::after {
-          opacity: 1;
-          transform: translateY(-6px);
-        }
-      }
+      &:hover:not(.selected) { color: $grey-2; }
       &.selected {
         color: $brand;
         pointer-events: none;
@@ -70,13 +62,6 @@ nav {
     .menu {
       a {
         &::after { height: 4px; }
-        &:hover:not(.selected) {
-          color: $grey-2;
-          &::after {
-            opacity: 1;
-            transform: translateY(2px);
-          }
-        }
       }
     }
   }
@@ -89,7 +74,15 @@ nav {
     .menu {
       a {
         font-size: ms(1);
+        &:hover:not(.selected) {
+          &::after {
+            opacity: 1;
+            transform: translateY(2px);
+          }
+        }
         &::after {
+          transition-duration: .2s;
+          transition-property: opacity, transform;
           transform: translateY(6px);
         }
       }

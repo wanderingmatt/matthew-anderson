@@ -17,7 +17,6 @@ header {
       font-weight: 400;
       text-decoration: none;
       transition-duration: .2s;
-      transition-timing-function: ease-in-out;
       transition-property: background-image, background-position, background-size;
       &:hover {
         background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
