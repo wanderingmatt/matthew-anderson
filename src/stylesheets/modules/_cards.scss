@@ -58,6 +58,7 @@
         object-fit: cover;
         object-position: 50% 0;
       }
+      &::after { content: none; }
     }
     .card-content {
       box-sizing: border-box;
