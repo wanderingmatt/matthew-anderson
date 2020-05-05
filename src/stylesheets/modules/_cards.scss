@@ -101,6 +101,9 @@
     }
     &.r8r {
       .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
+      .card-image {
+        img { object-position: top right; }
+      }
     }
     &.side-projects {
       .card-content { background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
