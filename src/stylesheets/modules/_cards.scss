@@ -47,6 +47,16 @@
       transform: translateY(-50%);
     }
   }
+  &.kenny-meyers {
+    .card-image {
+      img { object-position: 50% 50%; }
+    }
+  }
+  &.r8r {
+    .card-image {
+      img { object-position: 100% 0%; }
+    }
+  }
 
   @include breakpoint($breakpoint-tablet) {
     .card-action-area {
