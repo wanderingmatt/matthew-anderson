@@ -47,6 +47,11 @@
       transform: translateY(-50%);
     }
   }
+  &.chips-and-bits {
+    .card-image {
+      img { object-position: 0 100%; }
+    }
+  }
   &.kenny-meyers {
     .card-image {
       img { object-position: 50% 50%; }
@@ -54,39 +59,39 @@
   }
   &.r8r {
     .card-image {
-      img { object-position: 100% 0%; }
+      img { object-position: 100% 0; }
     }
   }
 
   @include breakpoint($breakpoint-tablet) {
     .card-action-area {
       transition: transform .2s ease-in-out;
-    }
-    .card-image {
-      img {
-        max-height: initial;
-        object-fit: cover;
-        object-position: 50% 0;
+      .card-image {
+        img {
+          max-height: initial;
+          object-fit: cover;
+          object-position: 50% 0;
+        }
+        &::after { content: none; }
       }
-      &::after { content: none; }
-    }
-    .card-content {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      transition: opacity .2s ease-in-out;
-      width: 100%;
-      h3 { color: #fff; }
-      .tags, .fab { @extend %hidden-tablet; }
-    }
-    &:hover {
-      .card-action-area { transform: scale(1.01); }
-      .card-content { opacity: .975; }
+      .card-content {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        transition: opacity .2s ease-in-out;
+        width: 100%;
+        h3 { color: #fff; }
+        .tags, .fab { @extend %hidden-tablet; }
+      }
+      &:hover {
+        transform: scale(1.01);
+        .card-content { opacity: .975; }
+      }
     }
     &.carlos-lamas {
       .card-content { background: #4C489E; }
@@ -111,9 +116,6 @@
     }
     &.r8r {
       .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
-      .card-image {
-        img { object-position: top right; }
-      }
     }
     &.side-projects {
       .card-content { background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
