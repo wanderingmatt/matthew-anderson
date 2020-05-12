@@ -35,6 +35,8 @@
     h3 {
       color: $grey-1;
       margin-bottom: 1rem;
+      position: relative;
+      top: 7px;
     }
     p {
       color: $grey-4;
@@ -105,7 +107,12 @@
       text-align: center;
       transition: opacity .2s ease-in-out;
       width: 100%;
-      h3 { color: #fff; }
+      h3 {
+        color: #fff;
+        font-family: $custom-font-regular;
+        font-size: ms(3);
+        text-transform: uppercase;
+      }
       .tags, .fab { @extend %hidden-tablet; }
     }
     &.carlos-lamas {
@@ -115,7 +122,10 @@
       .card-content { background: #096; }
     }
     &.iowa-actors {
-      .card-content { background: #FAE443; }
+      .card-content {
+        background: #FAE443;
+        h3 { color: $grey-1; }
+      }
     }
     &.kenny-meyers {
       .card-content { background: #981B1E; }
@@ -133,13 +143,10 @@
       .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
     }
     &.side-projects {
-      .card-content { background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    .card-content {
-      h3 { font-size: ms(4); }
+      .card-content {
+        background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4);
+        h3 { color: $grey-1; }
+      }
     }
   }
 }
