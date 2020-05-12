@@ -324,7 +324,7 @@ nav .monogram h1, .ribbon .hello .wave {
   display: none; }
 
 @media (min-width: 768px) {
-  .card .card-action-area .card-content .tags, .card .card-action-area .card-content .fab {
+  .card .card-content .tags, .card .card-content .fab {
     display: none; } }
 
 html {
@@ -647,7 +647,9 @@ nav a {
   position: relative; }
   .card .card-content h3 {
     color: #373938;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    position: relative;
+    top: 7px; }
   .card .card-content p {
     color: #919594;
     font-weight: initial; }
@@ -657,13 +659,25 @@ nav a {
     top: 0;
     transform: translateY(-50%); }
 
+.card.carlos-lamas .card-image img {
+  -o-object-position: 0 100%;
+     object-position: 0 100%; }
+
 .card.chips-and-bits .card-image img {
+  -o-object-position: 0 100%;
+     object-position: 0 100%; }
+
+.card.iowa-actors .card-image img {
   -o-object-position: 0 100%;
      object-position: 0 100%; }
 
 .card.kenny-meyers .card-image img {
   -o-object-position: 50% 50%;
      object-position: 50% 50%; }
+
+.card.marshal .card-image img {
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%; }
 
 .card.r8r .card-image img {
   -o-object-position: 100% 0;
@@ -672,37 +686,42 @@ nav a {
 @media (min-width: 768px) {
   .card .card-action-area {
     transition: transform .2s ease-in-out; }
-    .card .card-action-area .card-image img {
-      max-height: initial;
-      -o-object-fit: cover;
-         object-fit: cover;
-      -o-object-position: 50% 0;
-         object-position: 50% 0; }
-    .card .card-action-area .card-image::after {
-      content: none; }
-    .card .card-action-area .card-content {
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      justify-content: center;
-      opacity: 0;
-      position: absolute;
-      text-align: center;
-      transition: opacity .2s ease-in-out;
-      width: 100%; }
-      .card .card-action-area .card-content h3 {
-        color: #fff; }
     .card .card-action-area:hover {
       transform: scale(1.01); }
       .card .card-action-area:hover .card-content {
         opacity: .975; }
+  .card .card-image img {
+    max-height: initial;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 0;
+       object-position: 50% 0; }
+  .card .card-image::after {
+    content: none; }
+  .card .card-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    transition: opacity .2s ease-in-out;
+    width: 100%; }
+    .card .card-content h3 {
+      color: #fff;
+      font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 22.62736px;
+      text-transform: uppercase; }
   .card.carlos-lamas .card-content {
     background: #4C489E; }
   .card.chips-and-bits .card-content {
     background: #096; }
   .card.iowa-actors .card-content {
     background: #FAE443; }
+    .card.iowa-actors .card-content h3 {
+      color: #373938; }
   .card.kenny-meyers .card-content {
     background: #981B1E; }
   .card.marshal .card-content {
@@ -714,11 +733,9 @@ nav a {
   .card.r8r .card-content {
     background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
   .card.side-projects .card-content {
-    background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); } }
-
-@media (min-width: 1366px) {
-  .card .card-content h3 {
-    font-size: 27.99986px; } }
+    background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
+    .card.side-projects .card-content h3 {
+      color: #373938; } }
 
 .fab {
   background-color: #096;
