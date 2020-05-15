@@ -16,7 +16,7 @@
       height: 100%;
       max-height: 100vmin;
       object-fit: cover;
-      object-position: 50% 0;
+      object-position: 0 100%;
       width: 100%;
     }
     &::after {
@@ -49,22 +49,7 @@
       transform: translateY(-50%);
     }
   }
-  &.carlos-lamas {
-    .card-image {
-      img { object-position: 0 100%; }
-    }
-  }
-  &.chips-and-bits {
-    .card-image {
-      img { object-position: 0 100%; }
-    }
-  }
-  &.iowa-actors {
-    .card-image {
-      img { object-position: 0 100%; }
-    }
-  }
-  &.kenny-meyers {
+  &.kenny-meyers, &.side-projects {
     .card-image {
       img { object-position: 50% 50%; }
     }
@@ -89,11 +74,7 @@
       }
     }
     .card-image {
-      img {
-        max-height: initial;
-        object-fit: cover;
-        object-position: 50% 0;
-      }
+      img { max-height: initial; }
       &::after { content: none; }
     }
     .card-content {
