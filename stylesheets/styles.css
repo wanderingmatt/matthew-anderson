@@ -630,8 +630,8 @@ nav a {
     max-height: 100vmin;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: 50% 0;
-       object-position: 50% 0;
+    -o-object-position: 0 100%;
+       object-position: 0 100%;
     width: 100%; }
   .card .card-image::after {
     border-bottom: 1px solid rgba(25, 26, 25, 0.05);
@@ -659,19 +659,7 @@ nav a {
     top: 0;
     transform: translateY(-50%); }
 
-.card.carlos-lamas .card-image img {
-  -o-object-position: 0 100%;
-     object-position: 0 100%; }
-
-.card.chips-and-bits .card-image img {
-  -o-object-position: 0 100%;
-     object-position: 0 100%; }
-
-.card.iowa-actors .card-image img {
-  -o-object-position: 0 100%;
-     object-position: 0 100%; }
-
-.card.kenny-meyers .card-image img {
+.card.kenny-meyers .card-image img, .card.side-projects .card-image img {
   -o-object-position: 50% 50%;
      object-position: 50% 50%; }
 
@@ -691,11 +679,7 @@ nav a {
       .card .card-action-area:hover .card-content {
         opacity: .975; }
   .card .card-image img {
-    max-height: initial;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 0;
-       object-position: 50% 0; }
+    max-height: initial; }
   .card .card-image::after {
     content: none; }
   .card .card-content {
