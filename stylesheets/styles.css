@@ -324,7 +324,7 @@ nav .monogram h1, .ribbon .hello .wave {
   display: none; }
 
 @media (min-width: 768px) {
-  .card .card-content .tags, .card .card-content .fab {
+  .card .card-content .fab {
     display: none; } }
 
 html {
@@ -698,6 +698,17 @@ nav a {
       font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
       font-size: 22.62736px;
       text-transform: uppercase; }
+    .card .card-content .tags {
+      left: 2rem;
+      margin: 0 auto;
+      max-width: 375px;
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(2rem); }
+      .card .card-content .tags li {
+        background: rgba(0, 0, 0, 0.1);
+        color: rgba(0, 0, 0, 0.5); }
   .card.carlos-lamas .card-content {
     background: #4C489E; }
   .card.chips-and-bits .card-content {
