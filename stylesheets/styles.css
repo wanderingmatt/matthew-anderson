@@ -667,6 +667,10 @@ nav a {
   -o-object-position: 100% 100%;
      object-position: 100% 100%; }
 
+.card.proof .card-image img {
+  -o-object-position: 0 0;
+     object-position: 0 0; }
+
 .card.r8r .card-image img {
   -o-object-position: 100% 0;
      object-position: 100% 0; }
