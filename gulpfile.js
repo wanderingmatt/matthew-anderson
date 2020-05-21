@@ -5,19 +5,20 @@ const gulp         = require('gulp'),
       connect      = require('gulp-connect'),
       del          = require('del'),
       ghPages      = require('gulp-gh-pages-with-updated-gift'),
+      include      = require('gulp-file-include'),
       inlineFonts  = require('gulp-inline-fonts'),
       merge        = require('merge-stream'),
       sassGlob     = require('gulp-sass-glob'),
       sass         = require('gulp-sass');
 
 var paths = {
-  html: {
-    src: './src/**/*.html',
-    dest: './dist'
-  },
   fonts: {
     src: './src/fonts/*',
     dest: './src/stylesheets/framework/',
+  },
+  html: {
+    src: './src/**/*.html',
+    dest: './dist'
   },
   images: {
     src: './src/images/**/*',
@@ -46,19 +47,12 @@ function serve(done) {
 };
 
 function watch(done) {
-  gulp.watch(paths.html.src, html);
   gulp.watch(paths.fonts.src, fonts);
+  gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
   // gulp.watch(paths.javascripts.src, javascripts);
   done();
-};
-
-function html() {
-  return gulp
-    .src(paths.html.src)
-    .pipe(gulp.dest(paths.html.dest))
-    .pipe(connect.reload())
 };
 
 function fonts() {
@@ -77,6 +71,17 @@ function fonts() {
   return stream
     .pipe(concat('_fonts.scss'))
     .pipe(gulp.dest(paths.fonts.dest))
+    .pipe(connect.reload())
+};
+
+function html() {
+  return gulp
+    .src(paths.html.src)
+    .pipe(include({
+      basepath: './src/partials/',
+      indent: true
+    }))
+    .pipe(gulp.dest(paths.html.dest))
     .pipe(connect.reload())
 };
 

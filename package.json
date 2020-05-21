@@ -23,6 +23,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
+    "gulp-file-include": "^2.2.2",
     "gulp-gh-pages-with-updated-gift": "^0.5.4",
     "gulp-inline-fonts": "^1.2.1",
     "gulp-sass": "^4.0.2",
