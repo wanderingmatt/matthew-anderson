@@ -59,6 +59,11 @@
       img { object-position: 100% 100%; }
     }
   }
+  &.proof {
+    .card-image {
+      img { object-position: 0 0; }
+    }
+  }
   &.r8r {
     .card-image {
       img { object-position: 100% 0; }
