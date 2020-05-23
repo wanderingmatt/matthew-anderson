@@ -3,4 +3,29 @@
     background: linear-gradient(to bottom right, #58B28D, #79B743);
     height: 50vh;
   }
+  h4 {
+    margin-top: 6rem;
+  }
+}
+
+.gallery {
+  margin: 0 auto;
+  max-width: 1200px;
+  ul {
+    display: grid;
+    list-style-type: none;
+    grid-auto-rows: 166.5px;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(166.5px, 1fr));
+    margin: 0;
+    padding: 0;
+    li {
+      img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
 }
