@@ -509,6 +509,20 @@ header h2 span {
 body {
   padding-top: 64px; }
 
+.introduction {
+  margin: 0 auto;
+  max-width: 1200px; }
+
+.content, .cta {
+  margin: 0 auto;
+  max-width: 800px; }
+
+.hero {
+  margin: 0 auto;
+  max-width: 1200px; }
+  .hero img {
+    display: block; }
+
 nav .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
@@ -948,3 +962,28 @@ nav a {
       .about section a::after {
         bottom: -3px;
         height: 3px; } }
+
+.onehub .ribbon {
+  background: linear-gradient(to bottom right, #58B28D, #79B743);
+  height: 50vh; }
+
+.onehub h4 {
+  margin-top: 6rem; }
+
+.gallery {
+  margin: 0 auto;
+  max-width: 1200px; }
+  .gallery ul {
+    display: grid;
+    list-style-type: none;
+    grid-auto-rows: 166.5px;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(166.5px, 1fr));
+    margin: 0;
+    padding: 0; }
+    .gallery ul li img {
+      display: block;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%; }
