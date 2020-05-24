@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -382,6 +383,27 @@ h4 {
 p {
   margin-top: 0; }
 
+blockquote {
+  margin: 1rem 0; }
+  blockquote p {
+    color: #096;
+    font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 22.62736px;
+    margin: 0;
+    position: relative; }
+    blockquote p:before {
+      content: open-quote;
+      top: 0;
+      left: 0; }
+    blockquote p:after {
+      content: close-quote; }
+  blockquote cite {
+    font-size: 16px;
+    font-style: normal; }
+    blockquote cite:before {
+      color: #AFB4B3;
+      content: '— '; }
+
 @media (min-width: 768px) {
   h2 {
     font-family: "brandon-grotesque-light", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -405,7 +427,21 @@ p {
   h3 {
     font-size: 55.99944px; }
   h4 {
-    margin-bottom: 2rem; } }
+    margin-bottom: 2rem; }
+  blockquote {
+    margin: 2rem 0; }
+    blockquote p {
+      font-family: "brandon-grotesque-light", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-size: 31.99984px; }
+      blockquote p:before, blockquote p:after {
+        color: #CDD3D1;
+        font-size: 79.19496px;
+        line-height: 1;
+        position: absolute; }
+      blockquote p:before {
+        transform: translateX(-3rem) translateY(-0.5rem); }
+      blockquote p:after {
+        transform: translateX(0.5rem) translateY(-0.5rem); } }
 
 @media (min-width: 1600px) {
   h2 {
@@ -956,12 +992,21 @@ nav a {
     .about section a:hover {
       border-color: #096;
       color: #096; }
-  @media (min-width: 1366px) {
-    .about section {
-      margin-bottom: 4rem; }
-      .about section a::after {
-        bottom: -3px;
-        height: 3px; } }
+
+@media (min-width: 1366px) {
+  .about section {
+    margin-bottom: 4rem; }
+    .about section a::after {
+      bottom: -3px;
+      height: 3px; }
+  .about .split-personality {
+    border-bottom: 2px solid #EBF2F0;
+    border-top: 2px solid #EBF2F0;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding-top: 4rem;
+    width: 1200px; } }
 
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743);
