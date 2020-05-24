@@ -58,7 +58,7 @@
 }
 
 .about {
-    section {
+  section {
     @include layout-constraints($half);
     margin-bottom: 2rem;
     a {
@@ -72,8 +72,10 @@
         color: $brand;
       }
     }
+  }
 
-    @include breakpoint($breakpoint-desktop) {
+  @include breakpoint($breakpoint-desktop) {
+    section {
       margin-bottom: 4rem;
       a {
         &::after {
@@ -81,6 +83,15 @@
           height: 3px;
         }
       }
+    }
+    .split-personality {
+      border-bottom: 2px solid $off-white;
+      border-top: 2px solid $off-white;
+      display: flex;
+      margin: 0 auto;
+      margin-bottom: 4rem;
+      padding-top: 4rem;
+      width: 1200px;
     }
   }
 }

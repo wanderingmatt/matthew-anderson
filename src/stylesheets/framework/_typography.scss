@@ -57,6 +57,42 @@ h4 {
 
 p { margin-top: 0; }
 
+blockquote {
+  margin: 1rem 0;
+  p {
+    color: $brand;
+    font-family: $custom-font-regular;
+    font-size: ms(3);
+    // font-style: italic;
+    margin: 0;
+    position: relative;
+    &:before, &:after {
+      // color: rgba(255, 255, 255, .2);
+      // position: absolute;
+    }
+    &:before {
+      // background: red;
+      content: open-quote;
+      // margin-left: -40px;
+      top: 0;
+      left: 0;
+    }
+    &:after {
+      // bottom: -40px;
+      content: close-quote;
+      // margin-left: 10px;
+    }
+  }
+  cite {
+    font-size: ms(1);
+    font-style: normal;
+    &:before {
+      color: $grey-5;
+      content: '— ';
+    }
+  }
+}
+
 @include breakpoint($breakpoint-tablet) {
   h2 {
     font-family: $custom-font-light;
@@ -84,6 +120,22 @@ p { margin-top: 0; }
   h2 { font-size: ms(10); }
   h3 { font-size: ms(8); }
   h4 { margin-bottom: 2rem; }
+
+  blockquote {
+    margin: 2rem 0;
+    p {
+      font-family: $custom-font-light;
+      font-size: ms(5);
+      &:before, &:after {
+        color: $grey-6;
+        font-size: ms(10);
+        line-height: 1;
+        position: absolute;
+      }
+      &:before { transform: translateX(-3rem) translateY(-.5rem); }
+      &:after { transform: translateX(.5rem) translateY(-.5rem); }
+    }
+  }
 }
 
 @include breakpoint($breakpoint-widescreen) {
