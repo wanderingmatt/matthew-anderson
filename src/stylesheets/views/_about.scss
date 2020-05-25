@@ -1,60 +1,40 @@
-.introduction {
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  position: relative;
-  &::before, &::after {
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  &::before {
-    background-image: url('/images/contours-seattle.svg');
-    background-position: 50%;
-    background-size: cover;
-    opacity: .1;
-    z-index: -2;
-  }
-  &::after {
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 35% 65%, rgba(255, 255, 255, 1));
-    z-index: -1;
-  }
-  .wrapper { @include layout-constraints($quarter); }
-  .hello {
-    margin-top: 1rem;
-    .avatar {
-      border-radius: 50%;
-      display: block;
-      height: 4rem;
-      width: auto;
-    }
-    .wave { @extend %hidden; }
-  }
-
-  @include breakpoint($breakpoint-tablet) {
-    .hello { margin-top: 2rem; }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    padding-bottom: 6rem;
-    padding-top: 6rem;
-    &::before { opacity: .075; }
-    .hello {
-      bottom: 0;
-      margin: 0;
-      position: absolute;
-      transform: translateX(-3rem) translateY(6rem);
-      .avatar { height: 6rem; }
-    }
-  }
-}
-
 .about {
+  .introduction {
+    position: relative;
+    &::before, &::after {
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    &::before {
+      background-image: url('/images/contours-seattle.svg');
+      background-position: 50%;
+      background-size: cover;
+      opacity: .1;
+      z-index: -2;
+    }
+    &::after {
+      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 35% 65%, rgba(255, 255, 255, 1));
+      z-index: -1;
+    }
+    .wrapper { @include layout-constraints($quarter); }
+    .hello {
+      margin-top: 1rem;
+      .avatar {
+        border-radius: 50%;
+        display: block;
+        height: 4rem;
+        width: auto;
+      }
+      .wave { @extend %hidden; }
+    }
+  }
+  h4 { margin-bottom: 1rem; }
   section {
-    @include layout-constraints($half);
-    margin-bottom: 2rem;
+    // margin-bottom: 2rem;
     a {
       border-bottom: 2px solid $off-white;
       color: $grey-1;
@@ -68,7 +48,25 @@
     }
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    .introduction {
+      .hello { margin-top: 2rem; }
+    }
+  }
+
   @include breakpoint($breakpoint-desktop) {
+    .introduction {
+      padding-bottom: 6rem;
+      padding-top: 6rem;
+      &::before { opacity: .075; }
+      .hello {
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(-3rem) translateY(6rem);
+        .avatar { height: 6rem; }
+      }
+    }
     section {
       margin-bottom: 4rem;
       a {

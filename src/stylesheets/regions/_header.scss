@@ -1,5 +1,5 @@
 header {
-  .wrapper { @include layout-constraints; }
+  .content { @extend %content; }
   h2 {
     strong {
       color: $off-black;
@@ -31,17 +31,8 @@ header {
   }
 
   @include breakpoint($breakpoint-tablet) {
-    // padding-bottom: 2rem;
     h2 {
       a { background-size: 100% 4px; }
     }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    // padding-bottom: 4rem;
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    // padding-bottom: 6rem;
   }
 }

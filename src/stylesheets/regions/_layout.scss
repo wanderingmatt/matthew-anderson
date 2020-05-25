@@ -1,17 +1,33 @@
 body { padding-top: 64px; }
 
 .introduction {
-  margin: 0 auto;
-  max-width: 1200px;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  .content { @extend %content-quarter; }
 }
 
-.content, .cta {
+section {
+  .content { @extend %content-half; }
+}
+
+.cta {
   margin: 0 auto;
   max-width: 800px;
 }
 
 .hero {
-  margin: 0 auto;
+  @extend %content;
+  margin: 2rem auto;
   max-width: 1200px;
-  img { display: block; }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.sidekick {
+  img {
+    display: block;
+    max-width: 100%;
+  }
 }

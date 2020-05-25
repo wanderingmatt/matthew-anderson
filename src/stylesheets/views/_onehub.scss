@@ -1,38 +1,66 @@
 .onehub {
   .ribbon {
     background: linear-gradient(to bottom right, #58B28D, #79B743);
-    height: 75vh;
     overflow: hidden;
     h2 {
       position: absolute;
     }
     img {
+      display: block;
       max-width: 100%;
     }
   }
-  h4 {
-    margin-top: 6rem;
+  .tags { margin-bottom: 1rem; }
+
+  @include breakpoint($breakpoint-desktop) {
+    .ribbon {
+      height: 75vh;
+    }
   }
 }
 
 .gallery {
-  margin: 0 auto;
-  max-width: 1200px;
+  @extend %content;
+  position: relative;
+  .scroll-view {
+    margin: -.5rem -1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: .5rem 1rem;
+    // &::before, &::after {
+    //   content: '';
+    //   position: absolute;
+    //   height: 100%;
+    //   top: 0;
+    //   width: .9rem;
+    //   z-index: 1000;
+    // }
+    // &::before {
+    //   background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    //   left: 0;
+    // }
+    // &::after {
+    //   background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    //   right: 0;
+    // }
+  }
   ul {
-    display: grid;
+    display: inline-flex;
     list-style-type: none;
-    grid-auto-rows: 1fr;
-    grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(83.25px, 1fr));
     margin: 0;
     padding: 0;
     li {
+      margin-right: 1rem;
+      max-width: 200px;
+      min-width: 92px;
       img {
         display: block;
         height: 100%;
         object-fit: cover;
         width: 100%;
       }
+      &:last-child { margin-right: 0; }
     }
   }
+  figcaption { margin-top: .5rem; }
 }

@@ -26,3 +26,7 @@ $half: 800px;
     }
   }
 }
+
+%content { @include layout-constraints; }
+%content-quarter { @include layout-constraints($quarter); }
+%content-half { @include layout-constraints($half); }
