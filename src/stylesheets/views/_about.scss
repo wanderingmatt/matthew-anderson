@@ -21,25 +21,20 @@
     background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 35% 65%, rgba(255, 255, 255, 1));
     z-index: -1;
   }
-  .wrapper {
-    @include layout-constraints($quarter);
-  }
+  .wrapper { @include layout-constraints($quarter); }
   .hello {
+    margin-top: 1rem;
     .avatar {
       border-radius: 50%;
-      bottom: 0;
       display: block;
       height: 4rem;
-      margin-top: 2rem;
       width: auto;
     }
     .wave { @extend %hidden; }
   }
 
   @include breakpoint($breakpoint-tablet) {
-    .hello {
-      .avatar { margin-top: 2rem; }
-    }
+    .hello { margin-top: 2rem; }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -47,12 +42,11 @@
     padding-top: 6rem;
     &::before { opacity: .075; }
     .hello {
-      .avatar {
-        bottom: 0;
-        height: 6rem;
-        position: absolute;
-        transform: translateX(-3rem) translateY(4rem);
-      }
+      bottom: 0;
+      margin: 0;
+      position: absolute;
+      transform: translateX(-3rem) translateY(6rem);
+      .avatar { height: 6rem; }
     }
   }
 }
@@ -88,10 +82,14 @@
       border-bottom: 2px solid $off-white;
       border-top: 2px solid $off-white;
       display: flex;
+      @include layout-constraints($quarter);
       margin: 0 auto;
       margin-bottom: 4rem;
+      padding-bottom: 3rem;
       padding-top: 4rem;
-      width: 1200px;
+      section { margin-bottom: 0; }
+      section:first-child { margin-right: 3rem; }
+      section:last-child { margin-left: 3rem; }
     }
   }
 }

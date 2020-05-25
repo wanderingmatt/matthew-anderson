@@ -15,7 +15,14 @@ $half: 800px;
   }
 
   @include breakpoint($breakpoint-desktop) {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    @if $constraint == $quarter or $constraint == $half {
+      padding-left: 0;
+      padding-right: 0;
+      @if $constraint == $quarter { width: 75vw; }
+      @if $constraint == $half { width: 50vw; }
+    } @else {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
   }
 }

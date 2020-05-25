@@ -1,9 +1,5 @@
 header {
-  .wrapper {
-    @include layout-constraints;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  .wrapper { @include layout-constraints; }
   h2 {
     strong {
       color: $off-black;

@@ -33,25 +33,27 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
+h1, h2, h3 { font-weight: normal; }
+
 h1 { font-size: ms(5); }
 
 h2 {
   color: $grey-5;
   font-family: $custom-font-regular;
   font-size: ms(3);
-  font-weight: 400;
   line-height: 1.25;
 }
 
 h3 {
   color: $grey-1;
-  font-weight: 600;
-  font-size: ms(1);
+  font-family: $custom-font-regular;
+  font-size: ms(2);
 }
 
 h4 {
   color: $grey-1;
   font-weight: 700;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 
@@ -63,25 +65,14 @@ blockquote {
     color: $brand;
     font-family: $custom-font-regular;
     font-size: ms(3);
-    // font-style: italic;
     margin: 0;
     position: relative;
-    &:before, &:after {
-      // color: rgba(255, 255, 255, .2);
-      // position: absolute;
-    }
     &:before {
-      // background: red;
       content: open-quote;
-      // margin-left: -40px;
-      top: 0;
-      left: 0;
+      position: absolute;
+      transform: translateX(-.75rem);
     }
-    &:after {
-      // bottom: -40px;
-      content: close-quote;
-      // margin-left: 10px;
-    }
+    &:after { content: close-quote; }
   }
   cite {
     font-size: ms(1);
@@ -98,12 +89,18 @@ blockquote {
     font-family: $custom-font-light;
     font-size: ms(7);
   }
+
   h3 {
     font-family: $custom-font-light;
     font-size: ms(5);
     font-weight: 400;
   }
+
   h4 { margin-bottom: 1rem; }
+
+  blockquote {
+    p { font-size: ms(4); }
+  }
 }
 
 @include breakpoint($breakpoint-desktop) {
@@ -125,19 +122,25 @@ blockquote {
     margin: 2rem 0;
     p {
       font-family: $custom-font-light;
-      font-size: ms(5);
+      font-size: ms(4);
       &:before, &:after {
         color: $grey-6;
         font-size: ms(10);
         line-height: 1;
-        position: absolute;
       }
       &:before { transform: translateX(-3rem) translateY(-.5rem); }
-      &:after { transform: translateX(.5rem) translateY(-.5rem); }
+      &:after {
+        position: absolute;
+        transform: translateX(.5rem) translateY(0);
+      }
     }
   }
 }
 
 @include breakpoint($breakpoint-widescreen) {
   h2 { font-size: ms(11); }
+
+  blockquote {
+    p { font-size: ms(5); }
+  }
 }
