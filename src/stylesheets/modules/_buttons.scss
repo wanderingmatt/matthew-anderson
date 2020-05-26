@@ -1,0 +1,40 @@
+.button {
+  backface-visibility: hidden;
+  background: $off-white;
+  color: $grey-1;
+  cursor: pointer;
+  display: inline-block;
+  font-size: ms(0);
+  letter-spacing: .1rem;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-transform: uppercase;
+  .button-icon {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    speak: none;
+    transition: transform .2s;
+    transform: translateY(-100%);
+    width: 100%;
+    .icon {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+  .button-content {
+    backface-visibility: hidden;
+    display: inline-block;
+    padding: 1rem 2rem;
+    transition: transform .2s;
+  }
+  &:hover {
+    color: $grey-1;
+    .button-icon { transform: translateY(0); }
+    .button-content { transform: translateY(100%); }
+  }
+  &:active { background: $grey-6; }
+}

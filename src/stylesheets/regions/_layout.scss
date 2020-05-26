@@ -9,8 +9,9 @@ section {
 }
 
 .cta {
-  margin: 0 auto;
-  max-width: 800px;
+  @extend %content;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .hero {
@@ -28,11 +29,6 @@ section {
 
 .sidekick {
   margin: 0;
-  img {
-    box-sizing: border-box;
-    display: block;
-    max-width: 100%;
-  }
   .frame {
     position: relative;
     &::after {
@@ -46,6 +42,12 @@ section {
       top: 0;
     }
   }
+  img {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+  }
+  figcaption { margin-bottom: 1rem; }
 }
 
 @include breakpoint($breakpoint-desktop) {
