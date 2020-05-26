@@ -1,15 +1,17 @@
 const gulp         = require('gulp'),
 
-      autoprefixer = require('gulp-autoprefixer'),
-      concat       = require('gulp-concat'),
-      connect      = require('gulp-connect'),
-      del          = require('del'),
-      ghPages      = require('gulp-gh-pages-with-updated-gift'),
-      include      = require('gulp-file-include'),
-      inlineFonts  = require('gulp-inline-fonts'),
-      merge        = require('merge-stream'),
-      sassGlob     = require('gulp-sass-glob'),
-      sass         = require('gulp-sass');
+      autoprefixer     = require('gulp-autoprefixer'),
+      concat           = require('gulp-concat'),
+      connect          = require('gulp-connect'),
+      del              = require('del'),
+      ghPages          = require('gulp-gh-pages-with-updated-gift'),
+      imagemin         = require('gulp-imagemin'),
+      imageminPngquant = require('imagemin-pngquant'),
+      include          = require('gulp-file-include'),
+      inlineFonts      = require('gulp-inline-fonts'),
+      merge            = require('merge-stream'),
+      sassGlob         = require('gulp-sass-glob'),
+      sass             = require('gulp-sass');
 
 var paths = {
   fonts: {
@@ -88,6 +90,12 @@ function html() {
 function images() {
   return gulp
     .src(paths.images.src)
+    .pipe(imagemin([
+      imageminPngquant({
+          speed: 1,
+          quality: [0.95, 1]
+      })
+    ]))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 };
