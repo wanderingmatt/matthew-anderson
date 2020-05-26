@@ -433,7 +433,6 @@ p {
   margin-top: 0; }
 
 figcaption {
-  border-top: 1px solid #EBF2F0;
   color: #CDD3D1;
   font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   padding: .5rem 0;
@@ -604,11 +603,26 @@ body {
     display: block;
     max-width: 100%; }
   .hero figcaption {
+    border-top: 1px solid #EBF2F0;
     margin-top: 1rem; }
 
-.sidekick img {
-  display: block;
-  max-width: 100%; }
+.sidekick {
+  margin: 0; }
+  .sidekick img {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%; }
+  .sidekick .frame {
+    position: relative; }
+    .sidekick .frame::after {
+      border: 1px solid #EBF2F0;
+      bottom: 0;
+      content: '';
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      right: 0;
+      top: 0; }
 
 @media (min-width: 1366px) {
   .introduction {
@@ -620,7 +634,9 @@ body {
     margin-bottom: 4rem;
     margin-top: 4rem; }
     .hero figcaption {
-      margin-top: 2rem; } }
+      margin-top: 2rem; }
+  .sidekick figcaption {
+    margin-bottom: 3rem; } }
 
 nav .wrapper {
   box-sizing: border-box;
@@ -866,6 +882,52 @@ nav a {
       height: 4rem;
       width: 4rem; } }
 
+.gallery {
+  position: relative; }
+  .gallery .scroll-view {
+    margin: -.5rem -1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: .5rem 1rem; }
+  .gallery ul {
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0; }
+  .gallery li {
+    margin-right: 1rem; }
+    .gallery li a {
+      cursor: zoom-in; }
+    .gallery li img {
+      display: block;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      width: 100%; }
+    .gallery li:last-child {
+      margin-right: 0; }
+  .gallery figcaption {
+    border-top: 1px solid #EBF2F0;
+    margin-top: .5rem; }
+  .gallery.portrait li {
+    flex: 0 1 111px;
+    min-width: 83.25px; }
+  @media (min-width: 768px) {
+    .gallery .scroll-view {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem; } }
+  @media (min-width: 1366px) {
+    .gallery {
+      margin-bottom: 4rem;
+      margin-top: 4rem; }
+      .gallery li {
+        margin-right: 2rem; }
+      .gallery figcaption {
+        margin-top: 1rem; } }
+
 .icon {
   background-position: 50%;
   background-repeat: no-repeat;
@@ -1091,43 +1153,14 @@ nav a {
 .onehub .tags {
   margin-bottom: 1rem; }
 
+.onehub .files .gallery li {
+  flex: 0 1 25%;
+  min-width: 160px; }
+
+.onehub .ios .gallery li {
+  flex: 0 1 25%;
+  min-width: 83.25px; }
+
 @media (min-width: 1366px) {
   .onehub .ribbon {
     height: 75vh; } }
-
-.gallery {
-  position: relative; }
-  .gallery .scroll-view {
-    margin: -.5rem -1rem;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: .5rem 1rem; }
-  .gallery ul {
-    display: inline-flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    .gallery ul li {
-      flex: 1 1 111px;
-      margin-right: 1rem;
-      min-width: 83.25px; }
-      .gallery ul li img {
-        display: block;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        width: 100%; }
-      .gallery ul li:last-child {
-        margin-right: 0; }
-  .gallery figcaption {
-    margin-top: .5rem; }
-  @media (min-width: 768px) {
-    .gallery .scroll-view {
-      margin-left: -2rem;
-      margin-right: -2rem;
-      padding-left: 2rem;
-      padding-right: 2rem; } }
-  @media (min-width: 1366px) {
-    .gallery {
-      margin-bottom: 4rem;
-      margin-top: 4rem; } }
