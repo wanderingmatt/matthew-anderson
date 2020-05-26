@@ -22,13 +22,31 @@ section {
     display: block;
     max-width: 100%;
   }
-  figcaption { margin-top: 1rem; }
+  figcaption {
+    border-top: 1px solid $off-white;
+    margin-top: 1rem;
+  }
 }
 
 .sidekick {
+  margin: 0;
   img {
+    box-sizing: border-box;
     display: block;
     max-width: 100%;
+  }
+  .frame {
+    position: relative;
+    &::after {
+      border: 1px solid $off-white;
+      bottom: 0;
+      content: '';
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
 }
 
@@ -44,5 +62,9 @@ section {
     margin-bottom: 4rem;
     margin-top: 4rem;
     figcaption { margin-top: 2rem; }
+  }
+
+  .sidekick {
+    figcaption { margin-bottom: 3rem; }
   }
 }

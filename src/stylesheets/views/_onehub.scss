@@ -12,69 +12,27 @@
   }
   .tags { margin-bottom: 1rem; }
 
+  .files {
+    .gallery {
+      li {
+        flex: 0 1 25%;
+        min-width: 160px;
+      }
+    }
+  }
+
+  .ios {
+    .gallery {
+      li {
+        flex: 0 1 25%;
+        min-width: 83.25px;
+      }
+    }
+  }
+
   @include breakpoint($breakpoint-desktop) {
     .ribbon {
       height: 75vh;
     }
-  }
-}
-
-.gallery {
-  @extend %content-quarter;
-  position: relative;
-  .scroll-view {
-    margin: -.5rem -1rem;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: .5rem 1rem;
-    // &::before, &::after {
-    //   content: '';
-    //   position: absolute;
-    //   height: 100%;
-    //   top: 0;
-    //   width: 1.9rem;
-    //   z-index: 1000;
-    // }
-    // &::before {
-    //   background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
-    //   left: 0;
-    // }
-    // &::after {
-    //   background: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
-    //   right: 0;
-    // }
-  }
-  ul {
-    display: inline-flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    li {
-      flex: 1 1 111px;
-      margin-right: 1rem;
-      min-width: 83.25px;
-      img {
-        display: block;
-        height: 100%;
-        object-fit: cover;
-        width: 100%;
-      }
-      &:last-child { margin-right: 0; }
-    }
-  }
-  figcaption { margin-top: .5rem; }
-
-  @include breakpoint($breakpoint-tablet) {
-    .scroll-view {
-      margin-left: -2rem;
-      margin-right: -2rem;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
   }
 }

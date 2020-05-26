@@ -1,0 +1,70 @@
+.gallery {
+  @extend %content-quarter;
+  position: relative;
+  .scroll-view {
+    margin: -.5rem -1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: .5rem 1rem;
+    // &::before, &::after {
+    //   content: '';
+    //   position: absolute;
+    //   height: 100%;
+    //   top: 0;
+    //   width: 1.9rem;
+    //   z-index: 1000;
+    // }
+    // &::before {
+    //   background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
+    //   left: 0;
+    // }
+    // &::after {
+    //   background: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
+    //   right: 0;
+    // }
+  }
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin-right: 1rem;
+    a { cursor: zoom-in; }
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    &:last-child { margin-right: 0; }
+  }
+  figcaption {
+    border-top: 1px solid $off-white;
+    margin-top: .5rem;
+  }
+  &.portrait {
+    li {
+      flex: 0 1 111px;
+      min-width: 83.25px;
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .scroll-view {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    li { margin-right: 2rem; }
+    figcaption { margin-top: 1rem; }
+  }
+}
