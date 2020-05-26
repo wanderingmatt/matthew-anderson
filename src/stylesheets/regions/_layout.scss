@@ -16,18 +16,33 @@ section {
 }
 
 .hero {
-  @extend %content;
+  @extend %content-quarter;
   margin: 2rem auto;
-  max-width: 1200px;
   img {
     display: block;
     max-width: 100%;
   }
+  figcaption { margin-top: 1rem; }
 }
 
 .sidekick {
   img {
     display: block;
     max-width: 100%;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .introduction {
+    padding-bottom: 6rem;
+    padding-top: 6rem;
+  }
+
+  section { margin-bottom: 6rem; }
+
+  .hero {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    figcaption { margin-top: 2rem; }
   }
 }

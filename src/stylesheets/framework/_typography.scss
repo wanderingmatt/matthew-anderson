@@ -125,14 +125,6 @@ blockquote {
   h3 { font-size: ms(8); }
   h4 { margin-top: 2rem; }
 
-  figcaption {
-    color: $grey-6;
-    font-family: $custom-font-regular;
-    font-size: ms(2);
-    padding: 1rem 0;
-    text-align: center;
-  }
-
   blockquote {
     margin: 2rem 0;
     p {
@@ -154,6 +146,8 @@ blockquote {
 
 @include breakpoint($breakpoint-widescreen) {
   h2 { font-size: ms(11); }
+
+  figcaption { padding: 1rem 0; }
 
   blockquote {
     p { font-size: ms(5); }
