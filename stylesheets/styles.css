@@ -856,39 +856,20 @@ nav a {
       transform: translateY(2rem); }
       .card .card-content .tags li {
         background: rgba(0, 0, 0, 0.1);
-        color: rgba(0, 0, 0, 0.5); }
-  .card.carlos-lamas .card-content {
-    background: #4C489E; }
-  .card.chips-and-bits .card-content {
-    background: #096; }
-  .card.iowa-actors .card-content {
-    background: #FAE443; }
-    .card.iowa-actors .card-content h3 {
-      color: #373938; }
-  .card.kenny-meyers .card-content {
-    background: #981B1E; }
-  .card.marshal .card-content {
-    background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
-  .card.onehub .card-content {
-    background: linear-gradient(to bottom right, #58B28D, #79B743); }
-  .card.proof .card-content {
-    background: #B9AF64; }
-  .card.r8r .card-content {
-    background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
-  .card.side-projects .card-content {
-    background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
-    .card.side-projects .card-content h3 {
-      color: #373938; } }
+        color: rgba(0, 0, 0, 0.5); } }
 
 .fab {
+  align-items: center;
   background-color: #096;
   border: 0;
   border-radius: 50%;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   color: #fff;
+  display: flex;
   height: 3rem;
   font-size: 14px;
   font-weight: 500;
+  justify-content: center;
   letter-spacing: .1rem;
   text-transform: uppercase;
   width: 3rem; }
@@ -938,13 +919,14 @@ nav a {
     .gallery .card-action-area {
       transition: transform .2s ease; }
       .gallery .card-action-area:hover {
-        transform: perspective(100rem) scaleZ(1) translateZ(2rem); } }
+        transform: perspective(1rem) scaleZ(1) translateZ(0.025rem); } }
   @media (min-width: 1366px) {
     .gallery {
       margin-bottom: 4rem;
       margin-top: 4rem; }
       .gallery li {
-        margin-right: 2rem; }
+        margin-right: 2rem;
+        min-width: auto; }
       .gallery figcaption {
         margin-top: 1rem; } }
 
@@ -982,6 +964,9 @@ nav a {
 
 .icon-github {
   background-image: url("../images/icons/github.svg"); }
+
+.icon-globe {
+  background-image: url("../images/icons/globe.svg"); }
 
 .icon-instagram {
   background-image: url("../images/icons/instagram.svg"); }
@@ -1039,6 +1024,28 @@ nav a {
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-template-rows: 1fr; }
+        .projects .projects-list .card.carlos-lamas .card-content {
+          background: #4C489E; }
+        .projects .projects-list .card.chips-and-bits .card-content {
+          background: #096; }
+        .projects .projects-list .card.iowa-actors .card-content {
+          background: #FAE443; }
+          .projects .projects-list .card.iowa-actors .card-content h3 {
+            color: #373938; }
+        .projects .projects-list .card.kenny-meyers .card-content {
+          background: #981B1E; }
+        .projects .projects-list .card.marshal .card-content {
+          background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
+        .projects .projects-list .card.onehub .card-content {
+          background: linear-gradient(to bottom right, #58B28D, #79B743); }
+        .projects .projects-list .card.proof .card-content {
+          background: #B9AF64; }
+        .projects .projects-list .card.r8r .card-content {
+          background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
+        .projects .projects-list .card.side-projects .card-content {
+          background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4); }
+          .projects .projects-list .card.side-projects .card-content h3 {
+            color: #373938; }
         .projects .projects-list .card-action-area {
           display: flex;
           height: 100%;
@@ -1215,8 +1222,11 @@ nav a {
 .onehub .tags {
   margin-bottom: 1rem; }
 
-.onehub .ios .gallery li {
-  flex: 0 1 25%;
+.onehub .onehub-com .hero figcaption {
+  margin-top: 0; }
+
+.onehub .onehub-com .mobile.gallery li, .onehub .ios .gallery li {
+  flex: 0 1 15%;
   min-width: 83.25px; }
 
 @media (min-width: 768px) {
