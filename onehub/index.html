@@ -11,9 +11,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
 </head>
 <body class="onehub">
-  <aside class="banner">
-    <p><em>Live reboot in progress. <a href="https://dribbble.com/wanderingmatt/projects/2030622-Portfolio-Reboot-2020">Follow along on Dribbble</a>.</em></p>
-  </aside>
   <nav>
     <div class="wrapper">
       <a href="/" class="monogram">
@@ -30,12 +27,16 @@
     <header class="ribbon">
       <div class="content">
         <h2>Onehub</h2>
-        <img src="/images/onehub/onehub-card@2x.png" alt="Onehub – Cloud storage redefined.">
+        <picture>
+          <source media="(max-width: 375px)" srcset="/images/onehub/onehub-hero~400.png 1x, /images/onehub/onehub-hero~800.png 2x">
+          <source media="(min-width: 768px)" srcset="/images/onehub/onehub-hero~1600.png 1x, /images/onehub/onehub-hero~3200.png 2x">
+          <img srcset="/images/onehub/onehub-hero~800.png, /images/onehub/onehub-hero~1600.png 2x " alt="Onehub – Cloud storage redefined.">
+        </picture>
       </div>
     </header>
     <div class="introduction">
       <div class="content">
-        <h3>I joined Onehub in 2007 as the original employee and founding product designer. Here are a few of the things I am most proud of.</h3>
+        <h3>I joined Onehub as the original employee and founding product designer. Here are a few of the things I am most proud of.</h3>
       </div>
     </div>
     <section class="files">
@@ -128,9 +129,9 @@
         <h4>Onehub for iOS</h4>
         <ul class="tags">
           <li class="tag">Product Manager</li>
-          <li class="tag">Sole Designer</li>
+          <li class="tag">Principal Designer</li>
         </ul>
-        <p>I made the first three major releases of Onehub for iOS. This provided me the opportunity to evolve a mobile app through multiple feature launches and across multiple versions of iOS. I managed a remote team of iOS developers for each version.</p>
+        <p>I designed the first three major releases of Onehub for iOS. This provided me the opportunity to evolve a mobile app through multiple feature launches and across multiple versions of iOS. I managed a remote team of iOS developers for each version.</p>
       </div>
       <figure class="hero">
         <img src="/images/onehub/ios/all-versions.png">
@@ -209,7 +210,12 @@
         </div>
         <figcaption>Screenshots of Onehub for iOS 3.0.</figcaption>
       </figure>
-      <div class="cta"><a href="https://apps.apple.com/us/app/onehub/id476746131">Download the App</a></div>
+      <div class="cta">
+        <a href="https://apps.apple.com/us/app/onehub/id476746131" class="button">
+          <span class="button-icon"><span class="icon icon-github" aria-hidden="true"></span></span>
+          <span class="button-content">Download the App</span>
+        </a>
+      </div>
     </section>
 <!--     <section>
       <div class="content">
@@ -325,9 +331,9 @@
         <li><a href="https://www.linkedin.com/in/matthewanderson/"><span class="icon icon-linkedin">LinkedIn</span></a></li>
         <li><a href="http://twitter.com/wanderingmatt/"><span class="icon icon-twitter">Twitter</span></a></li>
         <li><a href="http://dribbble.com/WanderingMatt/"><span class="icon icon-dribbble">Dribbble</span></a></li>
-        <li><a href="https://www.instagram.com/wanderingmatt/"><span class="icon icon-instagram">Instagram</span></a></li>
         <li><a href="https://open.spotify.com/user/wanderingmatt/"><span class="icon icon-spotify">Spotify</span></a></li>
         <li><a href="https://github.com/WanderingMatt/"><span class="icon icon-github">GitHub</span></a></li>
+        <li><a href="https://www.instagram.com/wanderingmatt/"><span class="icon icon-instagram">Instagram</span></a></li>
       </ul>
     </div>
     <p class="copyright"><strong>&copy;</strong> MMXX</p>
