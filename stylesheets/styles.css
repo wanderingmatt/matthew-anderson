@@ -532,8 +532,10 @@ footer .elsewhere-list {
       padding-right: 4rem; } }
   footer .elsewhere-list a {
     display: block;
-    opacity: .75;
+    opacity: .25;
     padding: 1rem; }
+    footer .elsewhere-list a:hover {
+      opacity: 1; }
 
 footer .copyright {
   color: #CDD3D1;
@@ -550,7 +552,11 @@ footer .copyright {
 
 @media (min-width: 1366px) {
   footer .elsewhere-list {
-    padding: 4rem 0; } }
+    padding: 4rem 0; }
+    footer .elsewhere-list a {
+      transition: transform .2s; }
+      footer .elsewhere-list a:hover {
+        transform: translateY(-0.25rem); } }
 
 @media (min-width: 1366px) {
   footer .elsewhere-list {
@@ -724,8 +730,6 @@ nav a {
     padding-top: 6rem; } }
 
 .button {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   background: #EBF2F0;
   color: #373938;
   cursor: pointer;
@@ -735,7 +739,8 @@ nav a {
   outline: none;
   overflow: hidden;
   position: relative;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: background .2s; }
   .button .button-icon {
     align-items: center;
     display: flex;
@@ -743,26 +748,37 @@ nav a {
     justify-content: center;
     position: absolute;
     speak: none;
-    transition: transform .2s;
     transform: translateY(-100%);
     width: 100%; }
     .button .button-icon .icon {
       height: 2rem;
       width: 2rem; }
   .button .button-content {
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
     display: inline-block;
-    padding: 1rem 2rem;
-    transition: transform .2s; }
+    padding: 1rem 2rem; }
   .button:hover {
     color: #373938; }
-    .button:hover .button-icon {
-      transform: translateY(0); }
-    .button:hover .button-content {
-      transform: translateY(100%); }
   .button:active {
     background: #CDD3D1; }
+  @media (min-width: 768px) {
+    .button .button-content {
+      padding: 1.5rem 2rem; } }
+  @media (min-width: 1366px) {
+    .button {
+      font-size: 16px; }
+      .button .button-icon {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        transition: transform .2s; }
+      .button .button-content {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        padding: 2rem 3rem;
+        transition: transform .2s; }
+      .button:hover .button-icon {
+        transform: translateY(0); }
+      .button:hover .button-content {
+        transform: translateY(100%); } }
 
 .card .card-action-area {
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
@@ -809,29 +825,7 @@ nav a {
     top: 0;
     transform: translateY(-50%); }
 
-.card.kenny-meyers .card-image img, .card.side-projects .card-image img {
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%; }
-
-.card.marshal .card-image img {
-  -o-object-position: 100% 100%;
-     object-position: 100% 100%; }
-
-.card.proof .card-image img {
-  -o-object-position: 0 0;
-     object-position: 0 0; }
-
-.card.r8r .card-image img {
-  -o-object-position: 100% 0;
-     object-position: 100% 0; }
-
 @media (min-width: 768px) {
-  .card .card-action-area {
-    transition: transform .2s ease-in-out; }
-    .card .card-action-area:hover {
-      transform: scale(1.01); }
-      .card .card-action-area:hover .card-content {
-        opacity: .975; }
   .card .card-image img {
     max-height: initial; }
   .card .card-image::after {
@@ -910,7 +904,8 @@ nav a {
     margin: -.5rem -1rem;
     overflow: hidden;
     overflow-x: scroll;
-    padding: .5rem 1rem; }
+    padding: .5rem 1rem;
+    text-align: center; }
   .gallery ul {
     display: inline-flex;
     list-style-type: none;
@@ -918,7 +913,9 @@ nav a {
     margin: 0;
     padding: 0; }
   .gallery li {
-    margin-right: 1rem; }
+    flex: 0 1 25%;
+    margin-right: 1rem;
+    min-width: 148px; }
     .gallery li a {
       cursor: zoom-in; }
     .gallery li img {
@@ -932,15 +929,16 @@ nav a {
   .gallery figcaption {
     border-top: 1px solid #EBF2F0;
     margin-top: .5rem; }
-  .gallery.portrait li {
-    flex: 0 1 111px;
-    min-width: 83.25px; }
   @media (min-width: 768px) {
     .gallery .scroll-view {
       margin-left: -2rem;
       margin-right: -2rem;
       padding-left: 2rem;
-      padding-right: 2rem; } }
+      padding-right: 2rem; }
+    .gallery .card-action-area {
+      transition: transform .2s ease; }
+      .gallery .card-action-area:hover {
+        transform: perspective(100rem) scaleZ(1) translateZ(2rem); } }
   @media (min-width: 1366px) {
     .gallery {
       margin-bottom: 4rem;
@@ -967,11 +965,17 @@ nav a {
   height: 1.25rem;
   width: 1.25rem; }
 
+.icon-app-store {
+  background-image: url("../images/icons/app-store.svg"); }
+
 .icon-chevron-right-inverted {
   background-image: url("../images/icons/chevron-right-inverted.svg"); }
 
 .icon-dribbble {
   background-image: url("../images/icons/dribbble.svg"); }
+
+.icon-download {
+  background-image: url("../images/icons/download.svg"); }
 
 .icon-email {
   background-image: url("../images/icons/email.svg"); }
@@ -1013,6 +1017,18 @@ nav a {
     list-style-type: none;
     margin: 0;
     padding: 0; }
+  .projects .card.kenny-meyers .card-image img, .projects .card.side-projects .card-image img {
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%; }
+  .projects .card.marshal .card-image img {
+    -o-object-position: 100% 100%;
+       object-position: 100% 100%; }
+  .projects .card.proof .card-image img {
+    -o-object-position: 0 0;
+       object-position: 0 0; }
+  .projects .card.r8r .card-image img {
+    -o-object-position: 100% 0;
+       object-position: 100% 0; }
   @media (min-width: 768px) {
     .projects {
       margin-bottom: 4rem;
@@ -1023,9 +1039,14 @@ nav a {
         grid-gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
         grid-template-rows: 1fr; }
-        .projects .projects-list a {
+        .projects .projects-list .card-action-area {
           display: flex;
-          height: 100%; }
+          height: 100%;
+          transition: transform .2s; }
+          .projects .projects-list .card-action-area:hover {
+            transform: perspective(1rem) scaleZ(1) translateZ(0.025rem); }
+            .projects .projects-list .card-action-area:hover .card-content {
+              opacity: .975; }
         .projects .projects-list > li.highlight {
           grid-area: 1 / 1 / 1 / -1; }
         .projects .projects-list > li.tall {
@@ -1193,10 +1214,6 @@ nav a {
 
 .onehub .tags {
   margin-bottom: 1rem; }
-
-.onehub .files .gallery li {
-  flex: 0 1 25%;
-  min-width: 160px; }
 
 .onehub .ios .gallery li {
   flex: 0 1 25%;
