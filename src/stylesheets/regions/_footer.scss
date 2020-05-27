@@ -9,10 +9,9 @@ footer {
     padding: 2rem 1rem;
     a {
       display: block;
-      opacity: .75;
+      opacity: .25;
       padding: 1rem;
-    //   &:hover { opacity: .8; }
-    //   &:active { opacity: 1; }
+      &:hover { opacity: 1; }
     }
   }
   .copyright {
@@ -33,6 +32,10 @@ footer {
   @include breakpoint($breakpoint-desktop) {
     .elsewhere-list {
       padding: 4rem 0;
+      a {
+        transition: transform .2s;
+        &:hover { transform: translateY(-.25rem); }
+      }
     }
   }
 

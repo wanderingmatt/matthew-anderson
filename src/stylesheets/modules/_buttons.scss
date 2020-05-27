@@ -1,5 +1,4 @@
 .button {
-  backface-visibility: hidden;
   background: $off-white;
   color: $grey-1;
   cursor: pointer;
@@ -10,6 +9,7 @@
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
+  transition: background .2s;
   .button-icon {
     align-items: center;
     display: flex;
@@ -17,7 +17,6 @@
     justify-content: center;
     position: absolute;
     speak: none;
-    transition: transform .2s;
     transform: translateY(-100%);
     width: 100%;
     .icon {
@@ -26,15 +25,34 @@
     }
   }
   .button-content {
-    backface-visibility: hidden;
     display: inline-block;
     padding: 1rem 2rem;
-    transition: transform .2s;
   }
   &:hover {
     color: $grey-1;
-    .button-icon { transform: translateY(0); }
-    .button-content { transform: translateY(100%); }
   }
   &:active { background: $grey-6; }
+
+  @include breakpoint($breakpoint-tablet) {
+    .button-content {
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    font-size: ms(1);
+    .button-icon {
+      backface-visibility: hidden;
+      transition: transform .2s;
+    }
+    .button-content {
+      backface-visibility: hidden;
+      padding: 2rem 3rem;
+      transition: transform .2s;
+    }
+    &:hover {
+      .button-icon { transform: translateY(0); }
+      .button-content { transform: translateY(100%); }
+    }
+  }
 }
