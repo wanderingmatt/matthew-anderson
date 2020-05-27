@@ -87,38 +87,5 @@
         }
       }
     }
-    &.carlos-lamas {
-      .card-content { background: #4C489E; }
-    }
-    &.chips-and-bits {
-      .card-content { background: #096; }
-    }
-    &.iowa-actors {
-      .card-content {
-        background: #FAE443;
-        h3 { color: $grey-1; }
-      }
-    }
-    &.kenny-meyers {
-      .card-content { background: #981B1E; }
-    }
-    &.marshal {
-      .card-content { background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
-    }
-    &.onehub {
-      .card-content { background: linear-gradient(to bottom right, #58B28D, #79B743); }
-    }
-    &.proof {
-      .card-content { background: #B9AF64; }
-    }
-    &.r8r {
-      .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
-    }
-    &.side-projects {
-      .card-content {
-        background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4);
-        h3 { color: $grey-1; }
-      }
-    }
   }
 }

@@ -8,22 +8,6 @@
     overflow-x: scroll;
     padding: .5rem 1rem;
     text-align: center;
-    // &::before, &::after {
-    //   content: '';
-    //   position: absolute;
-    //   height: 100%;
-    //   top: 0;
-    //   width: 1.9rem;
-    //   z-index: 1000;
-    // }
-    // &::before {
-    //   background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
-    //   left: 0;
-    // }
-    // &::after {
-    //   background: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0));
-    //   right: 0;
-    // }
   }
   ul {
     display: inline-flex;
@@ -31,12 +15,10 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    // width: 100%;
   }
   li {
     flex: 0 1 25%;
     margin-right: 1rem;
-    // max-width: 300px;
     min-width: 148px;
     a { cursor: zoom-in; }
     img {
@@ -62,7 +44,7 @@
     .card-action-area {
       transition: transform .2s ease;
       &:hover {
-        transform: perspective(100rem) scaleZ(1) translateZ(2rem);
+        transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
       }
     }
   }

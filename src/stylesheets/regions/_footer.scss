@@ -23,9 +23,7 @@ footer {
   }
 
   @include breakpoint($breakpoint-tablet) {
-    .elsewhere-list {
-      padding: 3rem 0;
-    }
+    .elsewhere-list { padding: 3rem 0; }
     .copyright { padding: 2rem; }
   }
 
@@ -40,8 +38,6 @@ footer {
   }
 
   @include breakpoint($breakpoint-desktop) {
-    .elsewhere-list {
-      padding: 5rem 0;
-    }
+    .elsewhere-list { padding: 5rem 0; }
   }
 }
