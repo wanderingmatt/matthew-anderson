@@ -7,6 +7,7 @@
     overflow: hidden;
     overflow-x: scroll;
     padding: .5rem 1rem;
+    text-align: center;
     // &::before, &::after {
     //   content: '';
     //   position: absolute;
@@ -30,9 +31,13 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+    // width: 100%;
   }
   li {
+    flex: 0 1 25%;
     margin-right: 1rem;
+    // max-width: 300px;
+    min-width: 148px;
     a { cursor: zoom-in; }
     img {
       display: block;
@@ -46,12 +51,6 @@
     border-top: 1px solid $off-white;
     margin-top: .5rem;
   }
-  &.portrait {
-    li {
-      flex: 0 1 111px;
-      min-width: 83.25px;
-    }
-  }
 
   @include breakpoint($breakpoint-tablet) {
     .scroll-view {
@@ -63,7 +62,7 @@
     .card-action-area {
       transition: transform .2s ease;
       &:hover {
-        transform: perspective(1rem) scaleZ(1) translateZ(.05rem);
+        transform: perspective(100rem) scaleZ(1) translateZ(2rem);
       }
     }
   }
