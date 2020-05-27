@@ -14,6 +14,10 @@ const gulp         = require('gulp'),
       sass             = require('gulp-sass');
 
 var paths = {
+  downloads: {
+    src: './src/downloads/*',
+    dest: './dist/downloads/',
+  },
   fonts: {
     src: './src/fonts/*',
     dest: './src/stylesheets/framework/',
@@ -49,12 +53,20 @@ function serve(done) {
 };
 
 function watch(done) {
+  gulp.watch(paths.downloads.src, downloads);
   gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
   // gulp.watch(paths.javascripts.src, javascripts);
   done();
+};
+
+function downloads() {
+  return gulp
+    .src(paths.downloads.src)
+    .pipe(gulp.dest(paths.downloads.dest))
+    .pipe(connect.reload())
 };
 
 function fonts() {
@@ -129,6 +141,7 @@ exports.clean = clean;
 const build = gulp.series(
   clean,
   gulp.parallel(
+    downloads,
     html,
     images,
     stylesheets
