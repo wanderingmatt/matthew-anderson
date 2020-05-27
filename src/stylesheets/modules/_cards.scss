@@ -49,35 +49,8 @@
       transform: translateY(-50%);
     }
   }
-  &.kenny-meyers, &.side-projects {
-    .card-image {
-      img { object-position: 50% 50%; }
-    }
-  }
-  &.marshal {
-    .card-image {
-      img { object-position: 100% 100%; }
-    }
-  }
-  &.proof {
-    .card-image {
-      img { object-position: 0 0; }
-    }
-  }
-  &.r8r {
-    .card-image {
-      img { object-position: 100% 0; }
-    }
-  }
 
   @include breakpoint($breakpoint-tablet) {
-    .card-action-area {
-      transition: transform .2s ease-in-out;
-      &:hover {
-        transform: scale(1.01);
-        .card-content { opacity: .975; }
-      }
-    }
     .card-image {
       img { max-height: initial; }
       &::after { content: none; }

@@ -9,6 +9,28 @@
     margin: 0;
     padding: 0;
   }
+  .card {
+    &.kenny-meyers, &.side-projects {
+      .card-image {
+        img { object-position: 50% 50%; }
+      }
+    }
+    &.marshal {
+      .card-image {
+        img { object-position: 100% 100%; }
+      }
+    }
+    &.proof {
+      .card-image {
+        img { object-position: 0 0; }
+      }
+    }
+    &.r8r {
+      .card-image {
+        img { object-position: 100% 0; }
+      }
+    }
+  }
 
   @include breakpoint($breakpoint-tablet) {
     margin-bottom: 4rem;
@@ -19,9 +41,14 @@
       grid-gap: 2rem;
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       grid-template-rows: 1fr;
-      a {
+      .card-action-area {
         display: flex;
         height: 100%;
+        transition: transform .2s;
+        &:hover {
+          transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
+          .card-content { opacity: .975; }
+        }
       }
       > li {
         &.highlight { grid-area: 1 / 1 / 1 / -1; }

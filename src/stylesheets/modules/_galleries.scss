@@ -60,6 +60,12 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
+    .card-action-area {
+      transition: transform .2s ease;
+      &:hover {
+        transform: perspective(1rem) scaleZ(1) translateZ(.05rem);
+      }
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
