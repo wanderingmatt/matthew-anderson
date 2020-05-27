@@ -31,12 +31,15 @@
     }
   }
   .tags { margin-bottom: 1rem; }
-  .ios {
-    .gallery {
-      li {
-        flex: 0 1 25%;
-        min-width: 83.25px;
-      }
+  .onehub-com {
+    .hero {
+      figcaption { margin-top: 0; }
+    }
+  }
+  .onehub-com .mobile.gallery, .ios .gallery {
+    li {
+      flex: 0 1 15%;
+      min-width: 83.25px;
     }
   }
 

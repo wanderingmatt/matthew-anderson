@@ -52,7 +52,10 @@
   @include breakpoint($breakpoint-desktop) {
     margin-bottom: 4rem;
     margin-top: 4rem;
-    li { margin-right: 2rem; }
+    li {
+      margin-right: 2rem;
+      min-width: auto;
+    }
     figcaption { margin-top: 1rem; }
   }
 }
