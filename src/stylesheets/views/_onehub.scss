@@ -45,6 +45,11 @@
 
   @include breakpoint($breakpoint-tablet) {
     .ribbon { padding-top: 3rem; }
+
+    .tags-stylized {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
