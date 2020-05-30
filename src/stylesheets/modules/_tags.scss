@@ -19,7 +19,8 @@
   @extend .tags;
   display: flex;
   .tag {
-    background: fade_out($brand, .8);
+    background: none;
+    border: 2px dashed fade_out($brand, .8);
     color: $brand;
     flex: 0 1 percentage(1/3);
     font-size: ms(0);
@@ -42,10 +43,7 @@
   }
 
   @include breakpoint($breakpoint-widescreen) {
-    .tag {
-      padding: 1.5rem;
-      // font-size: ms(4);
-    }
+    .tag { padding: 1.5rem; }
   }
 
 }
