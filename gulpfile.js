@@ -23,7 +23,7 @@ var paths = {
     dest: './src/stylesheets/framework/',
   },
   html: {
-    src: './src/**/*.html',
+    src: ['./src/**/*.html', '!./src/partials/*'],
     dest: './dist'
   },
   images: {
