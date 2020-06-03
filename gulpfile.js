@@ -1,6 +1,7 @@
 const gulp         = require('gulp'),
 
       autoprefixer     = require('gulp-autoprefixer'),
+      cache            = require('gulp-cache'),
       concat           = require('gulp-concat'),
       connect          = require('gulp-connect'),
       del              = require('del'),
@@ -40,8 +41,10 @@ var paths = {
   // },
 };
 
-function clean() {
-  return del(['./dist/**/*', '!./dist/CNAME']);
+function clean(done) {
+  del(['./dist/**/*', '!./dist/CNAME']);
+  cache.clearAll();
+  done();
 }
 
 function serve(done) {
@@ -102,12 +105,17 @@ function html() {
 function images() {
   return gulp
     .src(paths.images.src)
-    .pipe(imagemin([
+    .pipe(cache(imagemin([
       imageminPngquant({
           speed: 1,
-          quality: [0.95, 1]
-      })
-    ]))
+          quality: [0.7, 0.95]
+      }),
+      imagemin.svgo({
+          plugins: [{
+              removeViewBox: false
+          }]
+      }),
+    ])))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 };
