@@ -43,7 +43,7 @@ var paths = {
 
 function clean(done) {
   del(['./dist/**/*', '!./dist/CNAME']);
-  cache.clearAll();
+  // cache.clearAll();
   done();
 }
 
@@ -105,7 +105,7 @@ function html() {
 function images() {
   return gulp
     .src(paths.images.src)
-    .pipe(cache(imagemin([
+    .pipe(imagemin([
       imageminPngquant({
           speed: 1,
           quality: [0.7, 0.95]
@@ -115,7 +115,7 @@ function images() {
               removeViewBox: false
           }]
       }),
-    ])))
+    ]))
     .pipe(gulp.dest(paths.images.dest))
     .pipe(connect.reload())
 };
