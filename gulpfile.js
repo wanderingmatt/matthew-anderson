@@ -41,10 +41,9 @@ var paths = {
   // },
 };
 
-function clean(done) {
-  del(['./dist/**/*', '!./dist/CNAME']);
+function clean() {
   cache.clearAll();
-  done();
+  return del(['./dist/**/*', '!./dist/CNAME']);
 }
 
 function serve(done) {
@@ -55,14 +54,13 @@ function serve(done) {
   done();
 };
 
-function watch(done) {
+function watch() {
   gulp.watch(paths.downloads.src, downloads);
   gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
   // gulp.watch(paths.javascripts.src, javascripts);
-  done();
 };
 
 function downloads() {
@@ -107,13 +105,13 @@ function images() {
     .src(paths.images.src)
     .pipe(cache(imagemin([
       imageminPngquant({
-          speed: 1,
-          quality: [0.7, 0.95]
+        speed: 1,
+        quality: [0.7, 0.95]
       }),
       imagemin.svgo({
-          plugins: [{
-              removeViewBox: false
-          }]
+        plugins: [{
+          removeViewBox: false
+        }]
       }),
     ])))
     .pipe(gulp.dest(paths.images.dest))
