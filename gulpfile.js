@@ -54,13 +54,14 @@ function serve(done) {
   done();
 };
 
-function watch() {
+function watch(done) {
   gulp.watch(paths.downloads.src, downloads);
   gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.stylesheets.src, stylesheets);
   // gulp.watch(paths.javascripts.src, javascripts);
+  done();
 };
 
 function downloads() {
