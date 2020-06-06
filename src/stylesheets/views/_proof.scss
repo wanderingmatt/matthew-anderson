@@ -1,16 +1,4 @@
 .proof {
   .ribbon { background: #1E1E1E; }
-  .gallery {
-    li {
-      flex: 0 1 (347px / 4);
-      min-width: (347px / 4);
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
-    .gallery {
-      ul { flex-wrap: wrap; }
-      li { margin: 1rem; }
-    }
-  }
+  .gallery { @extend .gallery-portrait; }
 }

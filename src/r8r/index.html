@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>R8R — Matthew Anderson</title>
+  @@include('_meta.html')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+</head>
+<body class="r8r case-study">
+  @@include('_nav.html', {
+    "work": '',
+    "about": ''
+  })
+  <main>
+    <header class="ribbon">
+      <div class="content">
+        <h2>R8R</h2>
+        <picture>
+          <source media="(max-width: 375px)" srcset="/images/r8r/r8r-hero~400.png, /images/r8r/r8r-hero~800.png 2x">
+          <source media="(min-width: 768px)" srcset="/images/r8r/r8r-hero~1600.png, /images/r8r/r8r-hero~3200.png 2x">
+          <img srcset="/images/r8r/r8r-hero~800.png, /images/r8r/r8r-hero~1600.png 2x" alt="Proof – A gesture-based photo organizer for iOS.">
+        </picture>
+      </div>
+    </header>
+    <div class="introduction">
+      <div class="content">
+        <h3>R8R lets you keep track of your opinions on anything. Create collections and store how you feel with a simple 5-star rating system.</h3>
+      </div>
+    </div>
+    <section>
+      <div class="content">
+        <p>In 2014, I decided to take a simple idea and learn how to develop an iOS app. My goal was to familiarize myself with exactly what was possible when developing an iOS app in order to further inform my designs.</p>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <h4>Logo / Icon</h4>
+        <ul class="tags">
+          <li class="tag">Principal Designer</li>
+        </ul>
+        <p>Remember when we used to curate our photos? I was tired of relying on generated albums and buying extra cloud storage for photos that belong in the trash. I created Proof to solve these problems.</p>
+        <p>I designed the logo to a evoke a photo grid and pair well with a minimal UI.</p>
+        <figure class="sidekick">
+          <div class="frame">
+            <picture>
+              <source media="(max-width: 375px)" srcset="/images/proof/proof-logo~400.png, /images/proof/proof-logo~800.png 2x">
+              <img srcset="/images/proof/proof-logo~800.png, /images/proof/proof-logo~1600.png 2x" alt="Screenshot of the Proof logo.">
+            </picture>
+          </div>
+          <figcaption>The Proof logo.</figcaption>
+        </figure>
+        <p>The app was designed to showcase your photos with minimal interface and colors. The The UI is mainly blacks and whites, with a hint of gold for a high class feel. The interaction is driven by learnable gestures.</p>
+        <p>The result is an app that lets you quickly swipe through your unorganized photos to create albums, delete outtakes, and reclaim space on your device.</p>
+      </div>
+    </section>
+    <section>
+      <div class="content">
+        <h4>iOS App</h4>
+        <ul class="tags">
+          <li class="tag">Principal Designer</li>
+          <li class="tag">Developer</li>
+        </ul>
+      </div>
+      <figure class="gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/r8r/ratings.png" class="card-action-area" data-fancybox="gallery-r8r" data-caption="These beer ratings are sorted by Rating (High - Low).">
+                <div class="card-image">
+                  <img src="/images/r8r/ratings~thumbnail.png" alt="Screenshot of the ratings view.">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/r8r/create-rating.png" class="card-action-area" data-fancybox="gallery-r8r" data-caption="You can quickly create a rating by providing a name and selecting your star rating.">
+                <div class="card-image">
+                  <img src="/images/r8r/create-rating~thumbnail.png" alt="Screenshot of the create rating view.">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of R8R.</figcaption>
+      </figure>
+      <div class="cta">
+        <a href="https://apps.apple.com/us/app/r8r/id960802006" class="button" target="_blank">
+          <span class="button-icon"><span class="icon icon-app-store" aria-hidden="true"></span></span>
+          <span class="button-content">Download the App</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html')
+  @@include('_scripts.html')
+</body>
+</html>

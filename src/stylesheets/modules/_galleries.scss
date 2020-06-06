@@ -19,6 +19,7 @@
   li {
     flex: 0 1 148px;
     margin-right: 1rem;
+    min-width: 148px;
     a { cursor: zoom-in; }
     img {
       display: block;
@@ -31,6 +32,12 @@
   figcaption {
     border-top: 1px solid $off-white;
     margin-top: .5rem;
+  }
+  &.gallery-portrait {
+    li {
+      flex: 0 1 (347px / 4);
+      min-width: (347px / 4);
+    }
   }
 
   @include breakpoint($breakpoint-tablet) {
@@ -56,5 +63,9 @@
       min-width: auto;
     }
     figcaption { margin-top: 1rem; }
+    &.gallery-portrait {
+      ul { flex-wrap: wrap; }
+      li { margin: 1rem; }
+    }
   }
 }
