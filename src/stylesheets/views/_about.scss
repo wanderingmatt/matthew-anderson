@@ -1,26 +1,6 @@
 .about {
   .introduction {
     position: relative;
-    &::before, &::after {
-      bottom: 0;
-      content: '';
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    &::before {
-      background-image: url('/images/contours-seattle.svg');
-      background-position: 50%;
-      background-size: cover;
-      opacity: .1;
-      z-index: -2;
-    }
-    &::after {
-      background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 35% 65%, rgba(255, 255, 255, 1));
-      z-index: -1;
-    }
-    .wrapper { @include layout-constraints($quarter); }
     .hello {
       margin-top: 1rem;
       .avatar {
@@ -55,32 +35,18 @@
 
   @include breakpoint($breakpoint-desktop) {
     .introduction {
-      &::before { opacity: .075; }
       .hello {
         bottom: 0;
         margin: 0;
         position: absolute;
-        transform: translateX(-3rem) translateY(6rem);
+        transform: translateX(-3rem) translateY(11.5rem);
         .avatar { height: 6rem; }
       }
     }
-    section {
-      a {
-        &::after {
-          bottom: -3px;
-          height: 3px;
-        }
-      }
-    }
     .split-personality {
-      border-bottom: 2px solid $off-white;
-      border-top: 2px solid $off-white;
       display: flex;
       @include layout-constraints($quarter);
       margin: 0 auto;
-      margin-bottom: 4rem;
-      padding-bottom: 3rem;
-      padding-top: 4rem;
       section {
         margin-bottom: 0;
         .content {
