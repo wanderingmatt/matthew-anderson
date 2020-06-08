@@ -427,10 +427,21 @@ h3 {
 h4 {
   color: #373938;
   font-weight: 700;
+  padding-top: 2.5rem;
+  position: relative;
   text-transform: uppercase; }
+  h4::before {
+    background: repeating-linear-gradient(-45deg, transparent, transparent 2px, #EBF2F0 2px, #EBF2F0 4px);
+    content: '';
+    display: block;
+    height: .5rem;
+    position: absolute;
+    top: 0;
+    width: 100%; }
 
 p {
-  margin-top: 0; }
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
 
 figcaption {
   color: #CDD3D1;
@@ -467,8 +478,6 @@ blockquote {
     font-family: "brandon-grotesque-light", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 31.99984px;
     font-weight: 400; }
-  h4 {
-    margin-bottom: 1rem; }
   blockquote p {
     font-size: 27.99986px; } }
 
@@ -484,7 +493,13 @@ blockquote {
   h3 {
     font-size: 55.99944px; }
   h4 {
-    margin-top: 2rem; }
+    padding-top: 4rem; }
+    h4::before {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #EBF2F0 2px, #EBF2F0 6px);
+      height: 1rem; }
+  p {
+    margin-bottom: 3rem;
+    margin-top: 3rem; }
   blockquote {
     margin: 2rem 0; }
     blockquote p {
@@ -593,8 +608,8 @@ header h2 span {
     background-size: 100% 4px; } }
 
 .introduction {
-  padding-bottom: 2rem;
-  padding-top: 2rem; }
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
 
 .cta {
   margin-bottom: 2rem;
@@ -626,22 +641,21 @@ header h2 span {
     box-sizing: border-box;
     display: block;
     max-width: 100%; }
-  .sidekick figcaption {
-    margin-bottom: 1rem; }
 
 @media (min-width: 1366px) {
   .introduction {
-    padding-bottom: 6rem;
-    padding-top: 6rem; }
+    margin-bottom: 6rem;
+    margin-top: 6rem; }
   section {
-    margin-bottom: 6rem; }
+    margin-bottom: 3rem; }
   .hero {
     margin-bottom: 4rem;
     margin-top: 4rem; }
     .hero figcaption {
       margin-top: 2rem; }
-  .sidekick figcaption {
-    margin-bottom: 3rem; } }
+  .sidekick {
+    margin-bottom: 3rem;
+    margin-top: 3rem; } }
 
 nav .wrapper {
   box-sizing: border-box;
@@ -940,7 +954,8 @@ nav a {
     padding: 0; }
   .gallery li {
     flex: 0 1 148px;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    min-width: 148px; }
     .gallery li a {
       cursor: zoom-in; }
     .gallery li img {
@@ -954,6 +969,9 @@ nav a {
   .gallery figcaption {
     border-top: 1px solid #EBF2F0;
     margin-top: .5rem; }
+  .gallery.gallery-portrait li, .proof .gallery li, .r8r .gallery li {
+    flex: 0 1 86.75px;
+    min-width: 86.75px; }
   @media (min-width: 768px) {
     .gallery .scroll-view {
       margin-left: -2rem;
@@ -972,7 +990,11 @@ nav a {
         margin: 0 1rem;
         min-width: auto; }
       .gallery figcaption {
-        margin-top: 1rem; } }
+        margin-top: 1rem; }
+      .gallery.gallery-portrait ul, .proof .gallery ul, .r8r .gallery ul {
+        flex-wrap: wrap; }
+      .gallery.gallery-portrait li, .proof .gallery li, .r8r .gallery li {
+        margin: 1rem; } }
 
 .icon {
   background-position: 50%;
@@ -1119,7 +1141,7 @@ nav a {
 .tags, .tags-stylized {
   font-size: 0;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 -.5rem 0;
   padding: 0; }
   .tags li, .tags-stylized li {
     background-color: rgba(235, 242, 240, 0.5);
@@ -1158,37 +1180,6 @@ nav a {
 
 .about .introduction {
   position: relative; }
-  .about .introduction::before, .about .introduction::after {
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0; }
-  .about .introduction::before {
-    background-image: url("/images/contours-seattle.svg");
-    background-position: 50%;
-    background-size: cover;
-    opacity: .1;
-    z-index: -2; }
-  .about .introduction::after {
-    background-image: linear-gradient(white, rgba(255, 255, 255, 0) 35% 65%, white);
-    z-index: -1; }
-  .about .introduction .wrapper {
-    box-sizing: border-box;
-    margin: 0 auto;
-    max-width: 1200px;
-    padding-left: 1rem;
-    padding-right: 1rem; }
-    @media (min-width: 768px) {
-      .about .introduction .wrapper {
-        padding-left: 2rem;
-        padding-right: 2rem; } }
-    @media (min-width: 1366px) {
-      .about .introduction .wrapper {
-        padding-left: 0;
-        padding-right: 0;
-        width: 75vw; } }
   .about .introduction .hello {
     margin-top: 1rem; }
     .about .introduction .hello .avatar {
@@ -1215,31 +1206,21 @@ nav a {
     margin-top: 2rem; } }
 
 @media (min-width: 1366px) {
-  .about .introduction::before {
-    opacity: .075; }
   .about .introduction .hello {
     bottom: 0;
     margin: 0;
     position: absolute;
-    transform: translateX(-3rem) translateY(6rem); }
+    transform: translateX(-3rem) translateY(11.5rem); }
     .about .introduction .hello .avatar {
       height: 6rem; }
-  .about section a::after {
-    bottom: -3px;
-    height: 3px; }
   .about .split-personality {
-    border-bottom: 2px solid #EBF2F0;
-    border-top: 2px solid #EBF2F0;
     display: flex;
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 1200px;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-    padding-bottom: 3rem;
-    padding-top: 4rem; } }
+    margin: 0 auto; } }
   @media (min-width: 1366px) and (min-width: 768px) {
     .about .split-personality {
       padding-left: 2rem;
@@ -1263,34 +1244,14 @@ nav a {
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743); }
 
-.onehub .tags, .onehub .tags-stylized {
-  margin-bottom: 1rem; }
-
 .onehub .onehub-com .hero figcaption {
   margin-top: 0; }
-
-.onehub .onehub-com .mobile.gallery li, .onehub .ios .gallery li {
-  flex: 0 1 86.75px;
-  min-width: 86.75px; }
-
-@media (min-width: 1366px) {
-  .onehub .onehub-com .mobile.gallery ul, .onehub .ios .gallery ul {
-    flex-wrap: wrap; }
-  .onehub .onehub-com .mobile.gallery li, .onehub .ios .gallery li {
-    margin: 1rem; } }
 
 .proof .ribbon {
   background: #1E1E1E; }
 
-.proof .gallery li {
-  flex: 0 1 86.75px;
-  min-width: 86.75px; }
-
-@media (min-width: 1366px) {
-  .proof .gallery ul {
-    flex-wrap: wrap; }
-  .proof .gallery li {
-    margin: 1rem; } }
+.r8r .ribbon {
+  background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
 
 .iowa-actors .ribbon {
   background: #444858; }
