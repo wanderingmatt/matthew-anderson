@@ -1241,6 +1241,9 @@ nav a {
     .about .split-personality section:last-child {
       margin-left: 3rem; } }
 
+.marshal .ribbon {
+  background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
+
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743); }
 
