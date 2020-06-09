@@ -42,8 +42,11 @@ var paths = {
 };
 
 function clean() {
-  cache.clearAll();
   return del(['./dist/**/*', '!./dist/CNAME']);
+}
+
+function clear() {
+  cache.clearAll();
 }
 
 function serve(done) {
@@ -158,6 +161,7 @@ const build = gulp.series(
 exports.build = build;
 
 exports.deploy = gulp.series(
+  clear,
   build,
   deploy
 );
