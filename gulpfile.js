@@ -45,8 +45,8 @@ function clean() {
   return del(['./dist/**/*', '!./dist/CNAME']);
 }
 
-function clear() {
-  cache.clearAll();
+function clear() { // Busts the image cache, if necessary.
+  return cache.clearAll();
 }
 
 function serve(done) {
@@ -147,6 +147,7 @@ function deploy() {
 };
 
 exports.clean = clean;
+exports.clear = clear;
 
 const build = gulp.series(
   clean,
@@ -161,7 +162,6 @@ const build = gulp.series(
 exports.build = build;
 
 exports.deploy = gulp.series(
-  clear,
   build,
   deploy
 );
