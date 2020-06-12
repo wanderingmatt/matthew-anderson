@@ -33,7 +33,7 @@
     border-top: 1px solid $off-white;
     margin-top: .5rem;
   }
-  &.gallery-portrait {
+  &.mobile {
     li {
       flex: 0 1 (347px / 4);
       min-width: (347px / 4);
@@ -63,7 +63,7 @@
       min-width: auto;
     }
     figcaption { margin-top: 1rem; }
-    &.gallery-portrait {
+    &.mobile {
       ul { flex-wrap: wrap; }
       li { margin: 1rem; }
     }
