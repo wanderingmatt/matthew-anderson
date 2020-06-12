@@ -32,6 +32,8 @@
   }
 
   @include breakpoint($breakpoint-tablet) {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     .tag {
       font-family: $custom-font-regular;
       font-size: ms(2);
