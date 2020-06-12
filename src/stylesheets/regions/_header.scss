@@ -6,19 +6,23 @@ header {
       font-weight: 400;
     }
     a {
-      background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
-      background-position: 100% 90%;
-      background-repeat: no-repeat;
-      background-size: 100% 2px;
+      position: relative;
       font-weight: 400;
       text-decoration: none;
-      transition-duration: .2s;
-      transition-property: background-image, background-position, background-size;
-      &:hover {
+      &::before {
         background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
-        background-size: 100% 90%;
-        background-position: 100% 100%;
+        bottom: 10%;
+        content: '';
+        display: inline-block;
+        height: 2px;
+        position: absolute;
+        transition-duration: .2s;
+        transition-property: height;
+        width: 100%;
+      }
+      &:hover {
         color: initial;
+        &::before { height: 80%; }
       }
     }
     span { display: table; }
@@ -32,7 +36,9 @@ header {
 
   @include breakpoint($breakpoint-tablet) {
     h2 {
-      a { background-size: 100% 4px; }
+      a {
+        &::before { height: 4px; }
+      }
     }
   }
 }
