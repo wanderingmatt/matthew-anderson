@@ -33,9 +33,9 @@
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(20rem, .375fr);
+      grid-auto-rows: minmax(22rem, .375fr);
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
       grid-template-rows: 1fr;
       .card {
         &.carlos-lamas {
