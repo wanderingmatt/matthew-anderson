@@ -58,6 +58,7 @@
     li {
       margin: 0 1rem;
       min-width: auto;
+      &:first-child { margin-left: 0; }
     }
     figcaption { margin-top: 1rem; }
     &.mobile {

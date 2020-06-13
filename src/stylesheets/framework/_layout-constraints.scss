@@ -3,7 +3,6 @@ $quarter: 1200px;
 $half: 800px;
 
 @mixin layout-constraints($constraint: $full) {
-  box-sizing: border-box;
   margin: 2rem auto;
   max-width: $constraint;
   padding-left: 1rem;
@@ -33,6 +32,13 @@ $half: 800px;
   @include breakpoint($breakpoint-widescreen) {
     margin-bottom: 6rem;
     margin-top: 6rem;
+    @if $constraint == $quarter or $constraint == $half {
+      padding-left: 0;
+      padding-right: 0;
+    } @else {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
   }
 }
 
