@@ -80,7 +80,7 @@ figcaption {
 }
 
 blockquote {
-  margin: 1rem 0;
+  margin: 2rem 0;
   p {
     color: $brand;
     font-family: $custom-font-regular;
@@ -95,8 +95,10 @@ blockquote {
     &:after { content: close-quote; }
   }
   cite {
+    display: inline-block;
     font-size: ms(1);
     font-style: normal;
+    margin-top: .5rem;
     &:before {
       color: $grey-5;
       content: '— ';
@@ -136,20 +138,14 @@ blockquote {
   h3 { font-size: ms(8); }
 
   h4 {
-    padding-top: 4rem;
+    padding-top: 5rem;
     &::before {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
       height: 1rem;
     }
   }
 
-  p {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-  }
-
   blockquote {
-    margin: 2rem 0;
     p {
       font-family: $custom-font-light;
       font-size: ms(4);
@@ -164,12 +160,13 @@ blockquote {
         transform: translateX(.5rem) translateY(0);
       }
     }
+    cite { margin-top: 1rem; }
   }
 }
 
 @include breakpoint($breakpoint-widescreen) {
   h2 { font-size: ms(11); }
-
+  h4 { padding-top: 7rem; }
   figcaption { padding: 1rem 0; }
 
   blockquote {

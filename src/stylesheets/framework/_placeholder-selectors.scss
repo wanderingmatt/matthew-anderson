@@ -9,3 +9,7 @@
   %hidden-tablet { display: none; }
   %shown-tablet { display: initial; }
 }
+
+@include breakpoint($breakpoint-desktop) {
+  %hidden-desktop { display: none; }
+}

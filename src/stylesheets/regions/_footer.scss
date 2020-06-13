@@ -16,15 +16,16 @@ footer {
   }
   .copyright {
     color: $grey-6;
-    font-weight: 500;
-    margin: 0;
-    padding: 1rem;
+    font-size: ms(1);
+    font-weight: 400;
     text-align: center;
   }
 
   @include breakpoint($breakpoint-tablet) {
-    .elsewhere-list { padding: 3rem 0; }
-    .copyright { padding: 2rem; }
+    .elsewhere-list {
+      margin-bottom: 0;
+      padding: 3rem 0;
+    }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -35,6 +36,7 @@ footer {
         &:hover { transform: translateY(-.25rem); }
       }
     }
+    .copyright { font-size: ms(2); }
   }
 
   @include breakpoint($breakpoint-desktop) {

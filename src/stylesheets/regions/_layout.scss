@@ -1,6 +1,4 @@
 .introduction {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
   .content { @extend %content-quarter; }
 }
 
@@ -10,13 +8,11 @@ section {
 
 .cta {
   @extend %content;
-  margin-bottom: 2rem;
   text-align: center;
 }
 
 .hero {
   @extend %content-quarter;
-  margin: 2rem auto;
   img {
     display: block;
     max-width: 100%;
@@ -50,13 +46,6 @@ section {
 }
 
 @include breakpoint($breakpoint-desktop) {
-  .introduction {
-    margin-bottom: 6rem;
-    margin-top: 6rem;
-  }
-
-  section { margin-bottom: 3rem; }
-
   .hero {
     margin-bottom: 4rem;
     margin-top: 4rem;

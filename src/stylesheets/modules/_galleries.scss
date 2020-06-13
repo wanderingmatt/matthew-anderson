@@ -1,6 +1,5 @@
 .gallery {
   @extend %content-quarter;
-  margin-bottom: 2rem;
   position: relative;
   .scroll-view {
     margin: -.5rem -1rem;
@@ -56,8 +55,6 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
     li {
       margin: 0 1rem;
       min-width: auto;

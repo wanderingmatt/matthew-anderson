@@ -3,7 +3,10 @@
   overflow: hidden;
   padding-top: 2rem;
   position: relative;
-  .content { @extend %content; }
+  .content {
+    @extend %content;
+    margin: 0 auto;
+  }
   h2 {
     background: #fff;
     color: $off-black;
