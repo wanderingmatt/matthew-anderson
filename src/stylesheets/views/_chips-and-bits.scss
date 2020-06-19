@@ -1,0 +1,46 @@
+.chips-and-bits {
+  .ribbon { background: #096; }
+  .gallery {
+    .scroll-view {
+      margin: -.25rem -1rem;
+      padding: 1rem;
+    }
+    li {
+      flex: 0 1 200px;
+      margin-right: 1rem;
+      min-width: 200px;
+      &:last-child { margin-right: 0; } // TODO: Remove after backporting.
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .gallery {
+      padding: 0 6rem;
+      max-width: none;
+      overflow: hidden;
+      position: relative;
+      width: auto;
+      .scroll-view {
+        margin: -.5rem -6rem;
+        padding: 1.5rem 6rem;
+      }
+      ul {
+        // padding: 0 6rem;
+      }
+      li {
+        flex: 0 1 400px;
+        margin: 0;
+        margin-right: 2rem;
+        min-width: 400px;
+        &:first-child { margin-left: 0; }
+      }
+      &.mobile {
+        ul { flex-wrap: nowrap; }
+        li {
+          flex: 0 1 150px;
+          min-width: 150px;
+        }
+      }
+    }
+  }
+}
