@@ -935,7 +935,8 @@ nav a {
     list-style-type: none;
     justify-content: center;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    vertical-align: middle; }
   .gallery li {
     flex: 0 1 148px;
     margin-right: 1rem;
@@ -1303,6 +1304,46 @@ nav a {
   .about .interests h4 {
     margin-top: -1rem; } }
 
+.chips-and-bits .ribbon {
+  background: #096; }
+
+.chips-and-bits .gallery .scroll-view {
+  margin: -.25rem -1rem;
+  padding: 1rem; }
+
+.chips-and-bits .gallery li {
+  flex: 0 1 200px;
+  margin-right: 1rem;
+  min-width: 200px; }
+  .chips-and-bits .gallery li:last-child {
+    margin-right: 0; }
+
+@media (min-width: 1366px) {
+  .chips-and-bits .gallery {
+    padding: 0 6rem;
+    max-width: none;
+    overflow: hidden;
+    position: relative;
+    width: auto; }
+    .chips-and-bits .gallery .scroll-view {
+      margin: -.5rem -6rem;
+      padding: 1.5rem 6rem; }
+    .chips-and-bits .gallery li {
+      flex: 0 1 400px;
+      margin: 0;
+      margin-right: 2rem;
+      min-width: 400px; }
+      .chips-and-bits .gallery li:first-child {
+        margin-left: 0; }
+    .chips-and-bits .gallery.mobile ul {
+      flex-wrap: nowrap; }
+    .chips-and-bits .gallery.mobile li {
+      flex: 0 1 150px;
+      min-width: 150px; } }
+
+.iowa-actors .ribbon {
+  background: #444858; }
+
 .marshal .ribbon {
   background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
   .marshal .ribbon h2 {
@@ -1333,6 +1374,3 @@ nav a {
 
 .r8r .ribbon {
   background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
-
-.iowa-actors .ribbon {
-  background: #444858; }
