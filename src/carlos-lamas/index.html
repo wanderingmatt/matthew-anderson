@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Carlos Lamas — Matthew Anderson</title>
+  @@include('_meta.html')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+</head>
+<body class="carlos-lamas case-study">
+  @@include('_nav.html', {
+    "work": '',
+    "about": ''
+  })
+  <main>
+    <div class="ribbon">
+      <div class="content">
+        <h2>Carlos Lamas</h2>
+<!--         <img src="/images/chips-and-bits/chips-and-bits-hero~400.png"
+             srcset="/images/chips-and-bits/chips-and-bits-hero~400.png 400w,
+                     /images/chips-and-bits/chips-and-bits-hero~800.png 800w,
+                     /images/chips-and-bits/chips-and-bits-hero~1600.png 1600w,
+                     /images/chips-and-bits/chips-and-bits-hero~3200.png 3200w"
+             alt="Chips & Bits – A podcast by two troglodytes who love video games.">
+ -->      </div>
+    </div>
+    <div class="introduction">
+      <div class="content">
+        <h3>Carlos is an accomplished freelance video editor, based in Minneapolis.</h3>
+      </div>
+    </div>
+    <section>
+      <div class="content">
+        <p>In 2012, I was contracted by Carlos Lamas as he was preparing to break out on his own. He was looking for a brand he could work under and a portfolio site to both showcase his work and build his customer base.</p>
+      </div>
+    </section>
+    <section class="website">
+      <div class="content">
+        <h4>Website</h4>
+        <ul class="tags">
+          <li class="tag">Principal Designer</li>
+          <li class="tag">Front-End Developer</li>
+        </ul>
+        <p>Carlos wanted a simple site where his work was the focus. He was also keen on maintaining the site himself. I designed a glorified video player, backed by semantic HTML and a flat file structure which auto-deploys to GitHub Pages. The website launched his freelance career and established him as one of the premier video editors in the Twin Cities. Carlos loves purple.</p>
+      </div>
+      <figure class="desktop gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/chips-and-bits/website/episodes-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
+                <div class="card-image">
+                  <img src="/images/chips-and-bits/website/episodes-desktop~240.png"
+                       srcset="/images/chips-and-bits/website/episodes-desktop~240.png 240w,
+                               /images/chips-and-bits/website/episodes-desktop~480.png 480w,
+                               /images/chips-and-bits/website/episodes-desktop~960.png 960w"
+                       sizes="(min-width: 1366px) 480px, 240px"
+                       alt="Screenshot of the Chips & Bits episodes page on desktop.">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Carlos Lamas portfolio on desktop.</figcaption>
+      </figure>
+      <figure class="mobile gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/chips-and-bits/website/episodes-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
+                <div class="card-image">
+                  <img src="/images/chips-and-bits/website/episodes-mobile~94.png"
+                       srcset="/images/chips-and-bits/website/episodes-mobile~94.png 94w,
+                               /images/chips-and-bits/website/episodes-mobile~188.png 188w,
+                               /images/chips-and-bits/website/episodes-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Screenshot of the Chips & Bits episodes page on mobile.">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Carlos Lamas portfolio on mobile.</figcaption>
+      </figure>
+      <div class="cta">
+        <a href="http://carloslamas.tv/" class="button" target="_blank">
+          <span class="button-icon"><span class="icon icon-globe" aria-hidden="true"></span></span>
+          <span class="button-content">Visit the Site</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  @@include('_footer.html')
+  @@include('_scripts.html')
+</body>
+</html>
