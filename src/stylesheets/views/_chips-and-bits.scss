@@ -1,5 +1,11 @@
 .chips-and-bits {
-  .ribbon { background: #096; }
+  .ribbon {
+    background: #096;
+    h2 {
+      @extend h2.inverted;
+      mix-blend-mode: normal;
+    }
+  }
   .gallery {
     .scroll-view {
       margin: -.25rem -1rem;
@@ -14,8 +20,8 @@
     &.mobile {
       ul { flex-wrap: nowrap; }
       li {
-        flex: 0 1 90px;
-        min-width: 90px;
+        flex: 0 1 94px;
+        min-width: 94px;
       }
     }
   }
@@ -41,8 +47,8 @@
       &.mobile {
         ul { flex-wrap: unset; }
         li {
-          flex: 0 1 180px;
-          min-width: 180px;
+          flex: 0 1 188px;
+          min-width: 188px;
         }
       }
     }
