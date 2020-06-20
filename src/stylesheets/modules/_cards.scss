@@ -30,11 +30,11 @@
     }
   }
   .card-content {
-    padding: 1rem;
+    padding: 1.5rem;
     position: relative;
     h3 {
       color: $grey-1;
-      margin-bottom: .5rem;
+      font-size: ms(3);
     }
     .fab {
       position: absolute;
@@ -42,7 +42,6 @@
       top: 0;
       transform: translateY(-50%);
     }
-    .tags { margin-bottom: 0; }
   }
 
   @include breakpoint($breakpoint-tablet) {
@@ -64,23 +63,9 @@
       h3 {
         color: #fff;
         font-family: $custom-font-regular;
-        font-size: ms(3);
         text-transform: uppercase;
       }
       .fab { @extend %hidden-tablet; }
-      .tags {
-        left: 2rem;
-        margin: 0 auto;
-        max-width: 375px;
-        position: absolute;
-        right: 2rem;
-        top: 50%;
-        transform: translateY(2rem);
-        li {
-          background: rgba(0, 0, 0, .1);
-          color: rgba(0, 0, 0, .5);
-        }
-      }
     }
   }
 }

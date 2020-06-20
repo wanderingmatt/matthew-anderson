@@ -4,9 +4,9 @@
   margin: 0;
   margin-bottom: -.5rem;
   padding: 0;
-  li {
+  .tag {
     background-color: fade_out($off-white, .5);
-    border-radius: .1rem;
+    border-radius: .25rem;
     color: $grey-4;
     display: inline-block;
     font-size: ms(-1);
@@ -16,7 +16,10 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
-    li { font-size: ms(0); }
+    .tag {
+      font-size: ms(0);
+      font-weight: 500;
+    }
   }
 }
 
@@ -52,5 +55,4 @@
   @include breakpoint($breakpoint-widescreen) {
     .tag { padding: 1.5rem; }
   }
-
 }

@@ -95,6 +95,7 @@
         &.highlight {
           grid-column: span 3;
           grid-row: span 2;
+          h3 { font-size: ms(6); }
         }
       }
     }
