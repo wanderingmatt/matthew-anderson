@@ -1137,7 +1137,7 @@ nav a {
     text-transform: uppercase;
     top: 50%;
     transform: translateY(-50%); }
-    .ribbon h2.inverted, .onehub .ribbon h2, .r8r .ribbon h2 {
+    .ribbon h2.inverted, .chips-and-bits .ribbon h2, .onehub .ribbon h2, .r8r .ribbon h2 {
       background: #191A19;
       color: #fff;
       mix-blend-mode: multiply; }
@@ -1306,17 +1306,26 @@ nav a {
 
 .chips-and-bits .ribbon {
   background: #096; }
+  .chips-and-bits .ribbon h2 {
+    mix-blend-mode: normal; }
 
 .chips-and-bits .gallery .scroll-view {
   margin: -.25rem -1rem;
   padding: 1rem; }
 
 .chips-and-bits .gallery li {
-  flex: 0 1 200px;
+  flex: 0 1 240px;
   margin-right: 1rem;
-  min-width: 200px; }
+  min-width: 240px; }
   .chips-and-bits .gallery li:last-child {
     margin-right: 0; }
+
+.chips-and-bits .gallery.mobile ul {
+  flex-wrap: nowrap; }
+
+.chips-and-bits .gallery.mobile li {
+  flex: 0 1 94px;
+  min-width: 94px; }
 
 @media (min-width: 1366px) {
   .chips-and-bits .gallery {
@@ -1329,17 +1338,17 @@ nav a {
       margin: -.5rem -6rem;
       padding: 1.5rem 6rem; }
     .chips-and-bits .gallery li {
-      flex: 0 1 400px;
+      flex: 0 1 480px;
       margin: 0;
       margin-right: 2rem;
-      min-width: 400px; }
+      min-width: 480px; }
       .chips-and-bits .gallery li:first-child {
         margin-left: 0; }
     .chips-and-bits .gallery.mobile ul {
-      flex-wrap: nowrap; }
+      flex-wrap: unset; }
     .chips-and-bits .gallery.mobile li {
-      flex: 0 1 150px;
-      min-width: 150px; } }
+      flex: 0 1 188px;
+      min-width: 188px; } }
 
 .iowa-actors .ribbon {
   background: #444858; }
