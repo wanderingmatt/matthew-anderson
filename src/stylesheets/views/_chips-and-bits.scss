@@ -6,10 +6,17 @@
       padding: 1rem;
     }
     li {
-      flex: 0 1 200px;
+      flex: 0 1 240px;
       margin-right: 1rem;
-      min-width: 200px;
+      min-width: 240px;
       &:last-child { margin-right: 0; } // TODO: Remove after backporting.
+    }
+    &.mobile {
+      ul { flex-wrap: nowrap; }
+      li {
+        flex: 0 1 90px;
+        min-width: 90px;
+      }
     }
   }
 
@@ -24,21 +31,18 @@
         margin: -.5rem -6rem;
         padding: 1.5rem 6rem;
       }
-      ul {
-        // padding: 0 6rem;
-      }
       li {
-        flex: 0 1 400px;
+        flex: 0 1 480px;
         margin: 0;
         margin-right: 2rem;
-        min-width: 400px;
+        min-width: 480px;
         &:first-child { margin-left: 0; }
       }
       &.mobile {
-        ul { flex-wrap: nowrap; }
+        ul { flex-wrap: unset; }
         li {
-          flex: 0 1 150px;
-          min-width: 150px;
+          flex: 0 1 180px;
+          min-width: 180px;
         }
       }
     }
