@@ -967,44 +967,44 @@ nav a {
     .gallery.mobile li {
       margin: 1rem; } }
 
-.chips-and-bits .gallery .scroll-view, .carlos-lamas .gallery .scroll-view {
+.carlos-lamas .gallery .scroll-view, .chips-and-bits .gallery .scroll-view, .marshal .gallery .scroll-view, .proof .gallery .scroll-view, .r8r .gallery .scroll-view {
   margin: -.25rem -1rem;
   padding: 1rem; }
 
-.chips-and-bits .gallery li, .carlos-lamas .gallery li {
+.carlos-lamas .gallery li, .chips-and-bits .gallery li, .marshal .gallery li, .proof .gallery li, .r8r .gallery li {
   flex: 0 1 280px;
   margin-right: 1rem;
   min-width: 280px; }
-  .chips-and-bits .gallery li:last-child, .carlos-lamas .gallery li:last-child {
+  .carlos-lamas .gallery li:last-child, .chips-and-bits .gallery li:last-child, .marshal .gallery li:last-child, .proof .gallery li:last-child, .r8r .gallery li:last-child {
     margin-right: 0; }
 
-.chips-and-bits .gallery.mobile ul, .carlos-lamas .gallery.mobile ul {
+.carlos-lamas .gallery.mobile ul, .chips-and-bits .gallery.mobile ul, .marshal .gallery.mobile ul, .proof .gallery.mobile ul, .r8r .gallery.mobile ul {
   flex-wrap: nowrap; }
 
-.chips-and-bits .gallery.mobile li, .carlos-lamas .gallery.mobile li {
+.carlos-lamas .gallery.mobile li, .chips-and-bits .gallery.mobile li, .marshal .gallery.mobile li, .proof .gallery.mobile li, .r8r .gallery.mobile li {
   flex: 0 1 94px;
   min-width: 94px; }
 
 @media (min-width: 1366px) {
-  .chips-and-bits .gallery, .carlos-lamas .gallery {
+  .carlos-lamas .gallery, .chips-and-bits .gallery, .marshal .gallery, .proof .gallery, .r8r .gallery {
     padding: 0 6rem;
     max-width: none;
     overflow: hidden;
     position: relative;
     width: auto; }
-    .chips-and-bits .gallery .scroll-view, .carlos-lamas .gallery .scroll-view {
+    .carlos-lamas .gallery .scroll-view, .chips-and-bits .gallery .scroll-view, .marshal .gallery .scroll-view, .proof .gallery .scroll-view, .r8r .gallery .scroll-view {
       margin: -.5rem -6rem;
       padding: 1.5rem 6rem; }
-    .chips-and-bits .gallery li, .carlos-lamas .gallery li {
+    .carlos-lamas .gallery li, .chips-and-bits .gallery li, .marshal .gallery li, .proof .gallery li, .r8r .gallery li {
       flex: 0 1 560px;
       margin: 0;
       margin-right: 2rem;
       min-width: 560px; }
-      .chips-and-bits .gallery li:first-child, .carlos-lamas .gallery li:first-child {
+      .carlos-lamas .gallery li:first-child, .chips-and-bits .gallery li:first-child, .marshal .gallery li:first-child, .proof .gallery li:first-child, .r8r .gallery li:first-child {
         margin-left: 0; }
-    .chips-and-bits .gallery.mobile ul, .carlos-lamas .gallery.mobile ul {
+    .carlos-lamas .gallery.mobile ul, .chips-and-bits .gallery.mobile ul, .marshal .gallery.mobile ul, .proof .gallery.mobile ul, .r8r .gallery.mobile ul {
       flex-wrap: unset; }
-    .chips-and-bits .gallery.mobile li, .carlos-lamas .gallery.mobile li {
+    .carlos-lamas .gallery.mobile li, .chips-and-bits .gallery.mobile li, .marshal .gallery.mobile li, .proof .gallery.mobile li, .r8r .gallery.mobile li {
       flex: 0 1 188px;
       min-width: 188px; } }
 
@@ -1351,19 +1351,16 @@ nav a {
   .marshal .ribbon h2 {
     top: 33.33333%; }
 
-.marshal .brand .sidekick .frame {
-  padding-bottom: 4rem;
-  padding-top: 4rem; }
+.marshal .logo .sidekick .frame {
+  padding: 4rem; }
 
 @media (min-width: 768px) {
-  .marshal .brand .sidekick .frame {
-    padding-bottom: 6rem;
-    padding-top: 6rem; } }
+  .marshal .logo .sidekick .frame {
+    padding: 6rem; } }
 
 @media (min-width: 1600px) {
-  .marshal .brand .sidekick .frame {
-    padding-bottom: 8rem;
-    padding-top: 8rem; } }
+  .marshal .logo .sidekick .frame {
+    padding: 8rem; } }
 
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743); }
