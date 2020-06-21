@@ -3,32 +3,29 @@
     background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
     h2 { top: (100%/3); }
   }
-  .brand {
+  .logo {
     .sidekick {
       .frame {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
+        padding: 4rem;
       }
     }
   }
 
   @include breakpoint($breakpoint-tablet) {
-    .brand {
+    .logo {
       .sidekick {
         .frame {
-          padding-bottom: 6rem;
-          padding-top: 6rem;
+          padding: 6rem;
         }
       }
     }
   }
 
   @include breakpoint($breakpoint-widescreen) {
-    .brand {
+    .logo {
       .sidekick {
         .frame {
-          padding-bottom: 8rem;
-          padding-top: 8rem;
+          padding: 8rem;
         }
       }
     }
