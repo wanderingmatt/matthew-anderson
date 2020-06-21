@@ -70,7 +70,7 @@
 }
 
 .gallery {
-  .carlos-lamas &, .chips-and-bits &, .r8r & {
+  .carlos-lamas &, .chips-and-bits &, .proof &, .r8r & {
     .scroll-view {
       margin: -.25rem -1rem;
       padding: 1rem;
@@ -91,7 +91,7 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
-    .carlos-lamas &, .chips-and-bits &, .r8r & {
+    .carlos-lamas &, .chips-and-bits &, .proof &, .r8r & {
       padding: 0 6rem;
       max-width: none;
       overflow: hidden;
