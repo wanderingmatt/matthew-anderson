@@ -403,7 +403,7 @@ nav .monogram h1, .about .introduction .hello .wave {
     display: none; } }
 
 @media (min-width: 1366px) {
-  .about .split-personality h4::before, .about .interests h4::before {
+  .about .split-personality h4::before {
     display: none; } }
 
 html {
@@ -728,11 +728,10 @@ nav .monogram {
     width: auto; }
 
 nav .menu {
+  display: flex;
   list-style-type: none;
   margin: 0 -1rem 0 0;
   padding: 0; }
-  nav .menu li {
-    display: inline-block; }
   nav .menu a {
     color: #AFB4B3;
     font-size: 14px;
@@ -1288,7 +1287,6 @@ nav a {
     max-width: 1200px;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin: 0 auto;
     position: relative; } }
   @media (min-width: 1366px) and (min-width: 768px) {
     .about .split-personality {
@@ -1314,12 +1312,13 @@ nav a {
     .about .split-personality section {
       margin-bottom: 0; }
       .about .split-personality section .content {
+        margin-bottom: 0;
         width: 100%; }
     .about .split-personality section:first-child {
       margin-right: 3rem; }
     .about .split-personality section:last-child {
       margin-left: 3rem; }
-    .about .split-personality::before, .about .split-personality::after {
+    .about .split-personality::before {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #EBF2F0 2px, #EBF2F0 6px);
       content: '';
       display: block;
@@ -1328,12 +1327,8 @@ nav a {
       width: 100%; }
     .about .split-personality::before {
       top: 0; }
-    .about .split-personality::after {
-      bottom: 0; }
-  .about .split-personality h4, .about .interests h4 {
-    padding-top: 0; }
-  .about .interests h4 {
-    margin-top: -1rem; } }
+  .about .split-personality h4 {
+    padding-top: 0; } }
 
 .carlos-lamas .ribbon {
   background: #4C489E; }
