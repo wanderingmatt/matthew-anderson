@@ -53,6 +53,7 @@ h3 {
 h4 {
   color: $grey-1;
   font-weight: 700;
+  margin-bottom: 1rem;
   padding-top: 2.5rem;
   position: relative;
   text-transform: uppercase;
@@ -138,6 +139,7 @@ blockquote {
   h3 { font-size: ms(8); }
 
   h4 {
+    margin-bottom: 2rem;
     padding-top: 5rem;
     &::before {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);

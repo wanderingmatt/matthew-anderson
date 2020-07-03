@@ -5,7 +5,7 @@
   margin-bottom: -.5rem;
   padding: 0;
   .tag {
-    background-color: fade_out($off-white, .5);
+    background-color: $off-white;
     border-radius: .25rem;
     color: $grey-4;
     display: inline-block;

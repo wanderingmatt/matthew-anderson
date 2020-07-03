@@ -3,24 +3,21 @@
     background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
     h2 { top: (100%/3); }
   }
-  // .credit {
-  //   display: block;
-  //   font-style: normal;
-  // }
+  .credit {
+    background: none;
+    box-shadow: inset 0 0 0 1px $off-white;
+    color: $grey-6;
+  }
   .logo {
     .sidekick {
-      .frame {
-        padding: 4rem;
-      }
+      .frame { padding: 4rem; }
     }
   }
 
   @include breakpoint($breakpoint-tablet) {
     .logo {
       .sidekick {
-        .frame {
-          padding: 6rem;
-        }
+        .frame { padding: 6rem; }
       }
     }
   }
@@ -28,9 +25,7 @@
   @include breakpoint($breakpoint-widescreen) {
     .logo {
       .sidekick {
-        .frame {
-          padding: 8rem;
-        }
+        .frame { padding: 8rem; }
       }
     }
   }
