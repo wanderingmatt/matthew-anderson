@@ -458,6 +458,7 @@ h3 {
 h4 {
   color: #373938;
   font-weight: 700;
+  margin-bottom: 1rem;
   padding-top: 2.5rem;
   position: relative;
   text-transform: uppercase; }
@@ -526,6 +527,7 @@ blockquote {
   h3 {
     font-size: 55.99944px; }
   h4 {
+    margin-bottom: 2rem;
     padding-top: 5rem; }
     h4::before {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #EBF2F0 2px, #EBF2F0 6px);
@@ -1206,7 +1208,7 @@ nav a {
   margin-bottom: -.5rem;
   padding: 0; }
   .tags .tag, .tags-stylized .tag {
-    background-color: rgba(235, 242, 240, 0.5);
+    background-color: #EBF2F0;
     border-radius: .25rem;
     color: #919594;
     display: inline-block;
@@ -1345,6 +1347,11 @@ nav a {
   background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
   .marshal .ribbon h2 {
     top: 33.33333%; }
+
+.marshal .credit {
+  background: none;
+  box-shadow: inset 0 0 0 1px #EBF2F0;
+  color: #CDD3D1; }
 
 .marshal .logo .sidekick .frame {
   padding: 4rem; }
