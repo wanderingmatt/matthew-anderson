@@ -666,7 +666,7 @@ header h2 span {
   margin-top: 1rem; }
 
 .sidekick {
-  margin: 0; }
+  margin: 1rem 0; }
   .sidekick .frame {
     position: relative; }
     .sidekick .frame::after {
@@ -683,6 +683,11 @@ header h2 span {
     display: block;
     margin: 0 auto;
     max-width: 100%; }
+
+@media (min-width: 768px) {
+  .sidekick {
+    margin-bottom: 2rem;
+    margin-top: 2rem; } }
 
 @media (min-width: 1366px) {
   .hero {
@@ -1367,7 +1372,7 @@ nav a {
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743); }
 
-.onehub .onehub-com .hero figcaption {
+.onehub .website .hero figcaption {
   margin-top: 0; }
 
 .proof .ribbon {
