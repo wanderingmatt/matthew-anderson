@@ -24,7 +24,7 @@ section {
 }
 
 .sidekick {
-  margin: 0;
+  margin: 1rem 0;
   .frame {
     position: relative;
     &::after {
@@ -43,6 +43,13 @@ section {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+  }
+}
+
+@include breakpoint($breakpoint-tablet) {
+  .sidekick {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 }
 
