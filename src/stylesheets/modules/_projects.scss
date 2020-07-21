@@ -8,6 +8,11 @@
     padding: 0;
   }
   .card {
+    &.onehub {
+      .card-image {
+        img { object-position: 0 0; }
+      }
+    }
     &.kenny-meyers {
       .card-image {
         img { object-position: 50% 50%; }
@@ -28,9 +33,10 @@
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(22rem, .375fr);
+      grid-auto-rows: minmax(18rem, .375fr);
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
       grid-template-rows: 1fr;
       .card {
         &.carlos-lamas {
@@ -59,12 +65,6 @@
         }
         &.r8r {
           .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
-        }
-        &.side-projects {
-          .card-content {
-            background: conic-gradient(#8BB9D4, #A6CFA1, #DAD6A1, #E1B298, #E59CA0, #AE9CD6, #8BB9D4);
-            h3 { color: $grey-1; }
-          }
         }
       }
       .card-action-area {

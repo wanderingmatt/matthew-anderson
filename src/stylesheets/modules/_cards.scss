@@ -15,7 +15,8 @@
     img {
       display: block;
       height: 100%;
-      max-height: 100vmin;
+      max-height: 100vw;
+      min-height: 75vw;
       object-fit: cover;
       object-position: 0 0;
       width: 100%;
@@ -47,7 +48,10 @@
 
   @include breakpoint($breakpoint-tablet) {
     .card-image {
-      img { max-height: initial; }
+      img {
+        max-height: initial;
+        min-height: initial;
+      }
       &::after { content: none; }
     }
     .card-content {
