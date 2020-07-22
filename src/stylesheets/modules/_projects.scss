@@ -8,22 +8,7 @@
     padding: 0;
   }
   .card {
-    &.onehub {
-      .card-image {
-        img { object-position: 0 0; }
-      }
-    }
-    &.kenny-meyers {
-      .card-image {
-        img { object-position: 50% 50%; }
-      }
-    }
-    &.marshal {
-      .card-image {
-        img { object-position: 100% 100%; }
-      }
-    }
-    &.r8r {
+    &.iowa-actors, &.r8r {
       .card-image {
         img { object-position: 100% 0; }
       }
@@ -33,10 +18,9 @@
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(18rem, .375fr);
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-auto-rows: minmax(14rem, .275fr);
       grid-gap: 2rem;
-      // grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       grid-template-rows: 1fr;
       .card {
         &.carlos-lamas {
@@ -85,8 +69,8 @@
 
   @include breakpoint($breakpoint-desktop) {
     .projects-list {
-      grid-auto-rows: minmax(18rem, .375fr);
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-auto-rows: minmax(16rem, .275fr);
+      grid-template-rows: .85fr;
       > li {
         &.highlight {
           grid-column: span 3;
@@ -98,8 +82,9 @@
 
   @include breakpoint($breakpoint-widescreen) {
     .projects-list {
-      grid-auto-rows: minmax(22rem, .375fr);
+      grid-auto-rows: minmax(20rem, .275fr);
       grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-template-rows: 1fr;
     }
   }
 }
