@@ -3,9 +3,6 @@
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 @import 'framework/*';
-@import 'regions/footer';
-@import 'regions/header';
-@import 'regions/layout';
-@import 'regions/nav';
+@import 'regions/*';
 @import 'modules/*';
 @import 'views/*';
