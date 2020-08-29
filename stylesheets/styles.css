@@ -395,7 +395,7 @@ section .content {
       padding-left: 0;
       padding-right: 0; } }
 
-nav .monogram h1, .about .introduction .hello .wave {
+.nav-site .monogram h1, .about .introduction .hello .wave {
   display: none; }
 
 @media (min-width: 768px) {
@@ -699,7 +699,31 @@ header h2 span {
     margin-bottom: 3rem;
     margin-top: 3rem; } }
 
-nav .wrapper {
+.nav-projects {
+  background: repeating-linear-gradient(-45deg, transparent, transparent 2px, #EBF2F0 2px, #EBF2F0 4px);
+  padding: 1rem .5rem; }
+  .nav-projects ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .nav-projects ul li {
+      flex: 0 1 50%;
+      margin: 0 .5rem; }
+    .nav-projects ul a {
+      background: white;
+      border: 2px solid #EBF2F0;
+      color: #AFB4B3;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 1rem;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase; }
+
+.nav-site .wrapper {
   margin: 2rem auto;
   max-width: 1600px;
   padding-left: 1rem;
@@ -709,44 +733,44 @@ nav .wrapper {
   justify-content: space-between;
   padding: 0 1rem; }
   @media (min-width: 768px) {
-    nav .wrapper {
+    .nav-site .wrapper {
       margin-bottom: 2rem;
       margin-top: 2rem;
       padding-left: 2rem;
       padding-right: 2rem; } }
   @media (min-width: 1366px) {
-    nav .wrapper {
+    .nav-site .wrapper {
       margin-bottom: 4rem;
       margin-top: 4rem;
       padding-left: 4rem;
       padding-right: 4rem; } }
   @media (min-width: 1600px) {
-    nav .wrapper {
+    .nav-site .wrapper {
       margin-bottom: 6rem;
       margin-top: 6rem;
       padding-left: 6rem;
       padding-right: 6rem; } }
 
-nav .monogram {
+.nav-site .monogram {
   margin-left: -1rem; }
-  nav .monogram img {
+  .nav-site .monogram img {
     display: block;
     height: 3rem;
     width: auto; }
 
-nav .menu {
+.nav-site .menu {
   display: flex;
   list-style-type: none;
   margin: 0 -1rem 0 0;
   padding: 0; }
-  nav .menu a {
+  .nav-site .menu a {
     color: #AFB4B3;
     font-size: 14px;
     font-weight: 700;
     position: relative;
     text-decoration: none;
     text-transform: uppercase; }
-    nav .menu a::after {
+    .nav-site .menu a::after {
       background: rgba(0, 153, 102, 0.2);
       bottom: 0;
       content: '';
@@ -755,29 +779,29 @@ nav .menu {
       opacity: 0;
       position: absolute;
       width: 100%; }
-    nav .menu a:hover:not(.selected) {
+    .nav-site .menu a:hover:not(.selected) {
       color: #555856; }
-    nav .menu a.selected {
+    .nav-site .menu a.selected {
       color: #096;
       pointer-events: none; }
 
-nav a {
+.nav-site a {
   display: block;
   padding: 1rem; }
 
 @media (min-width: 768px) {
-  nav .monogram img {
+  .nav-site .monogram img {
     height: 4rem; }
-  nav .menu a::after {
+  .nav-site .menu a::after {
     height: 4px; } }
 
 @media (min-width: 1366px) {
-  nav .menu a {
+  .nav-site .menu a {
     font-size: 16px; }
-    nav .menu a:hover:not(.selected)::after {
+    .nav-site .menu a:hover:not(.selected)::after {
       opacity: 1;
       transform: translateY(2px); }
-    nav .menu a::after {
+    .nav-site .menu a::after {
       transition-duration: .2s;
       transition-property: opacity, transform;
       transform: translateY(6px); } }
@@ -847,8 +871,7 @@ nav a {
   .card .card-image img {
     display: block;
     height: 100%;
-    max-height: 100vw;
-    min-height: 75vw;
+    max-height: 100vmin;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: 0 0;
