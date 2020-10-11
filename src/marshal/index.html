@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Marshal — Matthew Anderson</title>
+  @@include('_meta.html')
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+</head>
+<body class="marshal case-study">
+  @@include('_nav-site.html', {
+    "work": '',
+    "about": ''
+  })
+  <main>
+    <div class="ribbon">
+      <div class="content">
+        <h2>Marshal</h2>
+        <img src="/images/marshal/marshal-ribbon~400.png"
+             srcset="/images/marshal/marshal-ribbon~400.png 400w,
+                     /images/marshal/marshal-ribbon~800.png 800w,
+                     /images/marshal/marshal-ribbon~1600.png 1600w,
+                     /images/marshal/marshal-ribbon~3200.png 3200w"
+             alt="Marshal – large screenshot">
+      </div>
+    </div>
+    <div class="introduction">
+      <div class="content">
+        <h3>Marshal was an online privacy tool for finding and alerting you to sensitive data in your cloud services.</h3>
+      </div>
+    </div>
+    <section>
+      <div class="content">
+        <p>In 2017, I built a satellite team within Onehub with the goal of pursuing an alternative revenue stream. I created a new brand and built a beta.</p>
+      </div>
+    </section>
+    <section class="product">
+      <div class="content">
+        <h4>Product</h4>
+        <ul class="tags">
+          <li class="tag">Product Manager</li>
+          <li class="tag">Principal Designer</li>
+          <li class="tag">Front-End Developer</li>
+        </ul>
+        <p>We set out to build a cloud-based privacy tool that could find and alert people to sensitive data in their cloud. During the alpha, we learned some critical lessons including that customers didn't want yet another service having access to and/or storing copies of their data — especially if it was found to contain sensitive information. The beta was a security product which could parse files on-the-fly without data ever being copied or resting on disk.</p>
+      </div>
+      <figure class="desktop gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/marshal/product/start-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/start-desktop~280.png"
+                       srcset="/images/marshal/product/start-desktop~280.png 280w,
+                               /images/marshal/product/start-desktop~560.png 560w,
+                               /images/marshal/product/start-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - start screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/progress-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/progress-desktop~280.png"
+                       srcset="/images/marshal/product/progress-desktop~280.png 280w,
+                               /images/marshal/product/progress-desktop~560.png 560w,
+                               /images/marshal/product/progress-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - progress screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/complete-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/complete-desktop~280.png"
+                       srcset="/images/marshal/product/complete-desktop~280.png 280w,
+                               /images/marshal/product/complete-desktop~560.png 560w,
+                               /images/marshal/product/complete-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - progress complete screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/confirm-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/confirm-desktop~280.png"
+                       srcset="/images/marshal/product/confirm-desktop~280.png 280w,
+                               /images/marshal/product/confirm-desktop~560.png 560w,
+                               /images/marshal/product/confirm-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - confirmation modal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/report-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/report-desktop~280.png"
+                       srcset="/images/marshal/product/report-desktop~280.png 280w,
+                               /images/marshal/product/report-desktop~560.png 560w,
+                               /images/marshal/product/report-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - report screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/threats-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/threats-desktop~280.png"
+                       srcset="/images/marshal/product/threats-desktop~280.png 280w,
+                               /images/marshal/product/threats-desktop~560.png 560w,
+                               /images/marshal/product/threats-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - threats screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/filter-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Filter any of your connected services and connected threats out of the current report.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/filter-desktop~280.png"
+                       srcset="/images/marshal/product/filter-desktop~280.png 280w,
+                               /images/marshal/product/filter-desktop~560.png 560w,
+                               /images/marshal/product/filter-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - filter modal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/settings-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/settings-desktop~280.png"
+                       srcset="/images/marshal/product/settings-desktop~280.png 280w,
+                               /images/marshal/product/settings-desktop~560.png 560w,
+                               /images/marshal/product/settings-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - settings screenshot">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Marshal product on desktop.</figcaption>
+      </figure>
+      <figure class="mobile gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/marshal/product/start-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/start-mobile~94.png"
+                       srcset="/images/marshal/product/start-mobile~94.png 94w,
+                               /images/marshal/product/start-mobile~188.png 188w,
+                               /images/marshal/product/start-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - start screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/progress-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/progress-mobile~94.png"
+                       srcset="/images/marshal/product/progress-mobile~94.png 94w,
+                               /images/marshal/product/progress-mobile~188.png 188w,
+                               /images/marshal/product/progress-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - progress screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/complete-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/complete-mobile~94.png"
+                       srcset="/images/marshal/product/complete-mobile~94.png 94w,
+                               /images/marshal/product/complete-mobile~188.png 188w,
+                               /images/marshal/product/complete-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - progress complete screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/confirm-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/confirm-mobile~94.png"
+                       srcset="/images/marshal/product/confirm-mobile~94.png 94w,
+                               /images/marshal/product/confirm-mobile~188.png 188w,
+                               /images/marshal/product/confirm-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - confirmation modal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/report-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/report-mobile~94.png"
+                       srcset="/images/marshal/product/report-mobile~94.png 94w,
+                               /images/marshal/product/report-mobile~188.png 188w,
+                               /images/marshal/product/report-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - report screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/threats-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/threats-mobile~94.png"
+                       srcset="/images/marshal/product/threats-mobile~94.png 94w,
+                               /images/marshal/product/threats-mobile~188.png 188w,
+                               /images/marshal/product/threats-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - threats screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/filter-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Filter any of your connected services and connected threats out of the current report.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/filter-mobile~94.png"
+                       srcset="/images/marshal/product/filter-mobile~94.png 94w,
+                               /images/marshal/product/filter-mobile~188.png 188w,
+                               /images/marshal/product/filter-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - filter modal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/product/settings-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
+                <div class="card-image">
+                  <img src="/images/marshal/product/settings-mobile~94.png"
+                       srcset="/images/marshal/product/settings-mobile~94.png 94w,
+                               /images/marshal/product/settings-mobile~188.png 188w,
+                               /images/marshal/product/settings-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - settings screenshot">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Marshal product on mobile.</figcaption>
+      </figure>
+    </section>
+    <section class="website">
+      <div class="content">
+        <h4>Website</h4>
+        <ul class="tags">
+          <li class="tag">Product Manager</li>
+          <li class="tag">Principal Designer</li>
+          <li class="tag">Front-End Developer</li>
+          <li class="tag credit">Designed with Karsten Rowe</li>
+        </ul>
+        <p>We needed a simple yet compelling site which both elevated Marshal's stance on privacy and made it incredibly fast and easy to trial the product. I created a mobile-first, single page website within the product to allow for a fast and seamless onboarding experience.</p>
+      </div>
+      <figure class="desktop gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/marshal/website/hero-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The hero illustrates Marshal's primary function, to find sensitive information hiding in your cloud services.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/hero-desktop~280.png"
+                       srcset="/images/marshal/website/hero-desktop~280.png 280w,
+                               /images/marshal/website/hero-desktop~560.png 560w,
+                               /images/marshal/website/hero-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - hero screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/what-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The first introductory section covers what Marshal is.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/what-desktop~280.png"
+                       srcset="/images/marshal/website/what-desktop~280.png 280w,
+                               /images/marshal/website/what-desktop~560.png 560w,
+                               /images/marshal/website/what-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - what is Marshal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/how-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second introductory section covers how Marshal works.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/how-desktop~280.png"
+                       srcset="/images/marshal/website/how-desktop~280.png 280w,
+                               /images/marshal/website/how-desktop~560.png 560w,
+                               /images/marshal/website/how-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - how does Marshal work screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/discovers-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/discovers-desktop~280.png"
+                       srcset="/images/marshal/website/discovers-desktop~280.png 280w,
+                               /images/marshal/website/discovers-desktop~560.png 560w,
+                               /images/marshal/website/discovers-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - discovers without details screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/copies-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/copies-desktop~280.png"
+                       srcset="/images/marshal/website/copies-desktop~280.png 280w,
+                               /images/marshal/website/copies-desktop~560.png 560w,
+                               /images/marshal/website/copies-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - never makes copies screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/redacts-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/redacts-desktop~280.png"
+                       srcset="/images/marshal/website/redacts-desktop~280.png 280w,
+                               /images/marshal/website/redacts-desktop~560.png 560w,
+                               /images/marshal/website/redacts-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - redacts your risk screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/faq-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/faq-desktop~280.png"
+                       srcset="/images/marshal/website/faq-desktop~280.png 280w,
+                               /images/marshal/website/faq-desktop~560.png 560w,
+                               /images/marshal/website/faq-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - FAQ screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/sidekick-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/sidekick-desktop~280.png"
+                       srcset="/images/marshal/website/sidekick-desktop~280.png 280w,
+                               /images/marshal/website/sidekick-desktop~560.png 560w,
+                               /images/marshal/website/sidekick-desktop~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - sidekick screenshot">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Marshal website on desktop.</figcaption>
+      </figure>
+      <figure class="mobile gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/marshal/website/hero-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The hero illustrates Marshal's primary function and some of the supported services.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/hero-mobile~94.png"
+                       srcset="/images/marshal/website/hero-mobile~94.png 94w,
+                               /images/marshal/website/hero-mobile~188.png 188w,
+                               /images/marshal/website/hero-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - hero screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/what-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The first introductory section covers what Marshal is.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/what-mobile~94.png"
+                       srcset="/images/marshal/website/what-mobile~94.png 94w,
+                               /images/marshal/website/what-mobile~188.png 188w,
+                               /images/marshal/website/what-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - what is Marshal screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/how-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second introductory section covers how Marshal works.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/how-mobile~94.png"
+                       srcset="/images/marshal/website/how-mobile~94.png 94w,
+                               /images/marshal/website/how-mobile~188.png 188w,
+                               /images/marshal/website/how-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - how Marshal works screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/discovers-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/discovers-mobile~94.png"
+                       srcset="/images/marshal/website/discovers-mobile~94.png 94w,
+                               /images/marshal/website/discovers-mobile~188.png 188w,
+                               /images/marshal/website/discovers-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - discovers without details screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/copies-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/copies-mobile~94.png"
+                       srcset="/images/marshal/website/copies-mobile~94.png 94w,
+                               /images/marshal/website/copies-mobile~188.png 188w,
+                               /images/marshal/website/copies-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - never makes copies screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/redacts-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/redacts-mobile~94.png"
+                       srcset="/images/marshal/website/redacts-mobile~94.png 94w,
+                               /images/marshal/website/redacts-mobile~188.png 188w,
+                               /images/marshal/website/redacts-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - redacts your risk screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/faq-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/faq-mobile~94.png"
+                       srcset="/images/marshal/website/faq-mobile~94.png 94w,
+                               /images/marshal/website/faq-mobile~188.png 188w,
+                               /images/marshal/website/faq-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - FAQ screenshot">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/website/sidekick-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
+                <div class="card-image">
+                  <img src="/images/marshal/website/sidekick-mobile~94.png"
+                       srcset="/images/marshal/website/sidekick-mobile~94.png 94w,
+                               /images/marshal/website/sidekick-mobile~188.png 188w,
+                               /images/marshal/website/sidekick-mobile~375.png 375w"
+                       sizes="(min-width: 1366px) 188px, 94px"
+                       alt="Marshal - sidekick screenshot">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Screenshots of the Marshal website on mobile.</figcaption>
+      </figure>
+    </section>
+    <section class="logo">
+      <div class="content">
+        <h4>Logo</h4>
+        <ul class="tags">
+          <li class="tag">Creative Director</li>
+          <li class="tag">Principal Designer</li>
+          <li class="tag credit">Designed with Andrew Juarez</li>
+        </ul>
+        <p>We wanted a brand that would exude confidence without being overbearing. The name, logo, and palette were designed to evoke the following emotions:</p>
+        <ul class="tags-stylized">
+          <li class="tag">Secure</li>
+          <li class="tag">Trustworthy</li>
+          <li class="tag">Approachable</li>
+        </ul>
+        <p>The result is a product brand that is consumer friendly but powerful in presence. The name sounds like a person while also denoting safety. The logo is strong and angled but constructed with simple and pleasing geometric shapes. The color palette is functional and flexible.</p>
+        <figure class="sidekick">
+          <div class="frame">
+            <img src="/images/marshal/logo/marshal-logo~444.png"
+                 srcset="/images/marshal/logo/marshal-logo~222.png 222w,
+                         /images/marshal/logo/marshal-logo~444.png 444w,
+                         /images/marshal/logo/marshal-logo~888.png 888w"
+                 alt="Marshal - logo">
+          </div>
+          <figcaption>The Marshal logo.</figcaption>
+        </figure>
+      </div>
+      <figure class="desktop gallery">
+        <div class="scroll-view">
+          <ul>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-shapes.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Some of the first Marshal shape experiments.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-shapes~280.png"
+                       srcset="/images/marshal/logo/marshal-shapes~280.png 280w,
+                               /images/marshal/logo/marshal-shapes~560.png 560w,
+                               /images/marshal/logo/marshal-shapes~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - shapes iteration">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-cutout.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Isolating a unique working shape by cutting out a portion of a 6-pointed star.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-cutout~280.png"
+                       srcset="/images/marshal/logo/marshal-cutout~280.png 280w,
+                               /images/marshal/logo/marshal-cutout~560.png 560w,
+                               /images/marshal/logo/marshal-cutout~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - cutout iteration">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-connections.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Experimenting with different angles and connection points.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-connections~280.png"
+                       srcset="/images/marshal/logo/marshal-connections~280.png 280w,
+                               /images/marshal/logo/marshal-connections~560.png 560w,
+                               /images/marshal/logo/marshal-connections~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - connections iteration">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-final-shape.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The final Marshal shape was found by raising the external points and connecting them their acute top corners.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-final-shape~280.png"
+                       srcset="/images/marshal/logo/marshal-final-shape~280.png 280w,
+                               /images/marshal/logo/marshal-final-shape~560.png 560w,
+                               /images/marshal/logo/marshal-final-shape~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - final shape iteration">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-treatments.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A final round of experiments on the Marshal shape to give it some dimension.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-treatments~280.png"
+                       srcset="/images/marshal/logo/marshal-treatments~280.png 280w,
+                               /images/marshal/logo/marshal-treatments~560.png 560w,
+                               /images/marshal/logo/marshal-treatments~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - treatments iteration">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-colors.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A handful of Marshal color experiments including monochromatic, polychromatic, complementary, and duotone pairings.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-colors~280.png"
+                       srcset="/images/marshal/logo/marshal-colors~280.png 280w,
+                               /images/marshal/logo/marshal-colors~560.png 560w,
+                               /images/marshal/logo/marshal-colors~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - color experiments">
+                </div>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/images/marshal/logo/marshal-brand.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The Marshal brand guide showing the logo, glyph, and colors.">
+                <div class="card-image">
+                  <img src="/images/marshal/logo/marshal-brand~280.png"
+                       srcset="/images/marshal/logo/marshal-brand~280.png 280w,
+                               /images/marshal/logo/marshal-brand~560.png 560w,
+                               /images/marshal/logo/marshal-brand~1120.png 1120w"
+                       sizes="(min-width: 1366px) 560px, 280px"
+                       alt="Marshal - brand guide">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <figcaption>Evolution of the Marshal logo.</figcaption>
+      </figure>
+    </section>
+  </main>
+  @@include('_footer.html')
+  @@include('_scripts.html')
+</body>
+</html>

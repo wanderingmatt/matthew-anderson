@@ -1,0 +1,120 @@
+.gallery {
+  @extend %content-quarter;
+  position: relative;
+  .scroll-view {
+    margin: -.5rem -1rem;
+    overflow: hidden;
+    overflow-x: scroll;
+    padding: .5rem 1rem;
+    text-align: center;
+  }
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+  li {
+    flex: 0 1 148px;
+    margin-right: 1rem;
+    min-width: 148px;
+    a { cursor: zoom-in; }
+    img {
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+    &:last-child { margin-right: 0; }
+  }
+  figcaption {
+    border-top: 1px solid $off-white;
+    margin-top: .5rem;
+  }
+  &.mobile {
+    li {
+      flex: 0 1 (347px / 4);
+      min-width: (347px / 4);
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .scroll-view {
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    .card-action-area {
+      transition: transform .2s ease;
+      &:hover {
+        transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    li {
+      margin: 0 1rem;
+      min-width: auto;
+      &:first-child { margin-left: 0; }
+    }
+    figcaption { margin-top: 1rem; }
+    &.mobile {
+      ul { flex-wrap: wrap; }
+      li { margin: 1rem; }
+    }
+  }
+}
+
+.gallery {
+  .carlos-lamas &, .chips-and-bits &, .marshal &, .onehub &, .proof &, .r8r & {
+    .scroll-view {
+      margin: -.25rem -1rem;
+      padding: 1rem;
+    }
+    li {
+      flex: 0 1 280px;
+      margin-right: 1rem;
+      min-width: 280px;
+      &:last-child { margin-right: 0; } // TODO: Remove after backporting.
+    }
+    &.mobile {
+      ul { flex-wrap: nowrap; }
+      li {
+        flex: 0 1 94px;
+        min-width: 94px;
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .carlos-lamas &, .chips-and-bits &, .marshal &, .onehub &, .proof &, .r8r & {
+      padding: 0 6rem;
+      max-width: none;
+      overflow: hidden;
+      position: relative;
+      width: auto;
+      .scroll-view {
+        margin: -.5rem -6rem;
+        padding: 1.5rem 6rem;
+      }
+      li {
+        flex: 0 1 560px;
+        margin: 0;
+        margin-right: 2rem;
+        min-width: 560px;
+        &:first-child { margin-left: 0; }
+      }
+      &.mobile {
+        ul { flex-wrap: unset; }
+        li {
+          flex: 0 1 188px;
+          min-width: 188px;
+        }
+      }
+    }
+  }
+}

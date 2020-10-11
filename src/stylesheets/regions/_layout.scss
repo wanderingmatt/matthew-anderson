@@ -1,30 +1,67 @@
-%hidden { display: none; }
-%visible { display: initial; }
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 1920px;
+.introduction {
+  .content { @extend %content-quarter; }
 }
 
-// section { @extend %clearfix; }
+section {
+  .content { @extend %content-half; }
+}
 
-// TABLET
+.cta {
+  @extend %content;
+  text-align: center;
+}
 
-@include breakpoint($tablet) {
-  section {
-    display: flex;
-    padding: 0 rhythm(2);
-    @include trailer(4);
+.hero {
+  @extend %content-quarter;
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  figcaption {
+    border-top: 1px solid $off-white;
+    margin-top: 1rem;
   }
 }
 
-// DESKTOP
+.sidekick {
+  margin: 1rem 0;
+  .frame {
+    position: relative;
+    &::after {
+      border: 1px solid $off-white;
+      bottom: 0;
+      content: '';
+      left: 0;
+      mix-blend-mode: multiply;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  img {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
 
-@include breakpoint($desktop) {
-  section {
-    margin-left: 225px;
-    padding: 0;
-    @include padding-leader(3);
-    @include trailer(3);
+@include breakpoint($breakpoint-tablet) {
+  .sidekick {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@include breakpoint($breakpoint-desktop) {
+  .hero {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    figcaption { margin-top: 2rem; }
+  }
+
+  .sidekick {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 }

@@ -1,0 +1,44 @@
+header {
+  .content { @extend %content; }
+  h2 {
+    strong {
+      color: $off-black;
+      font-weight: 400;
+    }
+    a {
+      position: relative;
+      font-weight: 400;
+      text-decoration: none;
+      &::before {
+        background-image: linear-gradient(fade_out($brand, .8), fade_out($brand, .8));
+        bottom: 10%;
+        content: '';
+        display: inline-block;
+        height: 2px;
+        position: absolute;
+        transition-duration: .2s;
+        transition-property: height;
+        width: 100%;
+      }
+      &:hover {
+        color: initial;
+        &::before { height: 80%; }
+      }
+    }
+    span { display: table; }
+  }
+
+  @include breakpoint($breakpoint-legacy) {
+    h2 {
+      span { display: initial; }
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    h2 {
+      a {
+        &::before { height: 4px; }
+      }
+    }
+  }
+}

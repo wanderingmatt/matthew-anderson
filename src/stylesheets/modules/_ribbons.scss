@@ -1,0 +1,60 @@
+.ribbon {
+  display: flex;
+  overflow: hidden;
+  padding-top: 2rem;
+  position: relative;
+  .content {
+    @extend %content;
+    margin: 0 auto;
+  }
+  h2 {
+    background: #fff;
+    color: $off-black;
+    right: 0;
+    margin-top: 1rem;
+    mix-blend-mode: screen;
+    padding: 1rem;
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+    &.inverted {
+      background: $off-black;
+      color: #fff;
+      mix-blend-mode: multiply;
+    }
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  &::after {
+    background: $off-black;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 1px;
+    mix-blend-mode: difference;
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    padding-top: 3rem;
+    h2 { margin-top: 1.5rem; }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    padding-top: 5rem;
+    h2 {
+      margin-top: 2.5rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  @include breakpoint($breakpoint-widescreen) {
+    padding-top: 8rem;
+  }
+}

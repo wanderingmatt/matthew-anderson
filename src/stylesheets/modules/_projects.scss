@@ -1,0 +1,90 @@
+.projects {
+  @include layout-constraints;
+  .projects-list {
+    display: grid;
+    grid-gap: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .card {
+    &.iowa-actors, &.r8r {
+      .card-image {
+        img { object-position: 100% 0; }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .projects-list {
+      grid-auto-flow: dense;
+      grid-auto-rows: minmax(14rem, .275fr);
+      grid-gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      grid-template-rows: 1fr;
+      .card {
+        &.carlos-lamas {
+          .card-content { background: #4C489E; }
+        }
+        &.chips-and-bits {
+          .card-content { background: #096; }
+        }
+        &.iowa-actors {
+          .card-content {
+            background: #FAE443;
+            h3 { color: $grey-1; }
+          }
+        }
+        &.kenny-meyers {
+          .card-content { background: #981B1E; }
+        }
+        &.marshal {
+          .card-content { background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
+        }
+        &.onehub {
+          .card-content { background: linear-gradient(to bottom right, #58B28D, #79B743); }
+        }
+        &.proof {
+          .card-content { background: #B9AF64; }
+        }
+        &.r8r {
+          .card-content { background: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
+        }
+      }
+      .card-action-area {
+        display: flex;
+        height: 100%;
+        transition: transform .2s;
+        &:hover {
+          transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
+          .card-content { opacity: .975; }
+        }
+      }
+      > li {
+        &.highlight { grid-area: 1 / 1 / 1 / -1; }
+        &.tall { grid-row-end: span 2; }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .projects-list {
+      grid-auto-rows: minmax(16rem, .275fr);
+      grid-template-rows: .85fr;
+      > li {
+        &.highlight {
+          grid-column: span 3;
+          grid-row: span 2;
+        }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-widescreen) {
+    .projects-list {
+      grid-auto-rows: minmax(20rem, .275fr);
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+      grid-template-rows: 1fr;
+    }
+  }
+}

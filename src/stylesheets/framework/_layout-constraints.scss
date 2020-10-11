@@ -1,0 +1,47 @@
+$full: 1600px;
+$quarter: 1200px;
+$half: 800px;
+
+@mixin layout-constraints($constraint: $full) {
+  margin: 2rem auto;
+  max-width: $constraint;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include breakpoint($breakpoint-tablet) {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    @if $constraint == $quarter or $constraint == $half {
+      padding-left: 0;
+      padding-right: 0;
+      @if $constraint == $quarter { width: 75vw; }
+      @if $constraint == $half { width: 50vw; }
+    } @else {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  @include breakpoint($breakpoint-widescreen) {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+    @if $constraint == $quarter or $constraint == $half {
+      padding-left: 0;
+      padding-right: 0;
+    } @else {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+}
+
+%content { @include layout-constraints; }
+%content-quarter { @include layout-constraints($quarter); }
+%content-half { @include layout-constraints($half); }

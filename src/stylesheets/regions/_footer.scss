@@ -1,84 +1,45 @@
-@mixin sprite-position($position) { background-position: 0 (0 - (($position - 1) * 32px)); }
-
 footer {
-  .elsewhere {
-    background: $off-white;
+  .wrapper { background-color: $off-white; }
+  .elsewhere-list {
+    @include layout-constraints;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
     margin: 0;
-    padding: rhythm(2);
+    padding: 2rem 1rem;
     a {
-      background-image: url('../images/sprite.png');
-      @include breakpoint($retina) { background-image: url('../images/sprite@2x.png'); }
-      background-size: 100% auto;
       display: block;
-      height: 32px;
-      opacity: .4;
-      text-indent: -9999px;
-      width: 32px;
-      &:hover { opacity: .8; }
-      &:active { opacity: 1; }
-      &.dribbble { @include sprite-position(1); }
-      &.email { @include sprite-position(2); }
-      &.github { @include sprite-position(3); }
-      &.instagram { @include sprite-position(4); }
-      &.linkedin { @include sprite-position(5); }
-      &.spotify { @include sprite-position(6); }
-      &.twitter { @include sprite-position(7); }
+      opacity: .25;
+      padding: 1rem;
+      &:hover { opacity: 1; }
     }
   }
   .copyright {
-    color: $light-grey;
-    margin: 0;
-    padding: rhythm(1) rhythm(2);
+    color: $grey-6;
+    font-size: ms(1);
+    font-weight: 400;
+    text-align: center;
   }
 
-  // MOBILE ONLY
-
-  @include breakpoint($mobile-only) {
-    .elsewhere {
-      a { transform: scale(.75); }
-    }
-  }
-
-  // TABLET
-
-  @include breakpoint($tablet) {
-    background: $off-white;
-    display: flex;
-    padding: rhythm(2);
-    .elsewhere {
-      background: none;
-      box-sizing: border-box;
-      padding: 0;
-      width: 75%;
-    }
-    .copyright {
-      box-sizing: border-box;
-      line-height: 32px;
-      padding: 0 0 0 rhythm(4);
+  @include breakpoint($breakpoint-tablet) {
+    .elsewhere-list {
+      margin-bottom: 0;
+      padding: 3rem 0;
     }
   }
 
-  // DESKTOP
-
-  @include breakpoint($desktop) {
-    padding: rhythm(4) 0;
-    @include leader(6);
-    .elsewhere {
-      justify-content: flex-start;
-      order: 2;
-      li { margin-right: 3rem; }
+  @include breakpoint($breakpoint-desktop) {
+    .elsewhere-list {
+      padding: 4rem 0;
+      a {
+        transition: transform .2s;
+        &:hover { transform: translateY(-.25rem); }
+      }
     }
-    .copyright {
-      order: 1;
-      padding: 0 rhythm(2);
-      width: 225px;
-    }
+    .copyright { font-size: ms(2); }
   }
 
-  // WIDESCREEN
-
-  @include breakpoint($widescreen) { background: none; }
+  @include breakpoint($breakpoint-desktop) {
+    .elsewhere-list { padding: 5rem 0; }
+  }
 }

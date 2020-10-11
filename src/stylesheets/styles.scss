@@ -1,13 +1,8 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'node_modules/modularscale-sass/stylesheets/modularscale';
-@import 'node_modules/ritmo/ritmo';
-@import 'node_modules/ritmo/compass-aliases';
 @import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
 
-@import 'defaults';
-@import 'fonts/brandon-grotesque-light';
-@import 'fonts/brandon-grotesque-regular';
 @import 'framework/*';
-@import 'vendor/*';
 @import 'regions/*';
 @import 'modules/*';
+@import 'views/*';

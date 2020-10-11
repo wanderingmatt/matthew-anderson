@@ -1,0 +1,81 @@
+.nav-site {
+  .wrapper {
+    @include layout-constraints;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  .monogram {
+    margin-left: -1rem;
+    img {
+      display: block;
+      height: 3rem;
+      width: auto;
+    }
+    h1 { @extend %hidden; }
+  }
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0 -1rem 0 0;
+    padding: 0;
+    a {
+      color: $grey-5;
+      font-size: ms(0);
+      font-weight: 700;
+      position: relative;
+      text-decoration: none;
+      text-transform: uppercase;
+      &::after {
+        background: fade_out($brand, .8);
+        bottom: 0;
+        content: '';
+        height: 2px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+      }
+      &:hover:not(.selected) { color: $grey-2; }
+      &.selected {
+        color: $brand;
+        pointer-events: none;
+      }
+    }
+  }
+  a {
+    display: block;
+    padding: 1rem;
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .monogram {
+      img { height: 4rem; }
+    }
+    .menu {
+      a {
+        &::after { height: 4px; }
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .menu {
+      a {
+        font-size: ms(1);
+        &:hover:not(.selected) {
+          &::after {
+            opacity: 1;
+            transform: translateY(2px);
+          }
+        }
+        &::after {
+          transition-duration: .2s;
+          transition-property: opacity, transform;
+          transform: translateY(6px);
+        }
+      }
+    }
+  }
+}

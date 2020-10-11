@@ -1,0 +1,76 @@
+.about {
+  .introduction {
+    position: relative;
+    .hello {
+      margin-top: 1rem;
+      .avatar {
+        border-radius: 50%;
+        display: block;
+        height: 4rem;
+        width: auto;
+      }
+      .wave { @extend %hidden; }
+    }
+  }
+  section {
+    h4 { margin-bottom: 2rem; }
+    a {
+      border-bottom: 2px solid $off-white;
+      color: $grey-1;
+      font-weight: 500;
+      position: relative;
+      text-decoration: none;
+      &:hover {
+        border-color: $brand;
+        color: $brand;
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    .introduction {
+      .hello { margin-top: 2rem; }
+    }
+  }
+
+  @include breakpoint($breakpoint-desktop) {
+    .introduction {
+      .hello {
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+        transform: translateX(-3rem) translateY(11.5rem);
+        .avatar { height: 6rem; }
+      }
+    }
+    .split-personality {
+      display: flex;
+      @include layout-constraints($quarter);
+      position: relative;
+      section {
+        margin-bottom: 0;
+        .content {
+          margin-bottom: 0;
+          width: 100%;
+        }
+      }
+      section:first-child { margin-right: 3rem; }
+      section:last-child { margin-left: 3rem; }
+      &::before {
+        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
+        content: '';
+        display: block;
+        height: 1rem;
+        position: absolute;
+        width: 100%;
+      }
+      &::before { top: 0; }
+    }
+    .split-personality {
+      h4 {
+        padding-top: 0;
+        &::before { @extend %hidden-desktop; }
+      }
+    }
+  }
+}
