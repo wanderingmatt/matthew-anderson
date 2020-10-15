@@ -8,7 +8,7 @@
   }
   .monogram {
     margin-left: -1rem;
-    img {
+    img, object {
       display: block;
       height: 3rem;
       width: auto;
@@ -55,7 +55,7 @@
 
   @include breakpoint($breakpoint-tablet) {
     .monogram {
-      img { height: 4rem; }
+      img, object { height: 4rem; }
     }
     .menu {
       a {

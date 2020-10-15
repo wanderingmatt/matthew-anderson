@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="134" height="72" viewBox="0 0 134 72">
   <style>
+    svg { cursor: pointer; }
     @media (prefers-color-scheme: dark) {
       .monogram { fill: #EBF2F0; }
     }
