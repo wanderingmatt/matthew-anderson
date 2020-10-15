@@ -395,7 +395,7 @@ section .content {
       padding-left: 0;
       padding-right: 0; } }
 
-.nav-site .monogram h1, .about .introduction .hello .wave {
+.nav-site .monogram h1, .about .introduction .hello .wave, .hey .menu {
   display: none; }
 
 @media (min-width: 768px) {
@@ -403,7 +403,7 @@ section .content {
     display: none; } }
 
 @media (min-width: 1366px) {
-  .about .split-personality h4::before {
+  .about .split-personality section h4::before, .about .site h4::before {
     display: none; } }
 
 html {
@@ -423,14 +423,17 @@ body {
   text-rendering: optimizeSpeed;
   -webkit-text-size-adjust: none;
      -moz-text-size-adjust: none;
-      -ms-text-size-adjust: none;
           text-size-adjust: none; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #191A19;
+      color: #737775; } }
 
 a {
   color: #373938;
-  font-weight: 700; }
-  a:hover {
-    color: #096; }
+  font-weight: 500;
+  position: relative;
+  text-decoration: none; }
   a:active {
     position: relative;
     top: 1px; }
@@ -445,15 +448,23 @@ h1 {
   font-size: 31.99984px; }
 
 h2 {
-  color: #919594;
   font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 22.62736px;
   line-height: 1.25; }
+  h2 strong {
+    color: #191A19;
+    font-weight: 400; }
+    @media (prefers-color-scheme: dark) {
+      h2 strong {
+        color: #EBF2F0; } }
 
 h3 {
   color: #373938;
   font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-size: 19.79894px; }
+  @media (prefers-color-scheme: dark) {
+    h3 {
+      color: #AFB4B3; } }
 
 h4 {
   color: #373938;
@@ -462,6 +473,10 @@ h4 {
   padding-top: 2.5rem;
   position: relative;
   text-transform: uppercase; }
+  @media (prefers-color-scheme: dark) {
+    h4 {
+      color: #EBF2F0;
+      font-weight: 500; } }
   h4::before {
     background: repeating-linear-gradient(-45deg, transparent, transparent 2px, #EBF2F0 2px, #EBF2F0 4px);
     content: '';
@@ -470,6 +485,9 @@ h4 {
     position: absolute;
     top: 0;
     width: 100%; }
+    @media (prefers-color-scheme: dark) {
+      h4::before {
+        background: repeating-linear-gradient(-45deg, transparent, transparent 2px, #373938 2px, #373938 4px); } }
 
 p {
   margin-bottom: 2rem;
@@ -480,6 +498,9 @@ figcaption {
   font-family: "brandon-grotesque-regular", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   padding: .5rem 0;
   text-align: center; }
+  @media (prefers-color-scheme: dark) {
+    figcaption {
+      color: #555856; } }
 
 blockquote {
   margin: 2rem 0; }
@@ -503,6 +524,9 @@ blockquote {
     blockquote cite:before {
       color: #AFB4B3;
       content: '— '; }
+      @media (prefers-color-scheme: dark) {
+        blockquote cite:before {
+          color: #373938; } }
 
 @media (min-width: 768px) {
   h2 {
@@ -531,14 +555,24 @@ blockquote {
     padding-top: 5rem; }
     h4::before {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #EBF2F0 2px, #EBF2F0 6px);
-      height: 1rem; }
+      height: 1rem; } }
+    @media (min-width: 1366px) and (prefers-color-scheme: dark) {
+      h4::before {
+        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #373938 2px, #373938 6px); } }
+
+@media (min-width: 1366px) {
   blockquote p {
     font-family: "brandon-grotesque-light", -apple-system, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     font-size: 27.99986px; }
     blockquote p:before, blockquote p:after {
       color: #CDD3D1;
       font-size: 79.19496px;
-      line-height: 1; }
+      line-height: 1; } }
+    @media (min-width: 1366px) and (prefers-color-scheme: dark) {
+      blockquote p:before, blockquote p:after {
+        color: #373938; } }
+
+@media (min-width: 1366px) {
     blockquote p:before {
       transform: translateX(-3rem) translateY(-0.5rem); }
     blockquote p:after {
@@ -559,6 +593,9 @@ blockquote {
 
 footer .wrapper {
   background-color: #EBF2F0; }
+  @media (prefers-color-scheme: dark) {
+    footer .wrapper {
+      background-color: #373938; } }
 
 footer .elsewhere-list {
   margin: 2rem auto;
@@ -592,6 +629,9 @@ footer .elsewhere-list {
     display: block;
     opacity: .25;
     padding: 1rem; }
+    @media (prefers-color-scheme: dark) {
+      footer .elsewhere-list a {
+        opacity: .5; } }
     footer .elsewhere-list a:hover {
       opacity: 1; }
 
@@ -600,6 +640,9 @@ footer .copyright {
   font-size: 16px;
   font-weight: 400;
   text-align: center; }
+  @media (prefers-color-scheme: dark) {
+    footer .copyright {
+      color: #373938; } }
 
 @media (min-width: 768px) {
   footer .elsewhere-list {
@@ -619,10 +662,6 @@ footer .copyright {
 @media (min-width: 1366px) {
   footer .elsewhere-list {
     padding: 5rem 0; } }
-
-header h2 strong {
-  color: #191A19;
-  font-weight: 400; }
 
 header h2 a {
   position: relative;
@@ -654,6 +693,16 @@ header h2 span {
   header h2 a::before {
     height: 4px; } }
 
+section .content a {
+  border-bottom: 2px solid #EBF2F0; }
+  @media (prefers-color-scheme: dark) {
+    section .content a {
+      border-color: #373938;
+      color: #AFB4B3; } }
+  section .content a:hover {
+    border-color: #096;
+    color: #096; }
+
 .cta {
   text-align: center; }
 
@@ -664,6 +713,9 @@ header h2 span {
 .hero figcaption {
   border-top: 1px solid #EBF2F0;
   margin-top: 1rem; }
+  @media (prefers-color-scheme: dark) {
+    .hero figcaption {
+      border-color: #373938; } }
 
 .sidekick {
   margin: 1rem 0; }
@@ -683,6 +735,10 @@ header h2 span {
     display: block;
     margin: 0 auto;
     max-width: 100%; }
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.8) contrast(1.2); } }
 
 @media (min-width: 768px) {
   .sidekick {
@@ -770,6 +826,9 @@ header h2 span {
     position: relative;
     text-decoration: none;
     text-transform: uppercase; }
+    @media (prefers-color-scheme: dark) {
+      .nav-site .menu a {
+        color: #555856; } }
     .nav-site .menu a::after {
       background: rgba(0, 153, 102, 0.2);
       bottom: 0;
@@ -781,6 +840,9 @@ header h2 span {
       width: 100%; }
     .nav-site .menu a:hover:not(.selected) {
       color: #555856; }
+      @media (prefers-color-scheme: dark) {
+        .nav-site .menu a:hover:not(.selected) {
+          color: #CDD3D1; } }
     .nav-site .menu a.selected {
       color: #096;
       pointer-events: none; }
@@ -972,6 +1034,9 @@ header h2 span {
   .gallery figcaption {
     border-top: 1px solid #EBF2F0;
     margin-top: .5rem; }
+    @media (prefers-color-scheme: dark) {
+      .gallery figcaption {
+        border-color: #373938; } }
   .gallery.mobile li {
     flex: 0 1 86.75px;
     min-width: 86.75px; }
@@ -1188,7 +1253,8 @@ header h2 span {
     position: absolute;
     text-transform: uppercase;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    z-index: 1; }
     .ribbon h2.inverted, .chips-and-bits .ribbon h2, .onehub .ribbon h2, .r8r .ribbon h2 {
       background: #191A19;
       color: #fff;
@@ -1237,6 +1303,10 @@ header h2 span {
     font-weight: 600;
     margin: 0 .25rem .25rem 0;
     padding: .25rem .5rem; }
+    @media (prefers-color-scheme: dark) {
+      .tags .tag, .tags-stylized .tag {
+        background-color: #555856;
+        color: #191A19; } }
   @media (min-width: 1366px) {
     .tags .tag, .tags-stylized .tag {
       font-size: 14px;
@@ -1282,16 +1352,6 @@ header h2 span {
 .about section h4 {
   margin-bottom: 2rem; }
 
-.about section a {
-  border-bottom: 2px solid #EBF2F0;
-  color: #373938;
-  font-weight: 500;
-  position: relative;
-  text-decoration: none; }
-  .about section a:hover {
-    border-color: #096;
-    color: #096; }
-
 @media (min-width: 768px) {
   .about .introduction .hello {
     margin-top: 2rem; } }
@@ -1335,22 +1395,30 @@ header h2 span {
     .about .split-personality section {
       margin-bottom: 0; }
       .about .split-personality section .content {
-        margin-bottom: 0;
         width: 100%; }
+      .about .split-personality section h4 {
+        padding-top: 0; }
     .about .split-personality section:first-child {
       margin-right: 3rem; }
     .about .split-personality section:last-child {
       margin-left: 3rem; }
-    .about .split-personality::before {
+    .about .split-personality::before, .about .split-personality::after {
       background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #EBF2F0 2px, #EBF2F0 6px);
       content: '';
       display: block;
       height: 1rem;
       position: absolute;
-      width: 100%; }
+      width: 100%; } }
+    @media (min-width: 1366px) and (prefers-color-scheme: dark) {
+      .about .split-personality::before, .about .split-personality::after {
+        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, #373938 2px, #373938 6px); } }
+
+@media (min-width: 1366px) {
     .about .split-personality::before {
       top: 0; }
-  .about .split-personality h4 {
+    .about .split-personality::after {
+      bottom: 0; }
+  .about .site h4 {
     padding-top: 0; } }
 
 .carlos-lamas .ribbon {
@@ -1373,6 +1441,10 @@ header h2 span {
   background: none;
   box-shadow: inset 0 0 0 1px #EBF2F0;
   color: #CDD3D1; }
+  @media (prefers-color-scheme: dark) {
+    .marshal .credit {
+      box-shadow: inset 0 0 0 1px #555856;
+      color: #555856; } }
 
 .marshal .logo .sidekick .frame {
   padding: 4rem; }
