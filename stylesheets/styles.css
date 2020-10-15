@@ -809,7 +809,7 @@ section .content a {
 
 .nav-site .monogram {
   margin-left: -1rem; }
-  .nav-site .monogram img {
+  .nav-site .monogram img, .nav-site .monogram object {
     display: block;
     height: 3rem;
     width: auto; }
@@ -852,7 +852,7 @@ section .content a {
   padding: 1rem; }
 
 @media (min-width: 768px) {
-  .nav-site .monogram img {
+  .nav-site .monogram img, .nav-site .monogram object {
     height: 4rem; }
   .nav-site .menu a::after {
     height: 4px; } }
