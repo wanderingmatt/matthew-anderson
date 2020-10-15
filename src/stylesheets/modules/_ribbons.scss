@@ -18,6 +18,7 @@
     text-transform: uppercase;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
     &.inverted {
       background: $off-black;
       color: #fff;

@@ -3,7 +3,20 @@
 }
 
 section {
-  .content { @extend %content-half; }
+  .content {
+    @extend %content-half;
+    a {
+      border-bottom: 2px solid $off-white;
+      @include dark-mode {
+        border-color: $grey-1;
+        color: $grey-5;
+      }
+      &:hover {
+        border-color: $brand;
+        color: $brand;
+      }
+    }
+  }
 }
 
 .cta {
@@ -20,6 +33,7 @@ section {
   figcaption {
     border-top: 1px solid $off-white;
     margin-top: 1rem;
+    @include dark-mode { border-color: $grey-1; }
   }
 }
 
@@ -44,6 +58,10 @@ section {
     margin: 0 auto;
     max-width: 100%;
   }
+}
+
+@include dark-mode {
+  img { filter: brightness(.8) contrast(1.2); }
 }
 
 @include breakpoint($breakpoint-tablet) {

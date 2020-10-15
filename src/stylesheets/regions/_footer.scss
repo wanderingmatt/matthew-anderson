@@ -1,5 +1,8 @@
 footer {
-  .wrapper { background-color: $off-white; }
+  .wrapper {
+    background-color: $off-white;
+    @include dark-mode { background-color: $grey-1; }
+  }
   .elsewhere-list {
     @include layout-constraints;
     display: flex;
@@ -11,6 +14,7 @@ footer {
       display: block;
       opacity: .25;
       padding: 1rem;
+      @include dark-mode { opacity: .5; }
       &:hover { opacity: 1; }
     }
   }
@@ -19,6 +23,7 @@ footer {
     font-size: ms(1);
     font-weight: 400;
     text-align: center;
+    @include dark-mode { color: $grey-1; }
   }
 
   @include breakpoint($breakpoint-tablet) {

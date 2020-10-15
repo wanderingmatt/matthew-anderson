@@ -1,10 +1,6 @@
 header {
   .content { @extend %content; }
   h2 {
-    strong {
-      color: $off-black;
-      font-weight: 400;
-    }
     a {
       position: relative;
       font-weight: 400;

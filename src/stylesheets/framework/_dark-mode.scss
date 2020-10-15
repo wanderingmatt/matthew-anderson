@@ -1,0 +1,7 @@
+// Mixin for inlining dark mode media query.
+
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}

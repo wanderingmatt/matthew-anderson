@@ -32,6 +32,7 @@
   figcaption {
     border-top: 1px solid $off-white;
     margin-top: .5rem;
+    @include dark-mode { border-color: $grey-1; }
   }
   &.mobile {
     li {

@@ -14,17 +14,6 @@
   }
   section {
     h4 { margin-bottom: 2rem; }
-    a {
-      border-bottom: 2px solid $off-white;
-      color: $grey-1;
-      font-weight: 500;
-      position: relative;
-      text-decoration: none;
-      &:hover {
-        border-color: $brand;
-        color: $brand;
-      }
-    }
   }
 
   @include breakpoint($breakpoint-tablet) {
@@ -64,6 +53,7 @@
         height: 1rem;
         position: absolute;
         width: 100%;
+        @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $grey-1 2px, $grey-1 6px); }
       }
       &::before { top: 0; }
       &::after { bottom: 0; }
