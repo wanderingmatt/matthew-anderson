@@ -11,6 +11,7 @@
     img, object {
       display: block;
       height: 3rem;
+      pointer-events: none;
       width: auto;
     }
     h1 { @extend %hidden; }

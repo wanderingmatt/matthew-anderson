@@ -6,6 +6,7 @@
     display: block;
     position: relative;
     text-decoration: none;
+    @include dark-mode { background-color: $grey-1; }
   }
   .card-image {
     background: $off-white;
@@ -36,6 +37,7 @@
     h3 {
       color: $grey-1;
       font-size: ms(3);
+      @include dark-mode { color: $grey-5; }
     }
     .fab {
       position: absolute;
