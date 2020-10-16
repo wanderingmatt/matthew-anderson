@@ -427,7 +427,7 @@ body {
   @media (prefers-color-scheme: dark) {
     body {
       background: #191A19;
-      color: #737775; } }
+      color: #919594; } }
 
 a {
   color: #373938;
@@ -737,7 +737,7 @@ section .content a {
     max-width: 100%; }
 
 @media (prefers-color-scheme: dark) {
-  img {
+  img, object {
     filter: brightness(0.8) contrast(1.2); } }
 
 @media (min-width: 768px) {
@@ -812,6 +812,7 @@ section .content a {
   .nav-site .monogram img, .nav-site .monogram object {
     display: block;
     height: 3rem;
+    pointer-events: none;
     width: auto; }
 
 .nav-site .menu {
@@ -924,6 +925,9 @@ section .content a {
   display: block;
   position: relative;
   text-decoration: none; }
+  @media (prefers-color-scheme: dark) {
+    .card .card-action-area {
+      background-color: #373938; } }
 
 .card .card-image {
   background: #EBF2F0;
@@ -954,6 +958,9 @@ section .content a {
   .card .card-content h3 {
     color: #373938;
     font-size: 22.62736px; }
+    @media (prefers-color-scheme: dark) {
+      .card .card-content h3 {
+        color: #AFB4B3; } }
   .card .card-content .fab {
     position: absolute;
     right: 1rem;
@@ -1306,7 +1313,7 @@ section .content a {
     @media (prefers-color-scheme: dark) {
       .tags .tag, .tags-stylized .tag {
         background-color: #555856;
-        color: #191A19; } }
+        color: #000; } }
   @media (min-width: 1366px) {
     .tags .tag, .tags-stylized .tag {
       font-size: 14px;
@@ -1445,17 +1452,6 @@ section .content a {
     .marshal .credit {
       box-shadow: inset 0 0 0 1px #555856;
       color: #555856; } }
-
-.marshal .logo .sidekick .frame {
-  padding: 4rem; }
-
-@media (min-width: 768px) {
-  .marshal .logo .sidekick .frame {
-    padding: 6rem; } }
-
-@media (min-width: 1600px) {
-  .marshal .logo .sidekick .frame {
-    padding: 8rem; } }
 
 .onehub .ribbon {
   background: linear-gradient(to bottom right, #58B28D, #79B743); }
