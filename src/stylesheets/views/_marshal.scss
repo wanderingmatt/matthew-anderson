@@ -12,25 +12,4 @@
       color: $grey-2;
     }
   }
-  .logo {
-    .sidekick {
-      .frame { padding: 4rem; }
-    }
-  }
-
-  @include breakpoint($breakpoint-tablet) {
-    .logo {
-      .sidekick {
-        .frame { padding: 6rem; }
-      }
-    }
-  }
-
-  @include breakpoint($breakpoint-widescreen) {
-    .logo {
-      .sidekick {
-        .frame { padding: 8rem; }
-      }
-    }
-  }
 }

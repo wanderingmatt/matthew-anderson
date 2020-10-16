@@ -61,7 +61,7 @@ section {
 }
 
 @include dark-mode {
-  img { filter: brightness(.8) contrast(1.2); }
+  img, object { filter: brightness(.8) contrast(1.2); }
 }
 
 @include breakpoint($breakpoint-tablet) {
