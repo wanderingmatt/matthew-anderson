@@ -1,6 +1,6 @@
 # matthew-anderson.com
 
-Portfolio site for Matthew Anderson — product designer, podcaster, and Canadian expat.
+Portfolio site for Matthew Anderson — leader, designer, podcaster, and Canadian expat.
 
 ## Setup
 
