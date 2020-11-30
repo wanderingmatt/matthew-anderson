@@ -395,7 +395,7 @@ section .content {
       padding-left: 0;
       padding-right: 0; } }
 
-.nav-site .monogram h1, .about .introduction .hello .wave, .hey .menu {
+.nav-site .monogram h1, .about .introduction .hello .wave {
   display: none; }
 
 @media (min-width: 768px) {
@@ -605,7 +605,6 @@ footer .elsewhere-list {
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
-  margin: 0;
   padding: 2rem 1rem; }
   @media (min-width: 768px) {
     footer .elsewhere-list {
@@ -809,7 +808,7 @@ section .content a {
 
 .nav-site .monogram {
   margin-left: -1rem; }
-  .nav-site .monogram img, .nav-site .monogram object {
+  .nav-site .monogram img {
     display: block;
     height: 3rem;
     pointer-events: none;
@@ -853,7 +852,7 @@ section .content a {
   padding: 1rem; }
 
 @media (min-width: 768px) {
-  .nav-site .monogram img, .nav-site .monogram object {
+  .nav-site .monogram img {
     height: 4rem; }
   .nav-site .menu a::after {
     height: 4px; } }
