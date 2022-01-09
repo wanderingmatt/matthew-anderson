@@ -5,7 +5,7 @@ const gulp         = require('gulp'),
       concat           = require('gulp-concat'),
       connect          = require('gulp-connect'),
       del              = require('del'),
-      ghPages          = require('gulp-gh-pages'),
+      ghPages          = require('@justeat/gulp-gh-pages'),
       imagemin         = require('gulp-imagemin'),
       imageminPngquant = require('imagemin-pngquant'),
       include          = require('gulp-file-include'),
@@ -161,10 +161,7 @@ const build = gulp.series(
 
 exports.build = build;
 
-exports.deploy = gulp.series(
-  build,
-  deploy
-);
+exports.deploy = deploy;
 
 exports.default = gulp.series(
   build,
