@@ -28,7 +28,7 @@
     "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-inline-fonts": "^1.2.1",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
     "imagemin-pngquant": "^9.0.2",
     "jquery": "^3.6.0",
