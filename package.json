@@ -1,43 +1,29 @@
 {
   "name": "matthew-anderson",
-  "version": "1.0.0",
   "description": "Portfolio site for Matthew Anderson.",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WanderingMatt/matthew-anderson.git"
+    "url": "git+https://github.com/wanderingmatt/matthew-anderson.git"
   },
-  "author": "Matthew Anderson",
+  "author": "Matthew Anderson <matt@wanderingmatt.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/WanderingMatt/matthew-anderson/issues"
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "clean": "rm -rf .parcel-cache dist",
+    "predeploy": "rm -rf dist && parcel build --public-url https://wanderingmatt.github.io/carloslamas.tv/ && cp CNAME ./dist",
+    "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://github.com/WanderingMatt/matthew-anderson#readme",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "@justeat/gulp-gh-pages": "github:justeat/gulp-gh-pages",
-    "breakpoint-sass": "^2.7.1",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-cache": "^1.1.3",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-file-include": "^2.3.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-inline-fonts": "^1.2.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "^1.1.0",
-    "imagemin-pngquant": "^9.0.2",
-    "jquery": "^3.6.0",
-    "merge-stream": "^2.0.0",
-    "modularscale-sass": "^3.0.10",
+    "@fancyapps/ui": "^4.0.31",
+    "@parcel/optimizer-data-url": "^2.8.0",
+    "@parcel/transformer-inline-string": "^2.8.0",
+    "@parcel/transformer-sass": "^2.8.0",
+    "gh-pages": "^4.0.0",
     "normalize.css": "^8.0.1",
-    "ritmo": "^0.5.0"
-  },
-  "dependencies": {
-    "gift": "^0.10.2"
+    "parcel": "latest",
+    "sharp": "^0.31.2"
   }
 }
