@@ -61,8 +61,8 @@
         }
       }
       > li {
-        &.highlight { grid-area: 1 / 1 / 1 / -1; }
-        &.tall { grid-row-end: span 2; }
+        &.showcase { grid-area: 1 / 1 / 1 / -1; }
+        &.tall { grid-row: span 2; }
       }
     }
   }
@@ -73,7 +73,11 @@
       grid-template-rows: .85fr;
       > li {
         &.highlight {
-          grid-column: span 3;
+          grid-column: span 3 / -1;
+          grid-row: span 2;
+        }
+        &.feature {
+          grid-column: span 2;
           grid-row: span 2;
         }
       }
