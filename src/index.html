@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <title>Matthew Anderson — Creative Leader & Product Designer</title>
-  @@include('_meta.html')
+  <include src="partials/_meta.html"></include>
 </head>
 <body>
-  @@include('_nav-site.html', {
-    "work": 'selected',
-    "about": ''
-  })
+  <include src="partials/_nav-site.html">
+    {
+      "work": "selected"
+    }
+  </include>
   <main>
     <header>
       <div class="content">
@@ -137,6 +138,6 @@
       </ul>
     </section>
   </main>
-  @@include('_footer.html')
+  <include src="partials/_footer.html">
 </body>
 </html>
