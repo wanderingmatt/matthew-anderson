@@ -11,12 +11,22 @@
     <div class="ribbon">
       <div class="content">
         <h2>R8R</h2>
-        <img src="/src/images/r8r/r8r-ribbon~400.png"
-             srcset="/src/images/r8r/r8r-ribbon~400.png 400w,
-                     /src/images/r8r/r8r-ribbon~800.png 800w,
-                     /src/images/r8r/r8r-ribbon~1600.png 1600w,
-                     /src/images/r8r/r8r-ribbon~3200.png 3200w"
-             alt="R8R - large screenshot">
+        <picture>
+          <source type="image/webp"
+                  media="(min-width: 430px)"
+                  srcset="/src/images/r8r/r8r-ribbon.png?as=webp&width=800 800w,
+                          /src/images/r8r/r8r-ribbon.png?as=webp&width=1600 1600w,
+                          /src/images/r8r/r8r-ribbon.png?as=webp&width=3200 3200w,">
+          <source type="image/webp"
+                  srcset="/src/images/r8r/r8r-ribbon.png?as=webp&width=400 400w,
+                  /src/images/r8r/r8r-ribbon.png?as=webp&width=800 800w">
+          <img src="/src/images/r8r/r8r-ribbon.png?width=800"
+            srcset="/src/images/r8r/r8r-ribbon.png?width=400 400w,
+                    /src/images/r8r/r8r-ribbon.png?width=800 800w,
+                    /src/images/r8r/r8r-ribbon.png?width=1600 1600w,
+                    /src/images/r8r/r8r-ribbon.png?width=3200 3200w"
+            alt="R8R – large screenshot">
+        </picture>
       </div>
     </div>
     <div class="introduction">

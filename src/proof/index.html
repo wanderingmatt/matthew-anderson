@@ -11,12 +11,22 @@
     <div class="ribbon">
       <div class="content">
         <h2>Proof</h2>
-        <img src="/src/images/proof/proof-ribbon~400.png"
-             srcset="/src/images/proof/proof-ribbon~400.png 400w,
-                     /src/images/proof/proof-ribbon~800.png 800w,
-                     /src/images/proof/proof-ribbon~1600.png 1600w,
-                     /src/images/proof/proof-ribbon~3200.png 3200w"
-             alt="Proof - large screenshot">
+        <picture>
+          <source type="image/webp"
+                  media="(min-width: 430px)"
+                  srcset="/src/images/proof/proof-ribbon.png?as=webp&width=800 800w,
+                          /src/images/proof/proof-ribbon.png?as=webp&width=1600 1600w,
+                          /src/images/proof/proof-ribbon.png?as=webp&width=3200 3200w,">
+          <source type="image/webp"
+                  srcset="/src/images/proof/proof-ribbon.png?as=webp&width=400 400w,
+                  /src/images/proof/proof-ribbon.png?as=webp&width=800 800w">
+          <img src="/src/images/proof/proof-ribbon.png?width=800"
+            srcset="/src/images/proof/proof-ribbon.png?width=400 400w,
+                    /src/images/proof/proof-ribbon.png?width=800 800w,
+                    /src/images/proof/proof-ribbon.png?width=1600 1600w,
+                    /src/images/proof/proof-ribbon.png?width=3200 3200w"
+            alt="Proof – large screenshot">
+        </picture>
       </div>
     </div>
     <div class="introduction">
