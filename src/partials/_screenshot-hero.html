@@ -1,0 +1,16 @@
+<picture>
+  <source type="image/webp"
+          media="(min-width: 430px)"
+          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=804 804w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=1200 1200w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=2400 2400w,">
+  <source type="image/webp"
+          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=402 402w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=804 804w">
+  <img src="/src/images/{{ project }}/{{ filename }}.png?width=804"
+       srcset="/src/images/{{ project }}/{{ filename }}.png?width=402 402w,
+               /src/images/{{ project }}/{{ filename }}.png?width=804 804w,
+               /src/images/{{ project }}/{{ filename }}.png?width=1200 1200w,
+               /src/images/{{ project }}/{{ filename }}.png?width=2400 2400w"
+       alt="{{ alt }}">
+</picture>
