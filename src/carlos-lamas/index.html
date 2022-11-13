@@ -11,22 +11,12 @@
     <div class="ribbon">
       <div class="content">
         <h2>Carlos Lamas</h2>
-        <picture>
-          <source type="image/webp"
-                  media="(min-width: 430px)"
-                  srcset="/src/images/carlos-lamas/carlos-lamas-ribbon.png?as=webp&width=800 800w,
-                          /src/images/carlos-lamas/carlos-lamas-ribbon.png?as=webp&width=1600 1600w,
-                          /src/images/carlos-lamas/carlos-lamas-ribbon.png?as=webp&width=3200 3200w,">
-          <source type="image/webp"
-                  srcset="/src/images/carlos-lamas/carlos-lamas-ribbon.png?as=webp&width=400 400w,
-                  /src/images/carlos-lamas/carlos-lamas-ribbon.png?as=webp&width=800 800w">
-          <img src="/src/images/carlos-lamas/carlos-lamas-ribbon.png?width=800"
-            srcset="/src/images/carlos-lamas/carlos-lamas-ribbon.png?width=400 400w,
-                    /src/images/carlos-lamas/carlos-lamas-ribbon.png?width=800 800w,
-                    /src/images/carlos-lamas/carlos-lamas-ribbon.png?width=1600 1600w,
-                    /src/images/carlos-lamas/carlos-lamas-ribbon.png?width=3200 3200w"
-            alt="Carlos Lamas – large screenshot">
-        </picture>
+        <include src="partials/_screenshot-ribbon.html">
+          {
+            "project": "carlos-lamas",
+            "alt": "Carlos Lamas – large screenshot"
+          }
+        </include>
       </div>
     </div>
     <div class="introduction">
