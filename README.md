@@ -1,10 +1,6 @@
-# matthew-anderson.com
+# Portfolio
 
 Portfolio site for Matthew Anderson — leader, designer, podcaster, and Canadian expat.
-
-# Carlos Lamas' Reel
-
-Portfolio site for video editor Carlos Lamas.
 
 ## Setup
 
