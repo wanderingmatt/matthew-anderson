@@ -1,3 +1,4 @@
 {
-  "collapseWhitespace": false
+  "collapseWhitespace": false,
+  "minifySvg": false
 }
