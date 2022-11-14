@@ -3,7 +3,6 @@
 // No styleguide reference.
 
 %hidden { display: none; }
-%clearfix { @include clearfix; }
 
 @include breakpoint($breakpoint-tablet) {
   %hidden-tablet { display: none; }

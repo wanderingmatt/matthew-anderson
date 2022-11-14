@@ -2,7 +2,7 @@
   .ribbon {
     background: #096;
     h2 {
-      @extend h2.inverted;
+      @extend h2, .inverted;
       mix-blend-mode: normal;
     }
   }

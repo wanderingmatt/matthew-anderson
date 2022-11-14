@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <title>Matthew Anderson — Creative Leader & Product Designer</title>
-  @@include('_meta.html')
+  <include src="partials/_meta.html"></include>
 </head>
 <body>
-  @@include('_nav-site.html', {
-    "work": 'selected',
-    "about": ''
-  })
+  <include src="partials/_nav-site.html">
+    {
+      "work": "selected"
+    }
+  </include>
   <main>
     <header>
       <div class="content">
@@ -17,31 +18,52 @@
     </header>
     <section class="projects">
       <ul class="projects-list">
-        <li class="onehub card highlight">
-          <a href="/onehub/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/onehub/onehub-teaser~800.png"
-                   srcset="/images/onehub/onehub-teaser~400.png 400w,
-                           /images/onehub/onehub-teaser~800.png 800w,
-                           /images/onehub/onehub-teaser~1600.png 1600w,
-                           /images/onehub/onehub-teaser~3200.png 3200w"
-                   alt="Onehub – teaser">
+        <!--
+        <li class="iowa-actors card showcase">
+          <a href="iowa-actors/index.html" class="card-action-area">
+            <picture class="card-image">
+              <source type="image/webp"
+                      media="(min-width: 430px)"
+                      srcset="/src/images/iowa-actors/iowa-actors-teaser.png?as=webp&width=800 800w,
+                              /src/images/iowa-actors/iowa-actors-teaser.png?as=webp&width=1600 1600w">
+              <source type="image/webp"
+                      srcset="/src/images/iowa-actors/iowa-actors-teaser.png?as=webp&width=400 400w,
+                      /src/images/iowa-actors/iowa-actors-teaser.png?as=webp&width=800 800w">
+              <img src="/src/images/iowa-actors/iowa-actors-teaser.png?width=800"
+                srcset="/src/images/iowa-actors/iowa-actors-teaser.png?width=400 400w,
+                        /src/images/iowa-actors/iowa-actors-teaser.png?width=800 800w,
+                        /src/images/iowa-actors/iowa-actors-teaser.png?width=1600 1600w"
+                alt="Iowa Actors – teaser">
+            </picture>
+            <div class="card-content">
+              <h3>Iowa Actors</h3>
+              <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
             </div>
+          </a>
+        </li>
+        -->
+        <li class="onehub card highlight">
+          <a href="onehub/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "onehub",
+                "alt": "Onehub - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>Onehub</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
             </div>
           </a>
         </li>
-        <li class="marshal card">
-          <a href="/marshal/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/marshal/marshal-teaser~800.png"
-                   srcset="/images/marshal/marshal-teaser~400.png 400w,
-                           /images/marshal/marshal-teaser~800.png 800w,
-                           /images/marshal/marshal-teaser~1600.png 1600w"
-                   alt="Marshal – teaser">
-            </div>
+        <li class="marshal card feature">
+          <a href="marshal/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "marshal",
+                "alt": "Marshal - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>Marshal</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
@@ -49,14 +71,13 @@
           </a>
         </li>
         <li class="proof card tall">
-          <a href="/proof/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/proof/proof-teaser~800.png"
-                   srcset="/images/proof/proof-teaser~400.png 400w,
-                           /images/proof/proof-teaser~800.png 800w,
-                           /images/proof/proof-teaser~1600.png 1600w"
-                   alt="Proof – teaser">
-            </div>
+          <a href="proof/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "proof",
+                "alt": "Proof - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>Proof</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
@@ -64,14 +85,13 @@
           </a>
         </li>
         <li class="chips-and-bits card">
-          <a href="/chips-and-bits/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/chips-and-bits/chips-and-bits-teaser~800.png"
-                   srcset="/images/chips-and-bits/chips-and-bits-teaser~400.png 400w,
-                           /images/chips-and-bits/chips-and-bits-teaser~800.png 800w,
-                           /images/chips-and-bits/chips-and-bits-teaser~1600.png 1600w"
-                   alt="Chips & Bits – teaser">
-            </div>
+          <a href="chips-and-bits/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "chips-and-bits",
+                "alt": "Chips & Bits - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>Chips & Bits</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
@@ -79,14 +99,13 @@
           </a>
         </li>
         <li class="r8r card tall">
-          <a href="/r8r/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/r8r/r8r-teaser~800.png"
-                   srcset="/images/r8r/r8r-teaser~400.png 400w,
-                           /images/r8r/r8r-teaser~800.png 800w,
-                           /images/r8r/r8r-teaser~1600.png 1600w"
-                   alt="R8R – teaser">
-            </div>
+          <a href="r8r/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "r8r",
+                "alt": "R8R - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>R8R</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
@@ -94,42 +113,15 @@
           </a>
         </li>
         <li class="carlos-lamas card">
-          <a href="/carlos-lamas/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/carlos-lamas/carlos-lamas-teaser~800.png"
-                   srcset="/images/carlos-lamas/carlos-lamas-teaser~400.png 400w,
-                           /images/carlos-lamas/carlos-lamas-teaser~800.png 800w,
-                           /images/carlos-lamas/carlos-lamas-teaser~1600.png 1600w"
-                   alt="Carlos Lamas – teaser">
-            </div>
+          <a href="carlos-lamas/index.html" class="card-action-area">
+            <include src="partials/_screenshot-teaser.html">
+              {
+                "project": "carlos-lamas",
+                "alt": "Carlos Lamas - teaser"
+              }
+            </include>
             <div class="card-content">
               <h3>Carlos Lamas</h3>
-              <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
-            </div>
-          </a>
-        </li>
-<!--         <li class="kenny-meyers card">
-          <a href="https://www.dropbox.com/sh/qd50lrczyg7r7xa/AADgH-RsPuQASijeQvgq9a3Za?dl=0" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/kenny-meyers/kenny-meyers-card@2x.png" alt="Kenny Meyers – A developer trying to stay relevant.">
-            </div>
-            <div class="card-content">
-              <h3>Kenny Meyers</h3>
-              <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
-            </div>
-          </a>
-        </li> -->
-        <li class="iowa-actors card">
-          <a href="/iowa-actors/" class="card-action-area">
-            <div class="card-image">
-              <img src="/images/iowa-actors/iowa-actors-teaser~800.png"
-                   srcset="/images/iowa-actors/iowa-actors-teaser~400.png 400w,
-                           /images/iowa-actors/iowa-actors-teaser~800.png 800w,
-                           /images/iowa-actors/iowa-actors-teaser~1600.png 1600w"
-                   alt="Iowa Actors – teaser">
-            </div>
-            <div class="card-content">
-              <h3>Iowa Actors</h3>
               <span class="fab"><span class="icon icon-small icon-chevron-right-inverted">View Project</span></span>
             </div>
           </a>
@@ -137,6 +129,6 @@
       </ul>
     </section>
   </main>
-  @@include('_footer.html')
+  <include src="partials/_footer.html">
 </body>
 </html>

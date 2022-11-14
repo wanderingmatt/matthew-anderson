@@ -1,8 +1,37 @@
 @import 'node_modules/normalize.css/normalize';
 @import 'node_modules/modularscale-sass/stylesheets/modularscale';
-@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import 'node_modules/@fancyapps/ui/src/Fancybox/Fancybox';
 
-@import 'framework/*';
-@import 'regions/*';
-@import 'modules/*';
-@import 'views/*';
+@import 'framework/breakpoints';
+@import 'framework/colors';
+@import 'framework/dark-mode';
+@import 'framework/fonts';
+@import 'framework/layout-constraints';
+@import 'framework/placeholder-selectors';
+@import 'framework/typography';
+
+@import 'regions/footer';
+@import 'regions/header';
+@import 'regions/layout';
+@import 'regions/nav-projects';
+@import 'regions/nav-site';
+
+@import 'modules/buttons';
+@import 'modules/cards';
+@import 'modules/floating-action-buttons';
+@import 'modules/galleries';
+@import 'modules/icons';
+@import 'modules/projects';
+@import 'modules/ribbons';
+@import 'modules/tags';
+
+@import 'views/about';
+@import 'views/carlos-lamas';
+@import 'views/chips-and-bits';
+@import 'views/iowa-actors';
+@import 'views/marshal';
+@import 'views/onehub';
+@import 'views/proof';
+@import 'views/r8r';
+
+@import 'vendor/fancybox-overrides';

@@ -1,10 +1,11 @@
-// Variables for media queries and breakpoints.
-//
-// No styleguide reference.
+// Variables and mixin for inlining media queries.
 
-$breakpoint-legacy: max-width 374px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1366px;
 $breakpoint-widescreen: 1600px;
 
-$breakpoint-retina: min-resolution 2dppx;
+@mixin breakpoint($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

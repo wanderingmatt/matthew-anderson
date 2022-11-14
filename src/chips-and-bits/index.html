@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
   <title>Chips & Bits — Matthew Anderson</title>
-  @@include('_meta.html')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <include src="partials/_meta.html"></include>
 </head>
 <body class="chips-and-bits case-study">
-  @@include('_nav-site.html', {
-    "work": '',
-    "about": ''
-  })
+  <include src="partials/_nav-site.html"></include>
   <main>
     <div class="ribbon">
       <div class="content">
         <h2>Chips & Bits</h2>
-        <img src="/images/chips-and-bits/chips-and-bits-ribbon~400.png"
-             srcset="/images/chips-and-bits/chips-and-bits-ribbon~400.png 400w,
-                     /images/chips-and-bits/chips-and-bits-ribbon~800.png 800w,
-                     /images/chips-and-bits/chips-and-bits-ribbon~1600.png 1600w,
-                     /images/chips-and-bits/chips-and-bits-ribbon~3200.png 3200w"
-             alt="Chips & Bits – large screenshot">
+        <include src="partials/_screenshot-ribbon.html">
+          {
+            "project": "chips-and-bits",
+            "alt": "Chips & Bits – large screenshot"
+          }
+        </include>
       </div>
     </div>
     <div class="introduction">
@@ -29,7 +25,7 @@
     </div>
     <section>
       <div class="content">
-        <p>Since 2010, I have been the co-host of Chips & Bits. What started as a side project with a friend, blossomed into a monthly labour of love. In addition to co-hosting duties, I also handle the design side of the house.</p>
+        <p>I'm co-host of the Chips & Bits podcast. What started as a side project with a friend, blossomed into a monthly labour of love. In addition to co-hosting duties, I also handle the design side of the house.</p>
       </div>
     </section>
     <section class="website">
@@ -45,63 +41,58 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/chips-and-bits/website/episodes-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/episodes-desktop~280.png"
-                       srcset="/images/chips-and-bits/website/episodes-desktop~280.png 280w,
-                               /images/chips-and-bits/website/episodes-desktop~560.png 560w,
-                               /images/chips-and-bits/website/episodes-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Chips & Bits - episodes screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/episodes-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "episodes-desktop",
+                    "alt": "Chips & Bits - episodes screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/podcast-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="Any podcast can be played directly from the website.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/podcast-desktop~280.png"
-                       srcset="/images/chips-and-bits/website/podcast-desktop~280.png 280w,
-                               /images/chips-and-bits/website/podcast-desktop~560.png 560w,
-                               /images/chips-and-bits/website/podcast-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Chips & Bits - player screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/podcast-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="Any podcast can be played directly from the website.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "podcast-desktop",
+                    "alt": "Chips & Bits - player screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/scrubbing-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The player supports preloading and scrubbing.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/scrubbing-desktop~280.png"
-                       srcset="/images/chips-and-bits/website/scrubbing-desktop~280.png 280w,
-                               /images/chips-and-bits/website/scrubbing-desktop~560.png 560w,
-                               /images/chips-and-bits/website/scrubbing-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Chips & Bits - scrubbed player screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/scrubbing-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The player supports preloading and scrubbing.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "scrubbing-desktop",
+                    "alt": "Chips & Bits - scrubbed player screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/notes-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="We use notes to call out specific references in each episode. Clicking the timestamp for a given note will take you directly to that position in the podcast.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/notes-desktop~280.png"
-                       srcset="/images/chips-and-bits/website/notes-desktop~280.png 280w,
-                               /images/chips-and-bits/website/notes-desktop~560.png 560w,
-                               /images/chips-and-bits/website/notes-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Chips & Bits - notes screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/notes-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="We use notes to call out specific references in each episode. Clicking the timestamp for a given note will take you directly to that position in the podcast.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "notes-desktop",
+                    "alt": "Chips & Bits - notes screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/footer-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The footer lets you know when our next episode arrives, links to a related episode if available, and provides previous/next navigation. It also houses links to all of our subscription methods and communication profiles.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/footer-desktop~280.png"
-                       srcset="/images/chips-and-bits/website/footer-desktop~280.png 280w,
-                               /images/chips-and-bits/website/footer-desktop~560.png 560w,
-                               /images/chips-and-bits/website/footer-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Chips & Bits - footer screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/footer-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The footer lets you know when our next episode arrives, links to a related episode if available, and provides previous/next navigation. It also houses links to all of our subscription methods and communication profiles.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "footer-desktop",
+                    "alt": "Chips & Bits - footer screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -112,63 +103,58 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/chips-and-bits/website/episodes-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/episodes-mobile~94.png"
-                       srcset="/images/chips-and-bits/website/episodes-mobile~94.png 94w,
-                               /images/chips-and-bits/website/episodes-mobile~188.png 188w,
-                               /images/chips-and-bits/website/episodes-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Chips & Bits - episodes screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/episodes-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The episodes page provides a visual archive of every Chips & Bits recording.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "episodes-mobile",
+                    "alt": "Chips & Bits - episodes screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/podcast-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="Any podcast can be played directly from the website.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/podcast-mobile~94.png"
-                       srcset="/images/chips-and-bits/website/podcast-mobile~94.png 94w,
-                               /images/chips-and-bits/website/podcast-mobile~188.png 188w,
-                               /images/chips-and-bits/website/podcast-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Chips & Bits - player screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/podcast-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="Any podcast can be played directly from the website.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "podcast-mobile",
+                    "alt": "Chips & Bits - player screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/scrubbing-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The player supports preloading and scrubbing.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/scrubbing-mobile~94.png"
-                       srcset="/images/chips-and-bits/website/scrubbing-mobile~94.png 94w,
-                               /images/chips-and-bits/website/scrubbing-mobile~188.png 188w,
-                               /images/chips-and-bits/website/scrubbing-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Chips & Bits - scrubbed player screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/scrubbing-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The player supports preloading and scrubbing.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "scrubbing-mobile",
+                    "alt": "Chips & Bits - scrubbed player screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/notes-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="We use notes to call out specific references in each episode. Clicking the timestamp for a given note will take you directly to that position in the podcast.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/notes-mobile~94.png"
-                       srcset="/images/chips-and-bits/website/notes-mobile~94.png 94w,
-                               /images/chips-and-bits/website/notes-mobile~188.png 188w,
-                               /images/chips-and-bits/website/notes-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Chips & Bits - notes screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/notes-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="We use notes to call out specific references in each episode. Clicking the timestamp for a given note will take you directly to that position in the podcast.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "notes-mobile",
+                    "alt": "Chips & Bits - notes screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/chips-and-bits/website/footer-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The footer provides previous/next navigation. It also houses links to all of our subscription methods and communication profiles.">
-                <div class="card-image">
-                  <img src="/images/chips-and-bits/website/footer-mobile~94.png"
-                       srcset="/images/chips-and-bits/website/footer-mobile~94.png 94w,
-                               /images/chips-and-bits/website/footer-mobile~188.png 188w,
-                               /images/chips-and-bits/website/footer-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Chips & Bits - footer screenshot">
-                </div>
+              <a href="/src/images/chips-and-bits/website/footer-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The footer provides previous/next navigation. It also houses links to all of our subscription methods and communication profiles.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "chips-and-bits/website",
+                    "filename": "footer-mobile",
+                    "alt": "Chips & Bits - footer screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -183,7 +169,7 @@
       </div>
     </section>
   </main>
-  @@include('_footer.html')
-  @@include('_scripts.html')
+  <include src="partials/_footer.html"></include>
+  <script type="module" src="/src/javascripts/scripts.js"></script>
 </body>
 </html>

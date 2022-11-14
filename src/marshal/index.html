@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
   <title>Marshal — Matthew Anderson</title>
-  @@include('_meta.html')
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  <include src="partials/_meta.html"></include>
 </head>
 <body class="marshal case-study">
-  @@include('_nav-site.html', {
-    "work": '',
-    "about": ''
-  })
+  <include src="partials/_nav-site.html"></include>
   <main>
     <div class="ribbon">
       <div class="content">
         <h2>Marshal</h2>
-        <img src="/images/marshal/marshal-ribbon~400.png"
-             srcset="/images/marshal/marshal-ribbon~400.png 400w,
-                     /images/marshal/marshal-ribbon~800.png 800w,
-                     /images/marshal/marshal-ribbon~1600.png 1600w,
-                     /images/marshal/marshal-ribbon~3200.png 3200w"
-             alt="Marshal – large screenshot">
+        <include src="partials/_screenshot-ribbon.html">
+          {
+            "project": "marshal",
+            "alt": "Marshal – large screenshot"
+          }
+        </include>
       </div>
     </div>
     <div class="introduction">
@@ -29,7 +25,7 @@
     </div>
     <section>
       <div class="content">
-        <p>In 2017, I built a satellite team within Onehub with the goal of pursuing an alternative revenue stream. I created a new brand and built a beta.</p>
+        <p>I built a satellite team within Onehub with the goal of pursuing an alternative revenue stream. I created a new brand and built a beta.</p>
       </div>
     </section>
     <section class="product">
@@ -46,99 +42,91 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/marshal/product/start-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/start-desktop~280.png"
-                       srcset="/images/marshal/product/start-desktop~280.png 280w,
-                               /images/marshal/product/start-desktop~560.png 560w,
-                               /images/marshal/product/start-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - start screenshot">
-                </div>
+              <a href="/src/images/marshal/product/start-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "start-desktop",
+                    "alt": "Marshal - start screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/progress-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/progress-desktop~280.png"
-                       srcset="/images/marshal/product/progress-desktop~280.png 280w,
-                               /images/marshal/product/progress-desktop~560.png 560w,
-                               /images/marshal/product/progress-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - progress screenshot">
-                </div>
+              <a href="/src/images/marshal/product/progress-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "progress-desktop",
+                    "alt": "Marshal - progress screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/complete-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/complete-desktop~280.png"
-                       srcset="/images/marshal/product/complete-desktop~280.png 280w,
-                               /images/marshal/product/complete-desktop~560.png 560w,
-                               /images/marshal/product/complete-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - progress complete screenshot">
-                </div>
+              <a href="/src/images/marshal/product/complete-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "complete-desktop",
+                    "alt": "Marshal - progress complete screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/confirm-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/confirm-desktop~280.png"
-                       srcset="/images/marshal/product/confirm-desktop~280.png 280w,
-                               /images/marshal/product/confirm-desktop~560.png 560w,
-                               /images/marshal/product/confirm-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - confirmation modal screenshot">
-                </div>
+              <a href="/src/images/marshal/product/confirm-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "confirm-desktop",
+                    "alt": "Marshal - confirmation modal screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/report-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/report-desktop~280.png"
-                       srcset="/images/marshal/product/report-desktop~280.png 280w,
-                               /images/marshal/product/report-desktop~560.png 560w,
-                               /images/marshal/product/report-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - report screenshot">
-                </div>
+              <a href="/src/images/marshal/product/report-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "report-desktop",
+                    "alt": "Marshal - report screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/threats-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/threats-desktop~280.png"
-                       srcset="/images/marshal/product/threats-desktop~280.png 280w,
-                               /images/marshal/product/threats-desktop~560.png 560w,
-                               /images/marshal/product/threats-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - threats screenshot">
-                </div>
+              <a href="/src/images/marshal/product/threats-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "threats-desktop",
+                    "alt": "Marshal - threats screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/filter-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Filter any of your connected services and connected threats out of the current report.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/filter-desktop~280.png"
-                       srcset="/images/marshal/product/filter-desktop~280.png 280w,
-                               /images/marshal/product/filter-desktop~560.png 560w,
-                               /images/marshal/product/filter-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - filter modal screenshot">
-                </div>
+              <a href="/src/images/marshal/product/filter-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Filter any of your connected services and connected threats out of the current report.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "filter-desktop",
+                    "alt": "Marshal - filter modal screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/settings-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/settings-desktop~280.png"
-                       srcset="/images/marshal/product/settings-desktop~280.png 280w,
-                               /images/marshal/product/settings-desktop~560.png 560w,
-                               /images/marshal/product/settings-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - settings screenshot">
-                </div>
+              <a href="/src/images/marshal/product/settings-desktop.png" class="card-action-area" data-fancybox="gallery-product-desktop" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "settings-desktop",
+                    "alt": "Marshal - settings screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -149,99 +137,91 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/marshal/product/start-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/start-mobile~94.png"
-                       srcset="/images/marshal/product/start-mobile~94.png 94w,
-                               /images/marshal/product/start-mobile~188.png 188w,
-                               /images/marshal/product/start-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - start screenshot">
-                </div>
+              <a href="/src/images/marshal/product/start-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The first step in Marshal onboarding is to create your initial report. Clicking any of the available services triggers an OAuth flow, connects that service, and flips the corresponding toggle.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "start-mobile",
+                    "alt": "Marshal - start screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/progress-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/progress-mobile~94.png"
-                       srcset="/images/marshal/product/progress-mobile~94.png 94w,
-                               /images/marshal/product/progress-mobile~188.png 188w,
-                               /images/marshal/product/progress-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - progress screenshot">
-                </div>
+              <a href="/src/images/marshal/product/progress-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Customers are encouraged to confirm their account during generation, giving them the option to receive a reminder email once their report is complete.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "progress-mobile",
+                    "alt": "Marshal - progress screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/complete-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/complete-mobile~94.png"
-                       srcset="/images/marshal/product/complete-mobile~94.png 94w,
-                               /images/marshal/product/complete-mobile~188.png 188w,
-                               /images/marshal/product/complete-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - progress complete screenshot">
-                </div>
+              <a href="/src/images/marshal/product/complete-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Once your report has completed, you're asked to confirm your account by providing an email address and password to unlock your report.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "complete-mobile",
+                    "alt": "Marshal - progress complete screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/confirm-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/confirm-mobile~94.png"
-                       srcset="/images/marshal/product/confirm-mobile~94.png 94w,
-                               /images/marshal/product/confirm-mobile~188.png 188w,
-                               /images/marshal/product/confirm-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - confirmation modal screenshot">
-                </div>
+              <a href="/src/images/marshal/product/confirm-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="The confirmation modal is used to create your account and reaffirm Marshal's commitment to privacy.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "confirm-mobile",
+                    "alt": "Marshal - confirmation modal screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/report-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/report-mobile~94.png"
-                       srcset="/images/marshal/product/report-mobile~94.png 94w,
-                               /images/marshal/product/report-mobile~188.png 188w,
-                               /images/marshal/product/report-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - report screenshot">
-                </div>
+              <a href="/src/images/marshal/product/report-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Highlights of a Marshal report include the number of threats found, a threat delta from the previous scan, and a list of the threats found by file across your connected services.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "report-mobile",
+                    "alt": "Marshal - report screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/threats-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/threats-mobile~94.png"
-                       srcset="/images/marshal/product/threats-mobile~94.png 94w,
-                               /images/marshal/product/threats-mobile~188.png 188w,
-                               /images/marshal/product/threats-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - threats screenshot">
-                </div>
+              <a href="/src/images/marshal/product/threats-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Clicking on a file will expand it, revealing the threats found and providing enough redacted information to help you find it.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "threats-mobile",
+                    "alt": "Marshal - threats screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/filter-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Filter any of your connected services and connected threats out of the current report.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/filter-mobile~94.png"
-                       srcset="/images/marshal/product/filter-mobile~94.png 94w,
-                               /images/marshal/product/filter-mobile~188.png 188w,
-                               /images/marshal/product/filter-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - filter modal screenshot">
-                </div>
+              <a href="/src/images/marshal/product/filter-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Filter any of your connected services and connected threats out of the current report.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "filter-mobile",
+                    "alt": "Marshal - filter screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/product/settings-mobile~750.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
-                <div class="card-image">
-                  <img src="/images/marshal/product/settings-mobile~94.png"
-                       srcset="/images/marshal/product/settings-mobile~94.png 94w,
-                               /images/marshal/product/settings-mobile~188.png 188w,
-                               /images/marshal/product/settings-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - settings screenshot">
-                </div>
+              <a href="/src/images/marshal/product/settings-mobile.png" class="card-action-area" data-fancybox="gallery-product-mobile" data-caption="Connected services and selected threats can be modified at any time and your report will update in the background.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/product",
+                    "filename": "settings-mobile",
+                    "alt": "Marshal - settings screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -264,99 +244,91 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/marshal/website/hero-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The hero illustrates Marshal's primary function, to find sensitive information hiding in your cloud services.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/hero-desktop~280.png"
-                       srcset="/images/marshal/website/hero-desktop~280.png 280w,
-                               /images/marshal/website/hero-desktop~560.png 560w,
-                               /images/marshal/website/hero-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - hero screenshot">
-                </div>
+              <a href="/src/images/marshal/website/hero-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The hero illustrates Marshal's primary function, to find sensitive information hiding in your cloud services.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "hero-desktop",
+                    "alt": "Marshal - hero screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/what-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The first introductory section covers what Marshal is.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/what-desktop~280.png"
-                       srcset="/images/marshal/website/what-desktop~280.png 280w,
-                               /images/marshal/website/what-desktop~560.png 560w,
-                               /images/marshal/website/what-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - what is Marshal screenshot">
-                </div>
+              <a href="/src/images/marshal/website/what-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The first introductory section covers what Marshal is.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "what-desktop",
+                    "alt": "Marshal - what is Marshal screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/how-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second introductory section covers how Marshal works.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/how-desktop~280.png"
-                       srcset="/images/marshal/website/how-desktop~280.png 280w,
-                               /images/marshal/website/how-desktop~560.png 560w,
-                               /images/marshal/website/how-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - how does Marshal work screenshot">
-                </div>
+              <a href="/src/images/marshal/website/how-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second introductory section covers how Marshal works.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "how-desktop",
+                    "alt": "Marshal - how Marshal works screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/discovers-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/discovers-desktop~280.png"
-                       srcset="/images/marshal/website/discovers-desktop~280.png 280w,
-                               /images/marshal/website/discovers-desktop~560.png 560w,
-                               /images/marshal/website/discovers-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - discovers without details screenshot">
-                </div>
+              <a href="/src/images/marshal/website/discovers-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "discovers-desktop",
+                    "alt": "Marshal - discovers without details screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/copies-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/copies-desktop~280.png"
-                       srcset="/images/marshal/website/copies-desktop~280.png 280w,
-                               /images/marshal/website/copies-desktop~560.png 560w,
-                               /images/marshal/website/copies-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - never makes copies screenshot">
-                </div>
+              <a href="/src/images/marshal/website/copies-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "copies-desktop",
+                    "alt": "Marshal - never makes copies screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/redacts-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/redacts-desktop~280.png"
-                       srcset="/images/marshal/website/redacts-desktop~280.png 280w,
-                               /images/marshal/website/redacts-desktop~560.png 560w,
-                               /images/marshal/website/redacts-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - redacts your risk screenshot">
-                </div>
+              <a href="/src/images/marshal/website/redacts-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "redacts-desktop",
+                    "alt": "Marshal - redacts your risk screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/faq-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/faq-desktop~280.png"
-                       srcset="/images/marshal/website/faq-desktop~280.png 280w,
-                               /images/marshal/website/faq-desktop~560.png 560w,
-                               /images/marshal/website/faq-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - FAQ screenshot">
-                </div>
+              <a href="/src/images/marshal/website/faq-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "faq-desktop",
+                    "alt": "Marshal - FAQ screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/sidekick-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/sidekick-desktop~280.png"
-                       srcset="/images/marshal/website/sidekick-desktop~280.png 280w,
-                               /images/marshal/website/sidekick-desktop~560.png 560w,
-                               /images/marshal/website/sidekick-desktop~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - sidekick screenshot">
-                </div>
+              <a href="/src/images/marshal/website/sidekick-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "sidekick-desktop",
+                    "alt": "Marshal - sidekick screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -367,99 +339,91 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/marshal/website/hero-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The hero illustrates Marshal's primary function and some of the supported services.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/hero-mobile~94.png"
-                       srcset="/images/marshal/website/hero-mobile~94.png 94w,
-                               /images/marshal/website/hero-mobile~188.png 188w,
-                               /images/marshal/website/hero-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - hero screenshot">
-                </div>
+              <a href="/src/images/marshal/website/hero-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The hero illustrates Marshal's primary function and some of the supported services.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "hero-mobile",
+                    "alt": "Marshal - hero screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/what-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The first introductory section covers what Marshal is.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/what-mobile~94.png"
-                       srcset="/images/marshal/website/what-mobile~94.png 94w,
-                               /images/marshal/website/what-mobile~188.png 188w,
-                               /images/marshal/website/what-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - what is Marshal screenshot">
-                </div>
+              <a href="/src/images/marshal/website/what-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The first introductory section covers what Marshal is.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "what-mobile",
+                    "alt": "Marshal - what is Marshal screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/how-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second introductory section covers how Marshal works.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/how-mobile~94.png"
-                       srcset="/images/marshal/website/how-mobile~94.png 94w,
-                               /images/marshal/website/how-mobile~188.png 188w,
-                               /images/marshal/website/how-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - how Marshal works screenshot">
-                </div>
+              <a href="/src/images/marshal/website/how-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second introductory section covers how Marshal works.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "how-mobile",
+                    "alt": "Marshal - how Marshal works screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/discovers-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/discovers-mobile~94.png"
-                       srcset="/images/marshal/website/discovers-mobile~94.png 94w,
-                               /images/marshal/website/discovers-mobile~188.png 188w,
-                               /images/marshal/website/discovers-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - discovers without details screenshot">
-                </div>
+              <a href="/src/images/marshal/website/discovers-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="As you move down the page you reach angled sections highlighting Marshal's three pillar features. The first feature section discusses how Marshal does not require any of your personal information.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "discovers-mobile",
+                    "alt": "Marshal - discovers without details screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/copies-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/copies-mobile~94.png"
-                       srcset="/images/marshal/website/copies-mobile~94.png 94w,
-                               /images/marshal/website/copies-mobile~188.png 188w,
-                               /images/marshal/website/copies-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - never makes copies screenshot">
-                </div>
+              <a href="/src/images/marshal/website/copies-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The second feature section discusses how Marshal never makes copies of your data.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "copies-mobile",
+                    "alt": "Marshal - never makes copies screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/redacts-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/redacts-mobile~94.png"
-                       srcset="/images/marshal/website/redacts-mobile~94.png 94w,
-                               /images/marshal/website/redacts-mobile~188.png 188w,
-                               /images/marshal/website/redacts-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - redacts your risk screenshot">
-                </div>
+              <a href="/src/images/marshal/website/redacts-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The third feature section discusses how Marshal prioritizes privacy by redacting everything it finds.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "redacts-mobile",
+                    "alt": "Marshal - redacts your risk screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/faq-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/faq-mobile~94.png"
-                       srcset="/images/marshal/website/faq-mobile~94.png 94w,
-                               /images/marshal/website/faq-mobile~188.png 188w,
-                               /images/marshal/website/faq-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - FAQ screenshot">
-                </div>
+              <a href="/src/images/marshal/website/faq-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="A FAQ answered the top 10 questions we were asked throughout the alpha and beta.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "faq-mobile",
+                    "alt": "Marshal - FAQ screenshot"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/website/sidekick-mobile~750.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
-                <div class="card-image">
-                  <img src="/images/marshal/website/sidekick-mobile~94.png"
-                       srcset="/images/marshal/website/sidekick-mobile~94.png 94w,
-                               /images/marshal/website/sidekick-mobile~188.png 188w,
-                               /images/marshal/website/sidekick-mobile~375.png 375w"
-                       sizes="(min-width: 1366px) 188px, 94px"
-                       alt="Marshal - sidekick screenshot">
-                </div>
+              <a href="/src/images/marshal/website/sidekick-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The final section includes a call to action and a visual treatment that subconsiously familiarizes you with threat badges.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "marshal/website",
+                    "filename": "sidekick-mobile",
+                    "alt": "Marshal - sidekick screenshot"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -484,11 +448,14 @@
         <p>The result is a product brand that is consumer friendly but powerful in presence. The name sounds like a person while also denoting safety. The logo is strong and angled but constructed with simple and pleasing geometric shapes. The color palette is functional and flexible.</p>
         <figure class="sidekick">
           <div class="frame">
-            <img src="/images/marshal/logo/marshal-logo~800.png"
-                 srcset="/images/marshal/logo/marshal-logo~400.png 400w,
-                         /images/marshal/logo/marshal-logo~800.png 800w,
-                         /images/marshal/logo/marshal-logo~1600.png 1600w"
-                 alt="Marshal - logo">
+            <include src="partials/_screenshot-sidekick.html">
+              {
+                "project": "marshal/logo",
+                "filename": "marshal-logo",
+                "alt": "Marshal - logo",
+                "loading": "lazy"
+              }
+            </include>
           </div>
           <figcaption>The Marshal logo.</figcaption>
         </figure>
@@ -497,87 +464,80 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-shapes.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Some of the first Marshal shape experiments.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-shapes~280.png"
-                       srcset="/images/marshal/logo/marshal-shapes~280.png 280w,
-                               /images/marshal/logo/marshal-shapes~560.png 560w,
-                               /images/marshal/logo/marshal-shapes~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - shapes iteration">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-shapes.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Some of the first Marshal shape experiments.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-shapes",
+                    "alt": "Marshal - shapes iteration"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-cutout.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Isolating a unique working shape by cutting out a portion of a 6-pointed star.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-cutout~280.png"
-                       srcset="/images/marshal/logo/marshal-cutout~280.png 280w,
-                               /images/marshal/logo/marshal-cutout~560.png 560w,
-                               /images/marshal/logo/marshal-cutout~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - cutout iteration">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-cutout.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Isolating a unique working shape by cutting out a portion of a 6-pointed star.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-cutout",
+                    "alt": "Marshal - cutout iteration"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-connections.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Experimenting with different angles and connection points.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-connections~280.png"
-                       srcset="/images/marshal/logo/marshal-connections~280.png 280w,
-                               /images/marshal/logo/marshal-connections~560.png 560w,
-                               /images/marshal/logo/marshal-connections~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - connections iteration">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-connections.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="Experimenting with different angles and connection points.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-connections",
+                    "alt": "Marshal - connections iteration"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-final-shape.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The final Marshal shape was found by raising the external points and connecting them their acute top corners.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-final-shape~280.png"
-                       srcset="/images/marshal/logo/marshal-final-shape~280.png 280w,
-                               /images/marshal/logo/marshal-final-shape~560.png 560w,
-                               /images/marshal/logo/marshal-final-shape~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - final shape iteration">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-final-shape.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The final Marshal shape was found by raising the external points and connecting them their acute top corners.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-final-shape",
+                    "alt": "Marshal - final shape iteration"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-treatments.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A final round of experiments on the Marshal shape to give it some dimension.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-treatments~280.png"
-                       srcset="/images/marshal/logo/marshal-treatments~280.png 280w,
-                               /images/marshal/logo/marshal-treatments~560.png 560w,
-                               /images/marshal/logo/marshal-treatments~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - treatments iteration">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-treatments.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A final round of experiments on the Marshal shape to give it some dimension.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-treatments",
+                    "alt": "Marshal - treatments iteration"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-colors.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A handful of Marshal color experiments including monochromatic, polychromatic, complementary, and duotone pairings.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-colors~280.png"
-                       srcset="/images/marshal/logo/marshal-colors~280.png 280w,
-                               /images/marshal/logo/marshal-colors~560.png 560w,
-                               /images/marshal/logo/marshal-colors~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - color experiments">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-colors.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="A handful of Marshal color experiments including monochromatic, polychromatic, complementary, and duotone pairings.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-colors",
+                    "alt": "Marshal - color experiments"
+                  }
+                </include>
               </a>
             </li>
             <li class="card">
-              <a href="/images/marshal/logo/marshal-brand.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The Marshal brand guide showing the logo, glyph, and colors.">
-                <div class="card-image">
-                  <img src="/images/marshal/logo/marshal-brand~280.png"
-                       srcset="/images/marshal/logo/marshal-brand~280.png 280w,
-                               /images/marshal/logo/marshal-brand~560.png 560w,
-                               /images/marshal/logo/marshal-brand~1120.png 1120w"
-                       sizes="(min-width: 1366px) 560px, 280px"
-                       alt="Marshal - brand guide">
-                </div>
+              <a href="/src/images/marshal/logo/marshal-brand.png" class="card-action-area" data-fancybox="gallery-sketches" data-caption="The Marshal brand guide showing the logo, glyph, and colors.">
+                <include src="partials/_screenshot-desktop.html">
+                  {
+                    "project": "marshal/logo",
+                    "filename": "marshal-brand",
+                    "alt": "Marshal - brand guide"
+                  }
+                </include>
               </a>
             </li>
           </ul>
@@ -586,7 +546,7 @@
       </figure>
     </section>
   </main>
-  @@include('_footer.html')
-  @@include('_scripts.html')
+  <include src="partials/_footer.html"></include>
+  <script type="module" src="/src/javascripts/scripts.js"></script>
 </body>
 </html>
