@@ -1,7 +1,10 @@
 .onehub {
   .ribbon {
     background: linear-gradient(to bottom right, #58B28D, #79B743);
-    h2 { @extend h2, .inverted; }
+    h2 {
+      @extend h2, .inverted;
+      top: calc(100% / 1.5);
+    }
   }
   .website {
     .hero {
