@@ -36,8 +36,8 @@
   }
   &.mobile {
     li {
-      flex: 0 1 (347px / 4);
-      min-width: (347px / 4);
+      flex: 0 1 calc(347px / 4);
+      min-width: calc(347px / 4);
     }
   }
 
