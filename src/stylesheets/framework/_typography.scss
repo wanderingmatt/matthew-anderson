@@ -1,59 +1,91 @@
-// MODULAR SCALE
-// 14px 16px 20px 23px 28px 32px 40px 45px 56px 64px 79px
+// Modular Scale
+//
+// 13px - .833em @ 1rem
+// 16px - 1rem @ 1.1875rem
+// 19px - 1.2rem @ 1.3125rem
+// 23px - 1.44rem @ 1.5625rem / 1.75rem
+// 28px - 1.728rem @ 2rem
+// 33px - 2.074rem @ 2.25rem
+// 40px - 2.488rem @ ?
+// 48px - 2.986rem  @ 3.25rem
+// 57px - 3.583rem @ 3.9375rem
+// 69px - 4.3rem @ ?
+// 83px - 5.16rem @ 5.6875rem
+// 99px - 6.192rem @ 6.8125rem
 
-$modularscale: (
-  base: 14px 16px,
-  ratio: $augmented-fourth,
-);
-
-html { font-size: ms(0); }
 ::selection { background: fade_out($brand, .8); }
+html, body { font-size: 16px; }
 
 body {
   color: $grey-4;
   font-family: $default-font;
-  font-size: ms(1);
-  line-height: 1.5;
+  line-height: 1.78125rem;
   text-rendering: optimizeSpeed;
   text-size-adjust: none;
   @include dark-mode {
     background: $off-black;
     color: $grey-4;
   }
-}
-
-a {
-  color: $grey-1;
-  font-weight: 500;
-  position: relative;
-  text-decoration: none;
-  &:active {
-    position: relative;
-    top: 1px;
+  @include breakpoint($breakpoint-desktop) {
+    font-size: 1.44rem;
+    line-height: 2.1rem;
+    text-rendering: auto;
   }
 }
+
+// Headings
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 h1, h2, h3 { font-weight: normal; }
 
-h1 { font-size: ms(5); }
+h1 {
+  font-family: $custom-font-regular;
+  font-size: 1.44rem;
+  @include breakpoint($breakpoint-tablet) { font-size: 2.074rem; }
+  @include breakpoint($breakpoint-desktop) { font-size: 2.488rem; }
+}
 
 h2 {
   font-family: $custom-font-regular;
-  font-size: ms(3);
-  line-height: 1.25;
+  font-size: 1.44rem;
+  line-height: 1.875rem;
   strong {
     color: $off-black;
     font-weight: 400;
     @include dark-mode { color: $off-white; }
+  }
+  @include breakpoint($breakpoint-tablet) {
+    font-family: $custom-font-light;
+    font-size: 2.986rem;
+    line-height: 3.9rem;
+  }
+  @include breakpoint($breakpoint-desktop) {
+    font-size: 5.16rem;
+    line-height: 6.825rem;
+  }
+  @include breakpoint($breakpoint-widescreen) {
+    h2 {
+      font-size: 6.192rem;
+      line-height: 8.175rem;
+    }
   }
 }
 
 h3 {
   color: $grey-1;
   font-family: $custom-font-regular;
-  font-size: ms(2);
+  font-size: 1.2rem;
+  line-height: 1.575;
   @include dark-mode { color: $grey-5; }
+  @include breakpoint($breakpoint-tablet) {
+    font-family: $custom-font-light;
+    font-size: 2.074rem;
+    line-height: 2.7rem;
+  }
+  @include breakpoint($breakpoint-desktop) {
+    font-size: 3.583rem;
+    line-height: 4.725rem
+  }
 }
 
 h4 {
@@ -77,7 +109,21 @@ h4 {
     width: 100%;
     @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, $grey-1 2px, $grey-1 4px); }
   }
+  @include breakpoint($breakpoint-desktop) {
+    margin-bottom: 2rem;
+    padding-top: 5rem;
+    &::before {
+      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
+      height: 1rem;
+      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $grey-1 2px, $grey-1 6px); }
+    }
+  }
+  @include breakpoint($breakpoint-widescreen) {
+    h4 { padding-top: 7rem; }
+  }
 }
+
+// Copy
 
 p {
   margin-bottom: 2rem;
@@ -90,6 +136,9 @@ figcaption {
   padding: .5rem 0;
   text-align: center;
   @include dark-mode { color: $grey-2; }
+  @include breakpoint($breakpoint-widescreen) {
+    figcaption { padding: 1rem 0; }
+  }
 }
 
 blockquote {
@@ -97,7 +146,8 @@ blockquote {
   p {
     color: $brand;
     font-family: $custom-font-regular;
-    font-size: ms(3);
+    font-size: 1.44rem;
+    line-height: 1.875rem;
     margin: 0;
     position: relative;
     &:before {
@@ -109,7 +159,6 @@ blockquote {
   }
   cite {
     display: inline-block;
-    font-size: ms(1);
     font-style: normal;
     margin-top: .5rem;
     &:before {
@@ -118,75 +167,52 @@ blockquote {
       @include dark-mode { color: $grey-1; }
     }
   }
-}
-
-@include breakpoint($breakpoint-tablet) {
-  h2 {
-    font-family: $custom-font-light;
-    font-size: ms(7);
-  }
-
-  h3 {
-    font-family: $custom-font-light;
-    font-size: ms(5);
-    font-weight: 400;
-  }
-
-  blockquote {
-    p { font-size: ms(4); }
-  }
-}
-
-@include breakpoint($breakpoint-desktop) {
-  body {
-    font-size: ms(3);
-    text-rendering: auto;
-  }
-
-  a {
-    transition-duration: .2s;
-    transition-property: border-color, color;
-  }
-
-  h2 { font-size: ms(10); }
-  h3 { font-size: ms(8); }
-
-  h4 {
-    margin-bottom: 2rem;
-    padding-top: 5rem;
-    &::before {
-      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
-      height: 1rem;
-      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $grey-1 2px, $grey-1 6px); }
+  @include breakpoint($breakpoint-tablet) {
+    p {
+      font-size: 1.728rem;
+      line-height: 2.4rem;
     }
   }
-
-  blockquote {
+  @include breakpoint($breakpoint-desktop) {
     p {
       font-family: $custom-font-light;
-      font-size: ms(4);
+      font-size: 1.728rem;
+      line-height: 2.4rem;
       &:before, &:after {
         color: $grey-6;
-        font-size: ms(10);
+        font-size: 4.3rem;
         line-height: 1;
         @include dark-mode { color: $grey-1; }
       }
-      &:before { transform: translateX(-3rem) translateY(-.5rem); }
+      &:before { transform: translateX(-2rem) translateY(-.25rem); }
       &:after {
         position: absolute;
-        transform: translateX(.5rem) translateY(0);
+        transform: translateX(.25rem) translateY(-.25rem);
       }
     }
     cite { margin-top: 1rem; }
   }
+  @include breakpoint($breakpoint-widescreen) {
+    p {
+      font-size: 2.074rem;
+      line-height: 2.7rem;
+    }
+  }
 }
 
-@include breakpoint($breakpoint-widescreen) {
-  h2 { font-size: ms(11); }
-  h4 { padding-top: 7rem; }
-  figcaption { padding: 1rem 0; }
+// Links
 
-  blockquote {
-    p { font-size: ms(5); }
+a {
+  color: $grey-1;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  @include breakpoint($breakpoint-desktop) {
+    transition-duration: .2s;
+    transition-property: border-color, color;
   }
 }

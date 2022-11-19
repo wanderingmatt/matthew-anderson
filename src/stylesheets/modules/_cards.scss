@@ -36,7 +36,7 @@
     position: relative;
     h3 {
       color: $grey-1;
-      font-size: ms(3);
+      font-size: 1.44rem;
       @include dark-mode { color: $grey-5; }
     }
     .fab {

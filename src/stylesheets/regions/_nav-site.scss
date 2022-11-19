@@ -23,7 +23,6 @@
     padding: 0;
     a {
       color: $grey-5;
-      font-size: ms(0);
       font-weight: 700;
       position: relative;
       text-decoration: none;
@@ -53,7 +52,6 @@
     display: block;
     padding: 1rem;
   }
-
   @include breakpoint($breakpoint-tablet) {
     .monogram {
       img { height: 4rem; }
@@ -64,11 +62,10 @@
       }
     }
   }
-
   @include breakpoint($breakpoint-desktop) {
     .menu {
       a {
-        font-size: ms(1);
+        font-size: 1rem;
         &:hover:not(.selected) {
           &::after {
             opacity: 1;
