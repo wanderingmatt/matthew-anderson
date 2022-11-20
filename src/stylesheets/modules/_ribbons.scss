@@ -9,7 +9,7 @@
   }
   h2 {
     backdrop-filter: blur(1rem);
-    background: #fff;
+    background: rgba(255, 255, 255, .98);
     color: $off-black;
     right: 0;
     mix-blend-mode: screen;
@@ -20,7 +20,7 @@
     transform: translateY(-50%);
     z-index: 1;
     &.inverted {
-      background: $off-black;
+      background: fade_out($off-black, .02);
       color: #fff;
       mix-blend-mode: multiply;
     }
