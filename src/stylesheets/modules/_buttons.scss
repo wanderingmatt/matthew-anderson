@@ -3,7 +3,7 @@
   color: $grey-1;
   cursor: pointer;
   display: inline-block;
-  font-size: .833em;
+  font-size: .833rem;
   letter-spacing: .1rem;
   outline: none;
   overflow: hidden;
@@ -34,13 +34,13 @@
   &:active { background: $grey-6; }
 
   @include breakpoint($breakpoint-tablet) {
+    font-size: 1rem;
     .button-content {
       padding: 1.5rem 2rem;
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
-    font-size: 1rem;
     .button-icon {
       backface-visibility: hidden;
       transition: transform .2s;
