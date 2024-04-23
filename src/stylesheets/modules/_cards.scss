@@ -56,7 +56,6 @@
       &::after { content: none; }
     }
     .card-content {
-      background-color: fade_out($off-black, .2);
       box-sizing: border-box;
       display: flex;
       flex-direction: column;

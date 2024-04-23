@@ -23,41 +23,31 @@
       grid-template-rows: 1fr;
       .card {
         &.carlos-lamas {
-          // .card-content { background: #4C489E; }
+          .card-content { background: #4C489E; }
         }
         &.chips-and-bits {
-          // .card-content { background: #096; }
+          .card-content { background: #096; }
         }
         &.marshal {
-          // .card-content { background-image: linear-gradient(to top right, fade_out(#1F3A7E, .4), fade_out(#377E96, .4), fade_out(#62B096, .4)); }
+          .card-content { background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
         }
         &.onehub {
-          // .card-content { background-image: linear-gradient(to bottom right, fade_out(#58B28D, .4), fade_out(#79B743, .4)); }
+          .card-content { background-image: linear-gradient(to bottom right, #58B28D, #79B743); }
         }
         &.proof {
-          // .card-content { background-image: linear-gradient(to bottom right, fade_out(#B9AF64, .4), fade_out(#B9AF64, .4)); }
+          .card-content { background: #B9AF64; }
         }
         &.r8r {
-          // .card-content { background-image: linear-gradient(to bottom right, fade_out(#F05436, .4), fade_out(#DD2476, .4) 56.25%); }
+          .card-content { background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
         }
       }
       .card-action-area {
         display: flex;
         height: 100%;
         transition: transform .2s;
-        .card-image {
-          overflow: hidden;
-          img { transition: filter .2s; }
-        }
-        // .card-content {
-        //   h3 { color: $grey-1; }
-        // }
         &:hover {
           transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
-          .card-image {
-            img { filter: blur(1px) grayscale(1); }
-          }
-          .card-content { opacity: 1; }
+          .card-content { opacity: .92; }
         }
       }
       > li {
