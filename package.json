@@ -1,13 +1,14 @@
 {
   "name": "matthew-anderson",
-  "description": "Portfolio site for Matthew Anderson.",
   "version": "2.0.0",
+  "description": "Portfolio site for Matthew Anderson.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wanderingmatt/matthew-anderson.git"
   },
-  "author": "Matthew Anderson <matt@wanderingmatt.com>",
-  "license": "MIT",
+  "author": "Matthew Anderson",
+  "license": "ISC",
+  "homepage": "https://github.com/wanderingmatt/matthew-anderson#readme",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
@@ -15,17 +16,17 @@
     "predeploy": "rm -rf dist && parcel build --public-url https://matthew-anderson.com/ && cp CNAME ./dist",
     "deploy": "gh-pages -d dist"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": "defaults",
   "devDependencies": {
     "@fancyapps/ui": "^4.0.31",
-    "@parcel/optimizer-data-url": "^2.8.0",
-    "@parcel/transformer-inline-string": "^2.8.0",
-    "@parcel/transformer-sass": "^2.8.0",
-    "gh-pages": "^4.0.0",
+    "@parcel/optimizer-data-url": "^2.12.0",
+    "@parcel/transformer-inline-string": "^2.12.0",
+    "@parcel/transformer-sass": "^2.12.0",
+    "gh-pages": "^6.1.1",
     "normalize.css": "^8.0.1",
-    "parcel": "latest",
+    "parcel": "^2.12.0",
     "parcel-optimizer-friendly-urls": "^0.2.0",
-    "posthtml-include": "^1.7.4",
-    "sharp": "^0.31.2"
+    "posthtml-include": "^2.0.1",
+    "sharp": "^0.31.3"
   }
 }
