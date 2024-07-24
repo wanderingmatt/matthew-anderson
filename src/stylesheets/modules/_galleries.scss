@@ -2,10 +2,10 @@
   @extend %content-quarter;
   position: relative;
   .scroll-view {
-    margin: -.5rem -1rem;
+    margin: -.25rem -1rem;
     overflow: hidden;
     overflow-x: scroll;
-    padding: .5rem 1rem;
+    padding: 1rem;
     text-align: center;
   }
   ul {
@@ -17,9 +17,9 @@
     vertical-align: middle;
   }
   li {
-    flex: 0 1 148px;
+    flex: 0 1 280px;
     margin-right: 1rem;
-    min-width: 148px;
+    min-width: 280px;
     a { cursor: zoom-in; }
     img {
       display: block;
@@ -35,9 +35,10 @@
     @include dark-mode { border-color: $grey-1; }
   }
   &.mobile {
+    ul { flex-wrap: nowrap; }
     li {
-      flex: 0 1 calc(347px / 4);
-      min-width: calc(347px / 4);
+      flex: 0 1 94px;
+      min-width: 94px;
     }
   }
 
@@ -57,39 +58,6 @@
   }
 
   @include breakpoint($breakpoint-desktop) {
-    li {
-      margin: 0 1rem;
-      min-width: auto;
-      &:first-child { margin-left: 0; }
-    }
-    figcaption { margin-top: 1rem; }
-    &.mobile {
-      ul { flex-wrap: wrap; }
-      li { margin: 1rem; }
-    }
-  }
-}
-
-.gallery {
-  .scroll-view {
-    margin: -.25rem -1rem;
-    padding: 1rem;
-  }
-  li {
-    flex: 0 1 280px;
-    margin-right: 1rem;
-    min-width: 280px;
-    &:last-child { margin-right: 0; } // TODO: Remove after backporting.
-  }
-  &.mobile {
-    ul { flex-wrap: nowrap; }
-    li {
-      flex: 0 1 94px;
-      min-width: 94px;
-    }
-  }
-
-  @include breakpoint($breakpoint-desktop) {
     padding: 0 6rem;
     max-width: none;
     overflow: hidden;
@@ -104,8 +72,8 @@
       margin: 0;
       margin-right: 2rem;
       min-width: 560px;
-      &:first-child { margin-left: 0; }
     }
+    figcaption { margin-top: 1rem; }
     &.mobile {
       ul { flex-wrap: unset; }
       li {
