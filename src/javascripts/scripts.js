@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Image: {
       click: false
     },
+    infinite: false,
     Thumbs: false,
     Toolbar: false
   });
