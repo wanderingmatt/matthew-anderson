@@ -1,6 +1,6 @@
 .marshal {
   .ribbon {
-    background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
+    @include project-background('marshal');;
     h2 { top: calc(100% / 2.75); }
   }
 }
