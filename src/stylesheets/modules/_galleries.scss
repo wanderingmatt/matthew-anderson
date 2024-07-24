@@ -71,50 +71,46 @@
 }
 
 .gallery {
-  .carlos-lamas &, .chips-and-bits &, .marshal &, .onehub &, .proof &, .r8r & {
-    .scroll-view {
-      margin: -.25rem -1rem;
-      padding: 1rem;
-    }
+  .scroll-view {
+    margin: -.25rem -1rem;
+    padding: 1rem;
+  }
+  li {
+    flex: 0 1 280px;
+    margin-right: 1rem;
+    min-width: 280px;
+    &:last-child { margin-right: 0; } // TODO: Remove after backporting.
+  }
+  &.mobile {
+    ul { flex-wrap: nowrap; }
     li {
-      flex: 0 1 280px;
-      margin-right: 1rem;
-      min-width: 280px;
-      &:last-child { margin-right: 0; } // TODO: Remove after backporting.
-    }
-    &.mobile {
-      ul { flex-wrap: nowrap; }
-      li {
-        flex: 0 1 94px;
-        min-width: 94px;
-      }
+      flex: 0 1 94px;
+      min-width: 94px;
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
-    .carlos-lamas &, .chips-and-bits &, .marshal &, .onehub &, .proof &, .r8r & {
-      padding: 0 6rem;
-      max-width: none;
-      overflow: hidden;
-      position: relative;
-      width: auto;
-      .scroll-view {
-        margin: -.5rem -6rem;
-        padding: 1.5rem 6rem;
-      }
+    padding: 0 6rem;
+    max-width: none;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    .scroll-view {
+      margin: -.5rem -6rem;
+      padding: 1.5rem 6rem;
+    }
+    li {
+      flex: 0 1 560px;
+      margin: 0;
+      margin-right: 2rem;
+      min-width: 560px;
+      &:first-child { margin-left: 0; }
+    }
+    &.mobile {
+      ul { flex-wrap: unset; }
       li {
-        flex: 0 1 560px;
-        margin: 0;
-        margin-right: 2rem;
-        min-width: 560px;
-        &:first-child { margin-left: 0; }
-      }
-      &.mobile {
-        ul { flex-wrap: unset; }
-        li {
-          flex: 0 1 188px;
-          min-width: 188px;
-        }
+        flex: 0 1 188px;
+        min-width: 188px;
       }
     }
   }
