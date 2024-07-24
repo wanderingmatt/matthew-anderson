@@ -1,9 +1,3 @@
 .meta {
-  .ribbon {
-    background: linear-gradient(to bottom, #0064e0, #0081fb);
-    h2 {
-      @extend h2, .inverted;
-      // top: calc(100% / 1.5);
-    }
-  }
+  .ribbon { @include project-background('meta'); }
 }
