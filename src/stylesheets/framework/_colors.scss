@@ -11,3 +11,25 @@ $grey-4: #919594;
 $grey-5: #AFB4B3;
 $grey-6: #CDD3D1;
 $off-white: #EBF2F0;
+
+// Project Backgrounds
+
+@mixin project-background($project: null) {
+  @if $project == 'carlos-lamas' {
+    background: #4C489E;
+  } @else if $project == 'chips-and-bits' {
+    background: #096;
+  } @else if $project == 'marshal' {
+    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
+  } @else if $project == 'meta' {
+    background-image: linear-gradient(to bottom, #0064e0, #0081fb);
+  } @else if $project == 'onehub' {
+    background-image: linear-gradient(to bottom right, #58B28D, #79B743);
+  } @else if $project == 'proof' {
+    background: #B9AF64;
+  } @else if $project == 'r8r' {
+    background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%);
+  } @else {
+    background: $grey-5;
+  }
+}
