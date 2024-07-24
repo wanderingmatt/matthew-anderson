@@ -1,0 +1,19 @@
+// All of the shadows used throughout the site.
+//
+// No styleguide reference.
+
+$shadows: (
+  1: '0 1px 2px 0 rgba(0, 0, 0, .30), 0 1px 3px 1px rgba(0, 0, 0, 0.15)',
+);
+
+@function shadow($token) {
+  @if not map-has-key($shadows, $token) {
+    @warn "No shadow found for `#{$token}` in $shadows map.";
+  }
+
+  @return unquote(map-get($shadows, $token));
+}
+
+@mixin box-shadow($token) {
+  box-shadow: shadow($token);
+}
