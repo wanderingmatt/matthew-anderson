@@ -3,13 +3,4 @@
     background: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
     h2 { top: calc(100% / 2.75); }
   }
-  .credit {
-    background: none;
-    box-shadow: inset 0 0 0 1px $off-white;
-    color: $grey-6;
-    @include dark-mode {
-      box-shadow: inset 0 0 0 1px $grey-2;
-      color: $grey-2;
-    }
-  }
 }

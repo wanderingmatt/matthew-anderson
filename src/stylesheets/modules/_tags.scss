@@ -18,6 +18,15 @@
       background-color: $grey-2;
       color: #000;
     }
+    &.credit {
+      background: none;
+      box-shadow: inset 0 0 0 1px $off-white;
+      color: $grey-6;
+      @include dark-mode {
+        box-shadow: inset 0 0 0 1px $grey-2;
+        color: $grey-2;
+      }
+    }
   }
   @include breakpoint($breakpoint-desktop) {
     .tag {
