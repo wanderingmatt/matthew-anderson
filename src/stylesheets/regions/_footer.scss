@@ -42,7 +42,7 @@ footer {
     .copyright { font-size: 1.2rem; }
   }
 
-  @include breakpoint($breakpoint-desktop) {
+  @include breakpoint($breakpoint-widescreen) {
     .elsewhere-list { padding: 5rem 0; }
   }
 }
