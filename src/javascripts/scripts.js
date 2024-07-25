@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
     Toolbar: {
       display: {
         left: [],
-        middle: [],
         right: ['close'],
       },
     },
