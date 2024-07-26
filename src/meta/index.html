@@ -158,7 +158,7 @@
         <div class="scroll-view">
           <ul>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroup-join.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Admin-created subgroups were surfaced when they included people you expicitly follow in your community.">
+              <a href="/src/images/meta/connections/subgroup-join.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Admin-created subgroups were surfaced when they included people you expicitly follow in your community.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -170,7 +170,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroup.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Parent group attribution was maintained within a nested header.">
+              <a href="/src/images/meta/connections/subgroup.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Parent group attribution was maintained within a nested header.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -182,7 +182,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroup-entry.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Subgroup creation was surfaced to group members who explicitly follow people in their community.">
+              <a href="/src/images/meta/connections/subgroup-entry.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Subgroup creation was surfaced to group members who explicitly follow people in their community.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -194,7 +194,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroup-entry-scoped.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Scopes were surfaced to help find meaningful connections, such as location.">
+              <a href="/src/images/meta/connections/subgroup-entry-scoped.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Scopes were surfaced to help find meaningful connections, such as location.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -206,7 +206,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroup-create.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Secret subgroups could be created by any group member, allowing them to create secret, casual subgroups outside of admin constraints.">
+              <a href="/src/images/meta/connections/subgroup-create.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Secret subgroups could be created by any group member, allowing them to create secret, casual subgroups outside of admin constraints.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -218,7 +218,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/subgroups-list.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Public subgroups were visible to all group members. Secret subgroups were only visible to invited members.">
+              <a href="/src/images/meta/connections/subgroups-list.png" class="card-action-area" data-fancybox="gallery-subgroups" data-caption="Public subgroups were visible to all group members. Secret subgroups were only visible to invited members.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -229,8 +229,15 @@
                 </include>
               </a>
             </li>
+          </ul>
+        </div>
+        <figcaption>Subgroups created by group members.</figcaption>
+      </figure>
+      <figure class="mobile gallery">
+        <div class="scroll-view">
+          <ul>
             <li class="card">
-              <a href="/src/images/meta/connections/messenger-groups.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Groups and subgroup chats were shown within Messenger with badging for mutual connections.">
+              <a href="/src/images/meta/connections/messenger-groups.png" class="card-action-area" data-fancybox="gallery-messaging" data-caption="Groups and subgroup chats were shown within Messenger with badging for mutual connections.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -242,7 +249,19 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/messenger-context-chat.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Group and subgroup membership was displayed within Messenger chats to provide connection context.">
+              <a href="/src/images/meta/connections/messenger-following.png" class="card-action-area" data-fancybox="gallery-messaging" data-caption="Group members you follow were shown in a segmented tab within the people section.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "meta/connections",
+                    "filename": "messenger-following",
+                    "alt": "Meta – Messenger Following Screenshot",
+                    "loading": "lazy"
+                  }
+                </include>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/src/images/meta/connections/messenger-context-chat.png" class="card-action-area" data-fancybox="gallery-messaging" data-caption="Group and subgroup membership was displayed within Messenger chats to provide connection context.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -254,7 +273,19 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/messenger-context-profile.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Group and subgroup membership was displayed within Messenger profiles to provide connection context.">
+              <a href="/src/images/meta/connections/messenger-context-details.png" class="card-action-area" data-fancybox="gallery-messaging" data-caption="Group and subgroup membership was displayed within Messenger thread details to provide connection context.">
+                <include src="partials/_screenshot-mobile.html">
+                  {
+                    "project": "meta/connections",
+                    "filename": "messenger-context-details",
+                    "alt": "Meta – Messenger Context Details Screenshot",
+                    "loading": "lazy"
+                  }
+                </include>
+              </a>
+            </li>
+            <li class="card">
+              <a href="/src/images/meta/connections/messenger-context-profile.png" class="card-action-area" data-fancybox="gallery-messaging" data-caption="Contextual group profiles were shown to other group members throughout the app.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -265,8 +296,15 @@
                 </include>
               </a>
             </li>
+          </ul>
+        </div>
+        <figcaption>Mutual messaging unlocked via explicit group connections.</figcaption>
+      </figure>
+      <figure class="mobile gallery">
+        <div class="scroll-view">
+          <ul>
             <li class="card">
-              <a href="/src/images/meta/connections/ice-breakers-entry.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Admins could create contextual ice breakers which would be surfaced to members within the group feed.">
+              <a href="/src/images/meta/connections/ice-breakers-entry.png" class="card-action-area" data-fancybox="gallery-ice-breakers" data-caption="Admins could create contextual ice breakers which would be surfaced to members within the group feed.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -278,7 +316,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/ice-breakers-post.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Group members could post answers to the entire group or only their followers.">
+              <a href="/src/images/meta/connections/ice-breakers-post.png" class="card-action-area" data-fancybox="gallery-ice-breakers" data-caption="Group members could post answers to the entire group or only their followers.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -290,7 +328,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/ice-breakers-messenger-bot.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Ice breakers could be surfaced via chat bots after a mutual connection was made.">
+              <a href="/src/images/meta/connections/ice-breakers-messenger-bot.png" class="card-action-area" data-fancybox="gallery-ice-breakers" data-caption="Ice breakers could be surfaced via chat bots after a mutual connection was made.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -302,7 +340,7 @@
               </a>
             </li>
             <li class="card">
-              <a href="/src/images/meta/connections/ice-breakers-messenger-game.png" class="card-action-area" data-fancybox="gallery-connections" data-caption="Mutually connected group members could cycle through any unanswered ice breakers or quit at any time.">
+              <a href="/src/images/meta/connections/ice-breakers-messenger-game.png" class="card-action-area" data-fancybox="gallery-ice-breakers" data-caption="Mutually connected group members could cycle through any unanswered ice breakers or quit at any time.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "meta/connections",
@@ -315,7 +353,7 @@
             </li>
           </ul>
         </div>
-        <figcaption>Subgroups, ice breakers, and mutual messaging concepts.</figcaption>
+        <figcaption>Ice breakers for groups and chat.</figcaption>
       </figure>
     </section>
     <section class="interests">
