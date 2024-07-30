@@ -32,7 +32,7 @@
           .card-content { @include project-background('marshal'); }
         }
         &.meta {
-          .card-content { @include project-background('meta'); }
+          .card-image, .card-content { @include project-background('meta'); }
         }
         &.onehub {
           .card-content { @include project-background('onehub'); }
