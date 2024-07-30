@@ -11,7 +11,20 @@
       <div class="content">
         <h2>Meta</h2>
         <picture>
-          <img src="https://placehold.co/3200x1648?text=Ribbon">
+          <source type="image/webp"
+                  media="(min-width: 430px)"
+                  srcset="/src/images/meta/meta-hero.png?as=webp&width=800 800w,
+                          /src/images/meta/meta-hero.png?as=webp&width=1600 1600w,
+                          /src/images/meta/meta-hero.png?as=webp&width=3200 3200w,">
+          <source type="image/webp"
+                  srcset="/src/images/meta/meta-hero.png?as=webp&width=400 400w,
+                          /src/images/meta/meta-hero.png?as=webp&width=800 800w">
+          <img src="/src/images/meta/meta-hero.png?width=800"
+               srcset="/src/images/meta/meta-hero.png?width=400 400w,
+                       /src/images/meta/meta-hero.png?width=800 800w,
+                       /src/images/meta/meta-hero.png?width=1600 1600w,
+                       /src/images/meta/meta-hero.png?width=3200 3200w"
+               alt="Meta – Hero">
         </picture>
       </div>
     </div>

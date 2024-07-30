@@ -1,3 +1,7 @@
 .meta {
-  .ribbon { @include project-background('meta'); }
+  .ribbon {
+    @include project-background('meta');
+    padding-top: 0;
+    h2 { top: calc(100% / 1.4); }
+  }
 }
