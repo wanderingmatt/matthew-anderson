@@ -1,10 +1,6 @@
 .chips-and-bits {
   .ribbon {
-    background: #096;
-    h2 {
-      @extend h2, .inverted;
-      mix-blend-mode: luminosity;
-      top: calc(100% / 1.7);
-    }
+    @include project-background('chips-and-bits');
+    h2 { top: calc(100% / 1.7); }
   }
 }

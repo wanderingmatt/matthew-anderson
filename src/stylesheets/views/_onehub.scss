@@ -1,8 +1,8 @@
 .onehub {
   .ribbon {
-    background: linear-gradient(to bottom right, #58B28D, #79B743);
+    @include project-background('onehub');
     h2 {
-      @extend h2, .inverted;
+      @extend .inverted;
       top: calc(100% / 1.5);
     }
   }

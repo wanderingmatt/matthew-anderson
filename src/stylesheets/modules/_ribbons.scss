@@ -8,8 +8,8 @@
     margin: 0 auto;
   }
   h2 {
-    backdrop-filter: blur(1rem);
-    background: rgba(255, 255, 255, .98);
+    backdrop-filter: blur(2rem);
+    background: #383838, rgba(179, 179, 179, .82);
     color: $off-black;
     right: 0;
     mix-blend-mode: screen;
@@ -20,7 +20,7 @@
     transform: translateY(-50%);
     z-index: 1;
     &.inverted {
-      background: fade_out($off-black, .02);
+      background: #8C8C8C, rgba(37, 37, 37, .82);
       color: #fff;
       mix-blend-mode: multiply;
     }

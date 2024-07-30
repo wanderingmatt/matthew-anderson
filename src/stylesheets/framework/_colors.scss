@@ -11,3 +11,80 @@ $grey-4: #919594;
 $grey-5: #AFB4B3;
 $grey-6: #CDD3D1;
 $off-white: #EBF2F0;
+
+// All of the colors used throughout the product. Can easily be inserted via the `color` function. For example, our `brand` `teal` can be retrieved using `color('brand', 'teal')`.
+//
+// No styleguide reference.
+
+$colors: (
+  'brand': #096,
+  'dark': (
+    'primary': #FFF,
+    'tertiary-on-media': rgba(255, 255, 255, .32),
+  ),
+  'neutral': (
+          0: #FFF,
+         50: #F4F5F5,
+        100: #DFE2E1,
+        200: #CACECD,
+        300: #B5BAB9,
+        400: #A0A7A4,
+        500: #8A9390,
+        600: #767F7C,
+        700: #4E5553,
+        800: #3B403E,
+        900: #1D201F,
+       1000: #000,
+  )
+);
+
+// Returns a color from the `$colors` map.
+//
+// $collection - The group of colors that you want to select a variant from.
+// $variant    = null - The name/type of color that you're looking for.
+//
+// No styleguide reference.
+
+@function color($collection, $variant: null) {
+  @if ($variant != null) {
+    @if not map-has-key($colors, $collection) {
+      @error "No collection found for `#{$collection}` in `$colors` map.";
+    } @else {
+      $nested-map: map-get($colors, $collection);
+      @if not map-has-key($nested-map, $variant) {
+        @error "No variant found for `#{$variant}` within the `#{$collection}` collection in `$colors` map.";
+      }
+    }
+
+    @return map-get(map-get($colors, $collection), $variant);
+  } @else {
+    @if not map-has-key($colors, $collection) {
+      @error "No collection found for `#{$collection}` in `$colors` map.";
+    }
+
+    @return map-get($colors, $collection);
+  }
+}
+
+
+// Project Backgrounds
+
+@mixin project-background($project: null) {
+  @if $project == 'carlos-lamas' {
+    background: #4C489E;
+  } @else if $project == 'chips-and-bits' {
+    background: #096;
+  } @else if $project == 'marshal' {
+    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
+  } @else if $project == 'meta' {
+    background-image: linear-gradient(to bottom, #0064e0, #0081fb);
+  } @else if $project == 'onehub' {
+    background-image: linear-gradient(to bottom right, #58B28D, #79B743);
+  } @else if $project == 'proof' {
+    background: #B9AF64;
+  } @else if $project == 'r8r' {
+    background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%);
+  } @else {
+    background: $grey-5;
+  }
+}

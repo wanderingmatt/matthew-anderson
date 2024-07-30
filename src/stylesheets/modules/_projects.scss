@@ -8,7 +8,7 @@
     padding: 0;
   }
   .card {
-    &.iowa-actors, &.r8r {
+    &.r8r {
       .card-image {
         img { object-position: 100% 0; }
       }
@@ -23,31 +23,39 @@
       grid-template-rows: 1fr;
       .card {
         &.carlos-lamas {
-          .card-content { background: #4C489E; }
+          .card-content { @include project-background('carlos-lamas'); }
         }
         &.chips-and-bits {
-          .card-content { background: #096; }
+          .card-content { @include project-background('chips-and-bits'); }
         }
         &.marshal {
-          .card-content { background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096); }
+          .card-content { @include project-background('marshal'); }
+        }
+        &.meta {
+          .card-image, .card-content { @include project-background('meta'); }
         }
         &.onehub {
-          .card-content { background-image: linear-gradient(to bottom right, #58B28D, #79B743); }
+          .card-content { @include project-background('onehub'); }
         }
         &.proof {
-          .card-content { background: #B9AF64; }
+          .card-content { @include project-background('proof'); }
         }
         &.r8r {
-          .card-content { background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%); }
+          .card-content { @include project-background('r8r'); }
         }
       }
       .card-action-area {
         display: flex;
         height: 100%;
-        transition: transform .2s;
+        overflow: hidden;
+        transition: transform .2s ease-in-out;
         &:hover {
           transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
-          .card-content { opacity: .92; }
+          .card-image {
+            filter: blur(4px);
+            transition: filter .4s ease-in;
+          }
+          .card-content { opacity: .96; }
         }
       }
       > li {

@@ -2,11 +2,18 @@ import { Fancybox } from "@fancyapps/ui";
 
 document.addEventListener('DOMContentLoaded', function () {
   Fancybox.bind("[data-fancybox]", {
-    closeButton: 'outside',
-    Image: {
-      click: false
+    Carousel: {
+      infinite: false,
     },
+    contentClick: false,
+    placeFocusBack: false,
     Thumbs: false,
-    Toolbar: false
+    Toolbar: {
+      display: {
+        left: [],
+        right: ['close'],
+      },
+    },
+    wheel: 'pan'
   });
 });
