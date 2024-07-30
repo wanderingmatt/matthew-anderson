@@ -1,6 +1,7 @@
 .proof {
   .ribbon {
     @include project-background('proof');
+    padding-top: 0;
     h2 { @extend .inverted; }
   }
 }

@@ -9,11 +9,16 @@
   }
   .card {
     &.meta {
-      .card-image img { @include project-background('meta'); }
-    }
-    &.r8r {
       .card-image {
-        img { object-position: 100% 0; }
+        img { @include project-background('meta'); }
+      }
+    }
+    &.proof {
+      .card-image {
+        img {
+          @include project-background('proof');
+          object-position: 0 100%;
+        }
       }
     }
   }
