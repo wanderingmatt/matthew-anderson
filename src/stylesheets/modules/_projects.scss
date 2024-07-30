@@ -8,6 +8,9 @@
     padding: 0;
   }
   .card {
+    &.meta {
+      .card-image img { @include project-background('meta'); }
+    }
     &.r8r {
       .card-image {
         img { object-position: 100% 0; }
@@ -32,7 +35,7 @@
           .card-content { @include project-background('marshal'); }
         }
         &.meta {
-          .card-image, .card-content { @include project-background('meta'); }
+          .card-content { @include project-background('meta'); }
         }
         &.onehub {
           .card-content { @include project-background('onehub'); }
@@ -71,7 +74,7 @@
       grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
       > li {
         &.highlight {
-          grid-column: span 3 / -1;
+          grid-column: span 3;
           grid-row: span 2;
         }
         &.feature {
