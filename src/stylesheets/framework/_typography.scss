@@ -7,7 +7,7 @@
 // 28px - 1.728rem @ 2rem
 // 33px - 2.074rem @ 2.25rem
 // 40px - 2.488rem @ ?
-// 48px - 2.986rem  @ 3.25rem
+// 48px - 2.986rem @ 3.25rem
 // 57px - 3.583rem @ 3.9375rem
 // 69px - 4.3rem @ ?
 // 83px - 5.16rem @ 5.6875rem
@@ -83,8 +83,9 @@ h3 {
     line-height: 2.7rem;
   }
   @include breakpoint($breakpoint-desktop) {
-    font-size: 3.583rem;
-    line-height: 4.725rem
+    font-size: 2.986rem;
+    line-height: 3.25rem;
+    text-align: center;
   }
 }
 

@@ -3,4 +3,10 @@
     @include project-background('chips-and-bits');
     h2 { top: calc(100% / 1.7); }
   }
+  h3 {
+    span {
+      @extend %hidden;
+      @include breakpoint($breakpoint-tablet) { @extend %shown-tablet; }
+    }
+  }
 }
