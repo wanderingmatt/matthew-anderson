@@ -21,13 +21,6 @@ header {
         &::before { height: 80%; }
       }
     }
-    span { display: table; }
-  }
-
-  @media (max-width: 430px) {
-    h2 {
-      span { display: initial; }
-    }
   }
 
   @include breakpoint($breakpoint-tablet) {

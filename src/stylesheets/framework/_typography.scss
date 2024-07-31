@@ -62,6 +62,7 @@ h2 {
   @include breakpoint($breakpoint-desktop) {
     font-size: 5.16rem;
     line-height: 6.825rem;
+    text-align: center;
   }
   @include breakpoint($breakpoint-widescreen) {
     h2 {
