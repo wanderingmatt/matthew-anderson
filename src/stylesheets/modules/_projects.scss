@@ -81,10 +81,12 @@
         &.highlight {
           grid-column: span 3;
           grid-row: span 2;
+          h3 { font-size: 4.3rem; }
         }
         &.feature {
           grid-column: span 2;
           grid-row: span 2;
+          h3 { font-size: 2.074rem; }
         }
       }
     }
