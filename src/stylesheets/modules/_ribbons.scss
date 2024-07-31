@@ -8,21 +8,19 @@
     margin: 0 auto;
   }
   h2 {
-    backdrop-filter: blur(2rem);
-    background: #383838, rgba(179, 179, 179, .82);
+    -webkit-backdrop-filter: blur(1rem) !important;
+    backdrop-filter: blur(1rem);
+    background: rgba(255, 255, 255, .72);
     color: $off-black;
-    right: 0;
-    mix-blend-mode: screen;
     padding: 1rem;
     position: absolute;
+    right: 0;
     text-transform: uppercase;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
     &.inverted {
-      background: #8C8C8C, rgba(37, 37, 37, .82);
+      background: rgba(0, 0, 0, .72);
       color: #fff;
-      mix-blend-mode: multiply;
     }
   }
   img {
@@ -44,7 +42,11 @@
   @include breakpoint($breakpoint-tablet) { padding-top: 3rem; }
   @include breakpoint($breakpoint-desktop) {
     padding-top: 5rem;
-    h2 { padding: 1rem 3rem 1rem 2rem; }
+    h2 {
+      mix-blend-mode: screen;
+      padding: 1rem 3rem 1rem 2rem;
+      &.inverted { mix-blend-mode: multiply; }
+    }
   }
   @include breakpoint($breakpoint-widescreen) { padding-top: 8rem; }
 }
