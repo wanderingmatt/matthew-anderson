@@ -11,7 +11,7 @@
     -webkit-backdrop-filter: blur(1rem) !important;
     backdrop-filter: blur(1rem);
     background: rgba(255, 255, 255, .72);
-    color: $off-black;
+    color: color('neutral', 900);
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -30,7 +30,7 @@
     max-width: 100%;
   }
   &::after {
-    background: $off-black;
+    background: color('neutral', 900);
     bottom: 0;
     content: '';
     display: block;

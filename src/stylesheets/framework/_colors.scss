@@ -2,14 +2,8 @@
 //
 // No styleguide reference.
 
-$brand: #096;
-$off-black: #1D201F;
 $grey-1: #373938;
-$grey-2: #555856;
-$grey-3: #737775;
-$grey-4: #919594;
 $grey-5: #AFB4B3;
-$grey-6: #CDD3D1;
 $off-white: #EBF2F0;
 
 // All of the colors used throughout the product. Can easily be inserted via the `color` function. For example, our `brand` `teal` can be retrieved using `color('brand', 'teal')`.
@@ -18,10 +12,6 @@ $off-white: #EBF2F0;
 
 $colors: (
   'brand': #096,
-  'dark': (
-    'primary': #FFF,
-    'tertiary-on-media': rgba(255, 255, 255, .32),
-  ),
   'neutral': (
           0: #FFF,
          50: #F4F5F5,

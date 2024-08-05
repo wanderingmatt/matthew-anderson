@@ -22,13 +22,15 @@
       width: 100%;
     }
     &::after {
-      border-bottom: 1px solid fade_out($off-black, .95);
+      background: color('neutral', 900);
       bottom: 0;
       content: '';
-      left: 0;
+      display: block;
+      height: 1px;
+      mix-blend-mode: difference;
+      opacity: .5;
       position: absolute;
-      right: 0;
-      top: 0;
+      width: 100%;
     }
   }
   .card-content {

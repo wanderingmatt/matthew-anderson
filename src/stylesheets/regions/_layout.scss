@@ -12,8 +12,8 @@ section {
         color: $grey-5;
       }
       &:hover {
-        border-color: $brand;
-        color: $brand;
+        border-color: color('brand');
+        color: color('brand');
       }
     }
   }

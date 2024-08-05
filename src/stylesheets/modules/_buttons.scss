@@ -1,6 +1,6 @@
 .button {
-  background: $off-white;
-  color: $grey-1;
+  background: color('neutral', 50);
+  color: color('neutral', 900);
   cursor: pointer;
   display: inline-block;
   font-size: .833rem;
@@ -28,10 +28,7 @@
     display: inline-block;
     padding: 1rem 2rem;
   }
-  &:hover {
-    color: $grey-1;
-  }
-  &:active { background: $grey-6; }
+  &:active { background: color('neutral', 100); }
 
   @include breakpoint($breakpoint-tablet) {
     font-size: 1rem;

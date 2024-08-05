@@ -28,9 +28,9 @@
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
-      @include dark-mode { color: $grey-2; }
+      @include dark-mode { color: color('neutral', 600); }
       &::after {
-        background: fade_out($brand, .8);
+        background: fade_out(color('brand'), .8);
         bottom: 0;
         content: '';
         height: 2px;
@@ -40,11 +40,11 @@
         width: 100%;
       }
       &:hover:not(.selected) {
-        color: $grey-2;
-        @include dark-mode { color: $grey-6; }
+        color: color('neutral', 700);
+        @include dark-mode { color: color('neutral', 200); }
       }
       &.selected {
-        color: $brand;
+        color: color('brand');
         pointer-events: none;
       }
     }

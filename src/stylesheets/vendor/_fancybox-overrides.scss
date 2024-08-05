@@ -1,6 +1,6 @@
 .fancybox__container { --fancybox-bg: #{rgba(color('neutral', 900), .96)}; }
-.fancybox__nav { --fancybox-color: #{color('dark', 'primary')}; }
-.f-button[disabled] { color: #{color('dark', 'tertiary-on-media')}; }
+.fancybox__nav { --fancybox-color: #FFF; }
+.f-button[disabled] { color: rgba(255, 255, 255, .32); }
 
 .fancybox__slide {
   gap: 2rem;
@@ -9,4 +9,7 @@
 }
 
 .fancybox__content { flex: 1; }
-.fancybox__caption { @extend figcaption; }
+.fancybox__caption {
+  @extend figcaption;
+  color: color('neutral', 100);
+}
