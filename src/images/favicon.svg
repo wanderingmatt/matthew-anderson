@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" fill="none">
   <style>
     @media (prefers-color-scheme:dark) {
-      #monogram { fill: #ebf2f0; }
+      #monogram { fill: #F4F5F5; }
     }
   </style>
   <g id="monogram" fill="#000">

@@ -51,7 +51,7 @@ h2 {
   strong {
     color: color('neutral', 900);
     font-weight: 400;
-    @include dark-mode { color: $off-white; }
+    @include dark-mode { color: color('neutral', 50); }
   }
   @include breakpoint($breakpoint-tablet) {
     font-family: $custom-font-light;
@@ -72,11 +72,11 @@ h2 {
 }
 
 h3 {
-  color: $grey-1;
+  color: color('neutral', 800);
   font-family: $custom-font-regular;
   font-size: 1.2rem;
   line-height: 1.575;
-  @include dark-mode { color: $grey-5; }
+  @include dark-mode { color: color('neutral', 100); }
   @include breakpoint($breakpoint-tablet) {
     font-family: $custom-font-light;
     font-size: 2.074rem;
@@ -90,32 +90,32 @@ h3 {
 }
 
 h4 {
-  color: $grey-1;
+  color: color('neutral', 800);
   font-weight: 700;
   margin-bottom: 1rem;
   padding-top: 2.5rem;
   position: relative;
   text-transform: uppercase;
   @include dark-mode {
-    color: $off-white;
+    color: color('neutral', 50);
     font-weight: 500;
   }
   &::before {
-    background: repeating-linear-gradient(-45deg, transparent, transparent 2px, $off-white 2px, $off-white 4px);
+    background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color('neutral', 100) 2px, color('neutral', 100) 4px);
     content: '';
     display: block;
     height: .5rem;
     position: absolute;
     top: 0;
     width: 100%;
-    @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, $grey-1 2px, $grey-1 4px); }
+    @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color('neutral', 800) 2px, color('neutral', 800) 4px); }
   }
   @include breakpoint($breakpoint-desktop) {
     padding-top: 5rem;
     &::before {
-      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
+      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 100) 2px, color('neutral', 100) 6px);
       height: 1rem;
-      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $grey-1 2px, $grey-1 6px); }
+      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 800) 2px, color('neutral', 800) 6px); }
     }
   }
   @include breakpoint($breakpoint-widescreen) {
@@ -203,7 +203,6 @@ blockquote {
 // Links
 
 a {
-  color: $grey-1;
   font-weight: 500;
   position: relative;
   text-decoration: none;

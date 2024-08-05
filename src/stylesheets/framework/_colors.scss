@@ -1,11 +1,3 @@
-// All of the colors used throughout the site.
-//
-// No styleguide reference.
-
-$grey-1: #373938;
-$grey-5: #AFB4B3;
-$off-white: #EBF2F0;
-
 // All of the colors used throughout the product. Can easily be inserted via the `color` function. For example, our `brand` `teal` can be retrieved using `color('brand', 'teal')`.
 //
 // No styleguide reference.
@@ -75,6 +67,6 @@ $colors: (
   } @else if $project == 'r8r' {
     background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%);
   } @else {
-    background: $grey-5;
+    background: #F4F5F5;
   }
 }

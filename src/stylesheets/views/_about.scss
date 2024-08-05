@@ -47,13 +47,13 @@
       section:first-child { margin-right: 3rem; }
       section:last-child { margin-left: 3rem; }
       &::before, &::after {
-        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $off-white 2px, $off-white 6px);
+        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 50) 2px, color('neutral', 50) 6px);
         content: '';
         display: block;
         height: 1rem;
         position: absolute;
         width: 100%;
-        @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, $grey-1 2px, $grey-1 6px); }
+        @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 800) 2px, color('neutral', 800) 6px); }
       }
       &::before { top: 0; }
       &::after { bottom: 0; }

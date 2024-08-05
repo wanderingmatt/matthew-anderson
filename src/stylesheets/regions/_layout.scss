@@ -6,10 +6,11 @@ section {
   .content {
     @extend %content-half;
     a {
-      border-bottom: 2px solid $off-white;
+      border-bottom: 2px solid color('neutral', 100);
+      color: color('neutral', 900);
       @include dark-mode {
-        border-color: $grey-1;
-        color: $grey-5;
+        border-color: color('neutral', 700);
+        color: color('neutral', 100);
       }
       &:hover {
         border-color: color('brand');
@@ -31,9 +32,9 @@ section {
     max-width: 100%;
   }
   figcaption {
-    border-top: 1px solid $off-white;
+    border-top: 1px solid color('neutral', 100);
     margin-top: 1rem;
-    @include dark-mode { border-color: $grey-1; }
+    @include dark-mode { border-color: color('neutral', 800); }
   }
 }
 
@@ -42,7 +43,7 @@ section {
   .frame {
     position: relative;
     &::after {
-      border: 1px solid $off-white;
+      border: 1px solid color('neutral', 100);
       bottom: 0;
       content: '';
       left: 0;

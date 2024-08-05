@@ -30,9 +30,9 @@
     &:last-child { margin-right: 0; }
   }
   figcaption {
-    border-top: 1px solid $off-white;
+    border-top: 1px solid color('neutral', 100);
     margin-top: .5rem;
-    @include dark-mode { border-color: $grey-1; }
+    @include dark-mode { border-color: color('neutral', 800); }
   }
   &.mobile {
     ul { flex-wrap: nowrap; }

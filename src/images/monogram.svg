@@ -2,7 +2,7 @@
   <style>
   #monogram { fill: #1D201F; }
     @media (prefers-color-scheme: dark) {
-      #monogram { fill: #EBF2F0; }
+      #monogram { fill: #F4F5F5; }
     }
   </style>
   <g id="monogram">

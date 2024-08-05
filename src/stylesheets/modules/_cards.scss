@@ -6,10 +6,10 @@
     display: block;
     position: relative;
     text-decoration: none;
-    @include dark-mode { background-color: $grey-1; }
+    @include dark-mode { background-color: color('neutral', 800); }
   }
   .card-image {
-    background: $off-white;
+    background: color('neutral', 50);
     height: 100%;
     position: relative;
     width: 100%;
@@ -37,10 +37,9 @@
     padding: 1.5rem;
     position: relative;
     h3 {
-      color: $grey-1;
       font-size: 1.44rem;
       line-height: 1;
-      @include dark-mode { color: $grey-5; }
+      @include dark-mode { color: color('neutral', 200); }
     }
     .fab {
       position: absolute;

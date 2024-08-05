@@ -1,7 +1,7 @@
 footer {
   .wrapper {
-    background-color: $off-white;
-    @include dark-mode { background-color: $grey-1; }
+    background-color: color('neutral', 50);
+    @include dark-mode { background-color: color('neutral', 800); }
   }
   .elsewhere-list {
     @include layout-constraints;
@@ -26,7 +26,7 @@ footer {
     color: color('neutral', 600);
     font-weight: 400;
     text-align: center;
-    @include dark-mode { color: $grey-1; }
+    @include dark-mode { color: color('neutral', 700); }
   }
 
   @include breakpoint($breakpoint-tablet) {
