@@ -8,30 +8,31 @@ footer {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+    margin: 0 !important;
     padding: 2rem 1rem;
     a {
       display: block;
-      opacity: .25;
+      opacity: .48;
       padding: 1rem;
-      @include dark-mode { opacity: .5; }
+      @include dark-mode { opacity: .56; }
       &:hover { opacity: 1; }
       object {
-        display: inline-block;
+        display: block;
         height: 2rem;
         width: 2rem;
       }
     }
   }
   .copyright {
-    color: color('neutral', 600);
+    color: color('neutral', 200);
     font-weight: 400;
+    margin: 1rem 0;
     text-align: center;
     @include dark-mode { color: color('neutral', 700); }
   }
 
   @include breakpoint($breakpoint-tablet) {
     .elsewhere-list {
-      margin-bottom: 0;
       padding: 3rem 0;
       a {
         object {
@@ -50,7 +51,10 @@ footer {
         &:hover { transform: translateY(-.25rem); }
       }
     }
-    .copyright { font-size: 1.2rem; }
+    .copyright {
+      font-size: 1.2rem;
+      margin: 2rem 0;
+    }
   }
 
   @include breakpoint($breakpoint-widescreen) {
