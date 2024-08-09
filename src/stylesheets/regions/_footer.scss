@@ -8,8 +8,9 @@ footer {
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 2rem 1rem;
+    li:last-child { @extend %hidden; }
     a {
       display: block;
       opacity: .48;
@@ -34,6 +35,7 @@ footer {
   @include breakpoint($breakpoint-tablet) {
     .elsewhere-list {
       padding: 3rem 0;
+      li:last-child { @extend %shown-tablet; }
       a {
         object {
           height: 3rem;
