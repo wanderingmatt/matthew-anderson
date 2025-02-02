@@ -17,7 +17,7 @@ footer {
       padding: 1rem;
       @include dark-mode { opacity: .56; }
       &:hover { opacity: 1; }
-      object {
+      img {
         display: block;
         height: 2rem;
         pointer-events: none;
@@ -38,7 +38,7 @@ footer {
       padding: 3rem 0;
       li:last-child { @extend %shown-tablet; }
       a {
-        object {
+        img {
           height: 3rem;
           width: 3rem;
         }
