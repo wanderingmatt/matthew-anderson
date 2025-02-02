@@ -1,7 +1,12 @@
 <nav class="nav-site">
   <div class="wrapper">
     <a href="/" class="monogram">
-      <object type="image/svg+xml" title="Matthew Anderson" data="data-url:/src/images/monogram.svg" role="img"></object>
+      <picture>
+        <source media="(prefers-color-scheme: dark)"
+                srcset="data-url:/src/images/monogram-dark.svg">
+        <img src="data-url:/src/images/monogram.svg"
+             alt="Monogram">
+      </picture>
       <h1>Matthew Anderson</h1>
     </a>
     <ul class="menu">
