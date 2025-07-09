@@ -30,7 +30,7 @@ The `start` task will automatically rebuild your app, and serve it at http://loc
 
 If you run into issues while developing locally, the `clean` task will delete the Parcel cache and your current `dist` directory — providing you with a clean slate for your next build.
 
-`$npm run clean`
+`$ npm run clean`
 
 ## Updating Dependencies
 
