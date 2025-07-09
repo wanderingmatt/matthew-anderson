@@ -33,9 +33,6 @@
         &.carlos-lamas {
           .card-content { @include project-background('carlos-lamas'); }
         }
-        &.chips-and-bits {
-          .card-content { @include project-background('chips-and-bits'); }
-        }
         &.marshal {
           .card-content { @include project-background('marshal'); }
         }
@@ -47,9 +44,6 @@
         }
         &.proof {
           .card-content { @include project-background('proof'); }
-        }
-        &.r8r {
-          .card-content { @include project-background('r8r'); }
         }
       }
       .card-action-area {
@@ -90,13 +84,19 @@
         }
       }
     }
+    .card {
+      &.proof {
+        .card-image {
+          img { object-position: 50%; }
+        }
+      }
+    }
   }
 
   @include breakpoint($breakpoint-widescreen) {
     .projects-list {
       grid-auto-rows: minmax(20rem, .275fr);
       grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-      grid-template-rows: 1fr;
     }
   }
 }
