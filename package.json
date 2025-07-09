@@ -27,6 +27,7 @@
     "parcel": "^2.13.3",
     "parcel-optimizer-friendly-urls": "^0.2.0",
     "posthtml-include": "^2.0.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "svgo": "^3.3.2"
   }
 }
