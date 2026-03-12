@@ -6,10 +6,10 @@
     display: block;
     position: relative;
     text-decoration: none;
-    @include dark-mode { background-color: color('neutral', 800); }
+    @include dark-mode { background-color: color-token('neutral', 800); }
   }
   .card-image {
-    background: color('neutral', 50);
+    background: color-token('neutral', 50);
     height: 100%;
     position: relative;
     width: 100%;
@@ -23,7 +23,7 @@
       width: 100%;
     }
     &::after {
-      background: color('neutral', 900);
+      background: color-token('neutral', 900);
       bottom: 0;
       content: '';
       display: block;
@@ -40,7 +40,7 @@
     h3 {
       font-size: 1.44rem;
       line-height: 1;
-      @include dark-mode { color: color('neutral', 200); }
+      @include dark-mode { color: color-token('neutral', 200); }
     }
     .fab {
       position: absolute;

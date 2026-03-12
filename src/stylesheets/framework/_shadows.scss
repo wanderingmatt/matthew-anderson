@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // All of the shadows used throughout the site.
 //
 // No styleguide reference.
@@ -7,11 +9,11 @@ $shadows: (
 );
 
 @function shadow($token) {
-  @if not map-has-key($shadows, $token) {
+  @if not map.has-key($shadows, $token) {
     @warn "No shadow found for `#{$token}` in $shadows map.";
   }
 
-  @return unquote(map-get($shadows, $token));
+  @return unquote(map.get($shadows, $token));
 }
 
 @mixin box-shadow($token) {

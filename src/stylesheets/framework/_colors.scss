@@ -1,4 +1,6 @@
-// All of the colors used throughout the product. Can easily be inserted via the `color` function. For example, our `brand` `teal` can be retrieved using `color('brand', 'teal')`.
+@use "sass:map";
+
+// All of the colors used throughout the product. Can easily be inserted via the `color-token` function. For example, our `brand` `teal` can be retrieved using `color-token('brand', 'teal')`.
 //
 // No styleguide reference.
 
@@ -27,24 +29,24 @@ $colors: (
 //
 // No styleguide reference.
 
-@function color($collection, $variant: null) {
+@function color-token($collection, $variant: null) {
   @if ($variant != null) {
-    @if not map-has-key($colors, $collection) {
+    @if not map.has-key($colors, $collection) {
       @error "No collection found for `#{$collection}` in `$colors` map.";
     } @else {
-      $nested-map: map-get($colors, $collection);
-      @if not map-has-key($nested-map, $variant) {
+      $nested-map: map.get($colors, $collection);
+      @if not map.has-key($nested-map, $variant) {
         @error "No variant found for `#{$variant}` within the `#{$collection}` collection in `$colors` map.";
       }
     }
 
-    @return map-get(map-get($colors, $collection), $variant);
+    @return map.get(map.get($colors, $collection), $variant);
   } @else {
-    @if not map-has-key($colors, $collection) {
+    @if not map.has-key($colors, $collection) {
       @error "No collection found for `#{$collection}` in `$colors` map.";
     }
 
-    @return map-get($colors, $collection);
+    @return map.get($colors, $collection);
   }
 }
 

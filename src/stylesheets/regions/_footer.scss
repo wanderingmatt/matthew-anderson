@@ -1,7 +1,7 @@
 footer {
   .wrapper {
-    background-color: color('neutral', 50);
-    @include dark-mode { background-color: color('neutral', 800); }
+    background-color: color-token('neutral', 50);
+    @include dark-mode { background-color: color-token('neutral', 800); }
   }
   .elsewhere-list {
     @include layout-constraints;
@@ -26,11 +26,11 @@ footer {
     }
   }
   .copyright {
-    color: color('neutral', 200);
+    color: color-token('neutral', 200);
     font-weight: 400;
     margin: 1rem 0;
     text-align: center;
-    @include dark-mode { color: color('neutral', 700); }
+    @include dark-mode { color: color-token('neutral', 700); }
   }
 
   @include breakpoint($breakpoint-tablet) {
