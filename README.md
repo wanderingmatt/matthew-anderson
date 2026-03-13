@@ -1,6 +1,6 @@
 # Portfolio
 
-Portfolio site for Matthew Anderson — leader, designer, podcaster, and Canadian expat.
+Portfolio of Matthew Anderson — leader, designer, and Canadian expat.
 
 ## Setup
 
@@ -49,6 +49,6 @@ $ npm install
 
 ## Deploying
 
-The `deploy` task will automatically rebuild your app, copy the local `dist` folder to the `gh-pages` branch as a subtree, and push it to GitHub.
+The `deploy` task will automatically rebuild your app including production URLs, copy the local `dist` folder to the `gh-pages` branch as a subtree, and push it to GitHub.
 
 `$ npm run deploy`
