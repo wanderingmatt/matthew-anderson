@@ -51,7 +51,7 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
-    .card-action-area {
+    a {
       transition: transform .2s ease;
       &:hover {
         transform: perspective(1rem) scaleZ(1) translateZ(.025rem);

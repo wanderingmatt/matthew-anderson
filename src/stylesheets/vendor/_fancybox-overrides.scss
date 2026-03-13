@@ -3,9 +3,7 @@
 .fancybox__container {
   --fancybox-backdrop-bg: #{rgba(color-token('neutral', 900), .96)};
   --f-arrow-color: #FFF;
-  // --f-arrow-hover-color: #FFF;
   --f-close-button-color: #FFF;
-  // --f-close-button-hover-color: #FFF;
 }
 
 .f-button[aria-disabled] { opacity: .32; }
