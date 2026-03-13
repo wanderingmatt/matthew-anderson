@@ -4,14 +4,12 @@ $default-font: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif
 
 @font-face {
   font-family: 'Brandon Grotesque Light';
-  src: url('data-url:/src/fonts/brandon-grotesque-light.woff2') format('woff2'),
-       url('data-url:/src/fonts/brandon-grotesque-light.woff') format('woff');
+  src: url('data-url:/src/fonts/brandon-grotesque-light.woff2') format('woff2');
 }
 $custom-font-light: 'Brandon Grotesque Light', $default-font;
 
 @font-face {
   font-family: 'Brandon Grotesque Regular';
-  src: url('data-url:/src/fonts/brandon-grotesque-regular.woff2') format('woff2'),
-       url('data-url:/src/fonts/brandon-grotesque-regular.woff') format('woff');
+  src: url('data-url:/src/fonts/brandon-grotesque-regular.woff2') format('woff2');
 }
 $custom-font-regular: 'Brandon Grotesque Regular', $default-font;

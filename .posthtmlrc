@@ -2,7 +2,14 @@
   "lowerCaseAttributeNames": false,
   "plugins": {
     "posthtml-include": {
-      "root": "./src"
+      "root": "./src",
+      "posthtmlExpressionsOptions": {
+        "locals": {
+          "loading": "eager",
+        "about": "",
+        "work": ""
+        }
+      }
     }
   },
   "recognizeSelfClosing": true
