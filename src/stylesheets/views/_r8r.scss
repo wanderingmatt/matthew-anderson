@@ -1,9 +1,8 @@
+@use '../framework' as *;
+
 .r8r {
   .ribbon {
     @include project-background('r8r');
-    h2 {
-      @extend .inverted;
-      top: calc(100% / 1.5);
-    }
+    h2 { top: calc(100% / 1.5); }
   }
 }

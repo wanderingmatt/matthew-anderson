@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .projects {
   @include layout-constraints;
   .projects-list {

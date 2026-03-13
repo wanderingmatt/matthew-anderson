@@ -1,10 +1,9 @@
+@use '../framework' as *;
+
 .onehub {
   .ribbon {
     @include project-background('onehub');
-    h2 {
-      @extend .inverted;
-      top: calc(100% / 1.5);
-    }
+    h2 { top: calc(100% / 1.5); }
   }
   .website {
     .hero {

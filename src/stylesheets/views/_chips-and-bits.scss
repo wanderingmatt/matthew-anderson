@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .chips-and-bits {
   .ribbon {
     @include project-background('chips-and-bits');

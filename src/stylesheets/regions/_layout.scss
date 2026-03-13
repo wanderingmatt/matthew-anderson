@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .introduction {
   .content { @extend %content-quarter; }
 }

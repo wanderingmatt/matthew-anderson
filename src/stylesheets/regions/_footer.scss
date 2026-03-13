@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 footer {
   .wrapper {
     background-color: color-token('neutral', 50);

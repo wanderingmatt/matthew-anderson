@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .button {
   background: color-token('neutral', 50);
   color: color-token('neutral', 900);

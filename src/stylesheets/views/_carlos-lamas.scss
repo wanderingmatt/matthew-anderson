@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .carlos-lamas {
   .ribbon {
     @include project-background('carlos-lamas');

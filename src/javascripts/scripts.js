@@ -4,16 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
   Fancybox.bind("[data-fancybox]", {
     Carousel: {
       infinite: false,
-    },
-    contentClick: false,
-    placeFocusBack: false,
-    Thumbs: false,
-    Toolbar: {
-      display: {
-        left: [],
-        right: ['close'],
+      Thumbs: false,
+      Toolbar: {
+        display: {
+          left: [],
+          middle: [],
+          right: ['close'],
+        },
+      },
+      Zoomable: {
+        Panzoom: {
+          clickAction: false,
+        },
       },
     },
-    wheel: 'pan'
+    placeFocusBack: false,
   });
 });

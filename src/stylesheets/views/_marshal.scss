@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .marshal {
   .ribbon {
     @include project-background('marshal');;

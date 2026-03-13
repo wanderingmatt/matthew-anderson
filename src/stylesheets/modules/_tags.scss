@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "sass:math";
+@use '../framework' as *;
 
 .tags {
   font-size: 0;
