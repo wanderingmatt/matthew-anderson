@@ -54,9 +54,11 @@ $colors: (
 // Project Backgrounds
 
 @mixin project-background($project: null) {
-  @if $project == 'carlos-lamas' {
-    background: #4C489E;
-  } @else if $project == 'chips-and-bits' {
+  @if $project == 'bitwire' {
+    background: #FBFAF3;
+  } @else if $project == 'carlos-lamas' {
+    background: #4C489E;  }
+  @else if $project == 'chips-and-bits' {
     background: #096;
   } @else if $project == 'marshal' {
     background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
@@ -68,6 +70,8 @@ $colors: (
     background: #B9AF64;
   } @else if $project == 'r8r' {
     background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%);
+  } @else if $project == 'sweet-shop' {
+    background: #E4499C;
   } @else {
     background: #F4F5F5;
   }

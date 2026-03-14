@@ -10,6 +10,11 @@
     padding: 0;
   }
   .card {
+    &.bitwire {
+      .card-image {
+        img { @include project-background('bitwire'); }
+      }
+    }
     &.meta {
       .card-image {
         img { @include project-background('meta'); }
@@ -26,11 +31,9 @@
   }
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
-      grid-auto-flow: dense;
-      grid-auto-rows: minmax(14rem, .275fr);
+      align-items: start;
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       .card {
         &.carlos-lamas {
           .card-content { @include project-background('carlos-lamas'); }
@@ -62,29 +65,12 @@
           .card-content { opacity: .96; }
         }
       }
-      > li {
-        &.showcase { grid-area: 1 / 1 / 1 / -1; }
-        &.tall { grid-row: span 2; }
-      }
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
     .projects-list {
-      grid-auto-rows: minmax(16rem, 1fr);
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-      > li {
-        &.highlight {
-          grid-column: span 3;
-          grid-row: span 2;
-          h3 { font-size: 4.3rem; }
-        }
-        &.feature {
-          grid-column: span 2;
-          grid-row: span 2;
-          h3 { font-size: 2.074rem; }
-        }
-      }
+      grid-template-columns: repeat(3, 1fr);
     }
     .card {
       &.proof {
@@ -95,10 +81,4 @@
     }
   }
 
-  @include breakpoint($breakpoint-widescreen) {
-    .projects-list {
-      grid-auto-rows: minmax(20rem, .275fr);
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    }
-  }
 }
