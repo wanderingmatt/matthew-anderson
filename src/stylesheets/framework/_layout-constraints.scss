@@ -5,6 +5,7 @@ $quarter: 1200px;
 $half: 800px;
 
 @mixin layout-constraints($constraint: $full) {
+  box-sizing: content-box;
   margin: 2rem auto;
   max-width: $constraint;
   padding-left: 1rem;

@@ -16,7 +16,6 @@
     position: relative;
     width: 100%;
     img {
-      aspect-ratio: 16 / 9;
       display: block;
       height: 100%;
       max-height: 100vmin;
@@ -54,7 +53,6 @@
   @include breakpoint($breakpoint-tablet) {
     .card-image {
       img {
-        aspect-ratio: initial;
         max-height: initial;
         min-height: initial;
       }
