@@ -28,6 +28,11 @@
         }
       }
     }
+    &.sweet-shop {
+      .card-image {
+        img { @include project-background('sweet-shop'); }
+      }
+    }
   }
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
@@ -35,6 +40,9 @@
       grid-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
       .card {
+        &.bitwire {
+          .card-content { background: #FF4900; }
+        }
         &.carlos-lamas {
           .card-content { @include project-background('carlos-lamas'); }
         }
@@ -49,6 +57,9 @@
         }
         &.proof {
           .card-content { @include project-background('proof'); }
+        }
+        &.sweet-shop {
+          .card-content { @include project-background('sweet-shop'); }
         }
       }
       .card-action-area {

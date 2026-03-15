@@ -1,0 +1,8 @@
+@use '../framework' as *;
+
+.sweet-shop {
+  .ribbon {
+    @include project-background('sweet-shop');
+    padding-top: 0;
+  }
+}

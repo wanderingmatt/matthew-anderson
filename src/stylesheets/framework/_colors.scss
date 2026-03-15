@@ -57,8 +57,8 @@ $colors: (
   @if $project == 'bitwire' {
     background: #FBFAF3;
   } @else if $project == 'carlos-lamas' {
-    background: #4C489E;  }
-  @else if $project == 'chips-and-bits' {
+    background: #4C489E;
+  } @else if $project == 'chips-and-bits' {
     background: #096;
   } @else if $project == 'marshal' {
     background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
