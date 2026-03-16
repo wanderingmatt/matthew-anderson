@@ -82,6 +82,7 @@ h3 {
   font-family: $custom-font-regular;
   font-size: 1.2rem;
   line-height: 1.575;
+  text-wrap: balance;
   @include dark-mode { color: color-token('neutral', 100); }
   @include breakpoint($breakpoint-tablet) {
     font-family: $custom-font-light;
