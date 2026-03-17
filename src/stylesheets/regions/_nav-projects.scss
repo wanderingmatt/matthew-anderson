@@ -1,0 +1,21 @@
+@use "sass:color";
+@use '../framework' as *;
+
+.nav-projects {
+  background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color-token('neutral', 100) 2px, color-token('neutral', 100) 4px);
+  padding: 1rem;
+  .menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0 -1rem 0 0;
+    padding: 0;
+    a {
+      background: color-token('neutral', 0);
+    }
+  }
+  @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color-token('neutral', 800) 2px, color-token('neutral', 800) 4px); }
+  @include breakpoint($breakpoint-desktop) {
+    background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color-token('neutral', 50) 2px, color-token('neutral', 50) 6px);
+    @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color-token('neutral', 800) 2px, color-token('neutral', 800) 6px); }
+  }
+}
