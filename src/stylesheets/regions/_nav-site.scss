@@ -2,45 +2,17 @@
 @use '../framework' as *;
 
 .nav-site {
-  @include layout-constraints;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
-  &::before, &::after {
-    content: '';
-    inset: 0;
-    position: absolute;
-  }
-  &::before {
-    background: linear-gradient(in oklab to bottom,
-      rgba(color-token('neutral', 900), .98),
-      rgba(color-token('neutral', 900), .97) 8%,
-      rgba(color-token('neutral', 900), .95) 16%,
-      rgba(color-token('neutral', 900), .92) 24%,
-      rgba(color-token('neutral', 900), .88) 32%,
-      rgba(color-token('neutral', 900), .84) 40%,
-      rgba(color-token('neutral', 900), .8) 48%,
-      rgba(color-token('neutral', 900), .74) 53%,
-      rgba(color-token('neutral', 900), .64) 59%,
-      rgba(color-token('neutral', 900), .5) 66%,
-      rgba(color-token('neutral', 900), .36) 73%,
-      rgba(color-token('neutral', 900), .23) 80%,
-      rgba(color-token('neutral', 900), .13) 87%,
-      rgba(color-token('neutral', 900), .05) 93%,
-      rgba(color-token('neutral', 900), .01) 97%,
-      transparent 100%
-    );
-    z-index: -1;
-  }
-  &::after {
-    backdrop-filter: blur(80px);
-    mask-image: linear-gradient(to bottom, black 56%, transparent);
-    z-index: -2;
+  .wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
   }
   .monogram {
     margin-left: -1rem;
@@ -89,7 +61,64 @@
     display: block;
     padding: 1rem;
   }
+  &::before, &::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+  }
+  &::before {
+    background: linear-gradient(in oklab to bottom,
+      rgba(color-token('neutral', 0), .98),
+      rgba(color-token('neutral', 0), .978) 8%,
+      rgba(color-token('neutral', 0), .976) 16%,
+      rgba(color-token('neutral', 0), .973) 24%,
+      rgba(color-token('neutral', 0), .97) 32%,
+      rgba(color-token('neutral', 0), .965) 40%,
+      rgba(color-token('neutral', 0), .96) 48%,
+      rgba(color-token('neutral', 0), .9) 54%,
+      rgba(color-token('neutral', 0), .8) 60%,
+      rgba(color-token('neutral', 0), .68) 66%,
+      rgba(color-token('neutral', 0), .54) 72%,
+      rgba(color-token('neutral', 0), .42) 78%,
+      rgba(color-token('neutral', 0), .3) 84%,
+      rgba(color-token('neutral', 0), .18) 89%,
+      rgba(color-token('neutral', 0), .08) 94%,
+      rgba(color-token('neutral', 0), .02) 98%,
+      transparent 100%
+    );
+    z-index: -1;
+  }
+  &::after {
+    backdrop-filter: blur(80px);
+    mask-image: linear-gradient(to bottom, black 64%, transparent);
+    z-index: -2;
+  }
+  @include dark-mode {
+    &::before {
+      background: linear-gradient(in oklab to bottom,
+        rgba(color-token('neutral', 900), .98),
+        rgba(color-token('neutral', 900), .978) 8%,
+        rgba(color-token('neutral', 900), .976) 16%,
+        rgba(color-token('neutral', 900), .973) 24%,
+        rgba(color-token('neutral', 900), .97) 32%,
+        rgba(color-token('neutral', 900), .965) 40%,
+        rgba(color-token('neutral', 900), .96) 48%,
+        rgba(color-token('neutral', 900), .9) 54%,
+        rgba(color-token('neutral', 900), .8) 60%,
+        rgba(color-token('neutral', 900), .68) 66%,
+        rgba(color-token('neutral', 900), .54) 72%,
+        rgba(color-token('neutral', 900), .42) 78%,
+        rgba(color-token('neutral', 900), .3) 84%,
+        rgba(color-token('neutral', 900), .18) 89%,
+        rgba(color-token('neutral', 900), .08) 94%,
+        rgba(color-token('neutral', 900), .02) 98%,
+        transparent 100%
+      );
+      z-index: -1;
+    }
+  }
   @include breakpoint($breakpoint-tablet) {
+    padding: 2rem;
     .monogram {
       img { height: 4rem; }
     }
@@ -100,6 +129,7 @@
     }
   }
   @include breakpoint($breakpoint-desktop) {
+    padding: 4rem;
     .menu {
       a {
         font-size: 1rem;

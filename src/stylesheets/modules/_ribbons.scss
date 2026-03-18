@@ -31,17 +31,6 @@
     margin: 0 auto;
     max-width: 100%;
   }
-  &::after {
-    background: color-token('neutral', 900);
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 1px;
-    mix-blend-mode: difference;
-    opacity: .5;
-    position: absolute;
-    width: 100%;
-  }
   @include breakpoint($breakpoint-tablet) { padding-top: 3rem; }
   @include breakpoint($breakpoint-desktop) {
     padding-top: 5rem;
