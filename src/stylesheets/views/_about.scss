@@ -1,6 +1,9 @@
 @use '../framework' as *;
 
 .about {
+  header {
+    .content { margin-top: 0; }
+  }
   .introduction {
     position: relative;
     .hello {
