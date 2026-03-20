@@ -83,4 +83,10 @@
     &.tablet li { flex: 0 0 calc((100vw - 16rem) / 3); }
     &.desktop li { flex: 0 0 calc((100vw - 11rem) / 2.5); }
   }
+
+  @include breakpoint($breakpoint-widescreen) {
+    li { flex: 0 0 calc((100vw - 28rem) / 9); }
+    &.tablet li { flex: 0 0 calc((100vw - 18rem) / 4); }
+    &.desktop li { flex: 0 0 calc((100vw - 16rem) / 3); }
+  }
 }
