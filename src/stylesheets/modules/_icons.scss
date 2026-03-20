@@ -16,8 +16,7 @@
   width: 1.5rem;
 }
 
-$icons: app-store, arrow-up-right, bluesky, chevron-left, chevron-right,
-        dribbble, github, hand-wave, linkedin, spotify;
+$icons: app-store, arrow-up-right, bluesky, chevron-left, chevron-right, dribbble, github, hand-wave, linkedin, spotify;
 
 @each $icon in $icons {
   .icon-#{$icon} {
