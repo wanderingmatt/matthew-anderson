@@ -19,9 +19,8 @@
     vertical-align: middle;
   }
   li {
-    flex: 0 1 280px;
+    flex: 0 0 calc((100vw - 5rem) / 3);
     margin-right: 1rem;
-    min-width: 280px;
     a { cursor: zoom-in; }
     img {
       display: block;
@@ -36,12 +35,11 @@
     margin-top: .5rem;
     @include dark-mode { border-color: color-token('neutral', 800); }
   }
-  &.mobile {
-    ul { flex-wrap: nowrap; }
-    li {
-      flex: 0 1 94px;
-      min-width: 94px;
-    }
+  &.tablet {
+    li { flex: 0 0 calc((100vw - 2rem) / 1.5); }
+  }
+  &.desktop {
+    li { flex: 0 0 calc((100vw - 3rem)); }
   }
 
   @include breakpoint($breakpoint-tablet) {
@@ -51,6 +49,7 @@
       padding-left: 2rem;
       padding-right: 2rem;
     }
+    li { flex: 0 0 calc((100vw - 8rem) / 5); }
     a {
       box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
                   0px 1px 1px 0px rgba(0, 0, 0, 0.14),
@@ -61,6 +60,8 @@
         transform: perspective(1rem) scaleZ(1) translateZ(.025rem);
       }
     }
+    &.tablet li { flex: 0 0 calc((100vw - 5rem) / 2); }
+    &.desktop li { flex: 0 0 calc((100vw - 3rem) / 1.5); }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -74,18 +75,12 @@
       padding: 1.5rem 6rem;
     }
     li {
-      flex: 0 1 560px;
+      flex: 0 0 calc((100vw - 24rem) / 7);
       margin: 0;
       margin-right: 2rem;
-      min-width: 560px;
     }
     figcaption { margin-top: 1rem; }
-    &.mobile {
-      ul { flex-wrap: unset; }
-      li {
-        flex: 0 1 188px;
-        min-width: 188px;
-      }
-    }
+    &.tablet li { flex: 0 0 calc((100vw - 16rem) / 3); }
+    &.desktop li { flex: 0 0 calc((100vw - 11rem) / 2.5); }
   }
 }

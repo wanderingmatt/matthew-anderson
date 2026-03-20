@@ -1,0 +1,15 @@
+<picture class="card-image">
+  <source type="image/webp"
+          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=250 250w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=375 375w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=750 750w">
+  <img src="/src/images/{{ project }}/{{ filename }}.png?width=375"
+       srcset="/src/images/{{ project }}/{{ filename }}.png?width=250 250w,
+              /src/images/{{ project }}/{{ filename }}.png?width=375 375w,
+              /src/images/{{ project }}/{{ filename }}.png?width=750 750w"
+       sizes="(min-width: 1366px) calc((100vw - 16rem) / 3),
+              (min-width: 768px) calc((100vw - 5rem) / 2),
+              calc((100vw - 2rem) / 1.5)"
+       alt="{{ alt }}"
+       loading="{{ loading }}">
+</picture>
