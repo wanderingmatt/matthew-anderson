@@ -2,15 +2,15 @@
   <div class="wrapper">
     <ul class="menu">
       <li>
-        <a href="/" class="button previous">
-        <span class="button-icon"><span class="icon icon-app-store" aria-hidden="true"></span></span>
-        <span class="button-content">Previous</span>
+        <a href="{{ previousUrl }}" class="button previous">
+          <span class="button-icon"><span class="icon icon-chevron-left" aria-hidden="true"></span></span>
+          <span class="button-content">{{ previousTitle }}</span>
         </a>
       </li>
       <li>
-        <a href="/" class="button next">
-          <span class="button-icon"><span class="icon icon-app-store" aria-hidden="true"></span></span>
-          <span class="button-content">Previous</span>
+        <a href="{{ nextUrl }}" class="button next">
+          <span class="button-icon"><span class="icon icon-chevron-right" aria-hidden="true"></span></span>
+          <span class="button-content">{{ nextTitle }}</span>
         </a>
       </li>
     </ul>

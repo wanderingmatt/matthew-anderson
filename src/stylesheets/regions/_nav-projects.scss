@@ -6,12 +6,34 @@
   padding: 1rem;
   .menu {
     display: flex;
+    gap: 1rem;
     list-style-type: none;
-    margin: 0 -1rem 0 0;
+    margin: 0;
     padding: 0;
-    a {
+    li {
+      flex: 1;
+      max-width: 16rem;
+    }
+    .button {
       background: color-token('neutral', 0);
+      display: block;
+      text-align: center;
     }
   }
-  @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 6px, color-token('neutral', 800) 6px, color-token('neutral', 800) 8px); }
+  @include dark-mode {
+    background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color-token('neutral', 800) 4px, color-token('neutral', 800) 8px);
+    .menu {
+      .button {
+        background: color-token('neutral', 900);
+        color: color-token('neutral', 600);
+      }
+    }
+  }
+
+  @include breakpoint($breakpoint-tablet) {
+    padding: 2rem;
+    .menu {
+      justify-content: space-between;
+    }
+  }
 }

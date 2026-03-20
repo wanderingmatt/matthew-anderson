@@ -34,9 +34,6 @@
 
   @include breakpoint($breakpoint-tablet) {
     font-size: 1rem;
-    .button-content {
-      padding: 1.5rem 2rem;
-    }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -46,7 +43,7 @@
     }
     .button-content {
       backface-visibility: hidden;
-      padding: 2rem 3rem;
+      padding: 1.5rem 3rem;
       transition: transform .2s;
     }
     &:hover {
