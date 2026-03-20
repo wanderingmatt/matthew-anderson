@@ -63,10 +63,6 @@ section {
   }
 }
 
-@include dark-mode {
-  img, object { filter: brightness(.8) contrast(1.2); }
-}
-
 @include breakpoint($breakpoint-tablet) {
   .sidekick {
     margin-bottom: 2rem;

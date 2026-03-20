@@ -2,6 +2,7 @@
 
 .button {
   background: color-token('neutral', 50);
+  border-radius: .25rem;
   color: color-token('neutral', 900);
   cursor: pointer;
   display: inline-block;
@@ -21,10 +22,6 @@
     speak: none;
     transform: translateY(-100%);
     width: 100%;
-    .icon {
-      height: 2rem;
-      width: 2rem;
-    }
   }
   .button-content {
     display: inline-block;
@@ -43,7 +40,7 @@
     }
     .button-content {
       backface-visibility: hidden;
-      padding: 1.5rem 3rem;
+      padding: 1.25rem 2.5rem;
       transition: transform .2s;
     }
     &:hover {
