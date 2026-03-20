@@ -8,16 +8,15 @@ footer {
   .elsewhere-list {
     @include layout-constraints;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0 auto !important;
-    padding: 2rem 1rem;
-    li:last-child { @extend %hidden; }
+    padding: 2rem;
     a {
       display: block;
-      height: 4.5rem;
+      height: 2rem;
       opacity: .48;
-      width: 4.5rem;
+      width: 2rem;
       @include dark-mode {
         background-color: color-token('neutral', 50);
         opacity: .56;
@@ -35,20 +34,21 @@ footer {
 
   @include breakpoint($breakpoint-tablet) {
     .elsewhere-list {
-      padding: 3rem 0;
-      li:last-child { @extend %shown-tablet; }
+      padding: 3rem 4rem;
       a {
-        height: 4.5rem;
-        width: 4.5rem;
+        height: 3rem;
+        width: 3rem;
       }
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
     .elsewhere-list {
-      padding: 4rem 0;
+      padding: 4rem 8rem;
       a {
+        height: 4.5rem;
         transition: transform .2s;
+        width: 4.5rem;
         &:hover { transform: translateY(-.25rem); }
       }
     }
@@ -56,9 +56,5 @@ footer {
       font-size: 1.2rem;
       margin: 2rem 0;
     }
-  }
-
-  @include breakpoint($breakpoint-widescreen) {
-    .elsewhere-list { padding: 5rem 0; }
   }
 }

@@ -63,7 +63,7 @@
       &::before { top: 0; }
       &::after { bottom: 0; }
     }
-    .site {
+    .interests {
       h4 {
        padding-top: 0;
        &::before { @extend %hidden-desktop; }
