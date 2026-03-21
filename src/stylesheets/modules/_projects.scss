@@ -32,6 +32,11 @@
         h3 { mask-image: url('data-url:/src/images/bitwire/logo-bitwire.svg'); }
       }
     }
+    &.carlos-lamas {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/carlos-lamas/logo-carlos-lamas.svg'); }
+      }
+    }
     &.chips-and-bits {
       .card-content {
         h3 { mask-image: url('data-url:/src/images/chips-and-bits/logo-chips-and-bits.svg'); }
@@ -61,6 +66,9 @@
           @include project-background('proof');
           object-position: 0 100%;
         }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/proof/logo-proof.svg'); }
       }
     }
     &.sweet-shop {
