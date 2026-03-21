@@ -60,7 +60,7 @@ $colors: (
   } @else if $project == 'chips-and-bits' {
     background: #096;
   } @else if $project == 'marshal' {
-    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
+    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
   } @else if $project == 'meta' {
     background-image: linear-gradient(to bottom, #0064e0, #0081fb);
   } @else if $project == 'onehub' {
