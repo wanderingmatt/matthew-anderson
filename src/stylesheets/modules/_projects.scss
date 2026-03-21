@@ -10,19 +10,17 @@
     padding: 0;
   }
   .card {
-    .card-image {
-      img { aspect-ratio: 16 / 9; }
-    }
     .card-content {
       h3 {
         background: #fff;
         flex: 1;
-        mask-position: 50%;
+        height: 24px;
         mask-repeat: no-repeat;
-        mask-size: 50%;
+        mask-size: contain;
         text-indent: -9999px;
         width: 100%;
       }
+      .icon { background-color: #fff; }
     }
     &.bitwire {
       .card-image {
@@ -86,6 +84,13 @@
       grid-gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
       .card {
+        .card-content {
+          h3 {
+            height: auto;
+            mask-position: 50%;
+            mask-size: 50%;
+          }
+        }
         &.spotlight {
           grid-column: span 2;
           grid-row: span 2;
