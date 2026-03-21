@@ -13,14 +13,46 @@
     .card-image {
       img { aspect-ratio: 16 / 9; }
     }
+    .card-content {
+      h3 {
+        background: #fff;
+        flex: 1;
+        mask-position: 50%;
+        mask-repeat: no-repeat;
+        mask-size: 50%;
+        text-indent: -9999px;
+        width: 100%;
+      }
+    }
     &.bitwire {
       .card-image {
         img { @include project-background('bitwire'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/bitwire/logo-bitwire.svg'); }
+      }
+    }
+    &.chips-and-bits {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/chips-and-bits/logo-chips-and-bits.svg'); }
+      }
+    }
+    &.marshal {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/marshal/logo-marshal.svg'); }
       }
     }
     &.meta {
       .card-image {
         img { @include project-background('meta'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/meta/logo-meta.svg'); }
+      }
+    }
+    &.onehub {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/onehub/logo-onehub.svg'); }
       }
     }
     &.proof {
@@ -34,6 +66,9 @@
     &.sweet-shop {
       .card-image {
         img { @include project-background('sweet-shop'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/sweet-shop/logo-sweet-shop.svg'); }
       }
     }
   }
