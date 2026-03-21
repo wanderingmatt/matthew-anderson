@@ -3,6 +3,7 @@
 .carlos-lamas {
   .ribbon {
     @include project-background('carlos-lamas');
+    padding-top: 2rem;
     h2 {
       bottom: calc(100% / 3.65);
       top: auto;
