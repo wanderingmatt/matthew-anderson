@@ -1,12 +1,14 @@
+@use '../framework' as *;
+
 .fab {
   align-items: center;
-  background-color: color('brand');
+  background-color: color-token('brand');
   border: 0;
   border-radius: 50%;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
               0px 6px 10px 0px rgba(0, 0, 0, 0.14),
               0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  color: #fff;
+  color: color-token('neutral', 0);
   display: flex;
   height: 3rem;
   font-size: .833rem;

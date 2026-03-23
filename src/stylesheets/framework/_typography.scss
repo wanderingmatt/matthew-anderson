@@ -1,3 +1,9 @@
+@use "sass:color";
+@use 'breakpoints' as *;
+@use 'colors' as *;
+@use 'dark-mode' as *;
+@use 'fonts' as *;
+
 // Modular Scale
 //
 // 13px - .833rem @ 1rem
@@ -13,17 +19,17 @@
 // 83px - 5.16rem @ 5.6875rem
 // 99px - 6.192rem @ 6.8125rem
 
-::selection { background: fade_out(color('brand'), .8); }
+::selection { background: color.adjust(color-token('brand'), $alpha: -0.8); }
 html, body { font-size: 16px; }
 
 body {
-  color: color('neutral', 500);
+  color: color-token('neutral', 500);
   font-family: $default-font;
   line-height: 1.78125rem;
   text-rendering: optimizeSpeed;
   text-size-adjust: none;
   @include dark-mode {
-    background: color('neutral', 900);
+    background: color-token('neutral', 900);
   }
   @include breakpoint($breakpoint-desktop) {
     font-size: 1.44rem;
@@ -49,9 +55,9 @@ h2 {
   font-size: 1.44rem;
   line-height: 1.875rem;
   strong {
-    color: color('neutral', 900);
+    color: color-token('neutral', 900);
     font-weight: 400;
-    @include dark-mode { color: color('neutral', 50); }
+    @include dark-mode { color: color-token('neutral', 50); }
   }
   @include breakpoint($breakpoint-tablet) {
     font-family: $custom-font-light;
@@ -72,11 +78,12 @@ h2 {
 }
 
 h3 {
-  color: color('neutral', 800);
+  color: color-token('neutral', 800);
   font-family: $custom-font-regular;
   font-size: 1.2rem;
   line-height: 1.575;
-  @include dark-mode { color: color('neutral', 100); }
+  text-wrap: balance;
+  @include dark-mode { color: color-token('neutral', 100); }
   @include breakpoint($breakpoint-tablet) {
     font-family: $custom-font-light;
     font-size: 2.074rem;
@@ -90,32 +97,32 @@ h3 {
 }
 
 h4 {
-  color: color('neutral', 800);
+  color: color-token('neutral', 800);
   font-weight: 700;
   margin-bottom: 1rem;
   padding-top: 2.5rem;
   position: relative;
   text-transform: uppercase;
   @include dark-mode {
-    color: color('neutral', 50);
+    color: color-token('neutral', 50);
     font-weight: 500;
   }
   &::before {
-    background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color('neutral', 100) 2px, color('neutral', 100) 4px);
+    background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color-token('neutral', 50) 2px, color-token('neutral', 50) 4px);
     content: '';
     display: block;
     height: .5rem;
     position: absolute;
     top: 0;
     width: 100%;
-    @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color('neutral', 800) 2px, color('neutral', 800) 4px); }
+    @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 2px, color-token('neutral', 800) 2px, color-token('neutral', 800) 4px); }
   }
   @include breakpoint($breakpoint-desktop) {
     padding-top: 5rem;
     &::before {
-      background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 100) 2px, color('neutral', 100) 6px);
+      background: repeating-linear-gradient(-45deg, transparent, transparent 3px, color-token('neutral', 50) 3px, color-token('neutral', 50) 6px);
       height: 1rem;
-      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 800) 2px, color('neutral', 800) 6px); }
+      @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 3px, color-token('neutral', 800) 3px, color-token('neutral', 800) 6px); }
     }
   }
   @include breakpoint($breakpoint-widescreen) {
@@ -131,11 +138,11 @@ p {
 }
 
 figcaption {
-  color: color('neutral', 300);
+  color: color-token('neutral', 300);
   font-family: $custom-font-regular;
   padding: .5rem 0;
   text-align: center;
-  @include dark-mode { color: color('neutral', 700); }
+  @include dark-mode { color: color-token('neutral', 700); }
   @include breakpoint($breakpoint-widescreen) {
     figcaption { padding: 1rem 0; }
   }
@@ -144,7 +151,7 @@ figcaption {
 blockquote {
   margin: 2rem 0;
   p {
-    color: color('brand');
+    color: color-token('brand');
     font-family: $custom-font-regular;
     font-size: 1.44rem;
     line-height: 1.875rem;
@@ -162,9 +169,9 @@ blockquote {
     font-style: normal;
     margin-top: .5rem;
     &:before {
-      color: color('neutral', 100);
+      color: color-token('neutral', 100);
       content: '— ';
-      @include dark-mode { color: color('neutral', 700); }
+      @include dark-mode { color: color-token('neutral', 700); }
     }
   }
   @include breakpoint($breakpoint-tablet) {
@@ -179,10 +186,10 @@ blockquote {
       font-size: 1.728rem;
       line-height: 2.4rem;
       &:before, &:after {
-        color: color('neutral', 100);
+        color: color-token('neutral', 100);
         font-size: 4.3rem;
         line-height: 1;
-        @include dark-mode { color: color('neutral', 700); }
+        @include dark-mode { color: color-token('neutral', 700); }
       }
       &:before { transform: translateX(-2rem) translateY(-.25rem); }
       &:after {

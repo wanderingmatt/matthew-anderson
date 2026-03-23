@@ -1,10 +1,18 @@
+@use "sass:color";
+@use '../framework' as *;
+
 .nav-site {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   .wrapper {
-    @include layout-constraints;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 0;
   }
   .monogram {
     margin-left: -1rem;
@@ -22,15 +30,15 @@
     margin: 0 -1rem 0 0;
     padding: 0;
     a {
-      color: color('neutral', 300);
+      color: color-token('neutral', 300);
       font-size: .833rem;
       font-weight: 700;
       position: relative;
       text-decoration: none;
       text-transform: uppercase;
-      @include dark-mode { color: color('neutral', 600); }
+      @include dark-mode { color: color-token('neutral', 600); }
       &::after {
-        background: fade_out(color('brand'), .8);
+        background: color.adjust(color-token('brand'), $alpha: -0.8);
         bottom: 0;
         content: '';
         height: 2px;
@@ -40,11 +48,11 @@
         width: 100%;
       }
       &:hover:not(.selected) {
-        color: color('neutral', 700);
-        @include dark-mode { color: color('neutral', 200); }
+        color: color-token('neutral', 700);
+        @include dark-mode { color: color-token('neutral', 200); }
       }
       &.selected {
-        color: color('brand');
+        color: color-token('brand');
         pointer-events: none;
       }
     }
@@ -53,7 +61,64 @@
     display: block;
     padding: 1rem;
   }
+  &::before, &::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+  }
+  &::before {
+    background: linear-gradient(in oklab to bottom,
+      rgba(color-token('neutral', 0), .98),
+      rgba(color-token('neutral', 0), .978) 8%,
+      rgba(color-token('neutral', 0), .976) 16%,
+      rgba(color-token('neutral', 0), .973) 24%,
+      rgba(color-token('neutral', 0), .97) 32%,
+      rgba(color-token('neutral', 0), .965) 40%,
+      rgba(color-token('neutral', 0), .96) 48%,
+      rgba(color-token('neutral', 0), .9) 54%,
+      rgba(color-token('neutral', 0), .8) 60%,
+      rgba(color-token('neutral', 0), .68) 66%,
+      rgba(color-token('neutral', 0), .54) 72%,
+      rgba(color-token('neutral', 0), .42) 78%,
+      rgba(color-token('neutral', 0), .3) 84%,
+      rgba(color-token('neutral', 0), .18) 89%,
+      rgba(color-token('neutral', 0), .08) 94%,
+      rgba(color-token('neutral', 0), .02) 98%,
+      transparent 100%
+    );
+    z-index: -1;
+  }
+  &::after {
+    backdrop-filter: blur(80px);
+    mask-image: linear-gradient(to bottom, black 64%, transparent);
+    z-index: -2;
+  }
+  @include dark-mode {
+    &::before {
+      background: linear-gradient(in oklab to bottom,
+        rgba(color-token('neutral', 900), .98),
+        rgba(color-token('neutral', 900), .978) 8%,
+        rgba(color-token('neutral', 900), .976) 16%,
+        rgba(color-token('neutral', 900), .973) 24%,
+        rgba(color-token('neutral', 900), .97) 32%,
+        rgba(color-token('neutral', 900), .965) 40%,
+        rgba(color-token('neutral', 900), .96) 48%,
+        rgba(color-token('neutral', 900), .9) 54%,
+        rgba(color-token('neutral', 900), .8) 60%,
+        rgba(color-token('neutral', 900), .68) 66%,
+        rgba(color-token('neutral', 900), .54) 72%,
+        rgba(color-token('neutral', 900), .42) 78%,
+        rgba(color-token('neutral', 900), .3) 84%,
+        rgba(color-token('neutral', 900), .18) 89%,
+        rgba(color-token('neutral', 900), .08) 94%,
+        rgba(color-token('neutral', 900), .02) 98%,
+        transparent 100%
+      );
+      z-index: -1;
+    }
+  }
   @include breakpoint($breakpoint-tablet) {
+    padding: 2rem;
     .monogram {
       img { height: 4rem; }
     }
@@ -64,6 +129,7 @@
     }
   }
   @include breakpoint($breakpoint-desktop) {
+    padding: 3rem 4rem;
     .menu {
       a {
         font-size: 1rem;

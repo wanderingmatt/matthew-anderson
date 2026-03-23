@@ -1,6 +1,9 @@
+@use '../framework' as *;
+
 .chips-and-bits {
   .ribbon {
     @include project-background('chips-and-bits');
+    padding-top: 2rem;
     h2 { top: calc(100% / 1.7); }
   }
   h3 {

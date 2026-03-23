@@ -1,7 +1,8 @@
+@use '../framework' as *;
+
 .ribbon {
   display: flex;
   overflow: hidden;
-  padding-top: 2rem;
   position: relative;
   .content {
     @extend %content;
@@ -11,7 +12,7 @@
     -webkit-backdrop-filter: blur(1rem) !important;
     backdrop-filter: blur(1rem);
     background: rgba(255, 255, 255, .72);
-    color: color('neutral', 900);
+    color: color-token('neutral', 900);
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -21,7 +22,7 @@
     z-index: 1;
     &.inverted {
       background: rgba(0, 0, 0, .72);
-      color: #fff;
+      color: color-token('neutral', 0);
     }
   }
   img {
@@ -29,25 +30,11 @@
     margin: 0 auto;
     max-width: 100%;
   }
-  &::after {
-    background: color('neutral', 900);
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 1px;
-    mix-blend-mode: difference;
-    opacity: .5;
-    position: absolute;
-    width: 100%;
-  }
-  @include breakpoint($breakpoint-tablet) { padding-top: 3rem; }
   @include breakpoint($breakpoint-desktop) {
-    padding-top: 5rem;
     h2 {
       mix-blend-mode: screen;
       padding: 1rem 3rem 1rem 2rem;
       &.inverted { mix-blend-mode: multiply; }
     }
   }
-  @include breakpoint($breakpoint-widescreen) { padding-top: 8rem; }
 }

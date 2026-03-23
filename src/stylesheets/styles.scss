@@ -1,33 +1,19 @@
-@import 'npm:normalize.css/normalize.css';
-@import 'npm:@fancyapps/ui/dist/fancybox/fancybox.css';
+@use 'npm:modern-normalize';
+@use 'npm:@fancyapps/ui/dist/fancybox/fancybox.css';
 
-@import 'framework/breakpoints';
-@import 'framework/colors';
-@import 'framework/dark-mode';
-@import 'framework/fonts';
-@import 'framework/layout-constraints';
-@import 'framework/placeholder-selectors';
-@import 'framework/typography';
+@use 'framework';
+@use 'regions';
+@use 'modules';
 
-@import 'regions/footer';
-@import 'regions/header';
-@import 'regions/layout';
-@import 'regions/nav-site';
+@use 'views/home';
+@use 'views/about';
+@use 'views/bitwire';
+@use 'views/carlos-lamas';
+@use 'views/chips-and-bits';
+@use 'views/marshal';
+@use 'views/meta';
+@use 'views/onehub';
+@use 'views/proof';
+@use 'views/sweet-shop';
 
-@import 'modules/buttons';
-@import 'modules/cards';
-@import 'modules/floating-action-buttons';
-@import 'modules/galleries';
-@import 'modules/icons';
-@import 'modules/projects';
-@import 'modules/ribbons';
-@import 'modules/tags';
-
-@import 'views/about';
-@import 'views/carlos-lamas';
-@import 'views/marshal';
-@import 'views/meta';
-@import 'views/onehub';
-@import 'views/proof';
-
-@import 'vendor/fancybox-overrides';
+@use 'vendor';

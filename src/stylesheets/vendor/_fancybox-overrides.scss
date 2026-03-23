@@ -1,15 +1,17 @@
-.fancybox__container { --fancybox-bg: #{rgba(color('neutral', 900), .96)}; }
-.fancybox__nav { --fancybox-color: #FFF; }
-.f-button[disabled] { color: rgba(255, 255, 255, .32); }
+@use '../framework' as *;
 
-.fancybox__slide {
-  gap: 2rem;
-  padding: 4rem 4rem 2rem 4rem;
-  &::before, &::after { @extend %hidden; }
+.fancybox__container {
+  --fancybox-backdrop-bg: #{rgba(color-token('neutral', 900), .96)};
+  --f-arrow-color: #{color-token('neutral', 0)};
+  --f-close-button-color: #{color-token('neutral', 0)};
 }
 
-.fancybox__content { flex: 1; }
-.fancybox__caption {
-  @extend figcaption;
-  color: color('neutral', 100);
+.f-button[aria-disabled] { opacity: .32; }
+
+.fancybox__slide { gap: 2rem; }
+
+.f-caption {
+  color: color-token('neutral', 100);
+  font-family: $custom-font-regular;
+  text-align: center;
 }

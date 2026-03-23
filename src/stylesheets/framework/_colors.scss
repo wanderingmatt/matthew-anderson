@@ -1,4 +1,6 @@
-// All of the colors used throughout the product. Can easily be inserted via the `color` function. For example, our `brand` `teal` can be retrieved using `color('brand', 'teal')`.
+@use "sass:map";
+
+// All of the colors used throughout the product. Can easily be inserted via the `color-token` function. For example, our `brand` `teal` can be retrieved using `color-token('brand', 'teal')`.
 //
 // No styleguide reference.
 
@@ -27,37 +29,38 @@ $colors: (
 //
 // No styleguide reference.
 
-@function color($collection, $variant: null) {
+@function color-token($collection, $variant: null) {
   @if ($variant != null) {
-    @if not map-has-key($colors, $collection) {
+    @if not map.has-key($colors, $collection) {
       @error "No collection found for `#{$collection}` in `$colors` map.";
     } @else {
-      $nested-map: map-get($colors, $collection);
-      @if not map-has-key($nested-map, $variant) {
+      $nested-map: map.get($colors, $collection);
+      @if not map.has-key($nested-map, $variant) {
         @error "No variant found for `#{$variant}` within the `#{$collection}` collection in `$colors` map.";
       }
     }
 
-    @return map-get(map-get($colors, $collection), $variant);
+    @return map.get(map.get($colors, $collection), $variant);
   } @else {
-    @if not map-has-key($colors, $collection) {
+    @if not map.has-key($colors, $collection) {
       @error "No collection found for `#{$collection}` in `$colors` map.";
     }
 
-    @return map-get($colors, $collection);
+    @return map.get($colors, $collection);
   }
 }
-
 
 // Project Backgrounds
 
 @mixin project-background($project: null) {
-  @if $project == 'carlos-lamas' {
+  @if $project == 'bitwire' {
+    background: #FBFAF3;
+  } @else if $project == 'carlos-lamas' {
     background: #4C489E;
   } @else if $project == 'chips-and-bits' {
-    background: #096;
+    background: color-token('brand');
   } @else if $project == 'marshal' {
-    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096)
+    background-image: linear-gradient(to top right, #1F3A7E, #377E96, #62B096);
   } @else if $project == 'meta' {
     background-image: linear-gradient(to bottom, #0064e0, #0081fb);
   } @else if $project == 'onehub' {
@@ -66,7 +69,9 @@ $colors: (
     background: #B9AF64;
   } @else if $project == 'r8r' {
     background-image: linear-gradient(to bottom right, #F05436, #DD2476 56.25%);
+  } @else if $project == 'sweet-shop' {
+    background: #E4499C;
   } @else {
-    background: #F4F5F5;
+    background: color-token('neutral', 50);
   }
 }

@@ -1,0 +1,8 @@
+@use '../framework' as *;
+
+.bitwire {
+  .ribbon {
+    @include project-background('bitwire');
+    h2 { top: 25%; }
+  }
+}

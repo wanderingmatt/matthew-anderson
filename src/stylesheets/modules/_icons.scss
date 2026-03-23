@@ -1,26 +1,25 @@
-.icon {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  text-indent: -9999px;
-  height: 2rem;
-  width: 2rem;
+@use '../framework' as *;
 
-  @include breakpoint($breakpoint-tablet) {
-    height: 3rem;
-    width: 3rem;
-  }
+.icon {
+  background-color: color-token('neutral', 900);
+  display: inline-block;
+  height: 2rem;
+  mask-position: 50%;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  text-indent: -9999px;
+  width: 2rem;
 }
 
 .icon-small {
-  height: 1.25rem;
-  width: 1.25rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-.icon-app-store { background-image: url('data-url:/src/images/icons/app-store.svg'); }
-.icon-chevron-right { background-image: url('data-url:/src/images/icons/chevron-right.svg'); }
-.icon-download { background-image: url('data-url:/src/images/icons/download.svg'); }
-.icon-email { background-image: url('data-url:/src/images/icons/email.svg'); }
-.icon-figma { background-image: url('data-url:/src/images/icons/figma.svg'); }
-.icon-globe { background-image: url('data-url:/src/images/icons/globe.svg'); }
+$icons: app-store, arrow-up-right, bluesky, chevron-left, chevron-right, dribbble, github, hand-wave, linkedin, spotify;
+
+@each $icon in $icons {
+  .icon-#{$icon} {
+    mask-image: url('data-url:/src/images/icons/#{$icon}.svg');
+  }
+}

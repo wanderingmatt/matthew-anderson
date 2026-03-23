@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .projects {
   @include layout-constraints;
   .projects-list {
@@ -8,9 +10,53 @@
     padding: 0;
   }
   .card {
+    .card-content {
+      h3 {
+        background: color-token('neutral', 1000);
+        flex: 1;
+        height: 24px;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        text-indent: -9999px;
+        width: 100%;
+        @include dark-mode { background: color-token('neutral', 0); }
+      }
+      .icon { background-color: color-token('neutral', 0); }
+    }
+    &.bitwire {
+      .card-image {
+        img { @include project-background('bitwire'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/bitwire/logo-bitwire.svg'); }
+      }
+    }
+    &.carlos-lamas {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/carlos-lamas/logo-carlos-lamas.svg'); }
+      }
+    }
+    &.chips-and-bits {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/chips-and-bits/logo-chips-and-bits.svg'); }
+      }
+    }
+    &.marshal {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/marshal/logo-marshal.svg'); }
+      }
+    }
     &.meta {
       .card-image {
         img { @include project-background('meta'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/meta/logo-meta.svg'); }
+      }
+    }
+    &.onehub {
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/onehub/logo-onehub.svg'); }
       }
     }
     &.proof {
@@ -20,18 +66,41 @@
           object-position: 0 100%;
         }
       }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/proof/logo-proof.svg'); }
+      }
+    }
+    &.sweet-shop {
+      .card-image {
+        img { @include project-background('sweet-shop'); }
+      }
+      .card-content {
+        h3 { mask-image: url('data-url:/src/images/sweet-shop/logo-sweet-shop.svg'); }
+      }
     }
   }
   @include breakpoint($breakpoint-tablet) {
     .projects-list {
       grid-auto-flow: dense;
-      grid-auto-rows: minmax(14rem, .275fr);
       grid-gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-      grid-template-rows: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       .card {
+        .card-content {
+          h3 {
+            background: color-token('neutral', 0);
+            height: auto;
+            mask-position: 50%;
+            mask-size: 50%;
+          }
+        }
+        &.bitwire {
+          .card-content { background: #FF4900; }
+        }
         &.carlos-lamas {
           .card-content { @include project-background('carlos-lamas'); }
+        }
+        &.chips-and-bits {
+          .card-content { @include project-background('chips-and-bits'); }
         }
         &.marshal {
           .card-content { @include project-background('marshal'); }
@@ -45,6 +114,9 @@
         &.proof {
           .card-content { @include project-background('proof'); }
         }
+        &.sweet-shop {
+          .card-content { @include project-background('sweet-shop'); }
+        }
       }
       .card-action-area {
         display: flex;
@@ -57,46 +129,28 @@
             filter: blur(4px);
             transition: filter .4s ease-in;
           }
-          .card-content { opacity: .96; }
+          .card-content { opacity: .88; }
         }
-      }
-      > li {
-        &.showcase { grid-area: 1 / 1 / 1 / -1; }
-        &.tall { grid-row: span 2; }
       }
     }
   }
 
   @include breakpoint($breakpoint-desktop) {
     .projects-list {
-      grid-auto-rows: minmax(16rem, 1fr);
-      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-      > li {
-        &.highlight {
-          grid-column: span 3;
-          grid-row: span 2;
-          h3 { font-size: 4.3rem; }
-        }
-        &.feature {
+      grid-template-columns: repeat(3, 1fr);
+      .card {
+        &.spotlight, &.feature {
           grid-column: span 2;
           grid-row: span 2;
-          h3 { font-size: 2.074rem; }
+        }
+        &.feature {
+          h3 { mask-size: calc(100% / 3); }
+        }
+        &.portrait {
+          aspect-ratio: auto;
+          grid-row: 3 / span 3 ;
         }
       }
-    }
-    .card {
-      &.proof {
-        .card-image {
-          img { object-position: 50%; }
-        }
-      }
-    }
-  }
-
-  @include breakpoint($breakpoint-widescreen) {
-    .projects-list {
-      grid-auto-rows: minmax(20rem, .275fr);
-      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     }
   }
 }

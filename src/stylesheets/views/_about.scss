@@ -1,6 +1,15 @@
+@use '../framework' as *;
+
 .about {
+  header {
+    .content { margin-top: 0; }
+  }
   .introduction {
     position: relative;
+    p {
+      margin: 1rem 0;
+      text-wrap: balance;
+    }
     .hello {
       margin-top: 1rem;
       .avatar {
@@ -24,6 +33,10 @@
 
   @include breakpoint($breakpoint-desktop) {
     .introduction {
+      p {
+        margin: 4rem 0;
+        text-align: center;
+      }
       .hello {
         bottom: 0;
         margin: 0;
@@ -47,18 +60,18 @@
       section:first-child { margin-right: 3rem; }
       section:last-child { margin-left: 3rem; }
       &::before, &::after {
-        background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 50) 2px, color('neutral', 50) 6px);
+        background: repeating-linear-gradient(-45deg, transparent, transparent 3px, color-token('neutral', 50) 3px, color-token('neutral', 50) 6px);
         content: '';
         display: block;
         height: 1rem;
         position: absolute;
         width: 100%;
-        @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 4px, color('neutral', 800) 2px, color('neutral', 800) 6px); }
+        @include dark-mode { background: repeating-linear-gradient(-45deg, transparent, transparent 3px, color-token('neutral', 800) 3px, color-token('neutral', 800) 6px); }
       }
       &::before { top: 0; }
       &::after { bottom: 0; }
     }
-    .site {
+    .interests {
       h4 {
        padding-top: 0;
        &::before { @extend %hidden-desktop; }

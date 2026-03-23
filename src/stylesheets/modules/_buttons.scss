@@ -1,6 +1,9 @@
+@use '../framework' as *;
+
 .button {
-  background: color('neutral', 50);
-  color: color('neutral', 900);
+  background: color-token('neutral', 50);
+  border-radius: .25rem;
+  color: color-token('neutral', 900);
   cursor: pointer;
   display: inline-block;
   font-size: .833rem;
@@ -19,22 +22,15 @@
     speak: none;
     transform: translateY(-100%);
     width: 100%;
-    .icon {
-      height: 2rem;
-      width: 2rem;
-    }
   }
   .button-content {
     display: inline-block;
     padding: 1rem 2rem;
   }
-  &:active { background: color('neutral', 100); }
+  &:active { background: color-token('neutral', 100); }
 
   @include breakpoint($breakpoint-tablet) {
     font-size: 1rem;
-    .button-content {
-      padding: 1.5rem 2rem;
-    }
   }
 
   @include breakpoint($breakpoint-desktop) {
@@ -44,7 +40,7 @@
     }
     .button-content {
       backface-visibility: hidden;
-      padding: 2rem 3rem;
+      padding: 1.25rem 2.5rem;
       transition: transform .2s;
     }
     &:hover {

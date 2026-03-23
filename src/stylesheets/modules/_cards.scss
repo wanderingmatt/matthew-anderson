@@ -1,3 +1,5 @@
+@use '../framework' as *;
+
 .card {
   .card-action-area {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
@@ -6,10 +8,10 @@
     display: block;
     position: relative;
     text-decoration: none;
-    @include dark-mode { background-color: color('neutral', 800); }
+    @include dark-mode { background-color: color-token('neutral', 800); }
   }
   .card-image {
-    background: color('neutral', 50);
+    background: color-token('neutral', 50);
     height: 100%;
     position: relative;
     width: 100%;
@@ -19,11 +21,11 @@
       height: 100%;
       max-height: 100vmin;
       object-fit: cover;
-      object-position: 0 0;
+      object-position: 50%;
       width: 100%;
     }
     &::after {
-      background: color('neutral', 900);
+      background: color-token('neutral', 900);
       bottom: 0;
       content: '';
       display: block;
@@ -40,7 +42,7 @@
     h3 {
       font-size: 1.44rem;
       line-height: 1;
-      @include dark-mode { color: color('neutral', 200); }
+      @include dark-mode { color: color-token('neutral', 200); }
     }
     .fab {
       position: absolute;
@@ -52,7 +54,6 @@
   @include breakpoint($breakpoint-tablet) {
     .card-image {
       img {
-        aspect-ratio: initial;
         max-height: initial;
         min-height: initial;
       }
@@ -70,7 +71,7 @@
       transition: opacity .2s ease-in-out;
       width: 100%;
       h3 {
-        color: #fff;
+        color: color-token('neutral', 0);
         font-family: $custom-font-regular;
         text-transform: uppercase;
       }

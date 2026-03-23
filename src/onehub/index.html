@@ -15,11 +15,11 @@
   <main>
     <div class="ribbon">
       <div class="content">
-        <h2>Onehub</h2>
+        <h2 class="inverted">Onehub</h2>
         <include src="partials/_screenshot-ribbon.html">
           {
             "project": "onehub",
-            "alt": "Onehub – large screenshot"
+            "alt": "Onehub key image."
           }
         </include>
       </div>
@@ -31,7 +31,7 @@
     </div>
     <section>
       <div class="content">
-        <p>I joined Onehub as the founding product designer. I built a profitable business, beloved products, and a happy team. Here are a few of the things that I am most proud of.</p>
+        <p>I joined Onehub as the founding product designer. Over a decade, I shaped the product, grew the team, and helped exit a profitable business.</p>
       </div>
     </section>
     <section class="files">
@@ -49,8 +49,7 @@
               {
                 "project": "onehub/files",
                 "filename": "toolbar-buttons",
-                "alt": "Onehub – toolbar buttons screenshot",
-                "loading": "eager"
+                "alt": "Onehub toolbar buttons at varying permission levels."
               }
             </include>
           </div>
@@ -62,8 +61,7 @@
               {
                 "project": "onehub/files",
                 "filename": "item-actions",
-                "alt": "Onehub – item actions screenshot",
-                "loading": "eager"
+                "alt": "Onehub item actions at varying permission levels."
               }
             </include>
           </div>
@@ -75,8 +73,7 @@
               {
                 "project": "onehub/files",
                 "filename": "sidebar-actions",
-                "alt": "Onehub – sidebar actions screenshot",
-                "loading": "eager"
+                "alt": "Onehub sidebar actions at varying permission levels."
               }
             </include>
           </div>
@@ -86,46 +83,46 @@
       <figure class="desktop gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/files/files-list.png" class="card-action-area" data-fancybox="gallery-files" data-caption="Hidden by default, item actions become visible on hover and light up when modified.">
+            <li>
+              <a href="/src/images/onehub/files/files-list.png" data-fancybox="gallery-files" data-caption="Hidden by default, item actions become visible on hover and light up when modified.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/files",
                     "filename": "files-list",
-                    "alt": "Onehub – files list screenshot"
+                    "alt": "Onehub files in list view with hover actions."
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/files/files-thumbnails.png" class="card-action-area" data-fancybox="gallery-files" data-caption="Item actions work the same way with a slightly different visual treatment in thumbnail view to keep the priority on the images.">
+            <li>
+              <a href="/src/images/onehub/files/files-thumbnails.png" data-fancybox="gallery-files" data-caption="Item actions work the same way with a slightly different visual treatment in thumbnail view to keep the priority on the images.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/files",
                     "filename": "files-thumbnails",
-                    "alt": "Onehub – files thumbnails screenshot"
+                    "alt": "Onehub files in thumbnail view."
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/files/preview-moderator.png" class="card-action-area" data-fancybox="gallery-files" data-caption="A sidebar is present to enable higher roles to collaborate on files.">
+            <li>
+              <a href="/src/images/onehub/files/preview-moderator.png" data-fancybox="gallery-files" data-caption="A sidebar is present to enable higher roles to collaborate on files.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/files",
                     "filename": "preview-moderator",
-                    "alt": "Onehub – moderator preview screenshot"
+                    "alt": "Onehub file preview with collaboration sidebar for moderators."
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/files/preview-downloader.png" class="card-action-area" data-fancybox="gallery-files" data-caption="For lower roles, the sidebar collapses to afford greater screen real estate to the preview.">
+            <li>
+              <a href="/src/images/onehub/files/preview-downloader.png" data-fancybox="gallery-files" data-caption="For lower roles, the sidebar collapses to afford greater screen real estate to the preview.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/files",
                     "filename": "preview-downloader",
-                    "alt": "Onehub – downloader preview screenshot"
+                    "alt": "Onehub file preview with collapsed sidebar for downloaders."
                   }
                 </include>
               </a>
@@ -148,57 +145,62 @@
       <figure class="desktop gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/2fa/2fa-settings.png" class="card-action-area" data-fancybox="gallery-2fa" data-caption="Two-factor authentication can be enabled per individual or at an account level.">
+            <li>
+              <a href="/src/images/onehub/2fa/2fa-settings.png" data-fancybox="gallery-2fa" data-caption="Two-factor authentication can be enabled per individual or at an account level.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/2fa",
                     "filename": "2fa-settings",
-                    "alt": "Onehub – 2FA settings screenshot"
+                    "alt": "Onehub two-factor authentication settings.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/2fa/2fa-setup.png" class="card-action-area" data-fancybox="gallery-2fa" data-caption="Customers are encouraged to immediately setup an authenticator and enter their first verification code. Optionally, you can opt for SMS-only verification.">
+            <li>
+              <a href="/src/images/onehub/2fa/2fa-setup.png" data-fancybox="gallery-2fa" data-caption="Customers are encouraged to immediately setup an authenticator and enter their first verification code. Optionally, you can opt for SMS-only verification.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/2fa",
                     "filename": "2fa-setup",
-                    "alt": "Onehub – 2FA setup modal screenshot"
+                    "alt": "Onehub two-factor authentication setup modal.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/2fa/2fa-backup.png" class="card-action-area" data-fancybox="gallery-2fa" data-caption="Rather than require the use of backup codes, SMS is used as the backup method for cases where a customer loses access to their authenticator.">
+            <li>
+              <a href="/src/images/onehub/2fa/2fa-backup.png" data-fancybox="gallery-2fa" data-caption="Rather than require the use of backup codes, SMS is used as the backup method for cases where a customer loses access to their authenticator.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/2fa",
                     "filename": "2fa-backup",
-                    "alt": "Onehub – 2FA backup modal screenshot"
+                    "alt": "Onehub two-factor authentication backup method modal.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/2fa/2fa-verification.png" class="card-action-area" data-fancybox="gallery-2fa" data-caption="Customers enter a second code to both enable 2FA and register their phone as their backup device.">
+            <li>
+              <a href="/src/images/onehub/2fa/2fa-verification.png" data-fancybox="gallery-2fa" data-caption="Customers enter a second code to both enable 2FA and register their phone as their backup device.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/2fa",
                     "filename": "2fa-verification",
-                    "alt": "Onehub – 2FA verification modal screenshot"
+                    "alt": "Onehub two-factor authentication verification modal.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/2fa/2fa-enforced.png" class="card-action-area" data-fancybox="gallery-2fa" data-caption="2FA can optionally be enforced by Administrators at the account level. Existing account members are then given a 24-hour grace period to enable 2FA at their convenience before requiring it to sign in.">
+            <li>
+              <a href="/src/images/onehub/2fa/2fa-enforced.png" data-fancybox="gallery-2fa" data-caption="2FA can optionally be enforced by Administrators at the account level. Existing account members are then given a 24-hour grace period to enable 2FA at their convenience before requiring it to sign in.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/2fa",
                     "filename": "2fa-enforced",
-                    "alt": "Onehub – 2FA account enforcement screenshot"
+                    "alt": "Onehub two-factor authentication enforcement at the account level.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -222,7 +224,7 @@
           {
             "project": "onehub/ios",
             "filename": "all-versions",
-            "alt": "Onehub – all iOS versions graphic",
+            "alt": "Onehub for iOS versions 1.0, 2.0, and 3.0.",
             "loading": "lazy"
           }
         </include>
@@ -231,167 +233,182 @@
       <figure class="mobile gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/ios/files-list.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="The sign in screen is a webView pointed at the Onehub web service. This afforded the ability to support OAuth and 2FA without any additional development.">
+            <li>
+              <a href="/src/images/onehub/ios/sign-in.png" data-fancybox="gallery-ios" data-caption="The sign in screen is a webView pointed at the Onehub web service. This afforded the ability to support OAuth and 2FA without any additional development.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "sign-in",
-                    "alt": "Onehub – sign in screenshot"
+                    "alt": "Onehub iOS sign in screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/files-list.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="A folder in List view. Onehub item actions can be exposed by swiping left on any item.">
+            <li>
+              <a href="/src/images/onehub/ios/files-list.png" data-fancybox="gallery-ios" data-caption="A folder in List view. Onehub item actions can be exposed by swiping left on any item.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "files-list",
-                    "alt": "Onehub – files list screenshot"
+                    "alt": "Onehub iOS files in list view.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/files-list-dark.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Onehub for iOS has full Dark Mode support.">
+            <li>
+              <a href="/src/images/onehub/ios/files-list-dark.png" data-fancybox="gallery-ios" data-caption="Onehub for iOS has full Dark Mode support.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "files-list-dark",
-                    "alt": "Onehub – file list dark mode screenshot"
+                    "alt": "Onehub iOS files in list view in dark mode.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/file-secure-link.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="The current secure link settings for an individual file.">
+            <li>
+              <a href="/src/images/onehub/ios/file-secure-link.png" data-fancybox="gallery-ios" data-caption="The current secure link settings for an individual file.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "file-secure-link",
-                    "alt": "Onehub – secure link action sheet screenshot"
+                    "alt": "Onehub iOS secure link settings for a file.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/reorder.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Data Room customers can modify their current file index via drag-and-drop.">
+            <li>
+              <a href="/src/images/onehub/ios/reorder.png" data-fancybox="gallery-ios" data-caption="Data Room customers can modify their current file index via drag-and-drop.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "reorder",
-                    "alt": "Onehub – index reordering screenshot"
+                    "alt": "Onehub iOS file index reordering via drag-and-drop.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/files-thumbnails.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="A folder in Thumbnail view. Dynamically sized thumbnails are requested via the Onehub API depending on the device resolution.">
+            <li>
+              <a href="/src/images/onehub/ios/files-thumbnails.png" data-fancybox="gallery-ios" data-caption="A folder in Thumbnail view. Dynamically sized thumbnails are requested via the Onehub API depending on the device resolution.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "files-thumbnails",
-                    "alt": "Onehub – files thumbnails screenshot"
+                    "alt": "Onehub iOS files in thumbnail view.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/progress.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Onehub supports uploading from both Files.app and the Camera Roll. It was designed to match the aesthetic of the web product.">
+            <li>
+              <a href="/src/images/onehub/ios/progress.png" data-fancybox="gallery-ios" data-caption="Onehub supports uploading from both Files.app and the Camera Roll. It was designed to match the aesthetic of the web product.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "progress",
-                    "alt": "Onehub – progress screenshot"
+                    "alt": "Onehub iOS file upload progress screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/downloading.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="If a preview is either not cached locally or can't be displayed within a second, customers will be presented with a downloading progress screen.">
+            <li>
+              <a href="/src/images/onehub/ios/downloading.png" data-fancybox="gallery-ios" data-caption="If a preview is either not cached locally or can't be displayed within a second, customers will be presented with a downloading progress screen.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "downloading",
-                    "alt": "Onehub – downloading screenshot"
+                    "alt": "Onehub iOS file downloading progress screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/file-preview.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="The app can preview any document format supported by iOS.">
+            <li>
+              <a href="/src/images/onehub/ios/file-preview.png" data-fancybox="gallery-ios" data-caption="The app can preview any document format supported by iOS.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "file-preview",
-                    "alt": "Onehub – file preview screenshot"
+                    "alt": "Onehub iOS file preview.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/activity.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Customers can view individual audit trails for files they have access to.">
+            <li>
+              <a href="/src/images/onehub/ios/activity.png" data-fancybox="gallery-ios" data-caption="Customers can view individual audit trails for files they have access to.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "activity",
-                    "alt": "Onehub – activity screenshot"
+                    "alt": "Onehub iOS file activity audit trail.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/invite-users.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="New users can be invited at the Workspace or folder/file level at any role lower than the invitee.">
+            <li>
+              <a href="/src/images/onehub/ios/invite-users.png" data-fancybox="gallery-ios" data-caption="New users can be invited at the Workspace or folder/file level at any role lower than the invitee.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "invite-users",
-                    "alt": "Onehub – invite users screenshot"
+                    "alt": "Onehub iOS invite users screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/users.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="The users screen lists everyone who has access to an item and can be used to determine at what level their access was granted.">
+            <li>
+              <a href="/src/images/onehub/ios/users.png" data-fancybox="gallery-ios" data-caption="The users screen lists everyone who has access to an item and can be used to determine at what level their access was granted.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "users",
-                    "alt": "Onehub – users screenshot"
+                    "alt": "Onehub iOS users list showing access levels.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/roles.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="A user's role can be viewed and modified at any time.">
+            <li>
+              <a href="/src/images/onehub/ios/roles.png" data-fancybox="gallery-ios" data-caption="A user's role can be viewed and modified at any time.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "roles",
-                    "alt": "Onehub – change role screenshot"
+                    "alt": "Onehub iOS role modification screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/new-comment.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Customers can add comments on any folder or file they have access to.">
+            <li>
+              <a href="/src/images/onehub/ios/new-comment.png" data-fancybox="gallery-ios" data-caption="Customers can add comments on any folder or file they have access to.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "new-comment",
-                    "alt": "Onehub – new comment screenshot"
+                    "alt": "Onehub iOS new comment screen.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/ios/comments.png" class="card-action-area" data-fancybox="gallery-ios" data-caption="Customers can view comments for any folder/file they have access to.">
+            <li>
+              <a href="/src/images/onehub/ios/comments.png" data-fancybox="gallery-ios" data-caption="Customers can view comments for any folder/file they have access to.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/ios",
                     "filename": "comments",
-                    "alt": "Onehub – comments screenshot"
+                    "alt": "Onehub iOS comments for a file.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -422,7 +439,7 @@
           {
             "project": "onehub/website",
             "filename": "website-versions",
-            "alt": "Onehub – website versions graphic",
+            "alt": "A collection of major Onehub website versions.",
             "loading": "lazy"
           }
         </include>
@@ -431,90 +448,98 @@
       <figure class="desktop gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/website/home-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The homepage features a full height hero and a single call to action.">
+            <li>
+              <a href="/src/images/onehub/website/home-desktop.png" data-fancybox="gallery-website-desktop" data-caption="The homepage features a full height hero and a single call to action.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "home-desktop",
-                    "alt": "Onehub – homepage screenshot"
+                    "alt": "Onehub website homepage with full-height hero.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/sign-up-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The sign up modal can be triggered from anywhere on the site.">
+            <li>
+              <a href="/src/images/onehub/website/sign-up-desktop.png" data-fancybox="gallery-website-desktop" data-caption="The sign up modal can be triggered from anywhere on the site.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "sign-up-desktop",
-                    "alt": "Onehub – sign up modal screenshot"
+                    "alt": "Onehub website sign up modal.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/customize-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="This interactive highlight section outlines and demonstrates Onehub's customization feature.">
+            <li>
+              <a href="/src/images/onehub/website/customize-desktop.png" data-fancybox="gallery-website-desktop" data-caption="This interactive highlight section outlines and demonstrates Onehub's customization feature.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "customize-desktop",
-                    "alt": "Onehub – customize section screenshot"
+                    "alt": "Onehub website interactive customization section.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/testimonial-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="Rotating testimonials, linked to case studies, are used across the site. You can also see the footer with final call to action below.">
+            <li>
+              <a href="/src/images/onehub/website/testimonial-desktop.png" data-fancybox="gallery-website-desktop" data-caption="Rotating testimonials, linked to case studies, are used across the site. You can also see the footer with final call to action below.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "testimonial-desktop",
-                    "alt": "Onehub – testimonial screenshot"
+                    "alt": "Onehub website testimonial and footer with call to action.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/upload-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="This feature section highlights Onehub's simple and fast file uploads. You can also see the feature section jumper above.">
+            <li>
+              <a href="/src/images/onehub/website/upload-desktop.png" data-fancybox="gallery-website-desktop" data-caption="This feature section highlights Onehub's simple and fast file uploads. You can also see the feature section jumper above.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "upload-desktop",
-                    "alt": "Onehub – upload feature screenshot"
+                    "alt": "Onehub feature jump navigation and upload section.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/customers-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The customers page features a case study carousel and logos broken down by vertcial.">
+            <li>
+              <a href="/src/images/onehub/website/customers-desktop.png" data-fancybox="gallery-website-desktop" data-caption="The customers page features a case study carousel and logos broken down by vertical.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "customers-desktop",
-                    "alt": "Onehub – customers screenshot"
+                    "alt": "Onehub website customers page with case study carousel.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/pricing-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="The pricing page was designed to be as clean and straightforward as possible. Customers can initiate a trial or immediately purchase and trigger onboarding.">
+            <li>
+              <a href="/src/images/onehub/website/pricing-desktop.png" data-fancybox="gallery-website-desktop" data-caption="The pricing page was designed to be as clean and straightforward as possible. Customers can initiate a trial or immediately purchase and trigger onboarding.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "pricing-desktop",
-                    "alt": "Onehub – pricing screenshot"
+                    "alt": "Onehub website pricing page.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/choose-desktop.png" class="card-action-area" data-fancybox="gallery-website-desktop" data-caption="This sylized section emphasizes the main reason you should choose Onehub over a competitor.">
+            <li>
+              <a href="/src/images/onehub/website/choose-desktop.png" data-fancybox="gallery-website-desktop" data-caption="This stylized section emphasizes the main reason you should choose Onehub over a competitor.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/website",
                     "filename": "choose-desktop",
-                    "alt": "Onehub – choose Onehub screenshot"
+                    "alt": "Onehub website competitive comparison section.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -526,101 +551,110 @@
       <figure class="mobile gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/website/home-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The homepage features a full height hero and a single call to action.">
+            <li>
+              <a href="/src/images/onehub/website/home-mobile.png" data-fancybox="gallery-website-mobile" data-caption="The homepage features a full height hero and a single call to action.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "home-mobile",
-                    "alt": "Onehub – homepage screenshot"
+                    "alt": "Onehub website homepage on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/hamburger-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="On mobile, the primary menu collapses and is available via animated hamburger menu.">
+            <li>
+              <a href="/src/images/onehub/website/hamburger-mobile.png" data-fancybox="gallery-website-mobile" data-caption="On mobile, the primary menu collapses and is available via animated hamburger menu.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "hamburger-mobile",
-                    "alt": "Onehub – hamburger screenshot"
+                    "alt": "Onehub website hamburger menu on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/sign-up-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The sign up modal can be triggered from anywhere on the site.">
+            <li>
+              <a href="/src/images/onehub/website/sign-up-mobile.png" data-fancybox="gallery-website-mobile" data-caption="The sign up modal can be triggered from anywhere on the site.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "sign-up-mobile",
-                    "alt": "Onehub – sign up modal screenshot"
+                    "alt": "Onehub website sign up modal on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/customize-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="This interactive highlight section outlines and demonstrates Onehub's customization feature.">
+            <li>
+              <a href="/src/images/onehub/website/customize-mobile.png" data-fancybox="gallery-website-mobile" data-caption="This interactive highlight section outlines and demonstrates Onehub's customization feature.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "customize-mobile",
-                    "alt": "Onehub – customize section screenshot"
+                    "alt": "Onehub website customization section on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/testimonial-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="Rotating testimonials, linked to case studies, are used across the site. You can also see the footer with final call to action below.">
+            <li>
+              <a href="/src/images/onehub/website/testimonial-mobile.png" data-fancybox="gallery-website-mobile" data-caption="Rotating testimonials, linked to case studies, are used across the site. You can also see the footer with final call to action below.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "testimonial-mobile",
-                    "alt": "Onehub – testimonial screenshot"
+                    "alt": "Onehub website testimonial on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/upload-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="This feature section highlights Onehub's simple and fast file uploads. You can also see the feature section jumper above.">
+            <li>
+              <a href="/src/images/onehub/website/upload-mobile.png" data-fancybox="gallery-website-mobile" data-caption="This feature section highlights Onehub's simple and fast file uploads. You can also see the feature section jumper above.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "upload-mobile",
-                    "alt": "Onehub – upload screenshot"
+                    "alt": "Onehub website upload feature section on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/customers-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The customers page features a case study carousel and logos broken down by vertcial.">
+            <li>
+              <a href="/src/images/onehub/website/customers-mobile.png" data-fancybox="gallery-website-mobile" data-caption="The customers page features a case study carousel and logos broken down by vertical.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "customers-mobile",
-                    "alt": "Onehub – customers screenshot"
+                    "alt": "Onehub website customers page on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/pricing-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="The pricing page was designed to be as clean and straightforward as possible. Customers can initiate a trial or immediately purchase and trigger onboarding.">
+            <li>
+              <a href="/src/images/onehub/website/pricing-mobile.png" data-fancybox="gallery-website-mobile" data-caption="The pricing page was designed to be as clean and straightforward as possible. Customers can initiate a trial or immediately purchase and trigger onboarding.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "pricing-mobile",
-                    "alt": "Onehub – pricing screenshot"
+                    "alt": "Onehub website pricing page on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/website/choose-mobile.png" class="card-action-area" data-fancybox="gallery-website-mobile" data-caption="This sylized section emphasizes the main reason you should choose Onehub over a competitor.">
+            <li>
+              <a href="/src/images/onehub/website/choose-mobile.png" data-fancybox="gallery-website-mobile" data-caption="This stylized section emphasizes the main reason you should choose Onehub over a competitor.">
                 <include src="partials/_screenshot-mobile.html">
                   {
                     "project": "onehub/website",
                     "filename": "choose-mobile",
-                    "alt": "Onehub – choose Onehub screenshot"
+                    "alt": "Onehub website competitive comparison on mobile.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -631,7 +665,7 @@
       </figure>
       <div class="cta">
         <a href="https://www.onehub.com" class="button" target="_blank" rel="noreferrer">
-          <span class="button-icon"><span class="icon icon-globe" aria-hidden="true"></span></span>
+          <span class="button-icon"><span class="icon icon-arrow-up-right" aria-hidden="true"></span></span>
           <span class="button-content">Visit the Site</span>
         </a>
       </div>
@@ -644,84 +678,91 @@
           <li class="tag">Principal Designer</li>
           <li class="tag">Front-End Developer</li>
         </ul>
-        <p>A living styleguide served as the backbone of the Onehub Design System. The styleguide was generated from a custom, modular SCSS framework documented with <a href="https://github.com/kneath/kss">KSS</a>. Originating in code, it was always up-to-date and brought the entire Product team into the design process.</p>
+        <p>A living styleguide served as the backbone of the Onehub Design System. The styleguide was generated from a custom, modular SCSS framework documented with <a href="https://github.com/kneath/kss" target="_blank" rel="noreferrer">KSS</a>. Originating in code, it was always up-to-date and brought the entire Product team into the design process.</p>
       </div>
       <figure class="desktop gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-overview.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="The Overview section provided style, syntax, writing, best practice, and structure recommendations.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-overview.png" data-fancybox="gallery-styleguide" data-caption="The Overview section provided style, syntax, writing, best practice, and structure recommendations.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-overview",
-                    "alt": "Onehub – styleguide overview screenshot"
+                    "alt": "Onehub styleguide overview with best practices.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-colors.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="The Colors section a visual overview and one-click access to every color variable available in our color map.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-colors.png" data-fancybox="gallery-styleguide" data-caption="The Colors section provides a visual overview and one-click access to every color variable available in our color map.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-colors",
-                    "alt": "Onehub – styleguide colors screenshot"
+                    "alt": "Onehub styleguide color variables.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-messages.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="The Onehub Messages section is an example of a Onehub SCSS Module with dependencies and combined modifiers.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-messages.png" data-fancybox="gallery-styleguide" data-caption="The Onehub Messages section is an example of a Onehub SCSS Module with dependencies and combined modifiers.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-messages",
-                    "alt": "Onehub – styleguide messages screenshot"
+                    "alt": "Onehub styleguide messages module with modifiers.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-comments.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="Each Styleguide section begins as KSS comments including a state, description, modifiers, and section number.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-comments.png" data-fancybox="gallery-styleguide" data-caption="Each Styleguide section begins as KSS comments including a state, description, modifiers, and section number.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-comments",
-                    "alt": "Onehub – styleguide comments screenshot"
+                    "alt": "Onehub styleguide KSS comments in code.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-example-code.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="Each commented module is paired with a generator block, linking it to a section and providing example code.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-example-code.png" data-fancybox="gallery-styleguide" data-caption="Each commented module is paired with a generator block, linking it to a section and providing example code.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-example-code",
-                    "alt": "Onehub – styleguide example code screenshot"
+                    "alt": "Onehub styleguide generator block with example code.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-buttons-top.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="The resulting Buttons module, showing the KSS desccription and modifiers.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-buttons-top.png" data-fancybox="gallery-styleguide" data-caption="The resulting Buttons module, showing the KSS description and modifiers.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-buttons-top",
-                    "alt": "Onehub – styleguide buttons module (top) screenshot"
+                    "alt": "Onehub styleguide buttons module showing modifiers.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/styleguide/styleguide-buttons-bottom.png" class="card-action-area" data-fancybox="gallery-styleguide" data-caption="The resulting Buttons module, showing the example code.">
+            <li>
+              <a href="/src/images/onehub/styleguide/styleguide-buttons-bottom.png" data-fancybox="gallery-styleguide" data-caption="The resulting Buttons module, showing the example code.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/styleguide",
                     "filename": "styleguide-buttons-bottom",
-                    "alt": "Onehub – styleguide buttons module (bottom) screenshot"
+                    "alt": "Onehub styleguide buttons module showing example code.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -729,43 +770,46 @@
           </ul>
         </div>
         <figcaption>Screenshots of the Onehub Living Styleguide.</figcaption>
+      </figure>
     </section>
     <section>
       <div class="content">
         <h4>Company Reviews</h4>
         <ul class="tags">
-          <li class="tag">Leader</li>
+          <li class="tag">Leadership</li>
         </ul>
-        <p>I spearheaded and implemented company reviews. After interviewing the entire company, it was clear everyone wanted reviews that were:</p>
+        <p>I designed and implemented company reviews. After interviewing the entire company, it was clear everyone wanted reviews that were:</p>
         <ul class="tags-stylized">
           <li class="tag">Convenient</li>
           <li class="tag">Insightful</li>
           <li class="tag">Inclusive</li>
         </ul>
-        <p>After brainstorming and researching dozens of modern implementations, I settled on a modified version of the Stop-Start-Continue process, popularized by <a href="https://www.netflix.com/">Netflix</a>. I combined this with self-selected peer reviews and 360° feedback.</p>
+        <p>After brainstorming and researching dozens of modern implementations, I settled on a modified version of the Stop-Start-Continue process, popularized by <a href="https://www.netflix.com/" target="_blank" rel="noreferrer">Netflix</a>. I combined this with self-selected peer reviews and 360° feedback.</p>
         <p>The result is a company review policy that is still in use today and enjoyed by employees. The review forms facilitate timely but thoughtful reviews and the 360° feedback catalyzed meaningful cultural changes along the way.</p>
       </div>
       <figure class="desktop gallery">
         <div class="scroll-view">
           <ul>
-            <li class="card">
-              <a href="/src/images/onehub/reviews/review-questionnaire.png" class="card-action-area" data-fancybox="gallery-reviews" data-caption="Employees bring one thing they'd like to Start-Stop-Continue to each review. Those desires are turned into measurable goals with the aid of the reviewer.">
+            <li>
+              <a href="/src/images/onehub/reviews/review-questionnaire.png" data-fancybox="gallery-reviews" data-caption="Employees bring one thing they'd like to Start-Stop-Continue to each review. Those desires are turned into measurable goals with the aid of the reviewer.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/reviews",
                     "filename": "review-questionnaire",
-                    "alt": "Onehub – review questionnaire screenshot"
+                    "alt": "Onehub review questionnaire with stop-start-continue format.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
             </li>
-            <li class="card">
-              <a href="/src/images/onehub/reviews/review-evaluation.png" class="card-action-area" data-fancybox="gallery-reviews" data-caption="Each emplpoyee and their peers review their goals from the previous cycle by simply circling one of three boxes. Both alignments and discrepencies create opportunities for discussion during reviews.">
+            <li>
+              <a href="/src/images/onehub/reviews/review-evaluation.png" data-fancybox="gallery-reviews" data-caption="Each employee and their peers review their goals from the previous cycle by simply circling one of three boxes. Both alignments and discrepancies create opportunities for discussion during reviews.">
                 <include src="partials/_screenshot-desktop.html">
                   {
                     "project": "onehub/reviews",
                     "filename": "review-evaluation",
-                    "alt": "Onehub – review evaluation screenshot"
+                    "alt": "Onehub review evaluation form with peer feedback.",
+                    "loading": "lazy"
                   }
                 </include>
               </a>
@@ -774,15 +818,16 @@
         </div>
         <figcaption>Screenshots of the Onehub review forms.</figcaption>
       </figure>
-      <div class="cta">
-        <a href="/src/downloads/Onehub Review Forms.pdf" class="button" target="_blank" rel="noreferrer">
-          <span class="button-icon"><span class="icon icon-download" aria-hidden="true"></span></span>
-          <span class="button-content">Download a Review Form</span>
-        </a>
-      </div>
     </section>
   </main>
+  <include src="partials/_nav-projects.html">
+    {
+      "previousTitle": "Marshal",
+      "previousUrl": "/src/marshal/index.html",
+      "nextTitle": "Carlos Lamas",
+      "nextUrl": "/src/carlos-lamas/index.html"
+    }
+  </include>
   <include src="partials/_footer.html"></include>
-  <script type="module" src="/src/javascripts/scripts.js"></script>
 </body>
 </html>

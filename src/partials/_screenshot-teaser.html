@@ -1,16 +1,19 @@
 <picture class="card-image">
   <source type="image/webp"
-          media="(min-width: 430px)"
-          srcset="/src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=800 800w,
-                  /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=1600 1600w,
-                  /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=3200 3200w">
-  <source type="image/webp"
+          sizes="(min-width: 1366px) calc((100vw - 12rem) / 3),
+                 (min-width: 768px) calc((100vw - 6rem) / 2),
+                 calc(100vw - 2rem)"
           srcset="/src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=400 400w,
-          /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=800 800w">
+                  /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=800 800w,
+                  /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=1200 1200w,
+                  /src/images/{{ project }}/{{ project }}-teaser.png?as=webp&width=1600 1600w">
   <img src="/src/images/{{ project }}/{{ project }}-teaser.png?width=800"
        srcset="/src/images/{{ project }}/{{ project }}-teaser.png?width=400 400w,
-            /src/images/{{ project }}/{{ project }}-teaser.png?width=800 800w,
-            /src/images/{{ project }}/{{ project }}-teaser.png?width=1600 1600w,
-            /src/images/{{ project }}/{{ project }}-teaser.png?width=3200 3200w"
+               /src/images/{{ project }}/{{ project }}-teaser.png?width=800 800w,
+               /src/images/{{ project }}/{{ project }}-teaser.png?width=1200 1200w,
+               /src/images/{{ project }}/{{ project }}-teaser.png?width=1600 1600w"
+       sizes="(min-width: 1366px) calc((100vw - 12rem) / 3),
+              (min-width: 768px) calc((100vw - 6rem) / 2),
+              calc(100vw - 2rem)"
        alt="{{ alt }}">
 </picture>

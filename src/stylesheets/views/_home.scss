@@ -1,0 +1,7 @@
+@use '../framework' as *;
+
+.home {
+  header {
+    .content { margin-top: 0; }
+  }
+}

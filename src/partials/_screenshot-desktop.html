@@ -1,15 +1,18 @@
 <picture class="card-image">
   <source type="image/webp"
-          media="(min-width: 1366px)"
-          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=560 560w,
-                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=1120 1120w">
-  <source type="image/webp"
-          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=280 280w,
-                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=560 560w">
-  <img src="/src/images/{{ project }}/{{ filename }}.png?width=560"
-       srcset="/src/images/{{ project }}/{{ filename }}.png?width=280 280w,
-            /src/images/{{ project }}/{{ filename }}.png?width=560 560w,
-            /src/images/{{ project }}/{{ filename }}.png?width=1120 1120w"
-       sizes="(min-width: 1366px) 560px, 280px"
-       alt="{{ alt }}">
+          srcset="/src/images/{{ project }}/{{ filename }}.png?as=webp&width=480 480w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=720 720w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=1200 1200w,
+                  /src/images/{{ project }}/{{ filename }}.png?as=webp&width=1800 1800w">
+  <img src="/src/images/{{ project }}/{{ filename }}.png?width=720"
+       srcset="/src/images/{{ project }}/{{ filename }}.png?width=480 480w,
+              /src/images/{{ project }}/{{ filename }}.png?width=720 720w,
+              /src/images/{{ project }}/{{ filename }}.png?width=1200 1200w,
+              /src/images/{{ project }}/{{ filename }}.png?width=1800 1800w"
+       sizes="(min-width: 1600px) calc((100vw - 16rem) / 3),
+              (min-width: 1366px) calc((100vw - 11rem) / 2.5),
+              (min-width: 768px) calc((100vw - 3rem) / 1.5),
+              calc(100vw - 3rem)"
+       alt="{{ alt }}"
+       loading="{{ loading }}">
 </picture>

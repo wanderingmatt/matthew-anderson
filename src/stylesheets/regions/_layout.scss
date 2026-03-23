@@ -1,20 +1,24 @@
+@use '../framework' as *;
+
 .introduction {
-  .content { @extend %content-quarter; }
+  .content {
+    @extend %content-quarter;
+  }
 }
 
 section {
   .content {
     @extend %content-half;
     a {
-      border-bottom: 2px solid color('neutral', 100);
-      color: color('neutral', 900);
+      border-bottom: 2px solid color-token('neutral', 100);
+      color: color-token('neutral', 900);
       @include dark-mode {
-        border-color: color('neutral', 700);
-        color: color('neutral', 100);
+        border-color: color-token('neutral', 700);
+        color: color-token('neutral', 100);
       }
       &:hover {
-        border-color: color('brand');
-        color: color('brand');
+        border-color: color-token('brand');
+        color: color-token('brand');
       }
     }
   }
@@ -30,11 +34,12 @@ section {
   img {
     display: block;
     max-width: 100%;
+    width: 100%;
   }
   figcaption {
-    border-top: 1px solid color('neutral', 100);
+    border-top: 1px solid color-token('neutral', 100);
     margin-top: 1rem;
-    @include dark-mode { border-color: color('neutral', 800); }
+    @include dark-mode { border-color: color-token('neutral', 800); }
   }
 }
 
@@ -43,7 +48,7 @@ section {
   .frame {
     position: relative;
     &::after {
-      border: 1px solid color('neutral', 100);
+      border: 1px solid color-token('neutral', 100);
       bottom: 0;
       content: '';
       left: 0;
@@ -59,10 +64,6 @@ section {
     margin: 0 auto;
     max-width: 100%;
   }
-}
-
-@include dark-mode {
-  img, object { filter: brightness(.8) contrast(1.2); }
 }
 
 @include breakpoint($breakpoint-tablet) {

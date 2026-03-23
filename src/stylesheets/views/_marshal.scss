@@ -1,6 +1,9 @@
+@use '../framework' as *;
+
 .marshal {
   .ribbon {
-    @include project-background('marshal');;
-    h2 { top: calc(100% / 2.75); }
+    @include project-background('marshal');
+    padding-top: 2rem;
+    h2 { top: calc(100% / 3); }
   }
 }
