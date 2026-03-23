@@ -6,6 +6,10 @@
   }
   .introduction {
     position: relative;
+    p {
+      margin: 1rem 0;
+      text-wrap: balance;
+    }
     .hello {
       margin-top: 1rem;
       .avatar {
@@ -29,6 +33,10 @@
 
   @include breakpoint($breakpoint-desktop) {
     .introduction {
+      p {
+        margin: 4rem 0;
+        text-align: center;
+      }
       .hello {
         bottom: 0;
         margin: 0;
