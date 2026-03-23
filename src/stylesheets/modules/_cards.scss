@@ -71,7 +71,7 @@
       transition: opacity .2s ease-in-out;
       width: 100%;
       h3 {
-        color: #fff;
+        color: color-token('neutral', 0);
         font-family: $custom-font-regular;
         text-transform: uppercase;
       }

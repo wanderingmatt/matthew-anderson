@@ -12,15 +12,16 @@
   .card {
     .card-content {
       h3 {
-        background: #fff;
+        background: color-token('neutral', 1000);
         flex: 1;
         height: 24px;
         mask-repeat: no-repeat;
         mask-size: contain;
         text-indent: -9999px;
         width: 100%;
+        @include dark-mode { background: color-token('neutral', 0); }
       }
-      .icon { background-color: #fff; }
+      .icon { background-color: color-token('neutral', 0); }
     }
     &.bitwire {
       .card-image {
@@ -86,14 +87,11 @@
       .card {
         .card-content {
           h3 {
+            background: color-token('neutral', 0);
             height: auto;
             mask-position: 50%;
             mask-size: 50%;
           }
-        }
-        &.spotlight {
-          grid-column: span 2;
-          grid-row: span 2;
         }
         &.bitwire {
           .card-content { background: #FF4900; }
@@ -141,9 +139,12 @@
     .projects-list {
       grid-template-columns: repeat(3, 1fr);
       .card {
-        &.feature, &.spotlight {
+        &.spotlight, &.feature {
           grid-column: span 2;
           grid-row: span 2;
+        }
+        &.feature {
+          h3 { mask-size: calc(100% / 3); }
         }
         &.portrait {
           aspect-ratio: auto;

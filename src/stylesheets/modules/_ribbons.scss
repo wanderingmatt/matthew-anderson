@@ -22,7 +22,7 @@
     z-index: 1;
     &.inverted {
       background: rgba(0, 0, 0, .72);
-      color: #fff;
+      color: color-token('neutral', 0);
     }
   }
   img {

@@ -2,8 +2,8 @@
 
 .fancybox__container {
   --fancybox-backdrop-bg: #{rgba(color-token('neutral', 900), .96)};
-  --f-arrow-color: #FFF;
-  --f-close-button-color: #FFF;
+  --f-arrow-color: #{color-token('neutral', 0)};
+  --f-close-button-color: #{color-token('neutral', 0)};
 }
 
 .f-button[aria-disabled] { opacity: .32; }
