@@ -8,12 +8,10 @@
     overflow: hidden;
     overflow-x: scroll;
     padding: 1rem;
-    text-align: center;
   }
   ul {
     display: inline-flex;
     list-style-type: none;
-    justify-content: center;
     margin: 0;
     padding: 0;
     vertical-align: middle;
@@ -21,6 +19,7 @@
   li {
     flex: 0 0 calc((100vw - 5rem) / 3);
     margin-right: 1rem;
+    &:last-child { margin-right: 0; }
     a { cursor: zoom-in; }
     img {
       display: block;
@@ -28,7 +27,6 @@
       object-fit: cover;
       width: 100%;
     }
-    &:last-child { margin-right: 0; }
   }
   figcaption {
     border-top: 1px solid color-token('neutral', 100);
