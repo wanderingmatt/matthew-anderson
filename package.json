@@ -14,7 +14,8 @@
     "start": "parcel",
     "clean": "rm -rf .parcel-cache dist",
     "predeploy": "rm -rf dist && parcel build --public-url https://matthew-anderson.com/ && cp CNAME ./dist",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "postinstall": "patch-package"
   },
   "browserslist": "defaults",
   "devDependencies": {
@@ -26,7 +27,8 @@
     "modern-normalize": "^3.0.1",
     "parcel": "^2.16.4",
     "parcel-optimizer-friendly-urls": "^0.2.0",
+    "patch-package": "^8.0.1",
     "posthtml-include": "^2.0.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.35.5"
   }
 }

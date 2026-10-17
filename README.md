@@ -47,6 +47,21 @@ $ ncu -u
 $ npm install
 ```
 
+##### Parcel and Sharp Patch
+
+Parcel's image transformer only accepts Sharp `^0.33.5`, which has known vulnerabilities. To run Sharp `^0.35.5` instead, the project patches Parcel's accepted range in `patches/@parcel+transformer-image+2.16.4.patch`. [patch-package](https://www.npmjs.com/package/patch-package) re-applies the patch automatically after every `npm install`.
+
+When you upgrade Parcel, `patch-package` will warn that the patch was made for an older version. Check `SHARP_RANGE` in `node_modules/@parcel/transformer-image/lib/loadSharp.js`:
+
+- **If the new Parcel accepts the installed Sharp version**, delete the `patches` directory. If nothing else needs patching, also remove `patch-package` and the `postinstall` script from `package.json`.
+- **If it doesn't**, edit `SHARP_RANGE` to match the installed Sharp version and regenerate the patch:
+
+```
+$ npx patch-package @parcel/transformer-image
+```
+
+Then delete the old patch file and run a clean build (`npm run clean`, `npm run start`) to confirm images still generate.
+
 ## Deploying
 
 The `deploy` task will automatically rebuild your app including production URLs, copy the local `dist` folder to the `gh-pages` branch as a subtree, and push it to GitHub.
